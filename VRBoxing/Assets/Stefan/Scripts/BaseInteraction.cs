@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public class BaseInteraction : Selectable
+public class BaseInteraction : UIBehaviour
 {
     public static RaycastHit currentRay;
     static bool canRenewRaycast;
@@ -18,6 +18,8 @@ public class BaseInteraction : Selectable
 
     private void Update()
     {
+        if (!Application.isPlaying) return;
+
         if (canRenewRaycast)
         {
             Transform rayOrigin = GameManager.instance.selectionManager.CurrentSelector;
