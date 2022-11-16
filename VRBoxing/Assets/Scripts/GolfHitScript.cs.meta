@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7c4bc307426cb2342acc753b018ec728
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - rightArm: {instanceID: 0}
+  - stick: {fileID: 1154302560252505795, guid: a600c8eca829d15439446f45af24c6e8, type: 3}
+  - rightHand: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
