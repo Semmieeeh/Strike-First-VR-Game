@@ -16,6 +16,7 @@ public class BaseInteraction : UIBehaviour
         }
     }
 
+
     private void Update()
     {
         if (!Application.isPlaying) return;
