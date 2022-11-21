@@ -189,7 +189,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &437960800
 GameObject:
@@ -286,7 +286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508256247
 GameObject:
@@ -317,7 +317,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548492489
 GameObject:
@@ -478,7 +478,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -1.021, y: 1.885, z: -0.653}
 --- !u!54 &1042183811
 Rigidbody:
@@ -508,6 +508,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58dbadfb3b71c94d9235a7c7d1af45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1108596193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4133814476920062556, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_Name
+      value: =====MANAGERS=====
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.318041
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0351791
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.76454735
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133814476920062557, guid: 97951e7d8ce11ba448bed65bdc4800d6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 97951e7d8ce11ba448bed65bdc4800d6, type: 3}
 --- !u!850595691 &1116022371
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -668,7 +737,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1276616247
 MonoBehaviour:
@@ -1188,7 +1257,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.18699066, y: 0.22703949, z: -0.0069880555}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -1588,7 +1657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &2458039340008681518
 Transform:
   m_ObjectHideFlags: 0
@@ -1617,7 +1686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &2461185600527324179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,7 +1938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &2839546679525521441
 Transform:
   m_ObjectHideFlags: 0
@@ -1914,7 +1983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &2865649000470540850
 Transform:
   m_ObjectHideFlags: 0
@@ -1994,7 +2063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &3067174914145185833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,7 +2222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &4230037600827917893
 Transform:
   m_ObjectHideFlags: 0
@@ -2198,7 +2267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &4276382570583159045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3332,7 +3401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &4987163957172405721
 Transform:
   m_ObjectHideFlags: 0
@@ -3378,7 +3447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &5086254458198662324
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,7 +3480,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.0000000027939677, y: 0.42789853, z: 0.0000000027939677}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3532,7 +3601,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -4.656613e-10, y: 0.4277592, z: 9.313226e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3653,7 +3722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &5250477196996488862
 Transform:
   m_ObjectHideFlags: 0
@@ -3732,7 +3801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &5426566402418217473
 Transform:
   m_ObjectHideFlags: 0
@@ -3761,7 +3830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &5426723398994644292
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &5462193703245569939
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,7 +3909,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: 0.18699072, y: 0.22682935, z: -0.005257759}
   serializedVersion: 2
   m_SwingAxis: {x: -1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -3929,7 +3998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &5573127106188458962
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,7 +4028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &5632363498055789760
 Transform:
   m_ObjectHideFlags: 0
@@ -4416,6 +4485,7 @@ GameObject:
   - component: {fileID: 5838354294593461050}
   - component: {fileID: 5838354294593461055}
   - component: {fileID: 5838354294593461054}
+  - component: {fileID: 5838354294593461056}
   m_Layer: 0
   m_Name: LeftHand Controller
   m_TagString: Untagged
@@ -4792,6 +4862,18 @@ MonoBehaviour:
   m_MoveObjectIn: 14
   m_MoveObjectOut: 15
   m_PoseProvider: {fileID: 0}
+--- !u!114 &5838354294593461056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838354294593461048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fafa1b6c046b3841b23564aa5bc80d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5838354294877644596
 Transform:
   m_ObjectHideFlags: 0
@@ -4915,7 +4997,7 @@ Transform:
   m_Children:
   - {fileID: 5838354294877644596}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &5838354295416471316
 MonoBehaviour:
@@ -5133,7 +5215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &6207324931034431408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,7 +5245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &6239740208447735455
 GameObject:
   m_ObjectHideFlags: 0
@@ -5193,7 +5275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &6262903742576671286
 Transform:
   m_ObjectHideFlags: 0
@@ -5305,7 +5387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &6562735295018147815
 GameObject:
   m_ObjectHideFlags: 0
@@ -5354,7 +5436,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -4.4337765e-13, y: 0.34168005, z: 0.027680429}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -5458,7 +5540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &6932669902866743517
 Transform:
   m_ObjectHideFlags: 0
@@ -5487,7 +5569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &7032785262253472283
 Transform:
   m_ObjectHideFlags: 0
@@ -5653,7 +5735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &7107316297647678062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5746,7 +5828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &7230579292935353468
 Transform:
   m_ObjectHideFlags: 0
@@ -5762,7 +5844,7 @@ Transform:
   - {fileID: 1368479631052018779}
   - {fileID: 2891378453741177314}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7262609179858164265
 Transform:
@@ -5808,7 +5890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &7355832153529034939
 Transform:
   m_ObjectHideFlags: 0
@@ -5957,7 +6039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &7479842831290922181
 GameObject:
   m_ObjectHideFlags: 0
@@ -6006,7 +6088,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: -1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.0000000661239, y: 0.25571063, z: -0.000000014901161}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -6288,7 +6370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &8004019286731697862
 GameObject:
   m_ObjectHideFlags: 0
@@ -6319,7 +6401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5714d91197302524590520263b414302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCollider: {fileID: 0}
   rig: {fileID: 8415705627137118957}
   ragdollParts: []
   ragdollLimbs: []
@@ -6368,7 +6449,7 @@ MonoBehaviour:
   - {fileID: 2348686784843140111}
   - {fileID: 414192285997881966}
   - {fileID: 5016327248053408097}
-  toggleRagdoll: 0
+  isOn: 0
 --- !u!54 &8004019286731697864
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7480,7 +7561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &8355898312365379887
 Transform:
   m_ObjectHideFlags: 0
@@ -7525,7 +7606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &8378379552897408343
 Transform:
   m_ObjectHideFlags: 0
@@ -7554,7 +7635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &8415705627137118957
 GameObject:
   m_ObjectHideFlags: 0
@@ -7645,7 +7726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!4 &8585126033888706018
 Transform:
   m_ObjectHideFlags: 0
@@ -7674,7 +7755,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.00000004749745, y: 0.25560784, z: 0.00000020116568}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: -1}
   m_TwistLimitSpring:
@@ -7779,7 +7860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &8872322842126652227
 GameObject:
   m_ObjectHideFlags: 0
@@ -7823,7 +7904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}
 --- !u!1 &8947194721168255201
 GameObject:
   m_ObjectHideFlags: 0
@@ -8023,4 +8104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1e523343f13e4a43b985717ee0b1082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rt: {fileID: 8004019286731697863}
+  rt: {fileID: 0}

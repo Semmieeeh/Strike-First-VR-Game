@@ -20,46 +20,46 @@ public class VRMovement : MonoBehaviour
     public void Movement(InputAction.CallbackContext context)
     {
         Vector2 moveDir = context.ReadValue<Vector2>();
-        print(moveDir);
+        //print(moveDir);
         print("Moving");
     }
 
     public void Look(InputAction.CallbackContext context)
     {
         Vector3 lookDir = context.ReadValue<Vector2>();
-        print(lookDir);
+        //print(lookDir);
         print("Looking");
     }
 
     public void HardenFist(InputAction.CallbackContext context)
     {
         float axis = context.ReadValue<float>();
-        print(axis);
+        //print(axis);
         print("Hardened");
     }
     public void ReleaseHarden(InputAction.CallbackContext context)
     {
         float axis = context.ReadValue<float>();
-        print(axis);
+        //print(axis);
         print("UnHardened");
     }
     public void Grab(InputAction.CallbackContext context)
     {
         float axis = context.ReadValue<float>();
-        print(axis);
+        //print(axis);
         print("Grabbed");
     }
     public void ReleaseGrab(InputAction.CallbackContext context)
     {
         float axis = context.ReadValue<float>();
-        print(axis);
+       // print(axis);
         print("Released Grab");
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
         float axis = context.ReadValue<float>();
-        print(axis);
+      //  print(axis);
         print("Jumped");
     }
 }
