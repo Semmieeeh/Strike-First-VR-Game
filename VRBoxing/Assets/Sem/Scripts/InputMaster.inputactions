@@ -34,21 +34,12 @@
                 },
                 {
                     "name": "HardenFist",
-                    "type": "Value",
-                    "id": "2fc27d49-d03f-4c00-a1ee-9d63d3e85df7",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "ReleaseHardening",
                     "type": "Button",
-                    "id": "8d9757fd-d4a1-4425-afa3-a3ba243db61e",
+                    "id": "2fc27d49-d03f-4c00-a1ee-9d63d3e85df7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Jump",
@@ -130,7 +121,7 @@
                 {
                     "name": "",
                     "id": "6173f2ce-f197-44f2-8d57-6dd508caadaf",
-                    "path": "<OculusTouchController>{RightHand}/thumbstickTouched",
+                    "path": "<OculusTouchController>{RightHand}/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": "Oculus",
@@ -163,8 +154,8 @@
                 {
                     "name": "",
                     "id": "d3141acc-34e5-47c0-a08f-7d4d46a19009",
-                    "path": "<XRController>{RightHand}/trigger",
-                    "interactions": "",
+                    "path": "<OculusTouchController>{LeftHand}/triggerPressed",
+                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
                     "processors": "",
                     "groups": "Oculus",
                     "action": "HardenFist",
@@ -174,33 +165,11 @@
                 {
                     "name": "",
                     "id": "5090cf43-8108-4ee1-af1c-9541aa258017",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "Oculus",
                     "action": "HardenFist",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a88ace93-e045-4649-a97e-abf0a8148a4e",
-                    "path": "<XRController>{LeftHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Oculus",
-                    "action": "ReleaseHardening",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9bbbdffd-4c32-4d51-b4f7-5a60c87c09dd",
-                    "path": "<XRController>{RightHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Oculus",
-                    "action": "ReleaseHardening",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

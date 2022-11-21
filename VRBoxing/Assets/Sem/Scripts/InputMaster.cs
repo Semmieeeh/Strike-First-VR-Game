@@ -56,21 +56,12 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""HardenFist"",
-                    ""type"": ""Value"",
-                    ""id"": ""2fc27d49-d03f-4c00-a1ee-9d63d3e85df7"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""ReleaseHardening"",
                     ""type"": ""Button"",
-                    ""id"": ""8d9757fd-d4a1-4425-afa3-a3ba243db61e"",
+                    ""id"": ""2fc27d49-d03f-4c00-a1ee-9d63d3e85df7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""Jump"",
@@ -152,7 +143,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6173f2ce-f197-44f2-8d57-6dd508caadaf"",
-                    ""path"": ""<OculusTouchController>{RightHand}/thumbstickTouched"",
+                    ""path"": ""<OculusTouchController>{RightHand}/thumbstick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
@@ -185,8 +176,8 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d3141acc-34e5-47c0-a08f-7d4d46a19009"",
-                    ""path"": ""<XRController>{RightHand}/trigger"",
-                    ""interactions"": """",
+                    ""path"": ""<OculusTouchController>{LeftHand}/triggerPressed"",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
                     ""action"": ""HardenFist"",
@@ -196,33 +187,11 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5090cf43-8108-4ee1-af1c-9541aa258017"",
-                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
+                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
                     ""action"": ""HardenFist"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a88ace93-e045-4649-a97e-abf0a8148a4e"",
-                    ""path"": ""<XRController>{LeftHand}/triggerPressed"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Oculus"",
-                    ""action"": ""ReleaseHardening"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9bbbdffd-4c32-4d51-b4f7-5a60c87c09dd"",
-                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Oculus"",
-                    ""action"": ""ReleaseHardening"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -281,7 +250,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_HardenFist = m_Player.FindAction("HardenFist", throwIfNotFound: true);
-        m_Player_ReleaseHardening = m_Player.FindAction("ReleaseHardening", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
     }
 
@@ -346,7 +314,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_HardenFist;
-    private readonly InputAction m_Player_ReleaseHardening;
     private readonly InputAction m_Player_Jump;
     public struct PlayerActions
     {
@@ -356,7 +323,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @HardenFist => m_Wrapper.m_Player_HardenFist;
-        public InputAction @ReleaseHardening => m_Wrapper.m_Player_ReleaseHardening;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -379,9 +345,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @HardenFist.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
                 @HardenFist.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
                 @HardenFist.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
-                @ReleaseHardening.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardening;
-                @ReleaseHardening.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardening;
-                @ReleaseHardening.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardening;
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
@@ -401,9 +364,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @HardenFist.started += instance.OnHardenFist;
                 @HardenFist.performed += instance.OnHardenFist;
                 @HardenFist.canceled += instance.OnHardenFist;
-                @ReleaseHardening.started += instance.OnReleaseHardening;
-                @ReleaseHardening.performed += instance.OnReleaseHardening;
-                @ReleaseHardening.canceled += instance.OnReleaseHardening;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
@@ -426,7 +386,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnHardenFist(InputAction.CallbackContext context);
-        void OnReleaseHardening(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
     }
 }
