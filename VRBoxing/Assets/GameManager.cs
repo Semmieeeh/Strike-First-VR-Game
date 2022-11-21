@@ -5,7 +5,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public SelectionManager selectionManager;
+
+    [SerializeField] MainMenuManager mainMenuManager;
+
+    public static MainMenuManager MainMenu
+    {
+        get
+        {
+            return instance.mainMenuManager;
+        }
+    }
 
     private void Awake()
     {
