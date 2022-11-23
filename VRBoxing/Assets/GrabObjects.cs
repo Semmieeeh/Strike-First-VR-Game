@@ -10,12 +10,32 @@ public class GrabObjects : MonoBehaviour
     public bool grabbed;
     public GameObject hand;
     public GameObject grabObject;
+    Animator anim;
+    public bool hardened;
     void Start()
     {
-        hand = gameObject;        
+        hand = gameObject;  
+        anim = GetComponent<Animator>();
     }
 
-    
+    public void HardenFist(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            hardened = true;
+            gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            Debug.Log("Hardened");
+        }
+    }
+    public void ReleaseHarden(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            hardened = false;
+            gameObject.GetComponent<BoxCollider>().isTrigger = true;
+            Debug.Log("Un-hardened");
+        }
+    }
     public void Grab(InputAction.CallbackContext context)
     {
 
@@ -52,5 +72,9 @@ public class GrabObjects : MonoBehaviour
             canGrab = false;
             grabObject = null;
         }
+    }
+    private void Update()
+    {
+        anim.SetBool("Hardened", hardened);
     }
 }

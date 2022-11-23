@@ -98,15 +98,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press(pressPoint=0.1)"",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""StopMove"",
-                    ""type"": ""Value"",
-                    ""id"": ""4665bdfb-b51d-438c-94d0-318bf824bdd5"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -241,17 +232,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""action"": ""ReleaseHarden"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5e840ed2-3b9a-4365-9bb0-3ede80bf6e43"",
-                    ""path"": ""<XRController>{LeftHand}/joystick"",
-                    ""interactions"": ""Press(pressPoint=0.1)"",
-                    ""processors"": """",
-                    ""groups"": ""Oculus"",
-                    ""action"": ""StopMove"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -290,7 +270,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_ReleaseHarden = m_Player.FindAction("ReleaseHarden", throwIfNotFound: true);
         m_Player_RemoveBlock = m_Player.FindAction("RemoveBlock", throwIfNotFound: true);
         m_Player_ZaWarudo = m_Player.FindAction("ZaWarudo", throwIfNotFound: true);
-        m_Player_StopMove = m_Player.FindAction("StopMove", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -358,7 +337,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ReleaseHarden;
     private readonly InputAction m_Player_RemoveBlock;
     private readonly InputAction m_Player_ZaWarudo;
-    private readonly InputAction m_Player_StopMove;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -371,7 +349,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @ReleaseHarden => m_Wrapper.m_Player_ReleaseHarden;
         public InputAction @RemoveBlock => m_Wrapper.m_Player_RemoveBlock;
         public InputAction @ZaWarudo => m_Wrapper.m_Player_ZaWarudo;
-        public InputAction @StopMove => m_Wrapper.m_Player_StopMove;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -405,9 +382,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ZaWarudo.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
                 @ZaWarudo.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
                 @ZaWarudo.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
-                @StopMove.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMove;
-                @StopMove.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMove;
-                @StopMove.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMove;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -436,9 +410,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ZaWarudo.started += instance.OnZaWarudo;
                 @ZaWarudo.performed += instance.OnZaWarudo;
                 @ZaWarudo.canceled += instance.OnZaWarudo;
-                @StopMove.started += instance.OnStopMove;
-                @StopMove.performed += instance.OnStopMove;
-                @StopMove.canceled += instance.OnStopMove;
             }
         }
     }
@@ -462,6 +433,5 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnReleaseHarden(InputAction.CallbackContext context);
         void OnRemoveBlock(InputAction.CallbackContext context);
         void OnZaWarudo(InputAction.CallbackContext context);
-        void OnStopMove(InputAction.CallbackContext context);
     }
 }

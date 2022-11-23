@@ -76,15 +76,6 @@
                     "processors": "",
                     "interactions": "Press(pressPoint=0.1)",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "StopMove",
-                    "type": "Value",
-                    "id": "4665bdfb-b51d-438c-94d0-318bf824bdd5",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -217,17 +208,6 @@
                     "processors": "",
                     "groups": "Oculus",
                     "action": "ReleaseHarden",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5e840ed2-3b9a-4365-9bb0-3ede80bf6e43",
-                    "path": "<XRController>{LeftHand}/joystick",
-                    "interactions": "Press(pressPoint=0.1)",
-                    "processors": "",
-                    "groups": "Oculus",
-                    "action": "StopMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -33,25 +33,12 @@ public class VRMovement : MonoBehaviour
         Debug.Log("Looking");
 
     }
-    public void StopMove()
+    public void StopMove(InputAction.CallbackContext context)
     {
-        speed = 0;
-        Debug.Log("Stop moving");
+        
     }
-    public void HardenFist(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            Debug.Log("Hardened");
-        }
-    }
-    public void ReleaseHarden(InputAction.CallbackContext context)
-    {
-        if (context.canceled)
-        {
-            Debug.Log("Un-hardened");
-        }
-    }
+    
+    
     
     public void ZaWarudo(InputAction.CallbackContext context)
     {
@@ -71,7 +58,7 @@ public class VRMovement : MonoBehaviour
     private void Update()
     {
         
-        
+
     }
     public void Movement(InputAction.CallbackContext context)
     {
@@ -82,6 +69,11 @@ public class VRMovement : MonoBehaviour
         if(speed > maxSpeed)
         {
             speed = maxSpeed;
+        }
+
+        if (context.canceled)
+        {
+            speed = 0;
         }
     }
     private void FixedUpdate()
