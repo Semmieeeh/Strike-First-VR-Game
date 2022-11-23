@@ -4464,6 +4464,7 @@ GameObject:
   - component: {fileID: 5838354294002928897}
   - component: {fileID: 5838354294002928898}
   - component: {fileID: 5838354294002928901}
+  - component: {fileID: 5838354294002928960}
   m_Layer: 0
   m_Name: RightHand Controller
   m_TagString: Untagged
@@ -4471,6 +4472,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5838354294002928960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838354294002928959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fafa1b6c046b3841b23564aa5bc80d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canGrab: 0
+  grabbed: 0
+  hand: {fileID: 0}
+  grabObject: {fileID: 0}
 --- !u!1 &5838354294593461048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,6 +4891,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fafa1b6c046b3841b23564aa5bc80d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canGrab: 0
+  grabbed: 0
+  hand: {fileID: 0}
+  grabObject: {fileID: 0}
 --- !u!4 &5838354294877644596
 Transform:
   m_ObjectHideFlags: 0
@@ -4921,11 +4942,11 @@ GameObject:
   - component: {fileID: 5838354295416471312}
   - component: {fileID: 5838354295416471313}
   - component: {fileID: 5838354295416471316}
-  - component: {fileID: 5838354295416471317}
   - component: {fileID: 5838354295416471314}
   - component: {fileID: 5838354295416471318}
   - component: {fileID: 5838354295416471321}
   - component: {fileID: 5838354295416471322}
+  - component: {fileID: 5838354295416471324}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -5013,29 +5034,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 5838354295416471312}
---- !u!114 &5838354295416471317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5838354295416471310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aca1fc346609b54dbb0adba4664854b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 5838354295416471316}
-  m_MoveSpeed: 2
-  m_EnableStrafe: 1
-  m_UseGravity: 1
-  m_GravityApplicationMode: 0
-  m_ForwardSource: {fileID: 7769349776090934482}
-  m_InputBinding: 0
-  m_Controllers:
-  - {fileID: 5838354294593461055}
-  m_DeadzoneMin: 0.125
-  m_DeadzoneMax: 0.925
 --- !u!54 &5838354295416471318
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5063,9 +5061,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.2
-  m_Height: 1.5
+  m_Height: 1
   m_Direction: 1
-  m_Center: {x: 0, y: -0.4, z: 0}
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!114 &5838354295416471322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5109,38 +5107,58 @@ MonoBehaviour:
     m_ActionId: 48ab8a41-4219-4e81-b376-5ac6b89a1932
     m_ActionName: Player/Movement
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5838354295416471323}
+        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
+        m_MethodName: Look
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4be5d7ab-20ea-4c22-a318-a2295f3ae903
     m_ActionName: Player/New action
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5838354294593461056}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: Grab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5838354294002928960}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: Grab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 8cdb57fc-53c1-4631-a463-024478025fed
     m_ActionName: Player/New action
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5838354295416471323}
-        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
-        m_MethodName: HardenFist
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 2fc27d49-d03f-4c00-a1ee-9d63d3e85df7
     m_ActionName: Player/New action
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8d9757fd-d4a1-4425-afa3-a3ba243db61e
-    m_ActionName: Player/ReleaseHardening
-  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5838354295416471323}
-        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
-        m_MethodName: Jump
+      - m_Target: {fileID: 5838354294593461056}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: ReleaseGrab
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5150,8 +5168,72 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: f5816b09-b02e-482e-a19c-7a1238c2506e
-    m_ActionName: Player/Jump
+      - m_Target: {fileID: 5838354294002928960}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: ReleaseGrab
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: eae3842f-5219-4f47-babb-69782214b765
+    m_ActionName: Player/ReleaseGrab
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5838354295416471323}
+        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
+        m_MethodName: RemoveBlock
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bcf0fe36-4ae4-49cd-9214-b59380981fd9
+    m_ActionName: Player/RemoveBlock
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5838354295416471323}
+        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
+        m_MethodName: ZaWarudo
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7603bab7-5c8c-44a5-a02c-dd86f5e546f6
+    m_ActionName: Player/ZaWarudo
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 64e3c110-e38c-4adc-ae97-c0e909c62877
+    m_ActionName: Player/ReleaseHarden
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5838354295416471323}
+        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
+        m_MethodName: StopMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4665bdfb-b51d-438c-94d0-318bf824bdd5
+    m_ActionName: Player/StopMove
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Oculus
   m_DefaultActionMap: Player
@@ -5169,6 +5251,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67de63f361e9a24b88b9932a35198d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHardened: 0
+  inputSource: 4
+  rig: {fileID: 5838354295416471312}
+  ground:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  speed: 0
+  maxSpeed: 3
+  gravity: -9.82
+  fallingspeed: 1
+--- !u!143 &5838354295416471324
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838354295416471310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6045771742758272777
 GameObject:
   m_ObjectHideFlags: 0

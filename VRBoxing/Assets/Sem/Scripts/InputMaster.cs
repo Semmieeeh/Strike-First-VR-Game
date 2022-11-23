@@ -51,7 +51,16 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""id"": ""8cdb57fc-53c1-4631-a463-024478025fed"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReleaseGrab"",
+                    ""type"": ""Button"",
+                    ""id"": ""eae3842f-5219-4f47-babb-69782214b765"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1,behavior=1)"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -60,85 +69,57 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""id"": ""2fc27d49-d03f-4c00-a1ee-9d63d3e85df7"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""ReleaseHarden"",
                     ""type"": ""Button"",
-                    ""id"": ""f5816b09-b02e-482e-a19c-7a1238c2506e"",
+                    ""id"": ""64e3c110-e38c-4adc-ae97-c0e909c62877"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RemoveBlock"",
+                    ""type"": ""Button"",
+                    ""id"": ""bcf0fe36-4ae4-49cd-9214-b59380981fd9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ZaWarudo"",
+                    ""type"": ""Button"",
+                    ""id"": ""7603bab7-5c8c-44a5-a02c-dd86f5e546f6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""StopMove"",
+                    ""type"": ""Value"",
+                    ""id"": ""4665bdfb-b51d-438c-94d0-318bf824bdd5"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""f00780db-8386-41d5-8d61-075f301061ec"",
-                    ""path"": ""<XRController>{LeftHand}/thumbstick"",
-                    ""interactions"": ""Press"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/thumbstick"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""e5764b42-9b27-4cd8-bb4e-cab43f908914"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""fba1c322-9f3e-4b63-9c6d-bbb6a0cc8152"",
-                    ""path"": ""<Keyboard>/#(W)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""8dffa76f-b773-465d-a616-cf3cd58e84c5"",
-                    ""path"": ""<Keyboard>/#(S)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""b6aa9450-53e8-40cd-b82b-cb16623b7e91"",
-                    ""path"": ""<Keyboard>/#(A)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""d5b90ccb-7c35-4944-957e-44c0119d1cdf"",
-                    ""path"": ""<Keyboard>/#(D)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -154,7 +135,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""27b7ce97-a0fa-4079-8672-bfb19dbebe66"",
-                    ""path"": ""<XRController>{LeftHand}/gripPressed"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/gripPressed"",
                     ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
@@ -165,7 +146,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b9c1d795-c870-45c1-984f-3cbe3a00dc3f"",
-                    ""path"": ""<XRController>{RightHand}/gripPressed"",
+                    ""path"": ""<OculusTouchController>{RightHand}/gripPressed"",
                     ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
@@ -177,7 +158,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""d3141acc-34e5-47c0-a08f-7d4d46a19009"",
                     ""path"": ""<OculusTouchController>{LeftHand}/triggerPressed"",
-                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
                     ""action"": ""HardenFist"",
@@ -188,7 +169,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""5090cf43-8108-4ee1-af1c-9541aa258017"",
                     ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
                     ""action"": ""HardenFist"",
@@ -197,23 +178,78 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3536e99d-9b38-46ac-8e7a-fd8406c06a9e"",
+                    ""id"": ""8518ac62-644c-4fe8-a0b6-46cc22bb2d20"",
                     ""path"": ""<OculusTouchController>{RightHand}/primaryButton"",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""RemoveBlock"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3c1ed7cf-d0ab-4898-8a1b-36ac3882b3ce"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""b077f8e6-fe7e-42ec-8343-7434af08f1ce"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/primaryButton"",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""ZaWarudo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e98883a-66a0-4e2b-a932-e5acd518ad45"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/gripPressed"",
                     ""interactions"": ""Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
-                    ""action"": ""Jump"",
+                    ""action"": ""ReleaseGrab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b263c756-25ce-4877-a03b-a528a1f316f8"",
+                    ""path"": ""<OculusTouchController>{RightHand}/gripPressed"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""ReleaseGrab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ec4c908-ff36-4483-9a74-3b19062bf7af"",
+                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""ReleaseHarden"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""66f86c57-d412-449f-baac-b3a25d71cbea"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/triggerPressed"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""ReleaseHarden"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5e840ed2-3b9a-4365-9bb0-3ede80bf6e43"",
+                    ""path"": ""<XRController>{LeftHand}/joystick"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""StopMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -249,8 +285,12 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
+        m_Player_ReleaseGrab = m_Player.FindAction("ReleaseGrab", throwIfNotFound: true);
         m_Player_HardenFist = m_Player.FindAction("HardenFist", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_ReleaseHarden = m_Player.FindAction("ReleaseHarden", throwIfNotFound: true);
+        m_Player_RemoveBlock = m_Player.FindAction("RemoveBlock", throwIfNotFound: true);
+        m_Player_ZaWarudo = m_Player.FindAction("ZaWarudo", throwIfNotFound: true);
+        m_Player_StopMove = m_Player.FindAction("StopMove", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -313,8 +353,12 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Grab;
+    private readonly InputAction m_Player_ReleaseGrab;
     private readonly InputAction m_Player_HardenFist;
-    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_ReleaseHarden;
+    private readonly InputAction m_Player_RemoveBlock;
+    private readonly InputAction m_Player_ZaWarudo;
+    private readonly InputAction m_Player_StopMove;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -322,8 +366,12 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
+        public InputAction @ReleaseGrab => m_Wrapper.m_Player_ReleaseGrab;
         public InputAction @HardenFist => m_Wrapper.m_Player_HardenFist;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @ReleaseHarden => m_Wrapper.m_Player_ReleaseHarden;
+        public InputAction @RemoveBlock => m_Wrapper.m_Player_RemoveBlock;
+        public InputAction @ZaWarudo => m_Wrapper.m_Player_ZaWarudo;
+        public InputAction @StopMove => m_Wrapper.m_Player_StopMove;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -342,12 +390,24 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Grab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
                 @Grab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
                 @Grab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGrab;
+                @ReleaseGrab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseGrab;
+                @ReleaseGrab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseGrab;
+                @ReleaseGrab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseGrab;
                 @HardenFist.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
                 @HardenFist.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
                 @HardenFist.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
-                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @ReleaseHarden.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHarden;
+                @ReleaseHarden.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHarden;
+                @ReleaseHarden.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHarden;
+                @RemoveBlock.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
+                @RemoveBlock.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
+                @RemoveBlock.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
+                @ZaWarudo.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
+                @ZaWarudo.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
+                @ZaWarudo.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
+                @StopMove.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMove;
+                @StopMove.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMove;
+                @StopMove.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnStopMove;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -361,12 +421,24 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Grab.started += instance.OnGrab;
                 @Grab.performed += instance.OnGrab;
                 @Grab.canceled += instance.OnGrab;
+                @ReleaseGrab.started += instance.OnReleaseGrab;
+                @ReleaseGrab.performed += instance.OnReleaseGrab;
+                @ReleaseGrab.canceled += instance.OnReleaseGrab;
                 @HardenFist.started += instance.OnHardenFist;
                 @HardenFist.performed += instance.OnHardenFist;
                 @HardenFist.canceled += instance.OnHardenFist;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
+                @ReleaseHarden.started += instance.OnReleaseHarden;
+                @ReleaseHarden.performed += instance.OnReleaseHarden;
+                @ReleaseHarden.canceled += instance.OnReleaseHarden;
+                @RemoveBlock.started += instance.OnRemoveBlock;
+                @RemoveBlock.performed += instance.OnRemoveBlock;
+                @RemoveBlock.canceled += instance.OnRemoveBlock;
+                @ZaWarudo.started += instance.OnZaWarudo;
+                @ZaWarudo.performed += instance.OnZaWarudo;
+                @ZaWarudo.canceled += instance.OnZaWarudo;
+                @StopMove.started += instance.OnStopMove;
+                @StopMove.performed += instance.OnStopMove;
+                @StopMove.canceled += instance.OnStopMove;
             }
         }
     }
@@ -385,7 +457,11 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
+        void OnReleaseGrab(InputAction.CallbackContext context);
         void OnHardenFist(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
+        void OnReleaseHarden(InputAction.CallbackContext context);
+        void OnRemoveBlock(InputAction.CallbackContext context);
+        void OnZaWarudo(InputAction.CallbackContext context);
+        void OnStopMove(InputAction.CallbackContext context);
     }
 }
