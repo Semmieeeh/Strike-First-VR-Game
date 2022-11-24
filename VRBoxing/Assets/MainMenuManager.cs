@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 using Oculus.Interaction.PoseDetection;
-
+using Photon.Pun;
+using TMPro;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-public class MainMenuManager : MonoBehaviour
+public class MainMenuManager : MonoBehaviourPunCallbacks
 {
     [Tooltip("All The animators that get triggered whenever the play button is pressed on the start screen")]
     public AnimatorData[] gameStartAnimators;
@@ -20,6 +21,10 @@ public class MainMenuManager : MonoBehaviour
     public MenuPage[] menuPages;
 
     public float pageSwitchWaitTime;
+
+    [Header("Start Page Settings")]
+    public TextMeshProUGUI connectedText;
+    public AnimatorData connectedAnimator, createAnimator;
 
     [Header("Options Settings")]
     public Animator[] lineAnimators;
@@ -49,6 +54,39 @@ public class MainMenuManager : MonoBehaviour
             gameStartAnimators[i].Start();
         }
     }
+    #region Start Game
+
+    public async void OnEnterStart()
+    {
+        for (int i = 0; i < baseDisableAnimators.Length; i++)
+        {
+            baseDisableAnimators[i].Start();
+        }
+
+        await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
+
+        OpenPage("Start",true);
+    }
+    public async override void OnJoinedLobby()
+    {
+        connectedAnimator.Start();
+        await Task.Delay(ToMilliseconds(0.25f));
+
+        connectedText.text = "Connected";
+        createAnimator.animator.gameObject.SetActive(true);
+        createAnimator.Start();
+    }
+
+    public void PlayerJoinedRoom(ServerData server)
+    {
+        connectedText.text = "Joining..." + server.roomName;
+    }
+
+    public void TryCreateRoom(string roomName)
+    {
+        print("Room " + roomName + " created succesfully!");
+    }
+    #endregion
 
     #region Credits
     /// <summary>
