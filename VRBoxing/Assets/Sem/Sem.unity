@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 437960804}
   - component: {fileID: 437960803}
   - component: {fileID: 437960802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2934,8 +2934,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4879989170965674230}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.58, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.04, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2943,7 +2943,7 @@ Transform:
   - {fileID: 4879989170966029458}
   m_Father: {fileID: 5838354294002928958}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!4 &4879989170966029472
 Transform:
   m_ObjectHideFlags: 0
@@ -4354,7 +4354,7 @@ BoxCollider:
   m_GameObject: {fileID: 5838354294002928959}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4365,9 +4365,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5838354294002928959}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4879989170966029462}
@@ -4405,14 +4405,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5838354294002928959}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fafa1b6c046b3841b23564aa5bc80d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
   grabbed: 0
-  hand: {fileID: 0}
+  hand: {fileID: 5838354294002928959}
   grabObject: {fileID: 0}
   hardened: 0
 --- !u!95 &5838354294002928961
@@ -4423,7 +4423,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5838354294002928959}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d47ebf9744577d34988c2c2e1c1ed8bb, type: 2}
   m_CullingMode: 0
@@ -4567,8 +4567,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5838354294593461048}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.58, y: 0, z: 0}
+  m_LocalRotation: {x: -0.79916036, y: 0, z: 0, w: 0.60111797}
+  m_LocalPosition: {x: 0, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4576,7 +4576,7 @@ Transform:
   - {fileID: 636476070}
   m_Father: {fileID: 5838354294877644596}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -106.1, y: 0, z: 0}
 --- !u!114 &5838354294593461052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4792,7 +4792,7 @@ BoxCollider:
   m_GameObject: {fileID: 5838354294593461048}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -4841,7 +4841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canGrab: 0
   grabbed: 0
-  hand: {fileID: 0}
+  hand: {fileID: 5838354294593461048}
   grabObject: {fileID: 0}
   hardened: 0
 --- !u!95 &5838354294593461057
@@ -5133,18 +5133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5838354294002928960}
-        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
-        m_MethodName: HardenFist
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 2fc27d49-d03f-4c00-a1ee-9d63d3e85df7
     m_ActionName: Player/New action
   - m_PersistentCalls:
@@ -5209,18 +5197,6 @@ MonoBehaviour:
     m_ActionName: Player/ZaWarudo
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5838354294593461056}
-        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
-        m_MethodName: ReleaseHarden
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5838354294002928960}
         m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
         m_MethodName: ReleaseHarden
@@ -5235,6 +5211,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 64e3c110-e38c-4adc-ae97-c0e909c62877
     m_ActionName: Player/ReleaseHarden
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5838354294002928960}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: HardenFist
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 026752df-8cf0-4de3-922c-252c2b2834a1
+    m_ActionName: Player/HardenRightFist
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5838354294593461056}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: ReleaseHarden
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0163538a-8368-4679-9f2a-619585e1a8d9
+    m_ActionName: Player/ReleaseHardenLeft
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Oculus
   m_DefaultActionMap: Player
@@ -5261,7 +5269,8 @@ MonoBehaviour:
   speed: 0
   maxSpeed: 3
   gravity: -9.82
-  fallingspeed: 1
+  fallingspeed: 0
+  cameraOffset: 0
 --- !u!143 &5838354295416471324
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6669,7 +6678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8214811139856774249}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.029121809, y: -1.7763567e-16, z: -7.105427e-17}
+  m_LocalPosition: {x: -0.029121809, y: -1.776357e-16, z: -7.105427e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

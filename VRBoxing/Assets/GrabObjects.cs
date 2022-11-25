@@ -44,8 +44,8 @@ public class GrabObjects : MonoBehaviour
             Debug.Log("Tried to grab");
             if (canGrab && grabObject != null)
             {
-                grabObject.transform.position = hand.transform.position;
                 grabbed = true;
+                grabObject.transform.position = hand.transform.position;
                 Debug.Log("Grabbed");
             }
         }

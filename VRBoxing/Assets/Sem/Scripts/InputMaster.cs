@@ -64,7 +64,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""HardenFist"",
+                    ""name"": ""HardenLeftFist"",
                     ""type"": ""Button"",
                     ""id"": ""2fc27d49-d03f-4c00-a1ee-9d63d3e85df7"",
                     ""expectedControlType"": ""Button"",
@@ -73,9 +73,27 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""ReleaseHarden"",
+                    ""name"": ""HardenRightFist"",
+                    ""type"": ""Button"",
+                    ""id"": ""026752df-8cf0-4de3-922c-252c2b2834a1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ReleaseHardenRight"",
                     ""type"": ""Button"",
                     ""id"": ""64e3c110-e38c-4adc-ae97-c0e909c62877"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReleaseHardenLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""0163538a-8368-4679-9f2a-619585e1a8d9"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -152,18 +170,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""interactions"": ""Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
-                    ""action"": ""HardenFist"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""5090cf43-8108-4ee1-af1c-9541aa258017"",
-                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
-                    ""interactions"": ""Press(pressPoint=0.1)"",
-                    ""processors"": """",
-                    ""groups"": ""Oculus"",
-                    ""action"": ""HardenFist"",
+                    ""action"": ""HardenLeftFist"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -218,18 +225,29 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""interactions"": ""Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
-                    ""action"": ""ReleaseHarden"",
+                    ""action"": ""ReleaseHardenRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""66f86c57-d412-449f-baac-b3a25d71cbea"",
+                    ""id"": ""fadae63c-9738-4114-892e-be9569b0be66"",
+                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""HardenRightFist"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17377223-3932-4a46-b02a-5ca0fedce08e"",
                     ""path"": ""<OculusTouchController>{LeftHand}/triggerPressed"",
                     ""interactions"": ""Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
-                    ""action"": ""ReleaseHarden"",
+                    ""action"": ""ReleaseHardenLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -266,8 +284,10 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_ReleaseGrab = m_Player.FindAction("ReleaseGrab", throwIfNotFound: true);
-        m_Player_HardenFist = m_Player.FindAction("HardenFist", throwIfNotFound: true);
-        m_Player_ReleaseHarden = m_Player.FindAction("ReleaseHarden", throwIfNotFound: true);
+        m_Player_HardenLeftFist = m_Player.FindAction("HardenLeftFist", throwIfNotFound: true);
+        m_Player_HardenRightFist = m_Player.FindAction("HardenRightFist", throwIfNotFound: true);
+        m_Player_ReleaseHardenRight = m_Player.FindAction("ReleaseHardenRight", throwIfNotFound: true);
+        m_Player_ReleaseHardenLeft = m_Player.FindAction("ReleaseHardenLeft", throwIfNotFound: true);
         m_Player_RemoveBlock = m_Player.FindAction("RemoveBlock", throwIfNotFound: true);
         m_Player_ZaWarudo = m_Player.FindAction("ZaWarudo", throwIfNotFound: true);
     }
@@ -333,8 +353,10 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_ReleaseGrab;
-    private readonly InputAction m_Player_HardenFist;
-    private readonly InputAction m_Player_ReleaseHarden;
+    private readonly InputAction m_Player_HardenLeftFist;
+    private readonly InputAction m_Player_HardenRightFist;
+    private readonly InputAction m_Player_ReleaseHardenRight;
+    private readonly InputAction m_Player_ReleaseHardenLeft;
     private readonly InputAction m_Player_RemoveBlock;
     private readonly InputAction m_Player_ZaWarudo;
     public struct PlayerActions
@@ -345,8 +367,10 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @ReleaseGrab => m_Wrapper.m_Player_ReleaseGrab;
-        public InputAction @HardenFist => m_Wrapper.m_Player_HardenFist;
-        public InputAction @ReleaseHarden => m_Wrapper.m_Player_ReleaseHarden;
+        public InputAction @HardenLeftFist => m_Wrapper.m_Player_HardenLeftFist;
+        public InputAction @HardenRightFist => m_Wrapper.m_Player_HardenRightFist;
+        public InputAction @ReleaseHardenRight => m_Wrapper.m_Player_ReleaseHardenRight;
+        public InputAction @ReleaseHardenLeft => m_Wrapper.m_Player_ReleaseHardenLeft;
         public InputAction @RemoveBlock => m_Wrapper.m_Player_RemoveBlock;
         public InputAction @ZaWarudo => m_Wrapper.m_Player_ZaWarudo;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -370,12 +394,18 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ReleaseGrab.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseGrab;
                 @ReleaseGrab.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseGrab;
                 @ReleaseGrab.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseGrab;
-                @HardenFist.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
-                @HardenFist.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
-                @HardenFist.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenFist;
-                @ReleaseHarden.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHarden;
-                @ReleaseHarden.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHarden;
-                @ReleaseHarden.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHarden;
+                @HardenLeftFist.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenLeftFist;
+                @HardenLeftFist.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenLeftFist;
+                @HardenLeftFist.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenLeftFist;
+                @HardenRightFist.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenRightFist;
+                @HardenRightFist.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenRightFist;
+                @HardenRightFist.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHardenRightFist;
+                @ReleaseHardenRight.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenRight;
+                @ReleaseHardenRight.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenRight;
+                @ReleaseHardenRight.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenRight;
+                @ReleaseHardenLeft.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenLeft;
+                @ReleaseHardenLeft.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenLeft;
+                @ReleaseHardenLeft.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenLeft;
                 @RemoveBlock.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
                 @RemoveBlock.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
                 @RemoveBlock.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
@@ -398,12 +428,18 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ReleaseGrab.started += instance.OnReleaseGrab;
                 @ReleaseGrab.performed += instance.OnReleaseGrab;
                 @ReleaseGrab.canceled += instance.OnReleaseGrab;
-                @HardenFist.started += instance.OnHardenFist;
-                @HardenFist.performed += instance.OnHardenFist;
-                @HardenFist.canceled += instance.OnHardenFist;
-                @ReleaseHarden.started += instance.OnReleaseHarden;
-                @ReleaseHarden.performed += instance.OnReleaseHarden;
-                @ReleaseHarden.canceled += instance.OnReleaseHarden;
+                @HardenLeftFist.started += instance.OnHardenLeftFist;
+                @HardenLeftFist.performed += instance.OnHardenLeftFist;
+                @HardenLeftFist.canceled += instance.OnHardenLeftFist;
+                @HardenRightFist.started += instance.OnHardenRightFist;
+                @HardenRightFist.performed += instance.OnHardenRightFist;
+                @HardenRightFist.canceled += instance.OnHardenRightFist;
+                @ReleaseHardenRight.started += instance.OnReleaseHardenRight;
+                @ReleaseHardenRight.performed += instance.OnReleaseHardenRight;
+                @ReleaseHardenRight.canceled += instance.OnReleaseHardenRight;
+                @ReleaseHardenLeft.started += instance.OnReleaseHardenLeft;
+                @ReleaseHardenLeft.performed += instance.OnReleaseHardenLeft;
+                @ReleaseHardenLeft.canceled += instance.OnReleaseHardenLeft;
                 @RemoveBlock.started += instance.OnRemoveBlock;
                 @RemoveBlock.performed += instance.OnRemoveBlock;
                 @RemoveBlock.canceled += instance.OnRemoveBlock;
@@ -429,8 +465,10 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnReleaseGrab(InputAction.CallbackContext context);
-        void OnHardenFist(InputAction.CallbackContext context);
-        void OnReleaseHarden(InputAction.CallbackContext context);
+        void OnHardenLeftFist(InputAction.CallbackContext context);
+        void OnHardenRightFist(InputAction.CallbackContext context);
+        void OnReleaseHardenRight(InputAction.CallbackContext context);
+        void OnReleaseHardenLeft(InputAction.CallbackContext context);
         void OnRemoveBlock(InputAction.CallbackContext context);
         void OnZaWarudo(InputAction.CallbackContext context);
     }

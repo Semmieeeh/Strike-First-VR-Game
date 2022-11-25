@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using Unity.XR.CoreUtils;
 
+
 public class VRMovement : MonoBehaviour
 {
     Rigidbody rb;
@@ -18,6 +19,7 @@ public class VRMovement : MonoBehaviour
     public LayerMask ground;
     public float speed,maxSpeed;
     public float gravity, fallingspeed;
+    public float cameraOffset;
 
     
     void Start()
@@ -62,7 +64,7 @@ public class VRMovement : MonoBehaviour
     }
     public void Movement(InputAction.CallbackContext context)
     {
-        Debug.Log("Moving");
+        
         UnityEngine.XR.InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out inputAxis);
         speed += 8 * Time.deltaTime;
@@ -84,23 +86,14 @@ public class VRMovement : MonoBehaviour
         Vector3 direction = headDirection* new Vector3(inputAxis.x, y: 0, inputAxis.y);
         characterController.Move(direction * speed * Time.deltaTime);
 
-        bool grounded = CheckIfGrounded();
+        //bool grounded = CheckIfGrounded();
 
-        if (grounded)
-        {
-            fallingspeed = 0;
-        }
-        else
-        {
-            fallingspeed += gravity * Time.fixedDeltaTime;
-        }
-
-        characterController.Move(Vector3.up * fallingspeed * Time.fixedDeltaTime);
+        
     }
     public bool CheckIfGrounded()
     {
         Vector3 rayStart = transform.TransformPoint(characterController.center);
-        float rayLenth = characterController.center.y + 0.001f;
+        float rayLenth = characterController.center.y + cameraOffset + 0.001f;
         bool hasHit = Physics.SphereCast(rayStart, characterController.radius, Vector3.down, out RaycastHit hit, rayLenth, ground);
         return hasHit;
     }

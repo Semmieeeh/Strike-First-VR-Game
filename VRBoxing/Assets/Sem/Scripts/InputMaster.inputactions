@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HardenFist",
+                    "name": "HardenLeftFist",
                     "type": "Button",
                     "id": "2fc27d49-d03f-4c00-a1ee-9d63d3e85df7",
                     "expectedControlType": "Button",
@@ -51,9 +51,27 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "ReleaseHarden",
+                    "name": "HardenRightFist",
+                    "type": "Button",
+                    "id": "026752df-8cf0-4de3-922c-252c2b2834a1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "ReleaseHardenRight",
                     "type": "Button",
                     "id": "64e3c110-e38c-4adc-ae97-c0e909c62877",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReleaseHardenLeft",
+                    "type": "Button",
+                    "id": "0163538a-8368-4679-9f2a-619585e1a8d9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -130,18 +148,7 @@
                     "interactions": "Press(pressPoint=0.1)",
                     "processors": "",
                     "groups": "Oculus",
-                    "action": "HardenFist",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5090cf43-8108-4ee1-af1c-9541aa258017",
-                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
-                    "interactions": "Press(pressPoint=0.1)",
-                    "processors": "",
-                    "groups": "Oculus",
-                    "action": "HardenFist",
+                    "action": "HardenLeftFist",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -196,18 +203,29 @@
                     "interactions": "Press(pressPoint=0.1)",
                     "processors": "",
                     "groups": "Oculus",
-                    "action": "ReleaseHarden",
+                    "action": "ReleaseHardenRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "66f86c57-d412-449f-baac-b3a25d71cbea",
+                    "id": "fadae63c-9738-4114-892e-be9569b0be66",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "Oculus",
+                    "action": "HardenRightFist",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17377223-3932-4a46-b02a-5ca0fedce08e",
                     "path": "<OculusTouchController>{LeftHand}/triggerPressed",
                     "interactions": "Press(pressPoint=0.1)",
                     "processors": "",
                     "groups": "Oculus",
-                    "action": "ReleaseHarden",
+                    "action": "ReleaseHardenLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
