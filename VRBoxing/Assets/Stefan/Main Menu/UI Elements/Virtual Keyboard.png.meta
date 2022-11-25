@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: 3a4e024ae9e6bca498d61c42230211be
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Virtual Keyboard_0
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 641
+        width: 122
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 806a35b0c38ee3d4eb49e9ee913e4514
+      internalID: 1111849131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Virtual Keyboard_1
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 658
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc73050265673f45ac9925a50537093
+      internalID: -1069279248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Virtual Keyboard_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 572
+        width: 91
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e4ba41aaea4274185a0a60954d4e1f
+      internalID: 406583758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Virtual Keyboard_3
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 568
+        width: 108
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8784c8c34e85cac46acb11a145d85dca
+      internalID: -1262021322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ca90e27d886ab6543a509b806ad5f96e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Virtual Keyboard_11: 643756090
+      Virtual Keyboard_26: 890737143
+      Virtual Keyboard_3: -1262021322
+      Virtual Keyboard_50: -1713231911
+      Virtual Keyboard_47: -496333031
+      Virtual Keyboard_21: -215995820
+      Virtual Keyboard_9: 1109196415
+      Virtual Keyboard_40: -1245819817
+      Virtual Keyboard_49: -1295787215
+      Virtual Keyboard_45: -652049089
+      Virtual Keyboard_24: 2136840904
+      Virtual Keyboard_12: 1868702341
+      Virtual Keyboard_8: -1081844556
+      Virtual Keyboard_32: 589771247
+      Virtual Keyboard_33: 1975333488
+      Virtual Keyboard_16: 2066568434
+      Virtual Keyboard_52: -30529505
+      Virtual Keyboard_18: -666225164
+      Virtual Keyboard_36: 247000116
+      Virtual Keyboard_17: 153939346
+      Virtual Keyboard_34: 1945783012
+      Virtual Keyboard_5: -196441436
+      Virtual Keyboard_48: 1152989809
+      Virtual Keyboard_54: -1014871280
+      Virtual Keyboard_6: -764091392
+      Virtual Keyboard_22: -1790617748
+      Virtual Keyboard_37: 361915855
+      Virtual Keyboard_20: -45915072
+      Virtual Keyboard_19: -744738614
+      Virtual Keyboard_35: -451084626
+      Virtual Keyboard_43: 650551926
+      Virtual Keyboard_31: 1113847412
+      Virtual Keyboard_29: 1634966288
+      Virtual Keyboard_55: 1188044652
+      Virtual Keyboard_25: -563773189
+      Virtual Keyboard_23: 1774653535
+      Virtual Keyboard_10: -130887227
+      Virtual Keyboard_28: -918682267
+      Virtual Keyboard_13: 1368564331
+      Virtual Keyboard_53: 1945371541
+      Virtual Keyboard_30: 897462667
+      Virtual Keyboard_56: -1039251282
+      Virtual Keyboard_41: 1531699248
+      Virtual Keyboard_2: 406583758
+      Virtual Keyboard_0: 1111849131
+      Virtual Keyboard_46: 1191773350
+      Virtual Keyboard_39: 1433632449
+      Virtual Keyboard_7: 1580874110
+      Virtual Keyboard_15: 1681378502
+      Virtual Keyboard_4: 623479388
+      Virtual Keyboard_38: 1090114417
+      Virtual Keyboard_14: -60232571
+      Virtual Keyboard_42: -1933583373
+      Virtual Keyboard_44: -1552343308
+      Virtual Keyboard_57: -1830120197
+      Virtual Keyboard_51: -1046017633
+      Virtual Keyboard_27: 216121357
+      Virtual Keyboard_1: -1069279248
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
