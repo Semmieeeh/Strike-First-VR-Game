@@ -7895,10 +7895,8 @@ struct InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C  : public RuntimeOb
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Player_RemoveBlock_9;
 	// UnityEngine.InputSystem.InputAction InputMaster::m_Player_ZaWarudo
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Player_ZaWarudo_10;
-	// UnityEngine.InputSystem.InputAction InputMaster::m_Player_StopMove
-	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Player_StopMove_11;
 	// System.Int32 InputMaster::m_OculusSchemeIndex
-	int32_t ___m_OculusSchemeIndex_12;
+	int32_t ___m_OculusSchemeIndex_11;
 };
 
 // UnityEngine.XR.InputTracking
@@ -46299,6 +46297,10 @@ struct GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___hand_6;
 	// UnityEngine.GameObject GrabObjects::grabObject
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_7;
+	// UnityEngine.Animator GrabObjects::anim
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim_8;
+	// System.Boolean GrabObjects::hardened
+	bool ___hardened_9;
 };
 
 // OculusSampleFramework.GrabbableCrosshair

@@ -1562,6 +1562,7 @@ MonoBehaviour:
   grabbed: 0
   hand: {fileID: 0}
   grabObject: {fileID: 0}
+  hardened: 0
 --- !u!1 &6000297534956733110
 GameObject:
   m_ObjectHideFlags: 0
@@ -2328,6 +2329,7 @@ MonoBehaviour:
   grabbed: 0
   hand: {fileID: 0}
   grabObject: {fileID: 0}
+  hardened: 0
 --- !u!1 &7606879836190675311
 GameObject:
   m_ObjectHideFlags: 0

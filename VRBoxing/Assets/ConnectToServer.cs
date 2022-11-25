@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
+using System.Threading.Tasks;
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
@@ -12,15 +13,32 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public List<ServerData> activeServers = new();
 
     // Start is called before the first frame update
-    void Start()
+    public override void OnEnable()
     {
+        base.OnEnable();
         PhotonNetwork.ConnectUsingSettings();
+    }
+
+    public async void Disconnect()
+    {
+        GameManager.MainMenu.Disconnect();
+
+        await Task.Delay(1500);
+        PhotonNetwork.Disconnect();
     }
 
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinLobby();
     }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        print("disconnected!");
+        GameManager.MainMenu.OnExitStart();
+        PhotonNetwork.LeaveLobby();
+    }
+
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         print("ewgfaewgaesgtaesg");

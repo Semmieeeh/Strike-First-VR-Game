@@ -4963,10 +4963,8 @@ struct InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C  : public RuntimeOb
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Player_RemoveBlock_9;
 	// UnityEngine.InputSystem.InputAction InputMaster::m_Player_ZaWarudo
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Player_ZaWarudo_10;
-	// UnityEngine.InputSystem.InputAction InputMaster::m_Player_StopMove
-	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___m_Player_StopMove_11;
 	// System.Int32 InputMaster::m_OculusSchemeIndex
-	int32_t ___m_OculusSchemeIndex_12;
+	int32_t ___m_OculusSchemeIndex_11;
 };
 
 // UnityEngine.XR.InputTracking
@@ -28502,6 +28500,10 @@ struct GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___hand_6;
 	// UnityEngine.GameObject GrabObjects::grabObject
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___grabObject_7;
+	// UnityEngine.Animator GrabObjects::anim
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___anim_8;
+	// System.Boolean GrabObjects::hardened
+	bool ___hardened_9;
 };
 
 // OculusSampleFramework.GrabbableCrosshair
@@ -38106,9 +38108,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7043[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7044[2] = 
 {
 	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields, ___instance_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___mainMenuManager_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7045[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7045[6] = 
 {
-	static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canGrab_4)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabbed_5)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___hand_6)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabObject_7)),};
+	static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canGrab_4)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabbed_5)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___hand_6)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabObject_7)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___anim_8)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___hardened_9)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7047[2] = 
 {
 	static_cast<int32_t>(offsetof(MenuPage_t3D93868DAAB5E9B7443C65A3F120719C4DA85BA9, ___gameObject_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(MenuPage_t3D93868DAAB5E9B7443C65A3F120719C4DA85BA9, ___pageName_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
@@ -38544,9 +38546,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7212[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7213[1] = 
 {
 	static_cast<int32_t>(offsetof(PlayerActions_t711EEEC10CB153C4AAB5DD295521058D3E700153, ___m_Wrapper_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7215[13] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7215[12] = 
 {
-	static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___U3CassetU3Ek__BackingField_0)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_1)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_PlayerActionsCallbackInterface_2)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_Movement_3)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_Look_4)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_Grab_5)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_ReleaseGrab_6)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_HardenFist_7)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_ReleaseHarden_8)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_RemoveBlock_9)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_ZaWarudo_10)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_StopMove_11)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_OculusSchemeIndex_12)),};
+	static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___U3CassetU3Ek__BackingField_0)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_1)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_PlayerActionsCallbackInterface_2)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_Movement_3)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_Look_4)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_Grab_5)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_ReleaseGrab_6)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_HardenFist_7)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_ReleaseHarden_8)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_RemoveBlock_9)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_Player_ZaWarudo_10)),static_cast<int32_t>(offsetof(InputMaster_t20B780FF1DB8FA7ACA6AF24FCDEE8EB7359A697C, ___m_OculusSchemeIndex_11)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable7216[1] = 
 {
 	static_cast<int32_t>(offsetof(MoveCube_tFD726DFF601D0B3C939DF989C86D86ED0FF23E54, ___rb_4)),};

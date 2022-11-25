@@ -6,39 +6,52 @@ using System.Threading.Tasks;
 using Oculus.Interaction.PoseDetection;
 using Photon.Pun;
 using TMPro;
+using UnityEditor.MemoryProfiler;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 public class MainMenuManager : MonoBehaviourPunCallbacks
 {
+    public const int inspectorSpace = 8;
+
     [Tooltip("All The animators that get triggered whenever the play button is pressed on the start screen")]
     public AnimatorData[] gameStartAnimators;
 
+    [Space(inspectorSpace)]
     [Tooltip("All the animators that will get triggered whenever the player goes to a submenu")]
     public AnimatorData[] baseDisableAnimators;
 
+    [Space(inspectorSpace)]
     [Header("Menu Pages")]
     public MenuPage[] menuPages;
 
     public float pageSwitchWaitTime;
 
+    [Space(inspectorSpace)]
     [Header("Start Page Settings")]
     public TextMeshProUGUI connectedText;
-    public AnimatorData connectedAnimator, createAnimator;
+    public AnimatorData[] connectedAnimators, disconnectedAnimators;
+
+    [Space(inspectorSpace)]
+    public AnimatorData[] startEnableAnimators, startDisableAnimators;
+
+    [Space(inspectorSpace)]
+    public AnimatorData createLobbySettingsAnimator;
 
     [Header("Options Settings")]
     public Animator[] lineAnimators;
     public float lineToggleTime;
 
+    [Space(inspectorSpace)]
     public AnimatorData[] optionsEnableAnimators;
     public AnimatorData[] optionsDisableAnimators;
 
+    [Space(inspectorSpace)]
     public Animator optionsTabAnimator;
     public GameObject video, gameplay, _audio;
 
+    [Space(inspectorSpace)]
     [Header("Credits Settings")]
-
-
     public AnimatorData[] creditsEnableAnimators;
 
     public AnimatorData[] creditsExitAnimators;
@@ -66,15 +79,57 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
 
         OpenPage("Start",true);
+
+        connectedText.text = "Connecting to server...";
     }
+
+    public void ToggleCreateLobbySettings()
+    {
+        createLobbySettingsAnimator.animator.gameObject.SetActive(true);
+
+        createLobbySettingsAnimator.Start();
+    }
+    public async void OnExitStart()
+    {
+        connectedText.text = "Disconnected";
+
+        for (int i = 0; i < startDisableAnimators.Length; i++)
+        {
+            startDisableAnimators[i].Start();
+        }
+
+        await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
+
+        OpenPage("Main Screen", true);
+
+        for (int i = 0; i < gameStartAnimators.Length; i++)
+        {
+            gameStartAnimators[i].Start();
+        }
+    }
+
+    /// <summary>
+    /// Callback function whenever the player connected to the server
+    /// </summary>
     public async override void OnJoinedLobby()
     {
-        connectedAnimator.Start();
+        for (int i = 0; i < connectedAnimators.Length; i++)
+        {
+            connectedAnimators[i].Start();
+        }
         await Task.Delay(ToMilliseconds(0.25f));
 
         connectedText.text = "Connected";
-        createAnimator.animator.gameObject.SetActive(true);
-        createAnimator.Start();
+    }
+
+    public void Disconnect()
+    {
+        for (int i = 0; i < disconnectedAnimators.Length; i++)
+        {
+            disconnectedAnimators[i].Start();
+        }
+
+        connectedText.text = "Disconnecting...";
     }
 
     public void PlayerJoinedRoom(ServerData server)
@@ -84,6 +139,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     public void TryCreateRoom(string roomName)
     {
+        PhotonNetwork.CreateRoom(roomName);
         print("Room " + roomName + " created succesfully!");
     }
     #endregion
@@ -101,7 +157,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
         await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
         
-        OpenPage("Credits", false);
+        OpenPage("Credits", true);
         for (int i = 0; i < creditsEnableAnimators.Length; i++)
         {
             creditsEnableAnimators[i].Start();
