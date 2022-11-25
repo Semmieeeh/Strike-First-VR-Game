@@ -220,17 +220,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6ec4c908-ff36-4483-9a74-3b19062bf7af"",
-                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
-                    ""interactions"": ""Press(pressPoint=0.1)"",
-                    ""processors"": """",
-                    ""groups"": ""Oculus"",
-                    ""action"": ""ReleaseHardenRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""fadae63c-9738-4114-892e-be9569b0be66"",
                     ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
                     ""interactions"": ""Press(pressPoint=0.1)"",
@@ -248,6 +237,17 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Oculus"",
                     ""action"": ""ReleaseHardenLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ec4c908-ff36-4483-9a74-3b19062bf7af"",
+                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""ReleaseHardenRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }

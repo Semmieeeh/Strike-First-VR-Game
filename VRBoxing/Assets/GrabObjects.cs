@@ -23,7 +23,7 @@ public class GrabObjects : MonoBehaviour
         if (context.started)
         {
             hardened = true;
-            gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            hand.GetComponent<BoxCollider>().isTrigger = false;
             Debug.Log("Hardened");
         }
     }
@@ -32,7 +32,7 @@ public class GrabObjects : MonoBehaviour
         if (context.canceled)
         {
             hardened = false;
-            gameObject.GetComponent<BoxCollider>().isTrigger = true;
+            hand.GetComponent<BoxCollider>().isTrigger = true;
             Debug.Log("Un-hardened");
         }
     }
