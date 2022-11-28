@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Oculus.Interaction.PoseDetection;
 using Photon.Pun;
 using TMPro;
-using UnityEditor.MemoryProfiler;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -71,16 +70,17 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     public async void OnEnterStart()
     {
-        for (int i = 0; i < baseDisableAnimators.Length; i++)
-        {
-            baseDisableAnimators[i].Start();
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        //for (int i = 0; i < baseDisableAnimators.Length; i++)
+        //{
+        //    baseDisableAnimators[i].Start();
+        //}
 
-        await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
+        //await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
 
-        OpenPage("Start",true);
+        //OpenPage("Start",true);
 
-        connectedText.text = "Connecting to server...";
+        //connectedText.text = "Connecting to server...";
     }
 
     public void ToggleCreateLobbySettings()

@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Stefan/Main Menu.unity
     guid: e84c4ce34cd967340b411866cb908671
+  - enabled: 1
+    path: Assets/Sem/Sem.unity
+    guid: e8fc172aa461c6a448ef5e599eea47fb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
