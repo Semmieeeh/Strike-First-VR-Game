@@ -56,13 +56,14 @@ public class GrabObjects : MonoBehaviour
         if (context.canceled)
         {
             grabbed = false;
+            canGrab = false;
             Debug.Log("Released");
         }
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Grab")
+        if (other.gameObject.tag == "Fist")
         {
             canGrab = true;
             grabObject = other.transform.gameObject;
