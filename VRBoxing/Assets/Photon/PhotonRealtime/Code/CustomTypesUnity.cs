@@ -43,6 +43,8 @@ namespace Photon.Realtime
 
         #region Custom De/Serializer Methods
 
+
+
         public static readonly byte[] memVector3 = new byte[SizeV3];
 
         private static short SerializeVector3(StreamBuffer outStream, object customobject)

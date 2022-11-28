@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 using Oculus.Interaction.PoseDetection;
 using Photon.Pun;
 using TMPro;
+using Hastable = ExitGames.Client.Photon.Hashtable;
+using Photon.Realtime;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+
 public class MainMenuManager : MonoBehaviourPunCallbacks
 {
     public const int inspectorSpace = 8;
@@ -55,6 +59,10 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     public AnimatorData[] creditsExitAnimators;
 
+    private void Start()
+    {
+            
+    }
     /// <summary>
     /// Function called whenever the player pressed the Play button on the start screen
     /// </summary>
@@ -70,17 +78,16 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     public async void OnEnterStart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-        //for (int i = 0; i < baseDisableAnimators.Length; i++)
-        //{
-        //    baseDisableAnimators[i].Start();
-        //}
+        for (int i = 0; i < baseDisableAnimators.Length; i++)
+        {
+            baseDisableAnimators[i].Start();
+        }
 
-        //await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
+        await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
 
-        //OpenPage("Start",true);
+        OpenPage("Start",true);
 
-        //connectedText.text = "Connecting to server...";
+        connectedText.text = "Connecting to server...";
     }
 
     public void ToggleCreateLobbySettings()
@@ -122,6 +129,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         connectedText.text = "Connected";
     }
 
+    
     public void Disconnect()
     {
         for (int i = 0; i < disconnectedAnimators.Length; i++)
@@ -137,10 +145,32 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         connectedText.text = "Joining..." + server.roomName;
     }
 
-    public void TryCreateRoom(string roomName)
+    public bool TryCreateRoom(string roomName, int mapIndex, Sprite mapSprite)
     {
-        PhotonNetwork.CreateRoom(roomName);
-        print("Room " + roomName + " created succesfully!");
+        try
+        {
+            RoomOptions options = new RoomOptions()
+            {
+                IsVisible = true,
+                IsOpen = true,
+                MaxPlayers = 2,
+            };
+
+            Hastable customProperties = new Hastable();
+            customProperties.Add(ServerData.mapIndexProperty, mapIndex);
+
+            options.CustomRoomProperties = customProperties;
+            PhotonNetwork.CreateRoom(roomName, options);
+            PhotonNetwork.JoinRoom(roomName);
+
+
+            print("Room " + roomName + " created succesfully!");
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
     }
     #endregion
 

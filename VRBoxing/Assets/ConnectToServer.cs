@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Threading.Tasks;
+using Photon.Pun.Demo.Cockpit;
 
 public class ConnectToServer : MonoBehaviourPunCallbacks
 {
     public GameObject serverDataPrefab;
     public Transform canvas;
     public List<ServerData> activeServers = new();
+
+    public RoomCreator roomCreator;
 
     // Start is called before the first frame update
     public override void OnEnable()
@@ -38,7 +41,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
         GameManager.MainMenu.OnExitStart();
         PhotonNetwork.LeaveLobby();
     }
-
+    
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         print("ewgfaewgaesgtaesg");
@@ -53,7 +56,12 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
             var obj = Instantiate(serverDataPrefab, canvas).GetComponent<ServerData>();
             activeServers.Add(obj);
 
-            obj.roomName = roomList[i].Name;
+            var room = roomList[i];
+
+            int mapIndex = (int)room.CustomProperties[ServerData.mapIndexProperty];
+            var roomSprite = roomCreator.mapSprites[mapIndex-1];
+
+            obj.Initialize(room.Name,roomSprite ,mapIndex);
         }
     }
 }
