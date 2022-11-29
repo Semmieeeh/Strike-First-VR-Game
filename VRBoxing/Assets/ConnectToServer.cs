@@ -58,7 +58,12 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
             var room = roomList[i];
 
-            int mapIndex = (int)room.CustomProperties[ServerData.mapIndexProperty];
+            var properties = room.CustomProperties;
+            int mapIndex = 0;
+
+            if(properties != null)
+                mapIndex = (int)properties[ServerData.mapIndexProperty];
+
             var roomSprite = roomCreator.mapSprites[mapIndex-1];
 
             obj.Initialize(room.Name,roomSprite ,mapIndex);

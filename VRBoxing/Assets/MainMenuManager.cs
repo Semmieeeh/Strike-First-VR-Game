@@ -33,6 +33,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     [Space(inspectorSpace)]
     [Header("Start Page Settings")]
     public TextMeshProUGUI connectedText;
+    public GameObject servers;
     public AnimatorData[] connectedAnimators, disconnectedAnimators;
 
     [Space(inspectorSpace)]
@@ -58,6 +59,10 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public AnimatorData[] creditsEnableAnimators;
 
     public AnimatorData[] creditsExitAnimators;
+
+    [Header("Other")]
+    public RoomCreator roomCreator;
+
 
     private void Start()
     {
@@ -86,7 +91,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
 
         OpenPage("Start",true);
-
+        servers.SetActive(true);
         connectedText.text = "Connecting to server...";
     }
 
@@ -143,9 +148,23 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public void PlayerJoinedRoom(ServerData server)
     {
         connectedText.text = "Joining..." + server.roomName;
+        PhotonNetwork.JoinRoom(server.roomName);
     }
 
-    public bool TryCreateRoom(string roomName, int mapIndex, Sprite mapSprite)
+    public override void OnJoinedRoom()
+    {
+        PhotonNetwork.CurrentRoom.SetCustomProperties(roomCreator.GetCurrentProperties());
+
+        PhotonNetwork.LoadLevel(GetCurrentServerMapIndex());
+    }
+
+    public int mapSceneIndexOffset;
+    int GetCurrentServerMapIndex()
+    {
+        return mapSceneIndexOffset + (int)PhotonNetwork.CurrentRoom.CustomProperties[ServerData.mapIndexProperty];
+    }
+
+    public bool TryCreateRoom(string roomName, Hastable properties, Sprite mapSprite)
     {
         try
         {
@@ -156,12 +175,8 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
                 MaxPlayers = 2,
             };
 
-            Hastable customProperties = new Hastable();
-            customProperties.Add(ServerData.mapIndexProperty, mapIndex);
-
-            options.CustomRoomProperties = customProperties;
+            options.CustomRoomProperties = properties;
             PhotonNetwork.CreateRoom(roomName, options);
-            PhotonNetwork.JoinRoom(roomName);
 
 
             print("Room " + roomName + " created succesfully!");

@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using WebSocketSharp;
+using Hastable = ExitGames.Client.Photon.Hashtable;
 
 public class RoomCreator : MonoBehaviour
 {
@@ -14,16 +15,22 @@ public class RoomCreator : MonoBehaviour
     [Range(1,3)]
     public int mapIndex;
     public Sprite[] mapSprites;
-
     public void TryCreate()
     {
         if (!roomNameField.text.IsNullOrEmpty())
         {
-            if (GameManager.MainMenu.TryCreateRoom(roomNameField.text, mapIndex, mapSprites[mapIndex -1]))
+            if (GameManager.MainMenu.TryCreateRoom(roomNameField.text, GetCurrentProperties(), mapSprites[mapIndex -1]))
             {
                 Debug.Log("Room Succesfully Created!");
             }
         }
+    }
+
+    public Hastable GetCurrentProperties()
+    {
+        Hastable customProperties = new Hastable();
+        customProperties.Add(ServerData.mapIndexProperty, mapIndex);
+        return customProperties;
     }
 
     public void ScrollThroughLevel(int amount)
