@@ -20,20 +20,30 @@ public class VirtualKeyboard : MonoBehaviour
     public Vector3 targetScale;
     public Vector3 defaultScale;
 
+    public Transform player;
+    public float distanceFromPlayer;
     private void Start()
     {
         defaultScale = transform.localScale;
         transform.localScale = Vector3.zero;
-        gameObject.SetActive(false);
     }
     public void ToggleOn()
     {
-        gameObject.SetActive(true);
+        //gameObject.SetActive(true);
         targetScale = defaultScale;
+
+        transform.localScale = Vector3.zero;
+        transform.position = player.position + player.forward * distanceFromPlayer;
+
+        if (target)
+        {
+            current = target.text;
+        }
+        
     }
     public void ToggleOff()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
         targetScale = Vector3.zero;
     }
 
@@ -41,6 +51,7 @@ public class VirtualKeyboard : MonoBehaviour
     {
         currentText.text = current;
         transform.localScale = Vector3.SmoothDamp(transform.localScale, targetScale, ref scaleVelocity, scaleSmoothSpeed);
+        transform.rotation = Quaternion.LookRotation(player.forward, player.up);
     }
     public void AddKey(string key)
     {

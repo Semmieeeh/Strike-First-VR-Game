@@ -38,6 +38,10 @@ public class RoomCreator : MonoBehaviour
         customProperties.Add(ServerData.mapIndexProperty, mapIndex);
         return customProperties;
     }
+    private void OnEnable()
+    {
+        roomNameField.text = string.Empty;
+    }
 
     public void ScrollThroughLevel(int amount)
     {
