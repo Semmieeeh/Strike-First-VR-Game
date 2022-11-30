@@ -19,9 +19,9 @@ public class PlayerSync : MonoBehaviour
     {
         if (photon.IsMine)
         {
-            //head.gameObject.SetActive(false);
-            //leftHand.gameObject.SetActive(false);
-            //rightHand.gameObject.SetActive(false);
+            head.gameObject.SetActive(false);
+            leftHand.gameObject.SetActive(false);
+            rightHand.gameObject.SetActive(false);
 
 
             Pos(head, XRNode.Head);
