@@ -192,7 +192,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &5043111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -318,7 +319,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &7738747
 Transform:
   m_ObjectHideFlags: 0
@@ -547,7 +552,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &22672516
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -756,7 +762,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &30200760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -822,7 +829,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &30697979
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1130,7 +1138,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &51317184
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1322,7 +1331,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &61962031
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1928,7 +1938,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &86330056
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2313,7 +2324,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &112281139
 Transform:
   m_ObjectHideFlags: 0
@@ -2627,7 +2642,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &135092714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2805,7 +2821,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &148507853
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -2964,7 +2981,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &149380707
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3111,7 +3129,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &155082336
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -3709,7 +3728,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &207564010
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3824,7 +3844,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &211633311
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -4174,7 +4195,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &240689459
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -4303,7 +4325,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &252666083
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -4528,7 +4551,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &257061532
 Transform:
   m_ObjectHideFlags: 0
@@ -5046,7 +5073,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &317230067
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -5291,7 +5319,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &335537053
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -5549,7 +5578,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &360244157
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -5804,7 +5834,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &370801988
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5887,7 +5918,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &375839099
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -6032,7 +6064,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &376361896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6317,7 +6350,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &395658574
 Transform:
   m_ObjectHideFlags: 0
@@ -6387,7 +6424,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &401072646
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -6548,7 +6586,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &405444912
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -6724,7 +6763,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &414869300
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -7349,7 +7389,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &460979017
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -7785,7 +7826,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &490548329
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8120,7 +8162,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &503096754
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8395,7 +8438,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &517664454
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8524,7 +8568,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &520116216
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8701,7 +8746,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &529292630
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -8846,7 +8892,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &531527465
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -9023,7 +9070,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &542951967
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -9451,7 +9499,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &592687303
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -9892,7 +9941,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &626813001
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -10084,7 +10134,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &629758417
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -10373,7 +10424,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &648392862
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -10582,7 +10634,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &655540905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10728,7 +10781,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &664245767
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -10936,7 +10990,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &679162631
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -11376,7 +11431,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &710800175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11538,7 +11594,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &727632340
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -11638,7 +11695,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727853021}
-  m_LocalRotation: {x: 8.364196e-17, y: -1.5534073e-17, z: -0.14235, w: 0.9898164}
+  m_LocalRotation: {x: -0.09805696, y: 0.13756739, z: -0.21173675, w: 0.96261495}
   m_LocalPosition: {x: -0.03258824, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11646,7 +11703,7 @@ Transform:
   - {fileID: 1912277714}
   m_Father: {fileID: 1390303471}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.5, y: 18, z: -26}
 --- !u!1 &729033102
 GameObject:
   m_ObjectHideFlags: 0
@@ -11855,7 +11912,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &737921270
 Transform:
   m_ObjectHideFlags: 0
@@ -12114,7 +12175,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &771467666
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -12644,7 +12706,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &830614889
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12889,7 +12952,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &845423300
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -13046,7 +13110,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &852596706
 Transform:
   m_ObjectHideFlags: 0
@@ -13196,7 +13264,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &857912761
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -13421,7 +13490,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &864341873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13934,7 +14004,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &891314990
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14094,7 +14165,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &909202969
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14238,7 +14310,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &915392745
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14383,7 +14456,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &920638980
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14654,7 +14728,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &931821388
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -14971,7 +15046,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &938676558
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15197,7 +15273,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &972497979
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -15437,7 +15514,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &989273859
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -15629,7 +15707,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &998621120
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -15806,7 +15885,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1017233634
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -16354,7 +16434,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1057270852
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -16872,7 +16953,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1091787098
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17227,7 +17309,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &1113318832
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17608,7 +17691,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1136600766
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17800,7 +17884,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1139873014
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -17941,7 +18026,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &1141566599
 Transform:
   m_ObjectHideFlags: 0
@@ -18122,7 +18211,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1157759521
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -18283,7 +18373,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1166855376
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -19144,7 +19235,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1240394370
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -19504,7 +19596,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1246807060
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -19633,7 +19726,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1248300154
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -19933,7 +20027,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &1267821447
 Transform:
   m_ObjectHideFlags: 0
@@ -20135,7 +20233,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1273861111
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -20869,7 +20968,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &1310638005
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20968,7 +21068,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1315601228
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -21426,7 +21527,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1347427295
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -21634,7 +21736,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1366285933
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -22000,7 +22103,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1400965940
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -22209,7 +22313,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1405370337
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -22580,7 +22685,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1445167283
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -22821,7 +22927,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1459866413
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -23233,7 +23340,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1507183059
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -23362,7 +23470,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1509341698
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -23475,7 +23584,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1511661304
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -23620,7 +23730,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1520072907
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -24038,7 +24149,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1553119743
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -24199,7 +24311,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1560145853
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -25478,7 +25591,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1679420969
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -25669,7 +25783,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1687695368
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -26162,7 +26277,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!54 &1739527671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26261,7 +26377,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1741034625
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -26613,7 +26730,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1769928201
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -26907,7 +27025,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1792151796
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -27332,7 +27451,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1826208318
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -27444,7 +27564,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1826723690
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -27875,7 +27996,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &1855936141
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -28727,7 +28849,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &1894800096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29089,7 +29212,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912277713}
-  m_LocalRotation: {x: -3.3019005e-17, y: 6.6511964e-18, z: 0.008720745, w: 0.999962}
+  m_LocalRotation: {x: 0, y: 0, z: -0.52063715, w: 0.85377806}
   m_LocalPosition: {x: -0.026371535, y: 1.4210854e-16, z: -1.0658141e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -29097,7 +29220,7 @@ Transform:
   - {fileID: 1304877114}
   m_Father: {fileID: 727853022}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -62.75}
 --- !u!1 &1915004743
 GameObject:
   m_ObjectHideFlags: 0
@@ -29178,7 +29301,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &1915004745
 Transform:
   m_ObjectHideFlags: 0
@@ -29929,7 +30056,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &2016435449
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -30089,7 +30217,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &2019117856
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -30438,7 +30567,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 0
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &2035813584
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -30583,7 +30713,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &2038935512
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -30727,7 +30858,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &2039455650
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -31268,7 +31400,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &2074845677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31475,7 +31608,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &2093873514
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -31891,7 +32025,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 136
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!65 &2143854031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32278,7 +32413,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!1 &832887893882357896
 GameObject:
   m_ObjectHideFlags: 0
@@ -33337,7 +33473,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!4 &5110598497815759952
 Transform:
   m_ObjectHideFlags: 0
@@ -33416,7 +33553,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!144 &5133846974673380306
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -33703,7 +33841,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!4 &5544374600556439585
 Transform:
   m_ObjectHideFlags: 0
@@ -34004,8 +34143,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 4320616554957414338, guid: 4170d4d20a9b6034a88d89a71c2e0828,
-    type: 3}
+  m_ModelPrefab: {fileID: 0}
   m_ModelParent: {fileID: 0}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -34177,7 +34315,7 @@ GameObject:
   - component: {fileID: 5838354294002928962}
   m_Layer: 7
   m_Name: RightHand Controller
-  m_TagString: Fist
+  m_TagString: RightFist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34199,6 +34337,14 @@ MonoBehaviour:
   hand: {fileID: 5838354294002928959}
   grabObject: {fileID: 0}
   hardened: 0
+  canHarden: 0
+  handPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  timer: 0
+  speed: 0
 --- !u!95 &5838354294002928961
 Animator:
   serializedVersion: 4
@@ -34254,7 +34400,7 @@ GameObject:
   - component: {fileID: 5838354294593461058}
   m_Layer: 7
   m_Name: LeftHand Controller
-  m_TagString: Fist
+  m_TagString: LeftFist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34645,6 +34791,14 @@ MonoBehaviour:
   hand: {fileID: 5838354294593461048}
   grabObject: {fileID: 0}
   hardened: 0
+  canHarden: 0
+  handPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  timer: 0
+  speed: 0
 --- !u!95 &5838354294593461057
 Animator:
   serializedVersion: 4
@@ -35384,7 +35538,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!4 &6826106372096554021
 Transform:
   m_ObjectHideFlags: 0
@@ -35557,7 +35712,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!4 &7092591900106558179
 Transform:
   m_ObjectHideFlags: 0
@@ -35810,7 +35966,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!1 &7373766816958594079
 GameObject:
   m_ObjectHideFlags: 0
@@ -35970,7 +36127,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!4 &7769349776090934482
 Transform:
   m_ObjectHideFlags: 0
@@ -36244,7 +36402,11 @@ MonoBehaviour:
   hit: {fileID: 0}
   isOn: 0
   fpsCam: {fileID: 7769349776090934487}
+  limb: {fileID: 0}
   knockback: 20
+  health: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &8102509829131112592
 Transform:
   m_ObjectHideFlags: 0
@@ -37363,7 +37525,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!1 &8428318272443022123
 GameObject:
   m_ObjectHideFlags: 0
@@ -37488,7 +37651,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!4 &8704274006931851925
 Transform:
   m_ObjectHideFlags: 0
@@ -37695,7 +37859,8 @@ MonoBehaviour:
   hit:
     serializedVersion: 2
     m_Bits: 128
-  hand: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
 --- !u!4 &9222058331607060477
 Transform:
   m_ObjectHideFlags: 0

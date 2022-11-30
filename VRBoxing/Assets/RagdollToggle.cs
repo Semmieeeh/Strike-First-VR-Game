@@ -12,13 +12,23 @@ public class RagdollToggle : MonoBehaviour
     public GameObject hit;
     public bool isOn;
     public GameObject fpsCam;
+    public GameObject limb;
     public float knockback;
+    public float health;
+    public float maxHealth;
+    public float minHealth;
    
     void Start()
     {
-        
+        minHealth = 0;
+        maxHealth = 100;
+        health = maxHealth;
         isOn = false;
         GetRagdoll();
+        foreach(Rigidbody rb in ragdollLimbs)
+        {
+            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        }
         RagdollOff();
     }
   
@@ -33,16 +43,11 @@ public class RagdollToggle : MonoBehaviour
         foreach (Rigidbody rb in ragdollLimbs)
         {
             rb.isKinematic = false;
-            foreach(Rigidbody rigid in ragdollLimbs)
-            {
-                
-                rb.AddForce(hit.transform.forward * knockback* 10f, ForceMode.Force);
-            }
+            //rb.AddForce(hit.transform.forward * 10f, ForceMode.Impulse);
         }
         isOn = true;
        
     }
-    
     public void RagdollOff()
     {
         
@@ -52,7 +57,10 @@ public class RagdollToggle : MonoBehaviour
         }
         
     }
-
+    public void TakeDamage(float damage)
+    {
+        health -= damage;   
+    }
 
     public void OnCollisionEnter(Collision collision)
     {

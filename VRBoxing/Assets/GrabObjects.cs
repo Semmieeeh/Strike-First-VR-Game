@@ -12,15 +12,22 @@ public class GrabObjects : MonoBehaviour
     public GameObject grabObject;
     Animator anim;
     public bool hardened;
+    public bool canHarden;
+    public Vector3[] handPos = new Vector3[4];
+    public float timer;
+    int handPosCount = 0;
+    public float speed;
+
     void Start()
     {
-        hand = gameObject;  
+        hand = gameObject;
+        canHarden = true;
         anim = GetComponent<Animator>();
     }
 
     public void HardenFist(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && canHarden == true)
         {
             hardened = true;
             hand.GetComponent<BoxCollider>().isTrigger = false;
@@ -29,53 +36,62 @@ public class GrabObjects : MonoBehaviour
     }
     public void ReleaseHarden(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        if (context.canceled && hardened == true)
         {
             hardened = false;
             hand.GetComponent<BoxCollider>().isTrigger = true;
             Debug.Log("Un-hardened");
         }
     }
-    public void Grab(InputAction.CallbackContext context)
-    {
-
-        if (context.started)
-        {
-            Debug.Log("Tried to grab");
-            if (canGrab && grabObject != null)
-            {
-                grabbed = true;
-                grabObject.transform.position = hand.transform.position;
-                Debug.Log("Grabbed");
-            }
-        }
-    }
-
-    public void ReleaseGrab(InputAction.CallbackContext context)
-    {
-        if (context.canceled)
-        {
-            grabbed = false;
-            canGrab = false;
-            Debug.Log("Released");
-        }
-    }
+    
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Fist")
         {
-            canGrab = true;
+            //canGrab = true;
             grabObject = other.transform.gameObject;
         }
         else if(grabbed != true)
         {
-            canGrab = false;
+            //canGrab = false;
             grabObject = null;
         }
     }
     private void Update()
     {
         anim.SetBool("Hardened", hardened);
+        timer += Time.deltaTime;
+        if(timer > 0.1f)
+        {
+            if(handPosCount < 4)
+            {
+                handPosCount++;
+            }
+            timer = 0;
+            handPos[3] = handPos[2];
+            handPos[2] = handPos[1];
+            handPos[1] = handPos[0];
+            handPos[0] = transform.position;
+        }
+        
+        if(handPosCount == 4)
+        {
+            speed = Vector3.Distance(handPos[3], handPos[2]) + Vector3.Distance(handPos[2], handPos[1]) + Vector3.Distance(handPos[1], handPos[0]);
+            speed = speed / 3;
+            speed = speed * 100;
+
+        }
+
+
+
+
+    }
+    public IEnumerator ReAppear()
+    {
+        yield return new WaitForSeconds(3);
+        transform.GetChild(0).gameObject.SetActive(true);
+        hardened = false;
+        canHarden = true;
     }
 }

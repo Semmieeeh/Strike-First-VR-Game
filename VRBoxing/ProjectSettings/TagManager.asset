@@ -9,6 +9,8 @@ TagManager:
   - Main
   - Bullet
   - Fist
+  - LeftFist
+  - RightFist
   layers:
   - Default
   - TransparentFX
