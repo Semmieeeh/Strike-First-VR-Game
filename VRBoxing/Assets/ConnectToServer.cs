@@ -24,6 +24,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public async void Disconnect()
     {
+        ClearServerList();
         GameManager.MainMenu.Disconnect();
 
         await Task.Delay(1500);
@@ -44,29 +45,65 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+        ClearServerList();
+        for (int i = 0; i < roomList.Count; i++)
+        {
+            var room = roomList[i];
+
+            ServerData obj = Instantiate(serverDataPrefab, canvas).GetComponent<ServerData>();
+
+            activeServers.Add(obj);
+
+            //Determine if the serer is full
+            bool isRoomFull = room.PlayerCount >= room.MaxPlayers;
+
+            obj.SetServerColor(isRoomFull);
+
+
+            int mapIndex = ReadMapIndexFromName(room.Name);
+
+            var roomSprite = roomCreator.mapSprites[mapIndex-1];
+
+            obj.Initialize(room.Name,roomSprite ,mapIndex);
+        }
+    }
+
+    public int ReadMapIndexFromName(string name)
+    {
+        int current = -1;
+
+        char[] maps = new char[]
+        {
+            '1',
+            '2',
+            '3'
+        };
+
+        for (int i = 0; i < maps.Length; i++)
+        {
+            if (name.StartsWith(maps[i]))
+            {
+                current = i + 1;
+
+                break;
+            }
+        }
+
+        return current;
+    }
+
+    public override void OnDisable()
+    {
+        ClearServerList();
+    }
+
+    public void ClearServerList()
+    {
         print("ewgfaewgaesgtaesg");
         for (int i = 0; i < activeServers.Count; i++)
         {
             Destroy(activeServers[i].gameObject);
         }
         activeServers.Clear();
-
-        for (int i = 0; i < roomList.Count; i++)
-        {
-            var obj = Instantiate(serverDataPrefab, canvas).GetComponent<ServerData>();
-            activeServers.Add(obj);
-
-            var room = roomList[i];
-
-            var properties = room.CustomProperties;
-            int mapIndex = 0;
-
-            if(properties != null)
-                mapIndex = (int)properties[ServerData.mapIndexProperty];
-
-            var roomSprite = roomCreator.mapSprites[mapIndex-1];
-
-            obj.Initialize(room.Name,roomSprite ,mapIndex);
-        }
     }
 }

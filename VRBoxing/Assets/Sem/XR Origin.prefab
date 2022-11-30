@@ -1626,6 +1626,7 @@ MonoBehaviour:
   maxSpeed: 3
   gravity: -9.82
   fallingspeed: 1
+  cameraOffset: 0
 --- !u!114 &6000297534956733096
 MonoBehaviour:
   m_ObjectHideFlags: 0

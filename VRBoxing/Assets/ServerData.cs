@@ -12,10 +12,16 @@ public class ServerData : MonoBehaviourPunCallbacks
     public string roomName;
     public int mapIndex;
     public Sprite levelSprite;
+    public bool isServerFull;
 
-    [Header("References")]
-    public TextMeshProUGUI mapIndexText;
-    public Image mapImage; 
+    [Header("Data References")]
+    public TextMeshProUGUI mapNameText;
+    public Image mapImage;
+
+    [Header("Visual References")]
+    public Image border;
+    public TextMeshProUGUI JoinText;
+    public Color fullColor, notFullColor;
 
     public const string mapIndexProperty = "M";
 
@@ -25,14 +31,26 @@ public class ServerData : MonoBehaviourPunCallbacks
         this.levelSprite = levelSprite;
         this.mapIndex = mapIndex;
 
-        mapIndexText.text = mapIndex.ToString();
+        mapNameText.text = roomName;
         mapImage.sprite = levelSprite;
     }
 
     public void JoinServer()
     {
-        PhotonNetwork.JoinRoom(roomName);
+        if (isServerFull) return;
+
         GameManager.MainMenu.PlayerJoinedRoom(this);
+    }
+
+    public void SetServerColor(bool full)
+    {
+        isServerFull = full;
+        Color currentColor = full ? fullColor : notFullColor;
+
+        border.color = currentColor;
+        mapNameText.color = currentColor;
+        JoinText.color = currentColor;
+        JoinText.text = full ? "" : "JOIN SERVER";
     }
 
 }

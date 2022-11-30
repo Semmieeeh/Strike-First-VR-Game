@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Stefan/Main Menu.unity
     guid: e84c4ce34cd967340b411866cb908671
   - enabled: 1
+    path: Assets/Boxing Scenes/TEST SCENE.unity
+    guid: bc34a8fa089335942a2651da11e291d0
+  - enabled: 1
     path: Assets/Boxing Scenes/Scene 1.unity
     guid: 091bdfd633e5d1b45a565c0300391cf6
   - enabled: 1

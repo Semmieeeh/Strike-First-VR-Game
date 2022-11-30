@@ -15,11 +15,17 @@ public class RoomCreator : MonoBehaviour
     [Range(1,3)]
     public int mapIndex;
     public Sprite[] mapSprites;
+
+    public Hastable currentProperties;
+
     public void TryCreate()
     {
         if (!roomNameField.text.IsNullOrEmpty())
         {
-            if (GameManager.MainMenu.TryCreateRoom(roomNameField.text, GetCurrentProperties(), mapSprites[mapIndex -1]))
+            string name = /*mapIndex.ToString()*/ 1+" " + roomNameField.text;
+
+            currentProperties = GetCurrentProperties();
+            if (GameManager.MainMenu.TryCreateRoom(name, currentProperties))
             {
                 Debug.Log("Room Succesfully Created!");
             }

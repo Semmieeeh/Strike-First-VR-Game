@@ -153,7 +153,8 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.CurrentRoom.SetCustomProperties(roomCreator.GetCurrentProperties());
+        if(createdRoom)
+        PhotonNetwork.CurrentRoom.SetCustomProperties(properties);
 
         PhotonNetwork.LoadLevel(GetCurrentServerMapIndex());
     }
@@ -164,28 +165,28 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         return mapSceneIndexOffset + (int)PhotonNetwork.CurrentRoom.CustomProperties[ServerData.mapIndexProperty];
     }
 
-    public bool TryCreateRoom(string roomName, Hastable properties, Sprite mapSprite)
+    public bool createdRoom;
+    public Hastable properties;
+    public bool TryCreateRoom(string roomName, Hastable properties)
     {
-        try
+        bool succeeded = false;
+
+        RoomOptions options = new RoomOptions()
         {
-            RoomOptions options = new RoomOptions()
-            {
-                IsVisible = true,
-                IsOpen = true,
-                MaxPlayers = 2,
-            };
+            IsVisible = true,
+            IsOpen = true,
+            MaxPlayers = 2,
+        };
 
-            options.CustomRoomProperties = properties;
-            PhotonNetwork.CreateRoom(roomName, options);
+        options.CustomRoomProperties = properties;
+        succeeded = PhotonNetwork.CreateRoom(roomName, options);
 
+        print(properties.ToString());
+        print("Room " + roomName + " created succesfully!");
 
-            print("Room " + roomName + " created succesfully!");
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
+        createdRoom = true;
+        this.properties = properties;
+        return succeeded;
     }
     #endregion
 
