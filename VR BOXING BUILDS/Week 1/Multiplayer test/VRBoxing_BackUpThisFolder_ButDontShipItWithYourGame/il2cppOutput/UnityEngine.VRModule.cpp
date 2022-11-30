@@ -320,6 +320,25 @@ inline void Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline (Ac
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Boolean UnityEngine.XR.XRSettings::get_showDeviceView()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694 (const RuntimeMethod* method) 
+{
+	typedef bool (*XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694_ftn) ();
+	static XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (XRSettings_get_showDeviceView_m19D1D18E4CB66C282A27C6B5082F58F5B86D0694_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRSettings::get_showDeviceView()");
+	bool icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
+// System.Void UnityEngine.XR.XRSettings::set_showDeviceView(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8 (bool ___value0, const RuntimeMethod* method) 
+{
+	typedef void (*XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8_ftn) (bool);
+	static XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (XRSettings_set_showDeviceView_m308871D4216C8EA4922D51021BA0DDA50DFBD9D8_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRSettings::set_showDeviceView(System.Boolean)");
+	_il2cpp_icall_func(___value0);
+}
 // System.Int32 UnityEngine.XR.XRSettings::get_eyeTextureWidth()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t XRSettings_get_eyeTextureWidth_m3B18AF3F3382398E2A818B2B01AA1FE90FEB3AAF (const RuntimeMethod* method) 
 {

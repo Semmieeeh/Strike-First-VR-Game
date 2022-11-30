@@ -25896,6 +25896,28 @@ IL_0107:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_47, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&String_StartsWith_mA2A4405B1B9F3653A6A9AA7F223F68D86A0C6264_RuntimeMethod_var)));
 	}
 }
+// System.Boolean System.String::StartsWith(System.Char)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_StartsWith_mB6075CE4A782B5C7C421A7EEF0DA640F7D58C91E (String_t* __this, Il2CppChar ___value0, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0;
+		L_0 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(__this, NULL);
+		if (!L_0)
+		{
+			goto IL_0012;
+		}
+	}
+	{
+		Il2CppChar L_1 = __this->____firstChar_5;
+		Il2CppChar L_2 = ___value0;
+		return (bool)((((int32_t)L_1) == ((int32_t)L_2))? 1 : 0);
+	}
+
+IL_0012:
+	{
+		return (bool)0;
+	}
+}
 // System.Void System.String::CheckStringComparison(System.StringComparison)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void String_CheckStringComparison_m371C3E880F2FD08C36F503FCFFCFE355D350AE41 (int32_t ___comparisonType0, const RuntimeMethod* method) 
 {

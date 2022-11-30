@@ -200,7 +200,7 @@ const Il2CppCodeRegistration g_CodeRegistration =
 	g_Il2CppInvokerPointers,
 	1870,
 	g_UnresolvedVirtualMethodPointers,
-	1065,
+	1066,
 	g_Il2CppInteropData,
 	0,
 	NULL,

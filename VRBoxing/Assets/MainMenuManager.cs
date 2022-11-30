@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 using Oculus.Interaction.PoseDetection;
 using Photon.Pun;
 using TMPro;
+using Hastable = ExitGames.Client.Photon.Hashtable;
+using Photon.Realtime;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+
 public class MainMenuManager : MonoBehaviourPunCallbacks
 {
     public const int inspectorSpace = 8;
@@ -29,6 +33,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     [Space(inspectorSpace)]
     [Header("Start Page Settings")]
     public TextMeshProUGUI connectedText;
+    public GameObject servers;
     public AnimatorData[] connectedAnimators, disconnectedAnimators;
 
     [Space(inspectorSpace)]
@@ -55,6 +60,14 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     public AnimatorData[] creditsExitAnimators;
 
+    [Header("Other")]
+    public RoomCreator roomCreator;
+
+
+    private void Start()
+    {
+            
+    }
     /// <summary>
     /// Function called whenever the player pressed the Play button on the start screen
     /// </summary>
@@ -70,17 +83,16 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     public async void OnEnterStart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
-        //for (int i = 0; i < baseDisableAnimators.Length; i++)
-        //{
-        //    baseDisableAnimators[i].Start();
-        //}
+        for (int i = 0; i < baseDisableAnimators.Length; i++)
+        {
+            baseDisableAnimators[i].Start();
+        }
 
-        //await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
+        await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
 
-        //OpenPage("Start",true);
-
-        //connectedText.text = "Connecting to server...";
+        OpenPage("Start",true);
+        servers.SetActive(true);
+        connectedText.text = "Connecting to server...";
     }
 
     public void ToggleCreateLobbySettings()
@@ -122,6 +134,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         connectedText.text = "Connected";
     }
 
+    
     public void Disconnect()
     {
         for (int i = 0; i < disconnectedAnimators.Length; i++)
@@ -135,12 +148,45 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public void PlayerJoinedRoom(ServerData server)
     {
         connectedText.text = "Joining..." + server.roomName;
+        PhotonNetwork.JoinRoom(server.roomName);
     }
 
-    public void TryCreateRoom(string roomName)
+    public override void OnJoinedRoom()
     {
-        PhotonNetwork.CreateRoom(roomName);
+        if(createdRoom)
+        PhotonNetwork.CurrentRoom.SetCustomProperties(properties);
+
+        PhotonNetwork.LoadLevel(GetCurrentServerMapIndex());
+    }
+
+    public int mapSceneIndexOffset;
+    int GetCurrentServerMapIndex()
+    {
+        return mapSceneIndexOffset + (int)PhotonNetwork.CurrentRoom.CustomProperties[ServerData.mapIndexProperty];
+    }
+
+    public bool createdRoom;
+    public Hastable properties;
+    public bool TryCreateRoom(string roomName, Hastable properties)
+    {
+        bool succeeded = false;
+
+        RoomOptions options = new RoomOptions()
+        {
+            IsVisible = true,
+            IsOpen = true,
+            MaxPlayers = 2,
+        };
+
+        options.CustomRoomProperties = properties;
+        succeeded = PhotonNetwork.CreateRoom(roomName, options);
+
+        print(properties.ToString());
         print("Room " + roomName + " created succesfully!");
+
+        createdRoom = true;
+        this.properties = properties;
+        return succeeded;
     }
     #endregion
 
