@@ -1245,6 +1245,7 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=100
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D100_t31353965748512750AD1146F898DF113F5863D58 
 {
 	union
@@ -1258,8 +1259,10 @@ struct __StaticArrayInitTypeSizeU3D100_t31353965748512750AD1146F898DF113F5863D58
 		uint8_t __StaticArrayInitTypeSizeU3D100_t31353965748512750AD1146F898DF113F5863D58__padding[100];
 	};
 };
+#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=20
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D20_t1449E635E32A89423960AEA56E4EDFF525C3EEDE 
 {
 	union
@@ -1273,8 +1276,10 @@ struct __StaticArrayInitTypeSizeU3D20_t1449E635E32A89423960AEA56E4EDFF525C3EEDE
 		uint8_t __StaticArrayInitTypeSizeU3D20_t1449E635E32A89423960AEA56E4EDFF525C3EEDE__padding[20];
 	};
 };
+#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D24_t226C5F521B67F6FD3E9C29695114434A267A6141 
 {
 	union
@@ -1288,8 +1293,10 @@ struct __StaticArrayInitTypeSizeU3D24_t226C5F521B67F6FD3E9C29695114434A267A6141
 		uint8_t __StaticArrayInitTypeSizeU3D24_t226C5F521B67F6FD3E9C29695114434A267A6141__padding[24];
 	};
 };
+#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=460
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D460_t4ABB4E2DEDD6BE50A063561639D025CC2BDD5394 
 {
 	union
@@ -1303,8 +1310,10 @@ struct __StaticArrayInitTypeSizeU3D460_t4ABB4E2DEDD6BE50A063561639D025CC2BDD5394
 		uint8_t __StaticArrayInitTypeSizeU3D460_t4ABB4E2DEDD6BE50A063561639D025CC2BDD5394__padding[460];
 	};
 };
+#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=928
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D928_t45F2AF81CEF7FEE66F2B125F3B3A10AF7C990C44 
 {
 	union
@@ -1318,6 +1327,7 @@ struct __StaticArrayInitTypeSizeU3D928_t45F2AF81CEF7FEE66F2B125F3B3A10AF7C990C44
 		uint8_t __StaticArrayInitTypeSizeU3D928_t45F2AF81CEF7FEE66F2B125F3B3A10AF7C990C44__padding[928];
 	};
 };
+#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.InputBindingCompositeContext/PartBinding
 struct PartBinding_tB263B939F5CC92F02FD1C8892A194F9BC8A53D38 

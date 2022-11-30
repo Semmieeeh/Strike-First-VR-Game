@@ -2429,6 +2429,7 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=112
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D112_t3634DC8000B09BC9B0CCFCCA5B7FF92AE5FB2971 
 {
 	union
@@ -2442,8 +2443,10 @@ struct __StaticArrayInitTypeSizeU3D112_t3634DC8000B09BC9B0CCFCCA5B7FF92AE5FB2971
 		uint8_t __StaticArrayInitTypeSizeU3D112_t3634DC8000B09BC9B0CCFCCA5B7FF92AE5FB2971__padding[112];
 	};
 };
+#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12
+#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D12_t2075943EB4AAA12F6AE68BBCD8EFE67B74570C3B 
 {
 	union
@@ -2457,6 +2460,7 @@ struct __StaticArrayInitTypeSizeU3D12_t2075943EB4AAA12F6AE68BBCD8EFE67B74570C3B
 		uint8_t __StaticArrayInitTypeSizeU3D12_t2075943EB4AAA12F6AE68BBCD8EFE67B74570C3B__padding[12];
 	};
 };
+#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>
 struct U3CPrivateImplementationDetailsU3E_t9B0B2A8DD3C1F36C25925A26EB3ED0CB0DF8189E  : public RuntimeObject
