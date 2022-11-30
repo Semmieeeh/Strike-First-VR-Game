@@ -7416,8 +7416,18 @@ struct VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D  : public MonoB
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___currentText_4;
 	// System.String VirtualKeyboard::current
 	String_t* ___current_5;
+	// TMPro.TMP_InputField VirtualKeyboard::target
+	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* ___target_6;
 	// System.Text.StringBuilder VirtualKeyboard::sb
-	StringBuilder_t* ___sb_6;
+	StringBuilder_t* ___sb_7;
+	// System.Single VirtualKeyboard::scaleSmoothSpeed
+	float ___scaleSmoothSpeed_8;
+	// UnityEngine.Vector3 VirtualKeyboard::scaleVelocity
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___scaleVelocity_9;
+	// UnityEngine.Vector3 VirtualKeyboard::targetScale
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___targetScale_10;
+	// UnityEngine.Vector3 VirtualKeyboard::defaultScale
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___defaultScale_11;
 };
 
 // VolumeAndPlaneSwitcher
@@ -10856,6 +10866,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_SetException_mD9A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncVoidMethodBuilder_SetResult_m008490FDF057D5F5D871F537C7A58BE36027F3DC (AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.ScriptableObject::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScriptableObject__ctor_mD037FDB0B487295EA47F79A4DB1BF1846C9087FF (ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A* __this, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::SmoothDamp(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3&,System.Single)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_SmoothDamp_mF673AC30464B7DF671A0556140EB6E9DD75827ED_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___current0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___target1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___currentVelocity2, float ___smoothTime3, const RuntimeMethod* method) ;
 // System.Text.StringBuilder System.Text.StringBuilder::Append(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringBuilder_t* StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D (StringBuilder_t* __this, String_t* ___value0, const RuntimeMethod* method) ;
 // System.Text.StringBuilder System.Text.StringBuilder::Clear()
@@ -10864,6 +10876,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringBuilder_t* StringBuilder_Clear_m2D76F65
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t StringBuilder_get_Length_mDEA041E7357C68CC3B5885276BB403676DAAE0D8 (StringBuilder_t* __this, const RuntimeMethod* method) ;
 // System.Text.StringBuilder System.Text.StringBuilder::Remove(System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringBuilder_t* StringBuilder_Remove_m0D93692674D1C09795C7D6542420A3B6C5F81E90 (StringBuilder_t* __this, int32_t ___startIndex0, int32_t ___length1, const RuntimeMethod* method) ;
+// System.Void TMPro.TMP_InputField::set_text(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62 (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, String_t* ___value0, const RuntimeMethod* method) ;
+// System.Void VirtualKeyboard::ToggleOff()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_ToggleOff_mD3DA9798A5548839488D19064C4B35D902EFC56F (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, const RuntimeMethod* method) ;
 // System.Void System.Text.StringBuilder::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D (StringBuilder_t* __this, const RuntimeMethod* method) ;
 // UnityEngine.XR.Management.XRGeneralSettings UnityEngine.XR.Management.XRGeneralSettings::get_Instance()
@@ -11331,6 +11347,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_HSVToRGB_m8FA653F8C22366CB1AA90891822B889C59162AAF (float ___H0, float ___S1, float ___V2, bool ___hdr3, const RuntimeMethod* method) ;
 // UnityEngine.Quaternion UnityEngine.Quaternion::Internal_FromEulerRad(UnityEngine.Vector3)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Internal_FromEulerRad_m66D4475341F53949471E6870FB5C5E4A5E9BA93E (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___euler0, const RuntimeMethod* method) ;
+// UnityEngine.Vector3 UnityEngine.Vector3::SmoothDamp(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3&,System.Single,System.Single,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_SmoothDamp_mAF61EA22D4906BF87DD00A91FB4F6AC0C54C495A (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___current0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___target1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___currentVelocity2, float ___smoothTime3, float ___maxSpeed4, float ___deltaTime5, const RuntimeMethod* method) ;
 // System.Void System.Array::Clear(System.Array,System.Int32,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___array0, int32_t ___index1, int32_t ___length2, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Vector3::Magnitude(UnityEngine.Vector3)
@@ -27256,18 +27274,106 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Section__ctor_m5F732533E4DFC0167D965E5F5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void VirtualKeyboard::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_Start_m882B5846BB605C1B90A70961457FC34B7FEBEA0E (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, const RuntimeMethod* method) 
+{
+	{
+		// defaultScale = transform.localScale;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
+		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_0);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Transform_get_localScale_m804A002A53A645CDFCD15BB0F37209162720363F(L_0, NULL);
+		__this->___defaultScale_11 = L_1;
+		// transform.localScale = Vector3.zero;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
+		L_3 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		NullCheck(L_2);
+		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_2, L_3, NULL);
+		// gameObject.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
+		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_4);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
+		// }
+		return;
+	}
+}
+// System.Void VirtualKeyboard::ToggleOn()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_ToggleOn_m33F1DD1AA66530D1A8C669916E0929CA38825478 (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, const RuntimeMethod* method) 
+{
+	{
+		// gameObject.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
+		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_0);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
+		// targetScale = defaultScale;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = __this->___defaultScale_11;
+		__this->___targetScale_10 = L_1;
+		// }
+		return;
+	}
+}
+// System.Void VirtualKeyboard::ToggleOff()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_ToggleOff_mD3DA9798A5548839488D19064C4B35D902EFC56F (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, const RuntimeMethod* method) 
+{
+	{
+		// gameObject.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
+		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_0);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
+		// targetScale = Vector3.zero;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
+		L_1 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
+		__this->___targetScale_10 = L_1;
+		// }
+		return;
+	}
+}
+// System.Void VirtualKeyboard::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_Update_m8D2221EA4CCF8BF6874BE7602EB270D92BC2FA80 (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, const RuntimeMethod* method) 
+{
+	{
+		// currentText.text = current;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___currentText_4;
+		String_t* L_1 = __this->___current_5;
+		NullCheck(L_0);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, L_1);
+		// transform.localScale = Vector3.SmoothDamp(transform.localScale, targetScale, ref scaleVelocity, scaleSmoothSpeed);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
+		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
+		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_3);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
+		L_4 = Transform_get_localScale_m804A002A53A645CDFCD15BB0F37209162720363F(L_3, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = __this->___targetScale_10;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_6 = (&__this->___scaleVelocity_9);
+		float L_7 = __this->___scaleSmoothSpeed_8;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
+		L_8 = Vector3_SmoothDamp_mF673AC30464B7DF671A0556140EB6E9DD75827ED_inline(L_4, L_5, L_6, L_7, NULL);
+		NullCheck(L_2);
+		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_2, L_8, NULL);
+		// }
+		return;
+	}
+}
 // System.Void VirtualKeyboard::AddKey(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_AddKey_mB3AA88627A57C8089A21B53B064FC7E1B0FCCFD4 (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, String_t* ___key0, const RuntimeMethod* method) 
 {
 	{
 		// sb.Append(key);
-		StringBuilder_t* L_0 = __this->___sb_6;
+		StringBuilder_t* L_0 = __this->___sb_7;
 		String_t* L_1 = ___key0;
 		NullCheck(L_0);
 		StringBuilder_t* L_2;
 		L_2 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_0, L_1, NULL);
 		// current = sb.ToString();
-		StringBuilder_t* L_3 = __this->___sb_6;
+		StringBuilder_t* L_3 = __this->___sb_7;
 		NullCheck(L_3);
 		String_t* L_4;
 		L_4 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_3);
@@ -27282,12 +27388,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_ResetInput_m3D2B78DDFCBC
 {
 	{
 		// sb.Clear();
-		StringBuilder_t* L_0 = __this->___sb_6;
+		StringBuilder_t* L_0 = __this->___sb_7;
 		NullCheck(L_0);
 		StringBuilder_t* L_1;
 		L_1 = StringBuilder_Clear_m2D76F6533574F40A4E3E2DC4E730277CBD0AF8F6(L_0, NULL);
 		// current = sb.ToString();
-		StringBuilder_t* L_2 = __this->___sb_6;
+		StringBuilder_t* L_2 = __this->___sb_7;
 		NullCheck(L_2);
 		String_t* L_3;
 		L_3 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_2);
@@ -27302,8 +27408,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_RemoveCharacter_m9D238CE
 {
 	{
 		// sb.Remove(sb.Length -1, 1);
-		StringBuilder_t* L_0 = __this->___sb_6;
-		StringBuilder_t* L_1 = __this->___sb_6;
+		StringBuilder_t* L_0 = __this->___sb_7;
+		StringBuilder_t* L_1 = __this->___sb_7;
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = StringBuilder_get_Length_mDEA041E7357C68CC3B5885276BB403676DAAE0D8(L_1, NULL);
@@ -27311,7 +27417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_RemoveCharacter_m9D238CE
 		StringBuilder_t* L_3;
 		L_3 = StringBuilder_Remove_m0D93692674D1C09795C7D6542420A3B6C5F81E90(L_0, ((int32_t)il2cpp_codegen_subtract(L_2, 1)), 1, NULL);
 		// current = sb.ToString();
-		StringBuilder_t* L_4 = __this->___sb_6;
+		StringBuilder_t* L_4 = __this->___sb_7;
 		NullCheck(L_4);
 		String_t* L_5;
 		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(3 /* System.String System.Object::ToString() */, L_4);
@@ -27321,23 +27427,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_RemoveCharacter_m9D238CE
 		return;
 	}
 }
-// System.Void VirtualKeyboard::Update()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_Update_m8D2221EA4CCF8BF6874BE7602EB270D92BC2FA80 (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, const RuntimeMethod* method) 
-{
-	{
-		// currentText.text = current;
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___currentText_4;
-		String_t* L_1 = __this->___current_5;
-		NullCheck(L_0);
-		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, L_1);
-		// }
-		return;
-	}
-}
 // System.Void VirtualKeyboard::Apply()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard_Apply_mF7FBAD9E23A9FC3BF9AD3FD7E89841E5660FAFA5 (VirtualKeyboard_t061F6FD67A7187036A0D5BFF6576E3F6F245CF1D* __this, const RuntimeMethod* method) 
 {
 	{
+		// target.text = current;
+		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_0 = __this->___target_6;
+		String_t* L_1 = __this->___current_5;
+		NullCheck(L_0);
+		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(L_0, L_1, NULL);
+		// current = null;
+		__this->___current_5 = (String_t*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___current_5), (void*)(String_t*)NULL);
+		// ToggleOff();
+		VirtualKeyboard_ToggleOff_mD3DA9798A5548839488D19064C4B35D902EFC56F(__this, NULL);
 		// }
 		return;
 	}
@@ -27356,8 +27459,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VirtualKeyboard__ctor_m4D41E406E95930B4A
 		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_0, NULL);
-		__this->___sb_6 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___sb_6), (void*)L_0);
+		__this->___sb_7 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___sb_7), (void*)L_0);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
@@ -34559,6 +34662,35 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC
 		// get => m_Camera;
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_0 = __this->___m_Camera_4;
 		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_SmoothDamp_mF673AC30464B7DF671A0556140EB6E9DD75827ED_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___current0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___target1, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___currentVelocity2, float ___smoothTime3, const RuntimeMethod* method) 
+{
+	float V_0 = 0.0f;
+	float V_1 = 0.0f;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		float L_0;
+		L_0 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
+		V_0 = L_0;
+		V_1 = (std::numeric_limits<float>::infinity());
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___current0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = ___target1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_3 = ___currentVelocity2;
+		float L_4 = ___smoothTime3;
+		float L_5 = V_1;
+		float L_6 = V_0;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
+		L_7 = Vector3_SmoothDamp_mAF61EA22D4906BF87DD00A91FB4F6AC0C54C495A(L_1, L_2, L_3, L_4, L_5, L_6, NULL);
+		V_2 = L_7;
+		goto IL_001b;
+	}
+
+IL_001b:
+	{
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_2;
+		return L_8;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* XRManagerSettings_get_activeLoaders_m47D0FF16B7012A87F56D93124DC5D8DA0ACA591F_inline (XRManagerSettings_t7923B66EB3FEE58C7B9F85FF61749B774D3B9E52* __this, const RuntimeMethod* method) 
