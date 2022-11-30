@@ -14,7 +14,7 @@ public class RemoveIfNotMine : MonoBehaviourPun
         {
             for (int i = 0; i < toRemove.Length; i++)
             {
-                PhotonNetwork.Destroy(toRemove[i]);
+                Destroy(toRemove[i]);
             }
 
             Debug.Log("Removed Succesfully!");
