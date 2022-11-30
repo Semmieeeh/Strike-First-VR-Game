@@ -2470,7 +2470,6 @@ struct X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE  : pu
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=5
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D5_tCD7BCD2AB59A787CF4B5A85EEDE01FEBBBA4F273 
 {
 	union
@@ -2484,7 +2483,6 @@ struct __StaticArrayInitTypeSizeU3D5_tCD7BCD2AB59A787CF4B5A85EEDE01FEBBBA4F273
 		uint8_t __StaticArrayInitTypeSizeU3D5_tCD7BCD2AB59A787CF4B5A85EEDE01FEBBBA4F273__padding[5];
 	};
 };
-#pragma pack(pop, tp)
 
 // Interop/Kernel32/FILE_TIME
 struct FILE_TIME_tBD950B410C18B85474477EEA8F3651A2BD367965 

@@ -6470,7 +6470,6 @@ struct HmdRect2_t_tAF394D41DC1EEC399E9D2B45C173C3504AA23C74
 };
 
 // UnityEngine.InputSystem.LowLevel.IMECompositionString
-#pragma pack(push, tp, 1)
 struct IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E 
 {
 	union
@@ -6508,7 +6507,6 @@ struct IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E
 		uint8_t IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E__padding[132];
 	};
 };
-#pragma pack(pop, tp)
 // Native definition for P/Invoke marshalling of UnityEngine.InputSystem.LowLevel.IMECompositionString
 struct IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E_marshaled_pinvoke
 {
@@ -6926,7 +6924,6 @@ struct Pose_t3BF6349DC18B6BAF6A192896C06390F3A907CF10_marshaled_com
 };
 
 // UnityEngine.InputSystem.XR.PoseState
-#pragma pack(push, tp, 1)
 struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2 
 {
 	union
@@ -7016,7 +7013,6 @@ struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2
 		uint8_t PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2__padding[60];
 	};
 };
-#pragma pack(pop, tp)
 // Native definition for P/Invoke marshalling of UnityEngine.InputSystem.XR.PoseState
 struct PoseState_t1455185C7AA7AC8BCD6767AABF0AC47367FB99D2_marshaled_pinvoke
 {
@@ -7499,7 +7495,6 @@ struct Touch_t03E51455ED508492B3F278903A0114FA0E87B417
 };
 
 // UnityEngine.InputSystem.LowLevel.TouchState
-#pragma pack(push, tp, 1)
 struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97 
 {
 	union
@@ -7667,7 +7662,6 @@ struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97
 		uint8_t TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97__padding[56];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.UIElements.TransformOrigin
 struct TransformOrigin_tD11A368A96C0771398EBB4E6D435318AC0EF8502 

@@ -1963,7 +1963,6 @@ struct WaitForSecondsRealtime_tA8CE0AAB4B0C872B843E7973637037D17682BA01  : publi
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=13
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D13_tB4D4C39ADAB2F68C29D8E4E332C05D5F6F56FB7A 
 {
 	union
@@ -1977,7 +1976,6 @@ struct __StaticArrayInitTypeSizeU3D13_tB4D4C39ADAB2F68C29D8E4E332C05D5F6F56FB7A
 		uint8_t __StaticArrayInitTypeSizeU3D13_tB4D4C39ADAB2F68C29D8E4E332C05D5F6F56FB7A__padding[13];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>
 struct U3CPrivateImplementationDetailsU3E_t6C220874B8288F2E9E07FEA41E6C8D50B90BBFF5  : public RuntimeObject

@@ -5158,7 +5158,6 @@ struct OVRSpace_tDA5A6DB241624CD5712AC4A71E565BA171985B4D
 };
 
 // System.Collections.Concurrent.PaddedHeadAndTail
-#pragma pack(push, tp, 1)
 struct PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8 
 {
 	union
@@ -5198,7 +5197,6 @@ struct PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8
 		uint8_t PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8__padding[384];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.PhysicsScene
 struct PhysicsScene_t55222DD37072E8560EE054A07C0E3FE391D9D9DE 
@@ -7165,7 +7163,6 @@ struct GlyphAdjustmentRecord_tC7A1B2E0AC7C4ED9CDB8E95E48790A46B6F315F7
 };
 
 // UnityEngine.InputSystem.LowLevel.IMECompositionString
-#pragma pack(push, tp, 1)
 struct IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E 
 {
 	union
@@ -7203,7 +7200,6 @@ struct IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E
 		uint8_t IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E__padding[132];
 	};
 };
-#pragma pack(pop, tp)
 // Native definition for P/Invoke marshalling of UnityEngine.InputSystem.LowLevel.IMECompositionString
 struct IMECompositionString_tE204556D15A112A43E86FBF18FE4A5B8AD96161E_marshaled_pinvoke
 {

@@ -1989,7 +1989,6 @@ struct Mathf_tE284D016E3B297B72311AAD9EB8F0E643F6A4682_StaticFields
 };
 
 // UnityEngineInternal.Input.NativeInputEvent
-#pragma pack(push, tp, 1)
 struct NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8 
 {
 	union
@@ -2076,7 +2075,6 @@ struct NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8
 		uint8_t NativeInputEvent_tDE7DE9A48ACA442A8D37E2920836D00C26408CB8__padding[20];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.UI.Navigation
 struct Navigation_t4D2E201D65749CF4E104E8AC1232CF1D6F14795C 
@@ -3177,7 +3175,6 @@ struct U3CstateDataU3Ee__FixedBuffer_t00ED1E0C66E396C0021CE2F46B671748BC5E5FEC
 };
 
 // UnityEngine.InputSystem.Switch.SwitchProControllerHID/SwitchFullInputReport
-#pragma pack(push, tp, 1)
 struct SwitchFullInputReport_t8A4DB23E47F8B73F7DBF172F8932BA15C141B9CC 
 {
 	union
@@ -3319,7 +3316,6 @@ struct SwitchFullInputReport_t8A4DB23E47F8B73F7DBF172F8932BA15C141B9CC
 		uint8_t SwitchFullInputReport_t8A4DB23E47F8B73F7DBF172F8932BA15C141B9CC__padding[25];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.Switch.SwitchProControllerHID/SwitchHIDGenericInputReport
 struct SwitchHIDGenericInputReport_t0E4B3A4C170228E09D591E4827C8D0E0F1CFA9DD 
@@ -3341,7 +3337,6 @@ struct SwitchHIDGenericInputReport_t0E4B3A4C170228E09D591E4827C8D0E0F1CFA9DD
 };
 
 // UnityEngine.InputSystem.Switch.SwitchProControllerHID/SwitchInputOnlyReport
-#pragma pack(push, tp, 1)
 struct SwitchInputOnlyReport_t1A519D3B9C1524FA0F25B7140F74732F856948D4 
 {
 	union
@@ -3444,10 +3439,8 @@ struct SwitchInputOnlyReport_t1A519D3B9C1524FA0F25B7140F74732F856948D4
 		uint8_t SwitchInputOnlyReport_t1A519D3B9C1524FA0F25B7140F74732F856948D4__padding[7];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.Switch.SwitchProControllerHID/SwitchMagicOutputReport
-#pragma pack(push, tp, 1)
 struct SwitchMagicOutputReport_t70BCD39473C2245A8263971A5948F27C75DAA84A 
 {
 	union
@@ -3485,10 +3478,8 @@ struct SwitchMagicOutputReport_t70BCD39473C2245A8263971A5948F27C75DAA84A
 		uint8_t SwitchMagicOutputReport_t70BCD39473C2245A8263971A5948F27C75DAA84A__padding[49];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.Switch.SwitchProControllerHID/SwitchSimpleInputReport
-#pragma pack(push, tp, 1)
 struct SwitchSimpleInputReport_t3591D2A4B7396D61CCB1E1ABC9F08560816125A2 
 {
 	union
@@ -3604,7 +3595,6 @@ struct SwitchSimpleInputReport_t3591D2A4B7396D61CCB1E1ABC9F08560816125A2
 		uint8_t SwitchSimpleInputReport_t3591D2A4B7396D61CCB1E1ABC9F08560816125A2__padding[12];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.Layouts.InputControlLayout/Builder/ControlBuilder
 struct ControlBuilder_tA18891EC8D7AA5AB0C3AF2B2BB82244BBFCA6F50 
@@ -4060,7 +4050,6 @@ struct GCHandle_tC44F6F72EE68BD4CFABA24309DA7A179D41127DC
 };
 
 // UnityEngine.InputSystem.LowLevel.InputDeviceCommand
-#pragma pack(push, tp, 1)
 struct InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E 
 {
 	union
@@ -4098,7 +4087,6 @@ struct InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E
 		uint8_t InputDeviceCommand_t219FD4502984D73D423496E4A2ED7FDB6CBE710E__padding[8];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.Layouts.InputDeviceMatcher
 struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555 
@@ -4132,7 +4120,6 @@ struct InputDeviceMatcher_tF9BA551C8BB4AE41672366A7EBEA951543E0C555_marshaled_co
 };
 
 // UnityEngine.InputSystem.LowLevel.InputEvent
-#pragma pack(push, tp, 1)
 struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5 
 {
 	union
@@ -4159,7 +4146,6 @@ struct InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5
 		uint8_t InputEvent_t10F727342D1A79DCFC06529C203BB61C194AEBC5__padding[20];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.LowLevel.InputStateBlock
 struct InputStateBlock_t0E05211ACF29A99C0FE7FC9EA7042196BFF1F3B5 
@@ -4248,7 +4234,6 @@ struct InputUserSettings_t8B4C7CB5336B67CBC87F9F114AEAC5FE81D76F89  : public Run
 };
 
 // UnityEngine.InputSystem.LowLevel.MouseState
-#pragma pack(push, tp, 1)
 struct MouseState_t0D9AD9D7629CA3F363E7C2AFD710A11D965408E1 
 {
 	union
@@ -4338,7 +4323,6 @@ struct MouseState_t0D9AD9D7629CA3F363E7C2AFD710A11D965408E1
 		uint8_t MouseState_t0D9AD9D7629CA3F363E7C2AFD710A11D965408E1__padding[30];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.UI.NavigationModel
 struct NavigationModel_t6B51B0BA26B0D874FF92F039259B0E6B74E427C2 
@@ -4520,7 +4504,6 @@ struct RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B
 };
 
 // UnityEngine.InputSystem.Switch.LowLevel.SwitchProControllerHIDInputState
-#pragma pack(push, tp, 1)
 struct SwitchProControllerHIDInputState_tA7A5FA1C4F61222CF8F69BEA3891C9D4B3618B83 
 {
 	union
@@ -4610,7 +4593,6 @@ struct SwitchProControllerHIDInputState_tA7A5FA1C4F61222CF8F69BEA3891C9D4B3618B8
 		uint8_t SwitchProControllerHIDInputState_tA7A5FA1C4F61222CF8F69BEA3891C9D4B3618B83__padding[7];
 	};
 };
-#pragma pack(pop, tp)
 
 struct SwitchProControllerHIDInputState_tA7A5FA1C4F61222CF8F69BEA3891C9D4B3618B83_StaticFields
 {
@@ -4939,7 +4921,6 @@ struct Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3  : public Object_tC12
 };
 
 // UnityEngine.InputSystem.LowLevel.DeltaStateEvent
-#pragma pack(push, tp, 1)
 struct DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859 
 {
 	union
@@ -5011,7 +4992,6 @@ struct DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859
 		uint8_t DeltaStateEvent_tC11D9B5FD8A535C2D998D30F8624E6533044D859__padding[29];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.UI.ExtendedAxisEventData
 struct ExtendedAxisEventData_tC7D1E741A0DC9D38AA34796CE774908D95936D96  : public AxisEventData_t4AA742BC101B1AA300B16EE7F19E31B91F37A938
@@ -5299,7 +5279,6 @@ struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com 
 };
 
 // UnityEngine.InputSystem.LowLevel.StateEvent
-#pragma pack(push, tp, 1)
 struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F 
 {
 	union
@@ -5356,7 +5335,6 @@ struct StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F
 		uint8_t StateEvent_tB93D5F08B084A2BC9FFC71B084409DBBD2516C0F__padding[25];
 	};
 };
-#pragma pack(pop, tp)
 
 // System.SystemException
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
@@ -5584,7 +5562,6 @@ struct ButtonState_tC90005D9F1E87688352A8F97B40400D0319CFC69_marshaled_com
 };
 
 // UnityEngine.InputSystem.Switch.SwitchProControllerHID/SwitchMagicOutputHIDBluetooth
-#pragma pack(push, tp, 1)
 struct SwitchMagicOutputHIDBluetooth_t2C429523E3B3F580E4DC1A047FFDF325947FFF9F 
 {
 	union
@@ -5622,10 +5599,8 @@ struct SwitchMagicOutputHIDBluetooth_t2C429523E3B3F580E4DC1A047FFDF325947FFF9F
 		uint8_t SwitchMagicOutputHIDBluetooth_t2C429523E3B3F580E4DC1A047FFDF325947FFF9F__padding[57];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.InputSystem.Switch.SwitchProControllerHID/SwitchMagicOutputHIDUSB
-#pragma pack(push, tp, 1)
 struct SwitchMagicOutputHIDUSB_t192B092D590FCF67604174F3681F8D29F4544368 
 {
 	union
@@ -5663,7 +5638,6 @@ struct SwitchMagicOutputHIDUSB_t192B092D590FCF67604174F3681F8D29F4544368
 		uint8_t SwitchMagicOutputHIDUSB_t192B092D590FCF67604174F3681F8D29F4544368__padding[72];
 	};
 };
-#pragma pack(pop, tp)
 
 // System.Action`1<System.Object>
 struct Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87  : public MulticastDelegate_t
@@ -6656,32 +6630,34 @@ struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931  : public UIBehaviour_t
 	bool ___m_SkipMaterialUpdate_9;
 	// System.Boolean UnityEngine.UI.Graphic::m_RaycastTarget
 	bool ___m_RaycastTarget_10;
+	// System.Boolean UnityEngine.UI.Graphic::m_RaycastTargetCache
+	bool ___m_RaycastTargetCache_11;
 	// UnityEngine.Vector4 UnityEngine.UI.Graphic::m_RaycastPadding
-	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___m_RaycastPadding_11;
+	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___m_RaycastPadding_12;
 	// UnityEngine.RectTransform UnityEngine.UI.Graphic::m_RectTransform
-	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_RectTransform_12;
+	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___m_RectTransform_13;
 	// UnityEngine.CanvasRenderer UnityEngine.UI.Graphic::m_CanvasRenderer
-	CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* ___m_CanvasRenderer_13;
+	CanvasRenderer_tAB9A55A976C4E3B2B37D0CE5616E5685A8B43860* ___m_CanvasRenderer_14;
 	// UnityEngine.Canvas UnityEngine.UI.Graphic::m_Canvas
-	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___m_Canvas_14;
+	Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* ___m_Canvas_15;
 	// System.Boolean UnityEngine.UI.Graphic::m_VertsDirty
-	bool ___m_VertsDirty_15;
+	bool ___m_VertsDirty_16;
 	// System.Boolean UnityEngine.UI.Graphic::m_MaterialDirty
-	bool ___m_MaterialDirty_16;
+	bool ___m_MaterialDirty_17;
 	// UnityEngine.Events.UnityAction UnityEngine.UI.Graphic::m_OnDirtyLayoutCallback
-	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyLayoutCallback_17;
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyLayoutCallback_18;
 	// UnityEngine.Events.UnityAction UnityEngine.UI.Graphic::m_OnDirtyVertsCallback
-	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyVertsCallback_18;
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyVertsCallback_19;
 	// UnityEngine.Events.UnityAction UnityEngine.UI.Graphic::m_OnDirtyMaterialCallback
-	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyMaterialCallback_19;
+	UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* ___m_OnDirtyMaterialCallback_20;
 	// UnityEngine.Mesh UnityEngine.UI.Graphic::m_CachedMesh
-	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___m_CachedMesh_22;
+	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___m_CachedMesh_23;
 	// UnityEngine.Vector2[] UnityEngine.UI.Graphic::m_CachedUvs
-	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___m_CachedUvs_23;
+	Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA* ___m_CachedUvs_24;
 	// UnityEngine.UI.CoroutineTween.TweenRunner`1<UnityEngine.UI.CoroutineTween.ColorTween> UnityEngine.UI.Graphic::m_ColorTweenRunner
-	TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4* ___m_ColorTweenRunner_24;
+	TweenRunner_1_t5BB0582F926E75E2FE795492679A6CF55A4B4BC4* ___m_ColorTweenRunner_25;
 	// System.Boolean UnityEngine.UI.Graphic::<useLegacyMeshGeneration>k__BackingField
-	bool ___U3CuseLegacyMeshGenerationU3Ek__BackingField_25;
+	bool ___U3CuseLegacyMeshGenerationU3Ek__BackingField_26;
 };
 
 struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_StaticFields
@@ -6691,9 +6667,9 @@ struct Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931_StaticFields
 	// UnityEngine.Texture2D UnityEngine.UI.Graphic::s_WhiteTexture
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___s_WhiteTexture_5;
 	// UnityEngine.Mesh UnityEngine.UI.Graphic::s_Mesh
-	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___s_Mesh_20;
+	Mesh_t6D9C539763A09BC2B12AEAEF36F6DFFC98AE63D4* ___s_Mesh_21;
 	// UnityEngine.UI.VertexHelper UnityEngine.UI.Graphic::s_VertexHelper
-	VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* ___s_VertexHelper_21;
+	VertexHelper_tB905FCB02AE67CBEE5F265FE37A5938FC5D136FE* ___s_VertexHelper_22;
 };
 
 // UnityEngine.InputSystem.OnScreen.OnScreenButton

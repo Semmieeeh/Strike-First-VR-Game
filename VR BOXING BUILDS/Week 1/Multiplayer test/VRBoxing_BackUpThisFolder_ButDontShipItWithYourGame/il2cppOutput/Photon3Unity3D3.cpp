@@ -39,7 +39,6 @@ struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=120
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D120_t07CC46E257D02C84819F71DEBA3492A32B3F58E9 
 {
 	union
@@ -53,10 +52,8 @@ struct __StaticArrayInitTypeSizeU3D120_t07CC46E257D02C84819F71DEBA3492A32B3F58E9
 		uint8_t __StaticArrayInitTypeSizeU3D120_t07CC46E257D02C84819F71DEBA3492A32B3F58E9__padding[120];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=1212
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D1212_tA254A372923978BFED97198B9327F07B4822D24C 
 {
 	union
@@ -70,10 +67,8 @@ struct __StaticArrayInitTypeSizeU3D1212_tA254A372923978BFED97198B9327F07B4822D24
 		uint8_t __StaticArrayInitTypeSizeU3D1212_tA254A372923978BFED97198B9327F07B4822D24C__padding[1212];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=128
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D128_t2E29695B4BC956E343FF77CA0138C0C6A5CF9A78 
 {
 	union
@@ -87,10 +82,8 @@ struct __StaticArrayInitTypeSizeU3D128_t2E29695B4BC956E343FF77CA0138C0C6A5CF9A78
 		uint8_t __StaticArrayInitTypeSizeU3D128_t2E29695B4BC956E343FF77CA0138C0C6A5CF9A78__padding[128];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=192
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D192_tA23B8958D5BD1371FDA0012276F7C3BE0284F299 
 {
 	union
@@ -104,10 +97,8 @@ struct __StaticArrayInitTypeSizeU3D192_tA23B8958D5BD1371FDA0012276F7C3BE0284F299
 		uint8_t __StaticArrayInitTypeSizeU3D192_tA23B8958D5BD1371FDA0012276F7C3BE0284F299__padding[192];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D64_tF0FA80314AF76742592F19E889B8EBD60D077150 
 {
 	union
@@ -121,10 +112,8 @@ struct __StaticArrayInitTypeSizeU3D64_tF0FA80314AF76742592F19E889B8EBD60D077150
 		uint8_t __StaticArrayInitTypeSizeU3D64_tF0FA80314AF76742592F19E889B8EBD60D077150__padding[64];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=65
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D65_t6BF827579CE5108884BAF21EACF54BA6EC4AF209 
 {
 	union
@@ -138,10 +127,8 @@ struct __StaticArrayInitTypeSizeU3D65_t6BF827579CE5108884BAF21EACF54BA6EC4AF209
 		uint8_t __StaticArrayInitTypeSizeU3D65_t6BF827579CE5108884BAF21EACF54BA6EC4AF209__padding[65];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=9
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D9_t1D0E5E98B1B931A2F0A0B3372679DC64E05E4E20 
 {
 	union
@@ -155,10 +142,8 @@ struct __StaticArrayInitTypeSizeU3D9_t1D0E5E98B1B931A2F0A0B3372679DC64E05E4E20
 		uint8_t __StaticArrayInitTypeSizeU3D9_t1D0E5E98B1B931A2F0A0B3372679DC64E05E4E20__padding[9];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=97
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D97_t4087A205A5285288E91F491C3E306E5107025859 
 {
 	union
@@ -172,7 +157,6 @@ struct __StaticArrayInitTypeSizeU3D97_t4087A205A5285288E91F491C3E306E5107025859
 		uint8_t __StaticArrayInitTypeSizeU3D97_t4087A205A5285288E91F491C3E306E5107025859__padding[97];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>
 struct U3CPrivateImplementationDetailsU3E_tBEBD39EA3866CDEEAB682D715E5E67D0F87F603D  : public RuntimeObject

@@ -3178,7 +3178,6 @@ struct TextShadow_t6BADF37AB90ABCB63859A225B58AC5A580950A05
 };
 
 // UnityEngine.InputSystem.LowLevel.TouchState
-#pragma pack(push, tp, 1)
 struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97 
 {
 	union
@@ -3346,7 +3345,6 @@ struct TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97
 		uint8_t TouchState_tB05024FB4BCE85BAB82D2224AD4BF1E8B4589A97__padding[56];
 	};
 };
-#pragma pack(pop, tp)
 
 // UnityEngine.UIElements.TransformOrigin
 struct TransformOrigin_tD11A368A96C0771398EBB4E6D435318AC0EF8502 

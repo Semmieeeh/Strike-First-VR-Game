@@ -1960,7 +1960,6 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 };
 
 // System.String/ProbabilisticMap
-#pragma pack(push, tp, 1)
 struct ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B 
 {
 	union
@@ -1974,7 +1973,6 @@ struct ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B
 		uint8_t ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B__padding[32];
 	};
 };
-#pragma pack(pop, tp)
 
 // Interop/Kernel32/SYSTEMTIME
 struct SYSTEMTIME_t10D7D697A6F98CE85A759ADF55836BC2BFD076C7 

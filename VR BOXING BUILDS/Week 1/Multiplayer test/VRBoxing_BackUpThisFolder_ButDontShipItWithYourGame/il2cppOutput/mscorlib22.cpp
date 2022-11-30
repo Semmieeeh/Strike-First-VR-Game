@@ -1958,7 +1958,6 @@ struct InternalStringComparer_t04B2D1768998E940BC4619579B7044102591E38B  : publi
 };
 
 // System.Collections.Concurrent.PaddedHeadAndTail
-#pragma pack(push, tp, 1)
 struct PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8 
 {
 	union
@@ -1998,7 +1997,6 @@ struct PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8
 		uint8_t PaddedHeadAndTail_t1DAB41665EC6BE441A9807218EB9514A1E75B8A8__padding[384];
 	};
 };
-#pragma pack(pop, tp)
 
 // System.Single
 struct Single_t4530F2FF86FCB0DC29F35385CA1BD21BE294761C 

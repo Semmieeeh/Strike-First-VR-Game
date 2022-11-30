@@ -23832,7 +23832,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshBuilder_MakeVectorGraphics9SliceBack
 	int32_t V_40 = 0;
 	bool V_41 = false;
 	int32_t V_42 = 0;
-	bool V_43 = false;
+	Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7 V_43;
+	memset((&V_43), 0, sizeof(V_43));
+	bool V_44 = false;
 	{
 		bool L_0 = ___stretch6;
 		V_12 = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
@@ -24298,29 +24300,42 @@ IL_037b:
 	}
 	{
 		V_42 = 0;
-		goto IL_03ae;
+		goto IL_03d5;
 	}
 
 IL_038c:
 	{
-		MeshWriteData_tE09883A6419D2A92CC453702AD6D30486B44F5F9* L_187 = V_11;
-		Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7* L_188 = V_7;
-		int32_t L_189 = V_42;
-		uint32_t L_190 = sizeof(Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7);
-		Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7 L_191 = (*(Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7*)((Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7*)il2cpp_codegen_add((intptr_t)L_188, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_189), (int32_t)L_190)))));
-		NullCheck(L_187);
-		MeshWriteData_SetNextVertex_m120BCCC7DD2ACF1AA408166C9187500803FCF841(L_187, L_191, NULL);
-		int32_t L_192 = V_42;
-		V_42 = ((int32_t)il2cpp_codegen_add(L_192, 1));
+		Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7* L_187 = V_7;
+		int32_t L_188 = V_42;
+		uint32_t L_189 = sizeof(Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7);
+		Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7 L_190 = (*(Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7*)((Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7*)il2cpp_codegen_add((intptr_t)L_187, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_188), (int32_t)L_189)))));
+		V_43 = L_190;
+		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* L_191 = (&(&V_43)->___tint_2);
+		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B* L_192 = L_191;
+		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_193 = (*(Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B*)L_192);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_194;
+		L_194 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_193, NULL);
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_195 = ___tint7;
+		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_196;
+		L_196 = Color_op_Multiply_mD0296202733CB2D5342FB7C82B48AEDA63036758_inline(L_194, L_195, NULL);
+		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_197;
+		L_197 = Color32_op_Implicit_m79AF5E0BDE9CE041CAC4D89CBFA66E71C6DD1B70_inline(L_196, NULL);
+		*(Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B*)L_192 = L_197;
+		MeshWriteData_tE09883A6419D2A92CC453702AD6D30486B44F5F9* L_198 = V_11;
+		Vertex_t016AC68A2E6C62576E65412BEC71544AFC01AFC7 L_199 = V_43;
+		NullCheck(L_198);
+		MeshWriteData_SetNextVertex_m120BCCC7DD2ACF1AA408166C9187500803FCF841(L_198, L_199, NULL);
+		int32_t L_200 = V_42;
+		V_42 = ((int32_t)il2cpp_codegen_add(L_200, 1));
 	}
 
-IL_03ae:
+IL_03d5:
 	{
-		int32_t L_193 = V_42;
-		int32_t L_194 = V_9;
-		V_43 = (bool)((((int32_t)L_193) < ((int32_t)L_194))? 1 : 0);
-		bool L_195 = V_43;
-		if (L_195)
+		int32_t L_201 = V_42;
+		int32_t L_202 = V_9;
+		V_44 = (bool)((((int32_t)L_201) < ((int32_t)L_202))? 1 : 0);
+		bool L_203 = V_44;
+		if (L_203)
 		{
 			goto IL_038c;
 		}
@@ -25930,7 +25945,7 @@ IL_0157:
 		V_7 = L_91;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_92 = V_4;
 		float L_93 = L_92.___x_2;
-		if ((!(((float)L_93) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_93) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_0203;
 		}
@@ -25938,7 +25953,7 @@ IL_0157:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_94 = V_4;
 		float L_95 = L_94.___x_2;
-		if ((!(((float)L_95) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_95) <= ((float)(1.00001001f)))))
 		{
 			goto IL_0203;
 		}
@@ -25946,7 +25961,7 @@ IL_0157:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_96 = V_4;
 		float L_97 = L_96.___y_3;
-		if ((!(((float)L_97) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_97) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_0203;
 		}
@@ -25954,7 +25969,7 @@ IL_0157:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_98 = V_4;
 		float L_99 = L_98.___y_3;
-		if ((!(((float)L_99) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_99) <= ((float)(1.00001001f)))))
 		{
 			goto IL_0203;
 		}
@@ -25962,7 +25977,7 @@ IL_0157:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_100 = V_4;
 		float L_101 = L_100.___z_4;
-		if ((!(((float)L_101) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_101) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_0200;
 		}
@@ -25970,7 +25985,7 @@ IL_0157:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_102 = V_4;
 		float L_103 = L_102.___z_4;
-		G_B22_0 = ((((int32_t)((!(((float)L_103) <= ((float)(1.00000012f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		G_B22_0 = ((((int32_t)((!(((float)L_103) <= ((float)(1.00001001f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_0201;
 	}
 
@@ -26021,7 +26036,7 @@ IL_0232:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_116 = V_5;
 		float L_117 = L_116.___x_2;
-		if ((!(((float)L_117) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_117) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_028e;
 		}
@@ -26029,7 +26044,7 @@ IL_0232:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_118 = V_5;
 		float L_119 = L_118.___x_2;
-		if ((!(((float)L_119) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_119) <= ((float)(1.00001001f)))))
 		{
 			goto IL_028e;
 		}
@@ -26037,7 +26052,7 @@ IL_0232:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_120 = V_5;
 		float L_121 = L_120.___y_3;
-		if ((!(((float)L_121) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_121) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_028e;
 		}
@@ -26045,7 +26060,7 @@ IL_0232:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_122 = V_5;
 		float L_123 = L_122.___y_3;
-		if ((!(((float)L_123) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_123) <= ((float)(1.00001001f)))))
 		{
 			goto IL_028e;
 		}
@@ -26053,7 +26068,7 @@ IL_0232:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_124 = V_5;
 		float L_125 = L_124.___z_4;
-		if ((!(((float)L_125) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_125) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_028b;
 		}
@@ -26061,7 +26076,7 @@ IL_0232:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_126 = V_5;
 		float L_127 = L_126.___z_4;
-		G_B33_0 = ((((int32_t)((!(((float)L_127) <= ((float)(1.00000012f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		G_B33_0 = ((((int32_t)((!(((float)L_127) <= ((float)(1.00001001f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_028c;
 	}
 
@@ -26112,7 +26127,7 @@ IL_02bd:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_140 = V_6;
 		float L_141 = L_140.___x_2;
-		if ((!(((float)L_141) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_141) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_0319;
 		}
@@ -26120,7 +26135,7 @@ IL_02bd:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_142 = V_6;
 		float L_143 = L_142.___x_2;
-		if ((!(((float)L_143) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_143) <= ((float)(1.00001001f)))))
 		{
 			goto IL_0319;
 		}
@@ -26128,7 +26143,7 @@ IL_02bd:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_144 = V_6;
 		float L_145 = L_144.___y_3;
-		if ((!(((float)L_145) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_145) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_0319;
 		}
@@ -26136,7 +26151,7 @@ IL_02bd:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_146 = V_6;
 		float L_147 = L_146.___y_3;
-		if ((!(((float)L_147) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_147) <= ((float)(1.00001001f)))))
 		{
 			goto IL_0319;
 		}
@@ -26144,7 +26159,7 @@ IL_02bd:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_148 = V_6;
 		float L_149 = L_148.___z_4;
-		if ((!(((float)L_149) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_149) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_0316;
 		}
@@ -26152,7 +26167,7 @@ IL_02bd:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_150 = V_6;
 		float L_151 = L_150.___z_4;
-		G_B44_0 = ((((int32_t)((!(((float)L_151) <= ((float)(1.00000012f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		G_B44_0 = ((((int32_t)((!(((float)L_151) <= ((float)(1.00001001f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_0317;
 	}
 
@@ -26203,7 +26218,7 @@ IL_0348:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_164 = V_7;
 		float L_165 = L_164.___x_2;
-		if ((!(((float)L_165) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_165) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_03a4;
 		}
@@ -26211,7 +26226,7 @@ IL_0348:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_166 = V_7;
 		float L_167 = L_166.___x_2;
-		if ((!(((float)L_167) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_167) <= ((float)(1.00001001f)))))
 		{
 			goto IL_03a4;
 		}
@@ -26219,7 +26234,7 @@ IL_0348:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_168 = V_7;
 		float L_169 = L_168.___y_3;
-		if ((!(((float)L_169) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_169) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_03a4;
 		}
@@ -26227,7 +26242,7 @@ IL_0348:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_170 = V_7;
 		float L_171 = L_170.___y_3;
-		if ((!(((float)L_171) <= ((float)(1.00000012f)))))
+		if ((!(((float)L_171) <= ((float)(1.00001001f)))))
 		{
 			goto IL_03a4;
 		}
@@ -26235,7 +26250,7 @@ IL_0348:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_172 = V_7;
 		float L_173 = L_172.___z_4;
-		if ((!(((float)L_173) >= ((float)(-1.00000001E-07f)))))
+		if ((!(((float)L_173) >= ((float)(-9.99999975E-06f)))))
 		{
 			goto IL_03a1;
 		}
@@ -26243,7 +26258,7 @@ IL_0348:
 	{
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_174 = V_7;
 		float L_175 = L_174.___z_4;
-		G_B55_0 = ((((int32_t)((!(((float)L_175) <= ((float)(1.00000012f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		G_B55_0 = ((((int32_t)((!(((float)L_175) <= ((float)(1.00001001f))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		goto IL_03a2;
 	}
 
