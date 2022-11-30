@@ -1049,6 +1049,7 @@ GameObject:
   - component: {fileID: 5458504532359341535}
   - component: {fileID: 5458504532359341528}
   - component: {fileID: 5458504532359341533}
+  - component: {fileID: 5969529208117149201}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1214,6 +1215,22 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_HasMigratedActions: 1
+--- !u!114 &5969529208117149201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5458504532359341532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &5572494702174402637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1225,7 +1242,6 @@ GameObject:
   - component: {fileID: 712165186683412999}
   - component: {fileID: 3155483887876770116}
   - component: {fileID: 4491674835934713248}
-  - component: {fileID: 823574929200180938}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -1298,22 +1314,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &823574929200180938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5572494702174402637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &5913817520428547328
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,7 +3302,6 @@ GameObject:
   - component: {fileID: 8148356200743237137}
   - component: {fileID: 8148356200743237143}
   - component: {fileID: 1532241372778241513}
-  - component: {fileID: 6048199128287733359}
   - component: {fileID: 6674027737852744918}
   m_Layer: 6
   m_Name: XR Origin
@@ -3716,29 +3715,12 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 6048199128287733359}
+  - {fileID: 5969529208117149201}
   - {fileID: 5021058677579043939}
   - {fileID: 1591452640970488973}
-  - {fileID: 823574929200180938}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6048199128287733359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8148356200743237125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &6674027737852744918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3751,7 +3733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffe3acfc9465ecd48b4cc3085db272d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 8148356200204119615}
+  head: {fileID: 5458504532359341529}
   leftHand: {fileID: 8148356199953519152}
   rightHand: {fileID: 8148356199614612533}
   photon: {fileID: 0}
