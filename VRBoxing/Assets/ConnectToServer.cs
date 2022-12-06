@@ -46,6 +46,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         ClearServerList();
+
         for (int i = 0; i < roomList.Count; i++)
         {
             var room = roomList[i];
@@ -58,8 +59,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
             bool isRoomFull = room.PlayerCount >= room.MaxPlayers;
 
             obj.SetServerColor(isRoomFull);
-
-
+            
             int mapIndex = ReadMapIndexFromName(room.Name);
 
             var roomSprite = roomCreator.mapSprites[mapIndex-1];

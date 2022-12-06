@@ -41,6 +41,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     [Space(inspectorSpace)]
     public AnimatorData createLobbySettingsAnimator;
+    public AnimatorData createLobbySettingsAnimatorExit;
 
     [Header("Options Settings")]
     public Animator[] lineAnimators;
@@ -62,6 +63,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     [Header("Other")]
     public RoomCreator roomCreator;
+    public ConnectToServer serverConnector;
 
 
     private void Start()
@@ -95,12 +97,30 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         connectedText.text = "Connecting to server...";
     }
 
+    public bool createGameActive;
+
+    public void CreateGameActive(bool value) => createGameActive = value;
+    public void OnServerBackButton()
+    {
+        if (createGameActive)
+        {
+            BackToServerList();
+            createGameActive = false;
+        }
+        else
+        {
+            serverConnector.Disconnect();
+            Disconnect();
+        }
+    }
+
     public void ToggleCreateLobbySettings()
     {
         createLobbySettingsAnimator.animator.gameObject.SetActive(true);
 
         createLobbySettingsAnimator.Start();
     }
+
     public async void OnExitStart()
     {
         connectedText.text = "Disconnected";
@@ -134,7 +154,12 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         connectedText.text = "Connected";
     }
 
-    
+    public void BackToServerList()
+    {
+        createLobbySettingsAnimatorExit.Start();
+        servers.SetActive(true);
+    }
+
     public void Disconnect()
     {
         for (int i = 0; i < disconnectedAnimators.Length; i++)
