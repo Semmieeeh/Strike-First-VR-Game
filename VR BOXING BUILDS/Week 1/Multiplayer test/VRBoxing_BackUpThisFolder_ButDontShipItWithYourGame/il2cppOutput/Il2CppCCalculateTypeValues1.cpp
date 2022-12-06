@@ -45479,8 +45479,8 @@ struct CollisionCheck_t82E39117219FE372A4FC42B707CA2B6B652EBA6E  : public MonoBe
 	RagdollToggle_tB7F32AB24F6E0318E673CD99A2BBA9F6B3A61F87* ___rt_4;
 	// UnityEngine.LayerMask CollisionCheck::hit
 	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___hit_5;
-	// UnityEngine.GameObject CollisionCheck::leftHand
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___leftHand_6;
+	// UnityEngine.GameObject CollisionCheck::hand
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___hand_6;
 	// UnityEngine.GameObject CollisionCheck::rightHand
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rightHand_7;
 	// System.Single CollisionCheck::knockback
@@ -49132,28 +49132,50 @@ struct RagdollToggle_tB7F32AB24F6E0318E673CD99A2BBA9F6B3A61F87  : public MonoBeh
 {
 	// UnityEngine.GameObject RagdollToggle::rig
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___rig_4;
-	// UnityEngine.Collider[] RagdollToggle::ragdollParts
-	ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* ___ragdollParts_5;
-	// UnityEngine.Rigidbody[] RagdollToggle::ragdollLimbs
-	RigidbodyU5BU5D_t052E8AB174C34DFD0EBB5E897554DEBB841CC649* ___ragdollLimbs_6;
-	// UnityEngine.GameObject[] RagdollToggle::children
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___children_7;
+	// UnityEngine.GameObject RagdollToggle::hips
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___hips_5;
+	// UnityEngine.GameObject RagdollToggle::limb
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___limb_6;
+	// UnityEngine.GameObject RagdollToggle::offsetObject
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___offsetObject_7;
 	// UnityEngine.GameObject RagdollToggle::hit
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___hit_8;
+	// UnityEngine.Collider[] RagdollToggle::ragdollParts
+	ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* ___ragdollParts_9;
+	// UnityEngine.Rigidbody[] RagdollToggle::ragdollLimbs
+	RigidbodyU5BU5D_t052E8AB174C34DFD0EBB5E897554DEBB841CC649* ___ragdollLimbs_10;
+	// UnityEngine.GameObject[] RagdollToggle::children
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___children_11;
 	// System.Boolean RagdollToggle::isOn
-	bool ___isOn_9;
-	// UnityEngine.GameObject RagdollToggle::fpsCam
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___fpsCam_10;
-	// UnityEngine.GameObject RagdollToggle::limb
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___limb_11;
+	bool ___isOn_12;
+	// System.Boolean RagdollToggle::inPos
+	bool ___inPos_13;
+	// System.Boolean RagdollToggle::isGrounded
+	bool ___isGrounded_14;
+	// System.Boolean RagdollToggle::gravity
+	bool ___gravity_15;
+	// System.Boolean RagdollToggle::canReturnToIdle
+	bool ___canReturnToIdle_16;
 	// System.Single RagdollToggle::knockback
-	float ___knockback_12;
+	float ___knockback_17;
 	// System.Single RagdollToggle::health
-	float ___health_13;
+	float ___health_18;
 	// System.Single RagdollToggle::maxHealth
-	float ___maxHealth_14;
+	float ___maxHealth_19;
 	// System.Single RagdollToggle::minHealth
-	float ___minHealth_15;
+	float ___minHealth_20;
+	// System.Single RagdollToggle::ragdollTime
+	float ___ragdollTime_21;
+	// UnityEngine.Vector3[] RagdollToggle::transformList
+	Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* ___transformList_22;
+	// UnityEngine.Quaternion[] RagdollToggle::rotationList
+	QuaternionU5BU5D_t3C088AFB0F3D2763228C9CAB227021C5DC462AF7* ___rotationList_23;
+	// UnityEngine.Transform RagdollToggle::originalPos
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___originalPos_24;
+	// System.Int32 RagdollToggle::posCheck
+	int32_t ___posCheck_25;
+	// System.Int32 RagdollToggle::j
+	int32_t ___j_26;
 };
 
 // OculusSampleFramework.RayToolView
