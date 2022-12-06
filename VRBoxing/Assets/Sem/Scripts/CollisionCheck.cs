@@ -7,12 +7,12 @@ public class CollisionCheck : MonoBehaviour
 {
     public RagdollToggle rt;
     public LayerMask hit;
-    public GameObject leftHand, rightHand;
+    public GameObject hand, rightHand;
     float knockback;
     bool multiplier;
     public void Start()
     {
-        if(gameObject.tag == "Head")
+        if (gameObject.tag == "Head")
         {
             multiplier = true;
         }
@@ -20,84 +20,79 @@ public class CollisionCheck : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "LeftFist" && rt.isOn == false && rt.health <=0)
+        if (collision.gameObject.tag == "Fist" && rt.isOn == false && rt.health <= 0)
         {
-            leftHand = collision.gameObject;
+            hand = collision.gameObject;
             rt.hit = collision.gameObject;
             rt.limb = gameObject;
             rt.RagdollOn();
-            GetComponent<Rigidbody>().AddForce(leftHand.transform.forward * 100f * knockback);
-        }
-        if (collision.gameObject.tag == "RightFist" && rt.isOn == false && rt.health <= 0)
-        {
-            rightHand = collision.gameObject;
-            rt.hit = collision.gameObject;
-            rt.limb = gameObject;
-            rt.RagdollOn();
-            GetComponent<Rigidbody>().AddForce(rightHand.transform.forward * 100f * knockback);
+            GetComponent<Rigidbody>().AddForce(hand.transform.forward * 15f * hand.GetComponent<GrabObjects>().speed * knockback);
         }
 
-
-
-
-        if (collision.gameObject.tag == "LeftFist" && rt.isOn == false)
+        if (collision.gameObject.tag == "Fist" && rt.isOn == false)
         {
-            leftHand = collision.gameObject;
-            StartCoroutine(Cooldown());
-            rt.hit = collision.gameObject;
-            rt.limb = gameObject;
-            if(multiplier == true)
-            {
-                rt.TakeDamage(leftHand.GetComponent<GrabObjects>().speed *2);
-            }
-            else
-            {
-                rt.TakeDamage(leftHand.GetComponent<GrabObjects>().speed);
-            }
-        }
-        if (collision.gameObject.tag == "RightFist" && rt.isOn == false)
-        {
-            rightHand = collision.gameObject;
+            hand = collision.gameObject;
             StartCoroutine(Cooldown());
             rt.hit = collision.gameObject;
             rt.limb = gameObject;
             if (multiplier == true)
             {
-                rt.TakeDamage(rightHand.GetComponent<GrabObjects>().speed * 2);
+                rt.TakeDamage(hand.GetComponent<GrabObjects>().speed * 2);
             }
             else
             {
-                rt.TakeDamage(rightHand.GetComponent<GrabObjects>().speed);
+                rt.TakeDamage(hand.GetComponent<GrabObjects>().speed);
             }
+        }
+        if (collision.gameObject.tag == "Fist" && rt.isOn == false && collision.gameObject.GetComponent<GrabObjects>().speed >= 15)
+        {
+            hand = collision.gameObject;
+            StartCoroutine(Cooldown());
+            rt.hit = collision.gameObject;
+            rt.limb = gameObject;
+            if (multiplier == true)
+            {
+                rt.TakeDamage(hand.GetComponent<GrabObjects>().speed * 2);
+            }
+            else
+            {
+                rt.TakeDamage(hand.GetComponent<GrabObjects>().speed);
+            }
+            rt.RagdollOn();
+            GetComponent<Rigidbody>().AddForce(hand.transform.forward * 100f * knockback);
+        }
+
+
+
+        if (collision.gameObject.tag == "Ground")
+        {
+            rt.isGrounded = true;
+            rt.offsetObject = collision.gameObject;
+            
+        }
+        else
+        {
+            rt.isGrounded = false;
+            rt.offsetObject = null;
+            
         }
 
     }
     public IEnumerator Cooldown()
     {
-        if(leftHand!= null)
+        if (hand != null)
         {
-            leftHand.GetComponent<GrabObjects>().canHarden = false;
-            leftHand.GetComponent<BoxCollider>().isTrigger = true;
-            leftHand.transform.GetChild(0).gameObject.SetActive(false);
-            leftHand.GetComponent<GrabObjects>().StartCoroutine(leftHand.GetComponent<GrabObjects>().ReAppear());
-            yield return new WaitForSeconds(3);
-            leftHand.transform.GetChild(0).gameObject.SetActive(true);
-            leftHand.GetComponent<GrabObjects>().hardened = false;
-            leftHand.GetComponent<GrabObjects>().canHarden = true;
-            leftHand = null;
+            hand.GetComponent<GrabObjects>().canHarden = false;
+            hand.GetComponent<BoxCollider>().isTrigger = true;
+            hand.transform.GetChild(0).gameObject.SetActive(false);
+            hand.GetComponent<GrabObjects>().StartCoroutine(hand.GetComponent<GrabObjects>().ReAppear());
+            yield return new WaitForSeconds(3);            
+            hand.GetComponent<GrabObjects>().hardened = false;
+            
+            hand.GetComponent<GrabObjects>().canHarden = true;
+            hand = null;
         }
-        if (rightHand != null)
-        {
-            rightHand.GetComponent<GrabObjects>().canHarden = false;
-            rightHand.GetComponent<BoxCollider>().isTrigger = true;
-            rightHand.transform.GetChild(0).gameObject.SetActive(false);
-            rightHand.GetComponent<GrabObjects>().StartCoroutine(rightHand.GetComponent<GrabObjects>().ReAppear());
-            yield return new WaitForSeconds(3);
-            rightHand.transform.GetChild(0).gameObject.SetActive(true);
-            rightHand.GetComponent<GrabObjects>().hardened = false;
-            rightHand.GetComponent<GrabObjects>().canHarden = true;
-            rightHand = null;
-        }
+        
 
     }
 }
