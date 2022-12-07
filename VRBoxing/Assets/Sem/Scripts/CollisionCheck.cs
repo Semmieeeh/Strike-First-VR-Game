@@ -26,7 +26,7 @@ public class CollisionCheck : MonoBehaviour
             rt.hit = collision.gameObject;
             rt.limb = gameObject;
             rt.RagdollOn();
-            GetComponent<Rigidbody>().AddForce(hand.transform.forward * 15f * hand.GetComponent<GrabObjects>().speed * knockback);
+            GetComponent<Rigidbody>().AddForce(hand.transform.forward * 20f * hand.GetComponent<GrabObjects>().speed * knockback);
         }
 
         if (collision.gameObject.tag == "Fist" && rt.isOn == false)

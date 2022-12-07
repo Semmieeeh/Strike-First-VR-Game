@@ -11,16 +11,16 @@ public class PlayerNetworkSpawn : MonoBehaviourPunCallbacks
     {
         spawnPrefab = PhotonNetwork.Instantiate(spawnPrefab.name, transform.position, transform.rotation);
     }
-    //public override void OnJoinedRoom()
-    //{
-    //    base.OnJoinedRoom();
-    //    spawnPrefab = PhotonNetwork.Instantiate(spawnPrefab.name, transform.position, transform.rotation);
-    //}
+    public override void OnJoinedRoom()
+    {
+        base.OnJoinedRoom();
+        spawnPrefab = PhotonNetwork.Instantiate(spawnPrefab.name, transform.position, transform.rotation);
+    }
 
-    //public override void OnLeftRoom()
-    //{
-    //    base.OnLeftRoom();
-    //    PhotonNetwork.Destroy(spawnPrefab);
-    //}
+    public override void OnLeftRoom()
+    {
+        base.OnLeftRoom();
+        PhotonNetwork.Destroy(spawnPrefab);
+    }
 
 }
