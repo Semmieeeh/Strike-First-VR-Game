@@ -1080,6 +1080,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_mBDBC288D0E266BC1B62E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddTorque_Injected_m22FC0760ED37AE38443DB926B2A7D87470A63CF2 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___torque0, int32_t ___mode1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Rigidbody::AddTorque(UnityEngine.Vector3,UnityEngine.ForceMode)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddTorque_m7922F76C73DACF9E1610D72726C01709C14F0937 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___torque0, int32_t ___mode1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rigidbody::AddForceAtPosition_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForceAtPosition_Injected_m24F286471C9928629A50A5C1A0DF22698172438C (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___force0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___position1, int32_t ___mode2, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Component::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Component__ctor_m4319162A6E6B02301078C1233F6E7F4A3E735486 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Collider::ClosestPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
@@ -3644,6 +3646,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddTorque_m39C767D6CD12B2D12D5
 		return;
 	}
 }
+// System.Void UnityEngine.Rigidbody::AddForceAtPosition(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForceAtPosition_m61575E676B16690BEC0FD29841EAD35CC40B642C (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___force0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, int32_t ___mode2, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___mode2;
+		Rigidbody_AddForceAtPosition_Injected_m24F286471C9928629A50A5C1A0DF22698172438C(__this, (&___force0), (&___position1), L_0, NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.Rigidbody::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody__ctor_mB4E21922228AED3B52D8696D54F5B514F922CB07 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, const RuntimeMethod* method) 
 {
@@ -3768,6 +3779,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddTorque_Injected_m22FC0760ED
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Rigidbody_AddTorque_Injected_m22FC0760ED37AE38443DB926B2A7D87470A63CF2_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::AddTorque_Injected(UnityEngine.Vector3&,UnityEngine.ForceMode)");
 	_il2cpp_icall_func(__this, ___torque0, ___mode1);
+}
+// System.Void UnityEngine.Rigidbody::AddForceAtPosition_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForceAtPosition_Injected_m24F286471C9928629A50A5C1A0DF22698172438C (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___force0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___position1, int32_t ___mode2, const RuntimeMethod* method) 
+{
+	typedef void (*Rigidbody_AddForceAtPosition_Injected_m24F286471C9928629A50A5C1A0DF22698172438C_ftn) (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2*, int32_t);
+	static Rigidbody_AddForceAtPosition_Injected_m24F286471C9928629A50A5C1A0DF22698172438C_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_AddForceAtPosition_Injected_m24F286471C9928629A50A5C1A0DF22698172438C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::AddForceAtPosition_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&,UnityEngine.ForceMode)");
+	_il2cpp_icall_func(__this, ___force0, ___position1, ___mode2);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

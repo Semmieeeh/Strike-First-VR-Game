@@ -22,10 +22,14 @@ public class PlayersManager : MonoBehaviour
     /// </summary>
     public Player player1;
 
+    public bool player1SetUp;
+
     /// <summary>
     /// The second player in the game
     /// </summary>
     public Player player2;
+
+    public bool player2SetUp;
 
     [Header("Setup Data")]
     [SerializeField] 
@@ -74,6 +78,12 @@ public class PlayersManager : MonoBehaviour
         UpdatePlayerProperties(player, startHealth, 0, 0, 0);
     }
 
+    public void FindPlayers()
+    {
+        player1 = PhotonNetwork.PlayerList[0];
+        player2 = PhotonNetwork.PlayerList[1];
+    }
+
     /// <summary>
     /// Used to Update a Players properties. Should not be used frequently due to traffick and performance
     /// </summary>
@@ -84,13 +94,14 @@ public class PlayersManager : MonoBehaviour
     /// <param name="rightHandCooldown">The amount of time where the player cannot punch with the right hand</param>
     public void UpdatePlayerProperties(Player player, float hp, int roundsWon, float leftHandCooldown, float rightHandCooldown)
     {
-        var props = new Hastable();
-
-        // Initialize or update all player properties;
-        props.Add(kHealth, hp);
-        props.Add(kRoundsWon, roundsWon);
-        props.Add(kLeftHandCooldown, leftHandCooldown);
-        props.Add(kRightHandCooldown, rightHandCooldown);
+        var props = new Hastable
+        {
+            // Initialize or update all player properties;
+            { kHealth, hp },
+            { kRoundsWon, roundsWon },
+            { kLeftHandCooldown, leftHandCooldown },
+            { kRightHandCooldown, rightHandCooldown }
+        };
 
         // Used to Synchronizes the players properties to the server
         player.SetCustomProperties(props);

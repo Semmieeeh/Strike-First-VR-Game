@@ -3753,6 +3753,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   timer: 0
   speed: 0
+  mesh: {fileID: 0}
 --- !u!95 &8148356199614612554
 Animator:
   serializedVersion: 4
@@ -4233,6 +4234,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   timer: 0
   speed: 0
+  mesh: {fileID: 0}
 --- !u!95 &8148356199953519178
 Animator:
   serializedVersion: 4
@@ -4347,6 +4349,7 @@ GameObject:
   - component: {fileID: 8148356200743237144}
   - component: {fileID: 5436059895356403030}
   - component: {fileID: 8148356200743237136}
+  - component: {fileID: 6674027737852744918}
   - component: {fileID: 8148356200743237147}
   - component: {fileID: 8148356200743237146}
   - component: {fileID: 8148356200743237151}
@@ -4356,7 +4359,6 @@ GameObject:
   - component: {fileID: 8148356200743237137}
   - component: {fileID: 8148356200743237143}
   - component: {fileID: 1532241372778241513}
-  - component: {fileID: 6674027737852744918}
   - component: {fileID: 2642025995033914650}
   m_Layer: 6
   m_Name: XR Origin
@@ -4436,6 +4438,21 @@ MonoBehaviour:
   gravity: -9.82
   fallingspeed: 0
   cameraOffset: 0
+--- !u!114 &6674027737852744918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8148356200743237125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffe3acfc9465ecd48b4cc3085db272d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyTransform: {fileID: 8148356200743237144}
+  leftHandTransform: {fileID: 8148356199953519152}
+  rightHandTransform: {fileID: 8148356199614612533}
 --- !u!114 &8148356200743237147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4777,26 +4794,68 @@ MonoBehaviour:
   - {fileID: 1591452640970488973}
   - {fileID: 9201138198772103355}
   - {fileID: 9144728920913434872}
+  - {fileID: 6195324803022856766}
+  - {fileID: 359540843683306714}
   - {fileID: 8378429782575445792}
+  - {fileID: 7910232239724880304}
+  - {fileID: 8441885119164550492}
+  - {fileID: 3553797421148866848}
+  - {fileID: 797709008015134294}
+  - {fileID: 2998935446027570888}
+  - {fileID: 6396749172434415589}
+  - {fileID: 9187848749811064798}
+  - {fileID: 4139110786263077899}
+  - {fileID: 8611495654308445069}
+  - {fileID: 8805538389845344731}
+  - {fileID: 2232508127040136807}
+  - {fileID: 2286767908606256700}
+  - {fileID: 5310192689541122578}
+  - {fileID: 5778861246770365414}
+  - {fileID: 4281921527372951708}
+  - {fileID: 1157219855640636402}
+  - {fileID: 6099486614796557172}
+  - {fileID: 8139207876594633356}
+  - {fileID: 6583642765773098079}
+  - {fileID: 8065061096464684365}
+  - {fileID: 3555794920951629879}
+  - {fileID: 7739349203024889376}
+  - {fileID: 2760318225890314656}
+  - {fileID: 4103903809067517866}
+  - {fileID: 3053912902752297516}
+  - {fileID: 2628362607020308158}
+  - {fileID: 4593972539686054541}
+  - {fileID: 4873736224935065471}
+  - {fileID: 7219311608991470266}
+  - {fileID: 545167914596596941}
+  - {fileID: 7729226615660738083}
+  - {fileID: 2121556189856593349}
+  - {fileID: 5674495656941441815}
+  - {fileID: 1929525118981986782}
+  - {fileID: 773628134784096495}
+  - {fileID: 5311876196163023458}
+  - {fileID: 1139959879729553230}
+  - {fileID: 3060978760781618161}
+  - {fileID: 5890882908335642364}
+  - {fileID: 9029478102715262823}
+  - {fileID: 3033993215178291653}
+  - {fileID: 7914914446454232605}
+  - {fileID: 7284462184259483976}
+  - {fileID: 4737652728353956676}
+  - {fileID: 3830234831756867523}
+  - {fileID: 2971149671071010813}
+  - {fileID: 4503929100728473720}
+  - {fileID: 4718607849102284105}
+  - {fileID: 6466159342303952806}
+  - {fileID: 146804802714600616}
+  - {fileID: 6288619183064616945}
+  - {fileID: 2244348083337529420}
+  - {fileID: 4062002627911858345}
+  - {fileID: 302289528682350664}
+  - {fileID: 9096548855933341211}
+  - {fileID: 418350551100394182}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &6674027737852744918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8148356200743237125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffe3acfc9465ecd48b4cc3085db272d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 5458504532359341529}
-  leftHand: {fileID: 8148356199953519152}
-  rightHand: {fileID: 8148356199614612533}
-  photon: {fileID: 0}
 --- !u!114 &2642025995033914650
 MonoBehaviour:
   m_ObjectHideFlags: 0
