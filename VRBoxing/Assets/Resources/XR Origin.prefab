@@ -3753,6 +3753,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   timer: 0
   speed: 0
+  mesh: {fileID: 0}
 --- !u!95 &8148356199614612554
 Animator:
   serializedVersion: 4
@@ -4233,6 +4234,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   timer: 0
   speed: 0
+  mesh: {fileID: 0}
 --- !u!95 &8148356199953519178
 Animator:
   serializedVersion: 4
