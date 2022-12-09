@@ -1,42 +1,63 @@
-using Photon.Pun;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
+using Photon.Pun;
 
-public class PlayerSync : MonoBehaviour
+public class PlayerSync : MonoBehaviourPun
 {
-    public Transform head, leftHand, rightHand;
-    public PhotonView photon;
-    // Start is called before the first frame update
-    void Start()
-    {
-        photon = GetComponent<PhotonView>();
-    }
+    // The transform component of the player's body
+    public Transform bodyTransform;
 
-    // Update is called once per frame
+    // The transform component of the player's left hand
+    public Transform leftHandTransform;
+
+    // The transform component of the player's right hand
+    public Transform rightHandTransform;
+
+    // The current position of the player's body
+    private Vector3 bodyPosition;
+
+    // The current rotation of the player's body
+    private Quaternion bodyRotation;
+
+    // The current position of the player's left hand
+    private Vector3 leftHandPosition;
+
+    // The current rotation of the player's left hand
+    private Quaternion leftHandRotation;
+
+    // The current position of the player's right hand
+    private Vector3 rightHandPosition;
+
+    // The current rotation of the player's right hand
+    private Quaternion rightHandRotation;
+
     void Update()
     {
-        if (photon.IsMine)
+        // If this script is not being executed on the master client, do not update the player's body and hand transforms
+        if (!photonView.IsMine)
         {
-            //head.gameObject.SetActive(false);
-            //leftHand.gameObject.SetActive(false);
-            //rightHand.gameObject.SetActive(false);
-
-
-            Pos(head, XRNode.Head);
-            Pos(leftHand, XRNode.LeftHand);
-            Pos(rightHand, XRNode.RightHand);
+            return;
         }
+
+        // Get the current position and rotation of the player's body and hands
+        bodyPosition = bodyTransform.position;
+        bodyRotation = bodyTransform.rotation;
+        leftHandPosition = leftHandTransform.position;
+        leftHandRotation = leftHandTransform.rotation;
+        rightHandPosition = rightHandTransform.position;
+        rightHandRotation = rightHandTransform.rotation;
+
+        // Set the position and rotation of the player's body and hands on the Photon server
+        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, bodyTransform, bodyPosition, bodyRotation);
+        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, leftHandTransform, leftHandPosition, leftHandRotation);
+        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, rightHandTransform, rightHandPosition, rightHandRotation);
     }
 
-    void Pos(Transform target, XRNode node)
+
+    //RPC method to synchronize objects across the photon network
+    [PunRPC]
+    public void SyncBodyPart(Transform bodyPart, Vector3 pos, Quaternion rot)
     {
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 pos);
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rot);
-
-        target.position = pos;
-        target.rotation = rot;
-
+        bodyPart.position = pos;
+        bodyPart.rotation = rot;
     }
 }

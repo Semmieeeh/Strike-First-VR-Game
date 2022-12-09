@@ -49148,19 +49148,6 @@ struct PlayerNetworkSync_t28DAEB74521CA34C8ADC4AD44E0430D49689E752  : public Mon
 {
 };
 
-// PlayerSync
-struct PlayerSync_t5829651F90F56E0D39C94A082902278C3C42617A  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// UnityEngine.Transform PlayerSync::head
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___head_4;
-	// UnityEngine.Transform PlayerSync::leftHand
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___leftHand_5;
-	// UnityEngine.Transform PlayerSync::rightHand
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___rightHand_6;
-	// Photon.Pun.PhotonView PlayerSync::photon
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photon_7;
-};
-
 // Photon.Pun.Demo.PunBasics.PlayerUI
 struct PlayerUI_t2558295EA807F1C34C5C7AFA4BF3A53DB3A1CB55  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -53769,6 +53756,29 @@ struct PlayerControl_t0542C71446B43A4BA3F8CB5B2A4E0C1C7BCEA439  : public MonoBeh
 	bool ___m_firstTake_12;
 	// System.Single Photon.Pun.Demo.SlotRacer.PlayerControl::m_input
 	float ___m_input_13;
+};
+
+// PlayerSync
+struct PlayerSync_t5829651F90F56E0D39C94A082902278C3C42617A  : public MonoBehaviourPun_t64DD82CBA1C47A70448DAB2263AB90A4411621BD
+{
+	// UnityEngine.Transform PlayerSync::bodyTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___bodyTransform_5;
+	// UnityEngine.Transform PlayerSync::leftHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___leftHandTransform_6;
+	// UnityEngine.Transform PlayerSync::rightHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___rightHandTransform_7;
+	// UnityEngine.Vector3 PlayerSync::bodyPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___bodyPosition_8;
+	// UnityEngine.Quaternion PlayerSync::bodyRotation
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___bodyRotation_9;
+	// UnityEngine.Vector3 PlayerSync::leftHandPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___leftHandPosition_10;
+	// UnityEngine.Quaternion PlayerSync::leftHandRotation
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___leftHandRotation_11;
+	// UnityEngine.Vector3 PlayerSync::rightHandPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___rightHandPosition_12;
+	// UnityEngine.Quaternion PlayerSync::rightHandRotation
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___rightHandRotation_13;
 };
 
 // OculusSampleFramework.RayTool
