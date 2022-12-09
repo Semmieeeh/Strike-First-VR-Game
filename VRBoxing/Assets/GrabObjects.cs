@@ -17,6 +17,7 @@ public class GrabObjects : MonoBehaviour
     public float timer;
     int handPosCount = 0;
     public float speed;
+    public GameObject mesh;
 
     void Start()
     {
@@ -90,7 +91,7 @@ public class GrabObjects : MonoBehaviour
     public IEnumerator ReAppear()
     {
         yield return new WaitForSeconds(3);
-        transform.GetChild(0).gameObject.SetActive(true);
+        mesh.SetActive(true);
         hardened = false;
         canHarden = true;
     }

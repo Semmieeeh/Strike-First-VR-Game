@@ -12,6 +12,9 @@ TagManager:
   - LeftFist
   - RightFist
   - Ground
+  - LeftHand
+  - RightHand
+  - Head
   layers:
   - Default
   - TransparentFX
