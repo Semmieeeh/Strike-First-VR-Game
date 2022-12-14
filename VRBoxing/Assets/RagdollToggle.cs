@@ -43,7 +43,8 @@ public class RagdollToggle : MonoBehaviour
         hips = transform.GetChild(1).gameObject;
         anim = GetComponent<Animator>();
 
-    }        
+    }
+    
     public void GetRagdoll()
     {
         ragdollParts = rig.GetComponentsInChildren<Collider>();
@@ -89,6 +90,7 @@ public class RagdollToggle : MonoBehaviour
     {
         health -= damage;
     }
+    
     public void Ragdolling()
     {
         reset = false;
