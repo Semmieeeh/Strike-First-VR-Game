@@ -20,6 +20,7 @@ public class VRMovement : MonoBehaviour
     public float speed,maxSpeed;
     public float gravity, fallingspeed;
     public float cameraOffset;
+    public GrabObjects[] grab;
 
     
     void Start()
@@ -46,15 +47,25 @@ public class VRMovement : MonoBehaviour
     {
         if (context.started)
         {
-            Debug.Log("Za Warudo!");
+            
+            
         }
+    }
+    public void Disable()
+    {
+        grab[0].multiplier = false;
+        grab[1].multiplier = false;
     }
 
     public void RemoveBlock(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Debug.Log("Removed Block!");
+            Debug.Log("Double damage !");
+            
+            grab[1].multiplier = true;
+            grab[0].multiplier = true;
+            Invoke(nameof(Disable), 3f);
         }
     }
     private void Update()

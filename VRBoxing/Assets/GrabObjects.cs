@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class GrabObjects : MonoBehaviour
 {
     public bool canGrab;
+    public bool multiplier;
     public bool grabbed;
     public GameObject hand;
     public GameObject grabObject;
@@ -18,6 +19,7 @@ public class GrabObjects : MonoBehaviour
     int handPosCount = 0;
     public float speed;
     public GameObject mesh;
+    public GameObject leftHandDouble,rightHandDouble,normalHandLeft,normalHandRight;
 
     void Start()
     {
@@ -46,19 +48,7 @@ public class GrabObjects : MonoBehaviour
     }
     
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Fist")
-        {
-            //canGrab = true;
-            grabObject = other.transform.gameObject;
-        }
-        else if(grabbed != true)
-        {
-            //canGrab = false;
-            grabObject = null;
-        }
-    }
+    
     private void Update()
     {
         anim.SetBool("Hardened", hardened);
@@ -84,7 +74,20 @@ public class GrabObjects : MonoBehaviour
 
         }
 
-
+        if(multiplier == true)
+        {
+            leftHandDouble.SetActive(true);
+            rightHandDouble.SetActive(true);
+            normalHandLeft.SetActive(false);
+            normalHandRight.SetActive(false);
+        }
+        else if(multiplier == false)
+        {
+            leftHandDouble.SetActive(false);
+            rightHandDouble.SetActive(false);
+            normalHandLeft.SetActive(true);
+            normalHandRight.SetActive(true);
+        }
 
 
     }
