@@ -413,6 +413,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDevice_DisableAutoXRCameraTracking_m12
 	_il2cpp_icall_func = (XRDevice_DisableAutoXRCameraTracking_m1243FCAD2AC9C4D5C2E551255A1B2BA266E12A52_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRDevice::DisableAutoXRCameraTracking(UnityEngine.Camera,System.Boolean)");
 	_il2cpp_icall_func(___camera0, ___disabled1);
 }
+// System.Single UnityEngine.XR.XRDevice::get_fovZoomFactor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float XRDevice_get_fovZoomFactor_mB87D67173DE0F010349BBFD6B7CDC13F7331BC26 (const RuntimeMethod* method) 
+{
+	typedef float (*XRDevice_get_fovZoomFactor_mB87D67173DE0F010349BBFD6B7CDC13F7331BC26_ftn) ();
+	static XRDevice_get_fovZoomFactor_mB87D67173DE0F010349BBFD6B7CDC13F7331BC26_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (XRDevice_get_fovZoomFactor_mB87D67173DE0F010349BBFD6B7CDC13F7331BC26_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRDevice::get_fovZoomFactor()");
+	float icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
+// System.Void UnityEngine.XR.XRDevice::set_fovZoomFactor(System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDevice_set_fovZoomFactor_mCBDC1CA1650AD0772F9CCF61490E4465138A2DAD (float ___value0, const RuntimeMethod* method) 
+{
+	typedef void (*XRDevice_set_fovZoomFactor_mCBDC1CA1650AD0772F9CCF61490E4465138A2DAD_ftn) (float);
+	static XRDevice_set_fovZoomFactor_mCBDC1CA1650AD0772F9CCF61490E4465138A2DAD_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (XRDevice_set_fovZoomFactor_mCBDC1CA1650AD0772F9CCF61490E4465138A2DAD_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.XRDevice::set_fovZoomFactor(System.Single)");
+	_il2cpp_icall_func(___value0);
+}
 // System.Void UnityEngine.XR.XRDevice::InvokeDeviceLoaded(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDevice_InvokeDeviceLoaded_mBE2198DE44A72E2F5059566C46B9907D82782790 (String_t* ___loadedDeviceName0, const RuntimeMethod* method) 
 {
