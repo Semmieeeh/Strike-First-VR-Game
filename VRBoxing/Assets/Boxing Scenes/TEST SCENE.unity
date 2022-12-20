@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 5382191478725030665, guid: 00e44494372705643a53c02fce3827c6, type: 3}
-  amount: 1500
+  amount: 350
 --- !u!4 &1003970123
 Transform:
   m_ObjectHideFlags: 0
