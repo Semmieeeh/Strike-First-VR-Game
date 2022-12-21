@@ -12,6 +12,10 @@ public class PlayerSync : MonoBehaviourPun
     // The transform component of the player's right hand
     public Transform rightHandTransform;
 
+
+    [Space(8)]
+    public Transform networkBodyTransform, networkLeftHandTransform, networkRightHandTransform;
+
     // The current position of the player's body
     private Vector3 bodyPosition;
 
@@ -30,11 +34,20 @@ public class PlayerSync : MonoBehaviourPun
     // The current rotation of the player's right hand
     private Quaternion rightHandRotation;
 
+    public GameObject playerNetwork;
+    public GameObject[] thisPlayer;
+
     void Update()
     {
         // If this script is not being executed on the master client, do not update the player's body and hand transforms
-        if (!photonView.IsMine)
+        if (photonView.IsMine == false)
         {
+            playerNetwork.SetActive(true);
+
+            foreach (GameObject gameObject in thisPlayer)
+            {
+                gameObject.SetActive(false);
+            }
             return;
         }
 
@@ -47,9 +60,9 @@ public class PlayerSync : MonoBehaviourPun
         rightHandRotation = rightHandTransform.rotation;
 
         // Set the position and rotation of the player's body and hands on the Photon server
-        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, bodyTransform, bodyPosition, bodyRotation);
-        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, leftHandTransform, leftHandPosition, leftHandRotation);
-        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, rightHandTransform, rightHandPosition, rightHandRotation);
+        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, networkBodyTransform, bodyPosition, bodyRotation);
+        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, networkLeftHandTransform, leftHandPosition, leftHandRotation);
+        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, networkRightHandTransform, rightHandPosition, rightHandRotation);
     }
 
 
