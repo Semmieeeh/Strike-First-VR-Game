@@ -32,7 +32,7 @@ public class NetworkPlayer : MonoBehaviour
     {
         InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 position);
         InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation);
-        target.position = position;
+        target.position = position + transform.parent.position;
         target.rotation = rotation;
     }
 }
