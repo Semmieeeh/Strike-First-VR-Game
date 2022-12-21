@@ -1119,8 +1119,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 712165186683412999}
+  m_Children: []
   m_Father: {fileID: 8148356200204119615}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1312,7 +1311,7 @@ Transform:
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5458504532359341529}
+  m_Father: {fileID: 8148356200743237144}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3155483887876770116
@@ -2772,6 +2771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
+  multiplier: 0
   grabbed: 0
   hand: {fileID: 8148356199614612532}
   grabObject: {fileID: 0}
@@ -2785,6 +2785,10 @@ MonoBehaviour:
   timer: 0
   speed: 0
   mesh: {fileID: 0}
+  leftHandDouble: {fileID: 0}
+  rightHandDouble: {fileID: 0}
+  normalHandLeft: {fileID: 0}
+  normalHandRight: {fileID: 0}
 --- !u!95 &8148356199614612554
 Animator:
   serializedVersion: 4
@@ -2836,7 +2840,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 0
+  m_UseLocal: 1
 --- !u!1 &8148356199953519155
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,6 +3257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
+  multiplier: 0
   grabbed: 0
   hand: {fileID: 8148356199953519155}
   grabObject: {fileID: 0}
@@ -3266,6 +3271,10 @@ MonoBehaviour:
   timer: 0
   speed: 0
   mesh: {fileID: 0}
+  leftHandDouble: {fileID: 0}
+  rightHandDouble: {fileID: 0}
+  normalHandLeft: {fileID: 0}
+  normalHandRight: {fileID: 0}
 --- !u!95 &8148356199953519178
 Animator:
   serializedVersion: 4
@@ -3317,7 +3326,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 0
+  m_UseLocal: 1
 --- !u!1 &8148356200204119614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3350,7 +3359,7 @@ Transform:
   - {fileID: 8148356199953519152}
   - {fileID: 8148356199614612533}
   m_Father: {fileID: 8148356200743237144}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8148356200743237125
 GameObject:
@@ -3393,6 +3402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 712165186683412999}
   - {fileID: 8148356200204119615}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -3452,6 +3462,7 @@ MonoBehaviour:
   gravity: -9.82
   fallingspeed: 0
   cameraOffset: 0
+  grab: []
 --- !u!114 &6674027737852744918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3802,71 +3813,13 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 2642025995033914650}
-  - {fileID: 0}
   - {fileID: 5969529208117149201}
   - {fileID: 5021058677579043939}
   - {fileID: 1591452640970488973}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 6195324803022856766}
   - {fileID: 359540843683306714}
-  - {fileID: 0}
   - {fileID: 7910232239724880304}
   - {fileID: 8441885119164550492}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

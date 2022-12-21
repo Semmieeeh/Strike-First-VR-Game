@@ -47,9 +47,9 @@ public class PlayerSync : MonoBehaviourPun
         rightHandRotation = rightHandTransform.rotation;
 
         // Set the position and rotation of the player's body and hands on the Photon server
-        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, bodyTransform, bodyPosition, bodyRotation);
-        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, leftHandTransform, leftHandPosition, leftHandRotation);
-        photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, rightHandTransform, rightHandPosition, rightHandRotation);
+        //photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, bodyTransform, bodyPosition, bodyRotation);
+        //photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, leftHandTransform, leftHandPosition, leftHandRotation);
+        //photonView.RPC(nameof(SyncBodyPart), RpcTarget.Others, rightHandTransform, rightHandPosition, rightHandRotation);
     }
 
 

@@ -8193,7 +8193,7 @@ MonoBehaviour:
   currentLevelImage: {fileID: 14692180}
   mapIndex: 1
   mapSprites:
-  - {fileID: 21300000, guid: 49b11f9ec3a920943af3ba3b962b8dc7, type: 3}
+  - {fileID: 21300000, guid: 3f329e927a2b9de488c8d3a3645b23dd, type: 3}
   - {fileID: 21300000, guid: 9a8399a4332e85c47a876c05e7487e29, type: 3}
   - {fileID: 21300000, guid: 991b5ff604df1cd4a9a152da15ae8f35, type: 3}
 --- !u!114 &674986631
