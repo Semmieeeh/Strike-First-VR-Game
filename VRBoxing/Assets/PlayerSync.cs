@@ -13,6 +13,7 @@ public class PlayerSync : MonoBehaviourPun
     public Transform rightHandTransform;
 
 
+    [Space(8)]
     public Transform networkBodyTransform, networkLeftHandTransform, networkRightHandTransform;
 
     // The current position of the player's body
