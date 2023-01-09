@@ -1215,6 +1215,7 @@ MonoBehaviour:
   gravity: -9.82
   fallingspeed: 0
   cameraOffset: 0
+  grab: []
 --- !u!114 &4428112012733736104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1945,6 +1946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
+  multiplier: 0
   grabbed: 0
   hand: {fileID: 4428112013017759872}
   grabObject: {fileID: 0}
@@ -1957,6 +1959,11 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   timer: 0
   speed: 0
+  mesh: {fileID: 0}
+  leftHandDouble: {fileID: 0}
+  rightHandDouble: {fileID: 0}
+  normalHandLeft: {fileID: 0}
+  normalHandRight: {fileID: 0}
 --- !u!95 &4428112013017759993
 Animator:
   serializedVersion: 4
@@ -2442,6 +2449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
+  multiplier: 0
   grabbed: 0
   hand: {fileID: 4428112013484693127}
   grabObject: {fileID: 0}
@@ -2454,6 +2462,11 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   timer: 0
   speed: 0
+  mesh: {fileID: 0}
+  leftHandDouble: {fileID: 0}
+  rightHandDouble: {fileID: 0}
+  normalHandLeft: {fileID: 0}
+  normalHandRight: {fileID: 0}
 --- !u!95 &4428112013484693241
 Animator:
   serializedVersion: 4
