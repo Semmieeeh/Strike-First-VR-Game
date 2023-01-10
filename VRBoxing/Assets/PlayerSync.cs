@@ -6,10 +6,21 @@ public class PlayerSync : MonoBehaviour
     // Reference to the PhotonView component.
     public PhotonView photonView;
 
-    // Stores the past and future positions of the player controller.
-    Vector3 previousPosition;
-    Vector3 currentPosition;
-    Vector3 nextPosition;
+    // References to the head and hand transforms.
+    public Transform headTransform;
+    public Transform leftHandTransform;
+    public Transform rightHandTransform;
+
+    // Stores the past and future positions of the head and hand transforms.
+    Vector3 previousHeadPosition;
+    Vector3 currentHeadPosition;
+    Vector3 nextHeadPosition;
+    Vector3 previousLeftHandPosition;
+    Vector3 currentLeftHandPosition;
+    Vector3 nextLeftHandPosition;
+    Vector3 previousRightHandPosition;
+    Vector3 currentRightHandPosition;
+    Vector3 nextRightHandPosition;
 
     // Stores the time at which the past and future positions were received.
     float previousTime;
@@ -18,10 +29,16 @@ public class PlayerSync : MonoBehaviour
 
     void Start()
     {
-        // Initialize the past and future positions of the player controller.
-        previousPosition = transform.position;
-        currentPosition = transform.position;
-        nextPosition = transform.position;
+        // Initialize the past and future positions of the head and hand transforms.
+        previousHeadPosition = headTransform.position;
+        currentHeadPosition = headTransform.position;
+        nextHeadPosition = headTransform.position;
+        previousLeftHandPosition = leftHandTransform.position;
+        currentLeftHandPosition = leftHandTransform.position;
+        nextLeftHandPosition = leftHandTransform.position;
+        previousRightHandPosition = rightHandTransform.position;
+        currentRightHandPosition = rightHandTransform.position;
+        nextRightHandPosition = rightHandTransform.position;
 
         // Initialize the time at which the past and future positions were received.
         previousTime = Time.time;
@@ -33,32 +50,44 @@ public class PlayerSync : MonoBehaviour
     {
         if (photonView.IsMine)
         {
-            // Synchronize the player controller's transform across the network.
-            photonView.RPC(nameof(UpdatePlayerTransform), RpcTarget.Others, transform.position, Time.time);
+            // This is the local player's player controller.
+            // Synchronize the head and hand transforms across the network.
+            photonView.RPC(nameof(UpdatePlayerTransform), RpcTarget.Others, headTransform.position, leftHandTransform.position, rightHandTransform.position, Time.time);
         }
         else
         {
+            headTransform.gameObject.SetActive(false);
+            leftHandTransform.gameObject.SetActive(false);
+            rightHandTransform.gameObject.SetActive(false);
             // This is a remote player's player controller.
             // Smooth out movement over the network using interpolation.
             float lerpTime = (Time.time - previousTime) / (nextTime - previousTime);
-            transform.position = Vector3.Lerp(previousPosition, nextPosition, lerpTime);
+            headTransform.position = Vector3.Lerp(previousHeadPosition, nextHeadPosition, lerpTime);
+            leftHandTransform.position = Vector3.Lerp(previousLeftHandPosition, nextLeftHandPosition, lerpTime);
+            rightHandTransform.position = Vector3.Lerp(previousRightHandPosition, nextRightHandPosition, lerpTime);
         }
     }
-
-    // This function is called on all clients when the transform of the player controller is updated over the network.
+    // This function is called on all clients when the head and hand transforms of the player controller are updated over the network.
     [PunRPC]
-    void UpdatePlayerTransform(Vector3 position, float time)
+    void UpdatePlayerTransform(Vector3 headPosition, Vector3 leftHandPosition, Vector3 rightHandPosition, float time)
     {
-        // Store the past position of the player controller.
-        previousPosition = transform.position;
+        // Store the past positions of the head and hand transforms.
+        previousHeadPosition = headTransform.position;
+        previousLeftHandPosition = leftHandTransform.position;
+        previousRightHandPosition = rightHandTransform.position;
         previousTime = Time.time;
 
-        // Update the current and future positions of the player controller.
-        currentPosition = position;
+        // Update the current and future positions of the head and hand transforms.
+        currentHeadPosition = headPosition;
+        currentLeftHandPosition = leftHandPosition;
+        currentRightHandPosition = rightHandPosition;
         currentTime = time;
-        nextPosition = position;
+        nextHeadPosition = headPosition;
+        nextLeftHandPosition = leftHandPosition;
+        nextRightHandPosition = rightHandPosition;
         nextTime = time;
     }
+
 }
 
 //public class PlayerSync : MonoBehaviourPun
