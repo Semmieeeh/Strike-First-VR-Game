@@ -20,6 +20,7 @@ public class GrabObjects : MonoBehaviour
     public float speed;
     public GameObject mesh;
     public GameObject leftHandDouble,rightHandDouble,normalHandLeft,normalHandRight;
+    public GameObject enemy;
 
     void Start()
     {
@@ -93,9 +94,25 @@ public class GrabObjects : MonoBehaviour
     }
     public IEnumerator ReAppear()
     {
+        mesh.SetActive(false);
+        GetComponent<BoxCollider>().enabled = false;
         yield return new WaitForSeconds(3);
+        GetComponent<BoxCollider>().enabled = true;
         mesh.SetActive(true);
         hardened = false;
         canHarden = true;
+    }
+
+    public void Punch()
+    {
+        //enemy.GetComponent("health").TakeDamage("damage");
+        ReAppear();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Punch();
+        }
     }
 }

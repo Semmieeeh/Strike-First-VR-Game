@@ -7738,6 +7738,7 @@ MonoBehaviour:
   rightHandDouble: {fileID: 1427265884}
   normalHandLeft: {fileID: 8214811139856774163}
   normalHandRight: {fileID: 778211594}
+  enemy: {fileID: 0}
 --- !u!95 &5838354294002928961
 Animator:
   serializedVersion: 4
@@ -8207,6 +8208,7 @@ MonoBehaviour:
   rightHandDouble: {fileID: 1427265884}
   normalHandLeft: {fileID: 8214811139856774163}
   normalHandRight: {fileID: 778211594}
+  enemy: {fileID: 0}
 --- !u!95 &5838354294593461057
 Animator:
   serializedVersion: 4
@@ -8471,31 +8473,7 @@ MonoBehaviour:
     m_ActionId: 4be5d7ab-20ea-4c22-a318-a2295f3ae903
     m_ActionName: Player/New action
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5838354294593461056}
-        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
-        m_MethodName: Grab
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5838354294002928960}
-        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
-        m_MethodName: Grab
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 8cdb57fc-53c1-4631-a463-024478025fed
     m_ActionName: Player/New action
   - m_PersistentCalls:
@@ -8515,19 +8493,7 @@ MonoBehaviour:
     m_ActionId: 2fc27d49-d03f-4c00-a1ee-9d63d3e85df7
     m_ActionName: Player/New action
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5838354294593461056}
-        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
-        m_MethodName: ReleaseGrab
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: eae3842f-5219-4f47-babb-69782214b765
     m_ActionName: Player/ReleaseGrab
   - m_PersistentCalls:
