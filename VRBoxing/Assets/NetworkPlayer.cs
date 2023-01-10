@@ -20,16 +20,16 @@ public class NetworkPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (photonView.IsMine)
-        {
-            head.gameObject.SetActive(false);
-            rightHand.gameObject.SetActive(false);
-            leftHand.gameObject.SetActive(false);
+        //if (photonView.IsMine)
+        //{
+        //    head.gameObject.SetActive(false);
+        //    rightHand.gameObject.SetActive(false);
+        //    leftHand.gameObject.SetActive(false);
             
-            MapPosition(head, );
-            MapPosition(leftHand, );
-            MapPosition(rightHand,);
-        }
+        //    MapPosition(head, );
+        //    MapPosition(leftHand, );
+        //    MapPosition(rightHand,);
+        //}
     }
     void MapPosition(Transform target, Vector3 position, Quaternion rotation)
     { 
