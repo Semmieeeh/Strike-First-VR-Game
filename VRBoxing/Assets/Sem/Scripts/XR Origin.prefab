@@ -1344,7 +1344,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.005
+    widthMultiplier: 0.02
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1355,8 +1355,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1557,10 +1566,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
+  multiplier: 0
   grabbed: 0
   hand: {fileID: 2752673514478763213}
   grabObject: {fileID: 0}
   hardened: 0
+  canHarden: 0
+  handPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  timer: 0
+  speed: 0
+  mesh: {fileID: 0}
+  leftHandDouble: {fileID: 0}
+  rightHandDouble: {fileID: 0}
+  normalHandLeft: {fileID: 0}
+  normalHandRight: {fileID: 0}
 --- !u!95 &2752673514478763187
 Animator:
   serializedVersion: 4
@@ -1774,7 +1797,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.005
+    widthMultiplier: 0.02
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1785,8 +1808,17 @@ LineRenderer:
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -1986,10 +2018,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canGrab: 0
+  multiplier: 0
   grabbed: 0
   hand: {fileID: 2752673515094452938}
   grabObject: {fileID: 0}
   hardened: 0
+  canHarden: 0
+  handPos:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  timer: 0
+  speed: 0
+  mesh: {fileID: 0}
+  leftHandDouble: {fileID: 0}
+  rightHandDouble: {fileID: 0}
+  normalHandLeft: {fileID: 0}
+  normalHandRight: {fileID: 0}
 --- !u!95 &2752673515094452915
 Animator:
   serializedVersion: 4
@@ -2108,6 +2154,7 @@ MonoBehaviour:
   gravity: -9.82
   fallingspeed: 0
   cameraOffset: 0
+  grab: []
 --- !u!114 &2752673515884154594
 MonoBehaviour:
   m_ObjectHideFlags: 0

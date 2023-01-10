@@ -5,14 +5,17 @@ using UnityEngine.XR;
 using Photon.Pun;
 public class NetworkPlayer : MonoBehaviour
 {
-    public Transform head;
-    public Transform leftHand;
-    public Transform rightHand;
+    public Transform networkHead;
+    public Transform networkLeftHand;
+    public Transform networkRightHand;
     private PhotonView photonView;
+
+    public Transform parent;
     // Start is called before the first frame update
     void Start()
     {
         photonView = GetComponent<PhotonView>();
+        parent = GameObject.Find("XR Origin").transform;
     }
     // Update is called once per frame
     void Update()
@@ -23,16 +26,14 @@ public class NetworkPlayer : MonoBehaviour
             rightHand.gameObject.SetActive(false);
             leftHand.gameObject.SetActive(false);
             
-            MapPosition(head, XRNode.Head);
-            MapPosition(leftHand, XRNode.LeftHand);
-            MapPosition(rightHand, XRNode.RightHand);
+            MapPosition(head, );
+            MapPosition(leftHand, );
+            MapPosition(rightHand,);
         }
     }
-    void MapPosition(Transform target, XRNode node)
-    {
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.devicePosition, out Vector3 position);
-        InputDevices.GetDeviceAtXRNode(node).TryGetFeatureValue(CommonUsages.deviceRotation, out Quaternion rotation);
-        target.position = position + transform.parent.position;
+    void MapPosition(Transform target, Vector3 position, Quaternion rotation)
+    { 
+        target.position = position;
         target.rotation = rotation;
     }
 }
