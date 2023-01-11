@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 917603965952915184}
   - component: {fileID: 917603965952915087}
   - component: {fileID: 917603965952915086}
+  - component: {fileID: 6672208929028640772}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 917603965952915084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.47, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 917603967122342644}
@@ -97,6 +98,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6672208929028640772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917603965952915084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &917603966493050429
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +126,7 @@ GameObject:
   - component: {fileID: 917603966493050401}
   - component: {fileID: 917603966493050400}
   - component: {fileID: 917603966493050431}
+  - component: {fileID: 4619496909326509761}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Untagged
@@ -125,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 917603966493050429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.68, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 917603967122342644}
@@ -194,6 +212,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4619496909326509761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917603966493050429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &917603966893934185
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +240,7 @@ GameObject:
   - component: {fileID: 917603966893934189}
   - component: {fileID: 917603966893934188}
   - component: {fileID: 917603966893934187}
+  - component: {fileID: 3199453876357534598}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
@@ -222,8 +257,8 @@ Transform:
   m_GameObject: {fileID: 917603966893934185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.68, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 917603967122342644}
   m_RootOrder: 1
@@ -291,6 +326,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3199453876357534598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917603966893934185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &917603967122342643
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +396,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 6672208929028640772}
+  - {fileID: 3199453876357534598}
+  - {fileID: 4619496909326509761}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -361,7 +415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d823b22af581b9c4ca1df0685f40335e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 917603965952915085}
-  leftHand: {fileID: 917603966893934186}
-  rightHand: {fileID: 917603966493050430}
-  parent: {fileID: 0}
+  photonView: {fileID: 1446742772475621401}
+  headTransform: {fileID: 917603965952915085}
+  leftHandTransform: {fileID: 917603966893934186}
+  rightHandTransform: {fileID: 917603966493050430}
+  localCameraTransform: {fileID: 0}
+  localLeftHandTransform: {fileID: 0}
+  localRightHandTransform: {fileID: 0}

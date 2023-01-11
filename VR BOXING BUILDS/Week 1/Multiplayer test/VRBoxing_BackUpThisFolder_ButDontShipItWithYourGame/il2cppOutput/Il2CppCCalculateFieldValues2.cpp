@@ -28980,16 +28980,20 @@ struct NamePickGui_t8C0368B20268692BC4311641FC79610CCD7FB56B  : public MonoBehav
 // NetworkPlayer
 struct NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.Transform NetworkPlayer::networkHead
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___networkHead_4;
-	// UnityEngine.Transform NetworkPlayer::networkLeftHand
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___networkLeftHand_5;
-	// UnityEngine.Transform NetworkPlayer::networkRightHand
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___networkRightHand_6;
 	// Photon.Pun.PhotonView NetworkPlayer::photonView
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_7;
-	// UnityEngine.Transform NetworkPlayer::parent
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___parent_8;
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_4;
+	// UnityEngine.Transform NetworkPlayer::headTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___headTransform_5;
+	// UnityEngine.Transform NetworkPlayer::leftHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___leftHandTransform_6;
+	// UnityEngine.Transform NetworkPlayer::rightHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___rightHandTransform_7;
+	// UnityEngine.Transform NetworkPlayer::localCameraTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___localCameraTransform_8;
+	// UnityEngine.Transform NetworkPlayer::localLeftHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___localLeftHandTransform_9;
+	// UnityEngine.Transform NetworkPlayer::localRightHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___localRightHandTransform_10;
 };
 
 // Photon.Pun.Demo.Cockpit.NickNameField
@@ -37048,9 +37052,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6492[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6494[8] = 
 {
 	static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___U3CassetU3Ek__BackingField_0)),static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___m_Player_1)),static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___m_PlayerActionsCallbackInterface_2)),static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___m_Player_Movement_3)),static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___m_Player_Look_4)),static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___m_Player_Grab_5)),static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___m_Player_HardenFist_6)),static_cast<int32_t>(offsetof(Movement_t7ED030E814A2C7E091389CFDABC85C6995DD35E7, ___m_OculusSchemeIndex_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6496[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6496[7] = 
 {
-	static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___networkHead_4)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___networkLeftHand_5)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___networkRightHand_6)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___photonView_7)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___parent_8)),};
+	static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___photonView_4)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___headTransform_5)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___leftHandTransform_6)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___rightHandTransform_7)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___localCameraTransform_8)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___localLeftHandTransform_9)),static_cast<int32_t>(offsetof(NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74, ___localRightHandTransform_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6497[3] = 
 {
 	static_cast<int32_t>(offsetof(NetworkPlayerSpawner_t1696AC41E19750BAE24DCA6F65B071BF438DC1D0, ___spawnedPlayerPrefab_5)),static_cast<int32_t>(offsetof(NetworkPlayerSpawner_t1696AC41E19750BAE24DCA6F65B071BF438DC1D0, ___networkPlayerPrefab_6)),static_cast<int32_t>(offsetof(NetworkPlayerSpawner_t1696AC41E19750BAE24DCA6F65B071BF438DC1D0, ___networkPlayerParent_7)),};

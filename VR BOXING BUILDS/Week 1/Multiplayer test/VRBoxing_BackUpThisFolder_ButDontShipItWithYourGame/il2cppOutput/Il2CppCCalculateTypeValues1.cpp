@@ -47146,16 +47146,20 @@ struct NamePickGui_t8C0368B20268692BC4311641FC79610CCD7FB56B  : public MonoBehav
 // NetworkPlayer
 struct NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
-	// UnityEngine.Transform NetworkPlayer::networkHead
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___networkHead_4;
-	// UnityEngine.Transform NetworkPlayer::networkLeftHand
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___networkLeftHand_5;
-	// UnityEngine.Transform NetworkPlayer::networkRightHand
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___networkRightHand_6;
 	// Photon.Pun.PhotonView NetworkPlayer::photonView
-	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_7;
-	// UnityEngine.Transform NetworkPlayer::parent
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___parent_8;
+	PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___photonView_4;
+	// UnityEngine.Transform NetworkPlayer::headTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___headTransform_5;
+	// UnityEngine.Transform NetworkPlayer::leftHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___leftHandTransform_6;
+	// UnityEngine.Transform NetworkPlayer::rightHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___rightHandTransform_7;
+	// UnityEngine.Transform NetworkPlayer::localCameraTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___localCameraTransform_8;
+	// UnityEngine.Transform NetworkPlayer::localLeftHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___localLeftHandTransform_9;
+	// UnityEngine.Transform NetworkPlayer::localRightHandTransform
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___localRightHandTransform_10;
 };
 
 // Photon.Pun.Demo.Cockpit.NickNameField

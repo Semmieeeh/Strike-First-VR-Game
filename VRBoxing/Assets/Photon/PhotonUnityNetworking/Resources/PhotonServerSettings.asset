@@ -41,6 +41,10 @@ MonoBehaviour:
   - RespawnSpaceship
   - SyncBodyPart
   - UpdatePlayerTransform
+  - MapPosition
+  - MapHeadPosition
+  - MapLeftHandPosition
+  - MapRightHandPosition
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
