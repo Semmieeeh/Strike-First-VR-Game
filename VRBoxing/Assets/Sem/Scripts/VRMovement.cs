@@ -21,6 +21,9 @@ public class VRMovement : MonoBehaviour
     public float gravity, fallingspeed;
     public float cameraOffset;
     public GrabObjects[] grab;
+    public UniversalHealthBar healthBar;
+    public float healResetTime;
+    public bool canHeal;
 
     
     void Start()
@@ -28,6 +31,8 @@ public class VRMovement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
         rig = GetComponent<XROrigin>();
+        healthBar = GetComponentInParent<UniversalHealthBar>();
+        healResetTime = 10f;
     }
     
 
@@ -43,12 +48,11 @@ public class VRMovement : MonoBehaviour
     
     
     
-    public void ZaWarudo(InputAction.CallbackContext context)
+    public void Heal(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && canHeal)
         {
-            
-            
+            healthBar.Heal();
         }
     }
     public void Disable()
@@ -70,8 +74,14 @@ public class VRMovement : MonoBehaviour
     }
     private void Update()
     {
-        
-
+        if (healResetTime > 0)
+        {
+            canHeal = true;
+        }
+        else
+        {
+            canHeal = false;
+        }
     }
     public void Movement(InputAction.CallbackContext context)
     {

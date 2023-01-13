@@ -7739,6 +7739,7 @@ MonoBehaviour:
   normalHandLeft: {fileID: 8214811139856774163}
   normalHandRight: {fileID: 778211594}
   enemy: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!95 &5838354294002928961
 Animator:
   serializedVersion: 4
@@ -8209,6 +8210,7 @@ MonoBehaviour:
   normalHandLeft: {fileID: 8214811139856774163}
   normalHandRight: {fileID: 778211594}
   enemy: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!95 &5838354294593461057
 Animator:
   serializedVersion: 4
@@ -8297,6 +8299,7 @@ GameObject:
   - component: {fileID: 5838354295416471321}
   - component: {fileID: 5838354295416471322}
   - component: {fileID: 5838354295416471324}
+  - component: {fileID: 5838354295416471325}
   m_Layer: 6
   m_Name: XR Origin
   m_TagString: Untagged
@@ -8607,6 +8610,9 @@ MonoBehaviour:
   grab:
   - {fileID: 5838354294593461056}
   - {fileID: 5838354294002928960}
+  healthBar: {fileID: 0}
+  healResetTime: 0
+  canHeal: 0
 --- !u!143 &5838354295416471324
 CharacterController:
   m_ObjectHideFlags: 0
@@ -8625,6 +8631,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5838354295416471325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5838354295416471310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbe54ce44ef5d74caf2d19295aecca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  regenDuration: 0
+  dead: 0
+  maxHealth: 0
+  minHealth: 0
 --- !u!4 &7769349776090934482
 Transform:
   m_ObjectHideFlags: 0

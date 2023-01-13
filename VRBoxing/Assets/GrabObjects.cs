@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class GrabObjects : MonoBehaviour
+public class GrabObjects : MonoBehaviourPunCallbacks
 {
     public bool canGrab;
     public bool multiplier;
@@ -21,12 +23,16 @@ public class GrabObjects : MonoBehaviour
     public GameObject mesh;
     public GameObject leftHandDouble,rightHandDouble,normalHandLeft,normalHandRight;
     public GameObject enemy;
+    public UniversalHealthBar healthBar;
+    public PhotonView pv;
 
     void Start()
     {
+        healthBar = transform.GetComponentInParent<UniversalHealthBar>();
         hand = gameObject;
         canHarden = true;
         anim = GetComponent<Animator>();
+        
     }
 
     public void HardenFist(InputAction.CallbackContext context)
@@ -47,6 +53,7 @@ public class GrabObjects : MonoBehaviour
             Debug.Log("Un-hardened");
         }
     }
+
     
 
     
@@ -103,15 +110,18 @@ public class GrabObjects : MonoBehaviour
         canHarden = true;
     }
 
-    public void Punch()
+    [PunRPC]
+    void Punch()
     {
-        //enemy.GetComponent("health").TakeDamage("damage");
+        canHarden = false;
+        healthBar.playersHealth[pv.ViewID] -= speed;
         ReAppear();
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && canHarden == true)
         {
+            pv = enemy.GetComponent<PhotonView>();
             Punch();
         }
     }
