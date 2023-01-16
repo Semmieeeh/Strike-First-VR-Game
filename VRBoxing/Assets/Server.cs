@@ -8,6 +8,11 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class Server : MonoBehaviourPunCallbacks
 {
     public UniversalHealthBar healthBar;
+
+    public const byte kDamage = 0;
+    public const byte kDamageApplied = 1;
+    public const byte kHealth = 2;
+
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log("A new player entered the room");
@@ -19,6 +24,16 @@ public class Server : MonoBehaviourPunCallbacks
         if (MyPlayer == null)
         {
             MyPlayer = PhotonNetwork.LocalPlayer;
+            if (!myPlayerInitialized)
+            {
+                var props = MyPlayer.CustomProperties;
+                props.Add(kDamage,0);
+                props.Add(kDamageApplied, true);
+                props.Add(kHealth, 100);
+
+                MyPlayer.SetCustomProperties(props);
+                myPlayerInitialized = true;
+            }
         }
         if (OtherPlayer == null)
         {
@@ -30,19 +45,20 @@ public class Server : MonoBehaviourPunCallbacks
     }
 
     public static Player MyPlayer;
+    bool myPlayerInitialized;
     public static Player OtherPlayer;
 
     void ManageMyPlayer()
     {
         Hashtable properties = MyPlayer.CustomProperties;
-        if (properties.ContainsKey("DMGA"))
+        if (properties.ContainsKey(kDamageApplied))
         {
-            if (!(bool)properties["DMGA"])
+            if (!(bool)properties[kDamageApplied])
             {
-                print("You took" + (float)properties["DMG"] + " damage");
-                properties["DMGA"] = true;
+                print("You took" + (float)properties[kDamage] + " damage");
+                properties[kDamageApplied] = true;
 
-                healthBar.TakeDamage((float)properties["DMG"]);
+                healthBar.TakeDamage((float)properties[kDamage]);
             }
         }
 
@@ -51,24 +67,65 @@ public class Server : MonoBehaviourPunCallbacks
     public static void DamageEnemy(float damage)
     {
         Hashtable properties = OtherPlayer.CustomProperties;
-        if (!properties.ContainsKey("DMG"))
+        if (!properties.ContainsKey(kDamage))
         {
-            properties.Add("DMG", damage);
+            properties.Add(kDamage, damage);
             //{ "DMG" , 35 }
         }
         else
         {
-            properties["DMG"] = damage;
+            properties[kDamage] = damage;
         }
-        if (!properties.ContainsKey("DMGA"))
+        if (!properties.ContainsKey(kDamageApplied))
         {
-            properties.Add("DMGA", false);
+            properties.Add(kDamageApplied, false);
         }
         else
         {
-            properties["DMGA"] = false;
+            properties[kDamageApplied] = false;
         }
 
         OtherPlayer.SetCustomProperties(properties);
+    }
+
+    /// <summary>
+    /// healthToAdd Can be negative to remove health
+    /// </summary>
+    /// <param name="healthToAdd"></param>
+    public void UpdatePlayerHealth(float healthToAdd)
+    {
+        var props = MyPlayer.CustomProperties;
+        SetMyPlayerProperty(kHealth, (float)props[kHealth] + healthToAdd);
+    }
+
+    public static void SetMyPlayerProperty(byte key, object value)
+    {
+        var properties = MyPlayer.CustomProperties;
+        if (properties.ContainsKey(key))
+        {
+            properties.Add(key, value);
+
+        }
+        properties[key] = value;
+
+        SetPlayerProperties(MyPlayer, properties);
+    }
+
+    public static void SetOtherPlayerProperty(byte key, object value)
+    {
+        var properties = OtherPlayer.CustomProperties;
+        if (properties.ContainsKey(key))
+        {
+            properties.Add(key, value);
+
+        }
+        properties[key] = value;
+
+        SetPlayerProperties(OtherPlayer, properties);
+    }
+
+    public static void SetPlayerProperties(Player player, Hashtable properties)
+    {
+        player.SetCustomProperties(properties);
     }
 }
