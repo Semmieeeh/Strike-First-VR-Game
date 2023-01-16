@@ -83,20 +83,20 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
         }
 
-        if(multiplier == true)
-        {
-            leftHandDouble.SetActive(true);
-            rightHandDouble.SetActive(true);
-            normalHandLeft.SetActive(false);
-            normalHandRight.SetActive(false);
-        }
-        else if(multiplier == false)
-        {
-            leftHandDouble.SetActive(false);
-            rightHandDouble.SetActive(false);
-            normalHandLeft.SetActive(true);
-            normalHandRight.SetActive(true);
-        }
+        //if(multiplier == true)
+        //{
+        //    leftHandDouble.SetActive(true);
+        //    rightHandDouble.SetActive(true);
+        //    normalHandLeft.SetActive(false);
+        //    normalHandRight.SetActive(false);
+        //}
+        //else if(multiplier == false)
+        //{
+        //    leftHandDouble.SetActive(false);
+        //    rightHandDouble.SetActive(false);
+        //    normalHandLeft.SetActive(true);
+        //    normalHandRight.SetActive(true);
+        //}
 
 
     }
@@ -112,16 +112,17 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    void Punch()
+    public void Punch()
     {
-        gameObject.transform.parent.transform.parent.GetComponent<UniversalHealthBar>().TakeDamage(speed);
+        gameObject.transform.parent.GetComponent<UniversalHealthBar>().TakeDamage(speed);
 
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            pv.RPC(nameof(Punch), RpcTarget.Others);
+            //pv.RPC(nameof(Punch), RpcTarget.Others);
+            Server.DamageEnemy(speed);
             print("griep");
             
         }
