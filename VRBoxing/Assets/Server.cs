@@ -44,6 +44,7 @@ public class Server : MonoBehaviourPunCallbacks
 
         if(MyPlayer != null)
         ManageMyPlayer();
+        
     }
 
     public static Player MyPlayer;
@@ -95,10 +96,10 @@ public class Server : MonoBehaviourPunCallbacks
     /// healthToAdd Can be negative to remove health
     /// </summary>
     /// <param name="healthToAdd"></param>
-    public void UpdatePlayerHealth(float healthToAdd)
+    public static void UpdatePlayerHealth(float healthToAdd)
     {
-        var props = MyPlayer.CustomProperties;
-        SetMyPlayerProperty(kHealth, (float)props[kHealth] + healthToAdd);
+        var properties = MyPlayer.CustomProperties;
+        SetMyPlayerProperty(kHealth, (float)properties[kHealth] + healthToAdd);
     }
 
     public static void SetMyPlayerProperty(string key, object value)

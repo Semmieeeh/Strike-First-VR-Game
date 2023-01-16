@@ -41,7 +41,7 @@ public class UniversalHealthBar : MonoBehaviour
         
         if(regenDuration > 0)
         {
-            health += 10*Time.deltaTime;
+            Server.UpdatePlayerHealth(10 * Time.deltaTime);
         }
         regenDuration -= 1*Time.deltaTime;
         healResetTime -= 1 * Time.deltaTime;
