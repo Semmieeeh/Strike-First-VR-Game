@@ -62,6 +62,7 @@ public class NetworkPlayer : MonoBehaviour
         headTransform.position = position;
         headTransform.rotation = rotation;
     }
+
     [PunRPC]
     void MapLeftHandPosition(Vector3 position, Quaternion rotation)
     {
