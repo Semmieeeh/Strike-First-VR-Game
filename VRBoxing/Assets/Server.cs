@@ -9,9 +9,9 @@ public class Server : MonoBehaviourPunCallbacks
 {
     public UniversalHealthBar healthBar;
 
-    public const byte kDamage = 0;
-    public const byte kDamageApplied = 1;
-    public const byte kHealth = 2;
+    public const string kDamage = "DMG";
+    public const string kDamageApplied = "DMGA";
+    public const string kHealth = "HP";
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
