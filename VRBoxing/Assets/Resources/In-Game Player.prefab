@@ -1266,6 +1266,7 @@ GameObject:
   - component: {fileID: 5967584800018321524}
   - component: {fileID: 5967584800018321525}
   - component: {fileID: 5967584800018321526}
+  - component: {fileID: 1478236309966862769}
   m_Layer: 7
   m_Name: RightHand Controller
   m_TagString: RightFist
@@ -1721,6 +1722,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 2
+--- !u!114 &1478236309966862769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967584800018321419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &5967584801188454970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2187,7 @@ GameObject:
   - component: {fileID: 5967584801441023604}
   - component: {fileID: 5967584801441023605}
   - component: {fileID: 5967584801441023606}
+  - component: {fileID: 5076906561389834372}
   m_Layer: 7
   m_Name: LeftHand Controller
   m_TagString: LeftFist
@@ -2620,6 +2644,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 2
+--- !u!114 &5076906561389834372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967584801441023500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &5967584801727314433
 GameObject:
   m_ObjectHideFlags: 0
