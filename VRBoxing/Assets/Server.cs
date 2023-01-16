@@ -24,7 +24,7 @@ public class Server : MonoBehaviourPunCallbacks
         if (MyPlayer == null)
         {
             MyPlayer = PhotonNetwork.LocalPlayer;
-            if (!myPlayerInitialized)
+            if (!myPlayerInitialized && MyPlayer != null)
             {
                 var props = MyPlayer.CustomProperties;
                 props.Add(kDamage,0);
@@ -41,6 +41,8 @@ public class Server : MonoBehaviourPunCallbacks
         }
         print(MyPlayer);
         print(OtherPlayer);
+
+        if(MyPlayer != null)
         ManageMyPlayer();
     }
 
