@@ -32,7 +32,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         hand = gameObject;
         canHarden = true;
         anim = GetComponent<Animator>();
-        pv = GetComponent<PhotonView>();
+        pv = transform.parent.transform.parent.GetComponent<PhotonView>();
         
     }
 
