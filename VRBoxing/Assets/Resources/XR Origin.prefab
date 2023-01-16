@@ -2772,6 +2772,9 @@ MonoBehaviour:
   rightHandDouble: {fileID: 0}
   normalHandLeft: {fileID: 0}
   normalHandRight: {fileID: 0}
+  enemy: {fileID: 0}
+  healthBar: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!95 &8148356199614612554
 Animator:
   serializedVersion: 4
@@ -3258,6 +3261,9 @@ MonoBehaviour:
   rightHandDouble: {fileID: 0}
   normalHandLeft: {fileID: 0}
   normalHandRight: {fileID: 0}
+  enemy: {fileID: 0}
+  healthBar: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!95 &8148356199953519178
 Animator:
   serializedVersion: 4
@@ -3447,6 +3453,9 @@ MonoBehaviour:
   fallingspeed: 0
   cameraOffset: 0
   grab: []
+  healthBar: {fileID: 0}
+  healResetTime: 0
+  canHeal: 0
 --- !u!114 &6674027737852744918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3885,13 +3894,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4849439096677285835, guid: d14684b9925f15d459d91cdd9c09f546,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7472132579591730461, guid: d14684b9925f15d459d91cdd9c09f546,
         type: 3}
       propertyPath: m_Name
       value: Network player
       objectReference: {fileID: 0}
+    - target: {fileID: 7472132579591730461, guid: d14684b9925f15d459d91cdd9c09f546,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d14684b9925f15d459d91cdd9c09f546, type: 3}
+--- !u!1 &2040700157810524474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4849439096677285835, guid: d14684b9925f15d459d91cdd9c09f546,
+    type: 3}
+  m_PrefabInstance: {fileID: 6854107895612997361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2786924479510797027
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040700157810524474}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &7022207394484760726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4498333767774293607, guid: d14684b9925f15d459d91cdd9c09f546,

@@ -116,7 +116,6 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         gameObject.GetComponent<UniversalHealthBar>().TakeDamage(speed);
 
-
     }
     private void OnCollisionEnter(Collision collision)
     {
