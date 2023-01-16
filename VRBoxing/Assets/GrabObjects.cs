@@ -122,13 +122,13 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         if (collision.gameObject.tag == "Enemy")
         {
             pv.RPC(nameof(Punch), RpcTarget.Others);
-            print("kanker");
+            print("griep");
             
         }
 
-        if(collision.gameObject.tag == "Fist")
-        {
+        //if(collision.gameObject.tag == "Fist")
+        //{
 
-        }
+        //}
     }
 }
