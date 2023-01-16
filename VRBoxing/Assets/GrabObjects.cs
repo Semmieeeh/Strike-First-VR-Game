@@ -32,6 +32,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         hand = gameObject;
         canHarden = true;
         anim = GetComponent<Animator>();
+        pv = GetComponent<PhotonView>();
         
     }
 
@@ -113,16 +114,21 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     [PunRPC]
     void Punch()
     {
-        canHarden = false;
-        healthBar.playersHealth[pv.ViewID] -= speed;
-        ReAppear();
+        gameObject.GetComponent<UniversalHealthBar>().TakeDamage(speed);
+
+
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Enemy" && canHarden == true)
         {
-            pv = enemy.GetComponent<PhotonView>();
-            Punch();
+            pv.RPC(nameof(Punch), RpcTarget.Others);
+            
+        }
+
+        if(collision.gameObject.tag == "Fist")
+        {
+
         }
     }
 }
