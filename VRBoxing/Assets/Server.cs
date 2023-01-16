@@ -101,7 +101,7 @@ public class Server : MonoBehaviourPunCallbacks
         SetMyPlayerProperty(kHealth, (float)props[kHealth] + healthToAdd);
     }
 
-    public static void SetMyPlayerProperty(byte key, object value)
+    public static void SetMyPlayerProperty(string key, object value)
     {
         var properties = MyPlayer.CustomProperties;
         if (properties.ContainsKey(key))
@@ -114,7 +114,7 @@ public class Server : MonoBehaviourPunCallbacks
         SetPlayerProperties(MyPlayer, properties);
     }
 
-    public static void SetOtherPlayerProperty(byte key, object value)
+    public static void SetOtherPlayerProperty(string key, object value)
     {
         var properties = OtherPlayer.CustomProperties;
         if (properties.ContainsKey(key))
