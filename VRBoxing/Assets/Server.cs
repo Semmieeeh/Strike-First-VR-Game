@@ -10,6 +10,8 @@ public class Server : MonoBehaviourPunCallbacks
     public UniversalHealthBar healthBar;
 
     public const string kDamage = "DMG";
+    public const string kHealing = "HEAL";
+    public const string kHealingApplied = "HEALA";
     public const string kDamageApplied = "DMGA";
     public const string kHealth = "HP";
 
@@ -136,5 +138,29 @@ public class Server : MonoBehaviourPunCallbacks
     public static void SetPlayerProperties(Player player, Hashtable properties)
     {
         player.SetCustomProperties(properties);
+    }
+
+    public static void ApplyHealth(float healthToAdd)
+    {
+        Hashtable properties = OtherPlayer.CustomProperties;
+        if (!properties.ContainsKey(kHealing))
+        {
+            properties.Add(kHealing, healthToAdd);
+            //{ "DMG" , 35 }
+        }
+        else
+        {
+            properties[kHealing] = healthToAdd;
+        }
+        if (!properties.ContainsKey(kHealingApplied))
+        {
+            properties.Add(kHealingApplied, false);
+        }
+        else
+        {
+            properties[kHealingApplied] = false;
+        }
+
+        OtherPlayer.SetCustomProperties(properties);
     }
 }
