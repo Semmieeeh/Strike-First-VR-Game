@@ -7,7 +7,6 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     private GameObject spawnedPlayerPrefab;
     public GameObject networkPlayerPrefab;
 
-    public Transform networkPlayerParent;
 
     public void Start()
     {

@@ -55655,8 +55655,6 @@ struct NetworkPlayerSpawner_t1696AC41E19750BAE24DCA6F65B071BF438DC1D0  : public 
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedPlayerPrefab_5;
 	// UnityEngine.GameObject NetworkPlayerSpawner::networkPlayerPrefab
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___networkPlayerPrefab_6;
-	// UnityEngine.Transform NetworkPlayerSpawner::networkPlayerParent
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___networkPlayerParent_7;
 };
 
 // Unity.XR.Oculus.Input.OculusGoController

@@ -20,6 +20,7 @@ public class NetworkPlayer : MonoBehaviour
 
     void Start()
     {
+        photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
             // Find Local Transforms
