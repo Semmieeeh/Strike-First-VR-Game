@@ -114,7 +114,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     [PunRPC]
     void Punch()
     {
-        gameObject.GetComponent<UniversalHealthBar>().TakeDamage(speed);
+        gameObject.transform.parent.transform.parent.GetComponent<UniversalHealthBar>().TakeDamage(speed);
 
     }
     private void OnCollisionEnter(Collision collision)
@@ -122,6 +122,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         if (collision.gameObject.tag == "Enemy" && canHarden == true)
         {
             pv.RPC(nameof(Punch), RpcTarget.Others);
+            print("kanker");
             
         }
 
