@@ -7,11 +7,12 @@ using Photon.Pun;
 
 public class UniversalHealthBar : MonoBehaviour
 {
-    public float p1Health,p2Health, regenDuration;
+    public float regenDuration;
     public float health;
     public bool dead;
     public float maxHealth;
     public float minHealth;
+    public float healResetTime;
     VRMovement vm;
     void Start()
     {
@@ -23,21 +24,28 @@ public class UniversalHealthBar : MonoBehaviour
     }
     public void Heal()
     {
-        regenDuration = 3;
-        vm.healResetTime = 15;
+        if(healResetTime <= 0)
+        {
+            regenDuration = 3;
+            healResetTime = 10;
+        }
+        else if(healResetTime > 0)
+        {
+            //you cant heal ui
+        }
+        
     }
     // Update is called once per frame
     void Update()
     {
-        if (p1Health < 0)
-        {
-            //Destroy(gameObject);
-        }
+        
         if(regenDuration > 0)
         {
-            p1Health += 10*Time.deltaTime;
+            health += 10*Time.deltaTime;
         }
         regenDuration -= 1*Time.deltaTime;
+        healResetTime -= 1 * Time.deltaTime;
+        
     }
     public void TakeDamage(float amount)
     {
