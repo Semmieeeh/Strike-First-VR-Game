@@ -49,8 +49,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 9088590176340867455}
-  leftHandPhotonView: {fileID: 5873777891815876060}
-  rightHandPhotonView: {fileID: 1212823525831838269}
   headTransform: {fileID: 3029556615564302331}
   leftHandTransform: {fileID: 3029556615564302329}
   rightHandTransform: {fileID: 3029556615564302328}
@@ -232,8 +230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 3029556615564300372}
-  leftHandPhotonView: {fileID: 0}
-  rightHandPhotonView: {fileID: 0}
   headTransform: {fileID: 3029556615564302331}
   leftHandTransform: {fileID: 3029556615564302329}
   rightHandTransform: {fileID: 3029556615564302328}
