@@ -7,6 +7,7 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class Server : MonoBehaviourPunCallbacks
 {
+    public UniversalHealthBar healthBar;
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.Log("A new player entered the room");
@@ -40,6 +41,8 @@ public class Server : MonoBehaviourPunCallbacks
             {
                 print("You took" + (float)properties["DMG"] + " damage");
                 properties["DMGA"] = true;
+
+                healthBar.TakeDamage((float)properties["DMG"]);
             }
         }
 

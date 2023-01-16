@@ -11553,6 +11553,12 @@ RectTransform:
   m_AnchoredPosition: {x: 186.5, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!4 &880799478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7495494990045262310, guid: 6a64f62237056cf4f8e6226855f9da69,
+    type: 3}
+  m_PrefabInstance: {fileID: 94503070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &880800654
 GameObject:
   m_ObjectHideFlags: 0
@@ -12861,7 +12867,7 @@ MonoBehaviour:
   scaleSmoothSpeed: 0.15
   targetScale: {x: 0, y: 0, z: 0}
   defaultScale: {x: 0, y: 0, z: 0}
-  player: {fileID: 2130525031}
+  player: {fileID: 880799478}
   distanceFromPlayer: 1.8
 --- !u!114 &955423206
 MonoBehaviour:
@@ -29614,12 +29620,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122592916}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2130525031 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5967584801188454951, guid: 6a64f62237056cf4f8e6226855f9da69,
-    type: 3}
-  m_PrefabInstance: {fileID: 94503070}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2134817554
 GameObject:
   m_ObjectHideFlags: 0
