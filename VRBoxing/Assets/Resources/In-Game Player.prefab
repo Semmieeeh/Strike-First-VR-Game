@@ -2030,7 +2030,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5967584801188454959}
         m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
-        m_MethodName: RemoveBlock
+        m_MethodName: Heal
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2141,13 +2141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbe54ce44ef5d74caf2d19295aecca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1Health: 0
-  p2Health: 0
   regenDuration: 0
   health: 0
   dead: 0
   maxHealth: 0
   minHealth: 0
+  healResetTime: 0
 --- !u!114 &9069507114609530545
 MonoBehaviour:
   m_ObjectHideFlags: 0
