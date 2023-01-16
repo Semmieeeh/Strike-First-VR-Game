@@ -1216,6 +1216,9 @@ MonoBehaviour:
   fallingspeed: 0
   cameraOffset: 0
   grab: []
+  healthBar: {fileID: 0}
+  healResetTime: 0
+  canHeal: 0
 --- !u!114 &4428112012733736104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1964,6 +1967,9 @@ MonoBehaviour:
   rightHandDouble: {fileID: 0}
   normalHandLeft: {fileID: 0}
   normalHandRight: {fileID: 0}
+  enemy: {fileID: 0}
+  healthBar: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!95 &4428112013017759993
 Animator:
   serializedVersion: 4
@@ -2467,6 +2473,9 @@ MonoBehaviour:
   rightHandDouble: {fileID: 0}
   normalHandLeft: {fileID: 0}
   normalHandRight: {fileID: 0}
+  enemy: {fileID: 0}
+  healthBar: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!95 &4428112013484693241
 Animator:
   serializedVersion: 4
