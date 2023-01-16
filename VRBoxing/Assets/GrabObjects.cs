@@ -119,7 +119,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy" && canHarden == true)
+        if (collision.gameObject.tag == "Enemy")
         {
             pv.RPC(nameof(Punch), RpcTarget.Others);
             print("kanker");
