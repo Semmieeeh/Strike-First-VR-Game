@@ -61,10 +61,11 @@ public class Server : MonoBehaviourPunCallbacks
                 properties[kDamageApplied] = true;
 
                 healthBar.TakeDamage((float)properties[kDamage]);
+                MyPlayer.SetCustomProperties(properties);
             }
         }
 
-        MyPlayer.SetCustomProperties(properties);
+       
     }
     public static void DamageEnemy(float damage)
     {
