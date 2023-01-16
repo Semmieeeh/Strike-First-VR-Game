@@ -61,7 +61,11 @@ public class Server : MonoBehaviourPunCallbacks
                 print("You took" + (float)properties[kDamage] + " damage");
                 properties[kDamageApplied] = true;
 
-                healthBar.TakeDamage((float)properties[kDamage]);
+                float newHealth = (float)properties[kHealth];
+
+                newHealth -= (float)properties[kDamage];
+
+                healthBar.health = newHealth;
                 MyPlayer.SetCustomProperties(properties);
             }
         }
