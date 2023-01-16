@@ -65,6 +65,7 @@ public class Server : MonoBehaviourPunCallbacks
 
                 newHealth -= (float)properties[kDamage];
 
+                properties[kHealth] = newHealth;
                 healthBar.health = newHealth;
                 MyPlayer.SetCustomProperties(properties);
             }
