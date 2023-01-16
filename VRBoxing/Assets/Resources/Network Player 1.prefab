@@ -48,7 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d823b22af581b9c4ca1df0685f40335e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
+  photonView: {fileID: 9088590176340867455}
+  leftHandPhotonView: {fileID: 5873777891815876060}
+  rightHandPhotonView: {fileID: 1212823525831838269}
   headTransform: {fileID: 3029556615564302331}
   leftHandTransform: {fileID: 3029556615564302329}
   rightHandTransform: {fileID: 3029556615564302328}
@@ -231,6 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 3029556615564300372}
+  leftHandPhotonView: {fileID: 0}
+  rightHandPhotonView: {fileID: 0}
   headTransform: {fileID: 3029556615564302331}
   leftHandTransform: {fileID: 3029556615564302329}
   rightHandTransform: {fileID: 3029556615564302328}
@@ -250,6 +254,7 @@ GameObject:
   - component: {fileID: 3029556615564302100}
   - component: {fileID: 3029556615564300460}
   - component: {fileID: 3029556615564300347}
+  - component: {fileID: 1212823525831838269}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Untagged
@@ -351,6 +356,29 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &1212823525831838269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029556615564301677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 3029556615564300347}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &3029556615564301682
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +392,7 @@ GameObject:
   - component: {fileID: 3029556615564302101}
   - component: {fileID: 3029556615564300461}
   - component: {fileID: 3029556615564300363}
+  - component: {fileID: 5873777891815876060}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
@@ -465,3 +494,25 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &5873777891815876060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029556615564301682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
