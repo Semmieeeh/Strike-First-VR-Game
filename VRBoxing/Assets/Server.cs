@@ -31,7 +31,7 @@ public class Server : MonoBehaviourPunCallbacks
                 var props = MyPlayer.CustomProperties;
                 props.Add(kDamage,0);
                 props.Add(kDamageApplied, true);
-                props.Add(kHealth, 100);
+                props.Add(kHealth, 100f);
 
                 MyPlayer.SetCustomProperties(props);
                 myPlayerInitialized = true;
@@ -70,6 +70,9 @@ public class Server : MonoBehaviourPunCallbacks
                 properties[kHealth] = newHealth;
                 healthBar.health = newHealth;
                 MyPlayer.SetCustomProperties(properties);
+                
+                print(properties[kHealth] + " Health");
+                print(properties[kDamage] + " Damage");
             }
         }
 
