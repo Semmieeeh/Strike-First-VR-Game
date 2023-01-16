@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   networkPlayerPrefab: {fileID: 917603967122342643, guid: f394ab32d358faf488e0632f772c6b0f,
     type: 3}
+  networkPlayer: {fileID: 5967584801188454970, guid: 6a64f62237056cf4f8e6226855f9da69,
+    type: 3}
 --- !u!4 &140828944
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140828942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21378152, y: 7.530787, z: 5.5521555}
+  m_LocalPosition: {x: 0.21, y: 7.530787, z: 0.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -916,6 +918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.00240975
+      objectReference: {fileID: 0}
+    - target: {fileID: 9069507114609530545, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a64f62237056cf4f8e6226855f9da69, type: 3}
