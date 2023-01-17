@@ -159,9 +159,9 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         if (collision.gameObject.tag == "Enemy" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
         {
-            //canHarden = false;
-            //pv.RPC(nameof(ReAppear), RpcTarget.All);
+            
             Server.DamageEnemy(speed);
+            canHarden = false;
             pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("You Did "+ speed + " Damage");
             
@@ -169,18 +169,18 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
         if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
         {
-            //canHarden = false;
-            //pv.RPC(nameof(ReAppear), RpcTarget.All);
+            
             Server.DamageEnemy(speed / 4);
+            canHarden = false;
             pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Your punch got Blocked! You did" + speed / 4 + " damage");
         }
 
         if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
         {
-            //canHarden = false;
-            //pv.RPC(nameof(ReAppear), RpcTarget.All);
+            
             Server.DamageEnemy(speed / 4);
+            canHarden = false;
             pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Your punch got Blocked! You did" + speed / 4 +" damage");
         }
