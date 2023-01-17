@@ -184,5 +184,13 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Your punch got Blocked! You did" + speed / 4 +" damage");
         }
+        if (collision.gameObject.tag == "Body" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
+        {
+
+            Server.DamageEnemy(speed / 2);
+            canHarden = false;
+            pv.RPC(nameof(ReAppear), RpcTarget.All);
+            print("Body hit for " + speed / 2 + " damage");
+        }
     }
 }
