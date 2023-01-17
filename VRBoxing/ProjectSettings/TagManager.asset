@@ -15,6 +15,7 @@ TagManager:
   - LeftHand
   - RightHand
   - Head
+  - Body
   layers:
   - Default
   - TransparentFX
