@@ -165,7 +165,7 @@ public class Server : MonoBehaviourPunCallbacks
 
     public static void ApplyHealth(float healthToAdd)
     {
-        Hashtable properties = OtherPlayer.CustomProperties;
+        Hashtable properties = MyPlayer.CustomProperties;
         if (!properties.ContainsKey(kHealing))
         {
             properties.Add(kHealing, healthToAdd);
@@ -184,6 +184,6 @@ public class Server : MonoBehaviourPunCallbacks
             properties[kHealingApplied] = false;
         }
 
-        OtherPlayer.SetCustomProperties(properties);
+        MyPlayer.SetCustomProperties(properties);
     }
 }
