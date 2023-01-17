@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 4318638892606436579}
   - component: {fileID: 3233861758157013530}
   m_Layer: 7
-  m_Name: RightHand Controller
+  m_Name: Network Right Hand
   m_TagString: Fist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 6196679821008973310}
   - component: {fileID: 8496080120411307126}
   m_Layer: 7
-  m_Name: LeftHand Controller
+  m_Name: Network Left Hand
   m_TagString: Fist
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
