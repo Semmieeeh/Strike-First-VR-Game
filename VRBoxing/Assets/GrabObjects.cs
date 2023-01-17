@@ -102,7 +102,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         if(handPosCount == 4)
         {
             speed = Vector3.Distance(handPos[3], handPos[2]) + Vector3.Distance(handPos[2], handPos[1]) + Vector3.Distance(handPos[1], handPos[0]);
-            speed = speed / 5;
+            speed = speed / 2;
             speed = speed * 100;
             
 
@@ -157,13 +157,13 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
+        if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
         {
             
             Server.DamageEnemy(speed);
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
-            print("You Did "+ speed + " Damage");
+            print("You Hit The Head And Did "+ speed + " Damage");
             
         }
 
