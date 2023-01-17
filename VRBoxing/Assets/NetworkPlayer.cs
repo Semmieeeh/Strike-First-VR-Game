@@ -59,7 +59,7 @@ public class NetworkPlayer : MonoBehaviour
             photonView.RPC(nameof(MapHeadPosition), RpcTarget.All, localCameraTransform.position, localCameraTransform.rotation);
             photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.All,  localLeftHandTransform.position, localLeftHandTransform.rotation);
             photonView.RPC(nameof(MapRightHandPosition), RpcTarget.All, localRightHandTransform.position, localRightHandTransform.rotation);
-            photonView.RPC(nameof(SetSliderValue), RpcTarget.All, Mathf.Lerp(0, 100, playerHealth));
+            photonView.RPC(nameof(SetSliderValue), RpcTarget.All, Mathf.InverseLerp(0, 100, playerHealth));
         }
     }
 
