@@ -160,7 +160,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
         {
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
@@ -169,7 +169,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             
         }
 
-        if (collision.gameObject.tag == "LeftFist")
+        if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
         {
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
@@ -177,7 +177,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             print("Your punch got Blocked! You did" + speed / 4 + " damage");
         }
 
-        if (collision.gameObject.tag == "RightFist")
+        if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
         {
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
