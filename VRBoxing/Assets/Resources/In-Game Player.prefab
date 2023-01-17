@@ -2051,19 +2051,7 @@ MonoBehaviour:
     m_ActionId: bcf0fe36-4ae4-49cd-9214-b59380981fd9
     m_ActionName: Player/RemoveBlock
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5967584800018321524}
-        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
-        m_MethodName: Blocking
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 7603bab7-5c8c-44a5-a02c-dd86f5e546f6
     m_ActionName: Player/ZaWarudo
   - m_PersistentCalls:
@@ -2115,19 +2103,7 @@ MonoBehaviour:
     m_ActionId: 0163538a-8368-4679-9f2a-619585e1a8d9
     m_ActionName: Player/ReleaseHardenLeft
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5967584801441023604}
-        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
-        m_MethodName: Blocking
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 5c6b37f9-0d8e-44bf-a776-f601ce6e1f85
     m_ActionName: Player/RemoveBlock1
   m_NeverAutoSwitchControlSchemes: 0
