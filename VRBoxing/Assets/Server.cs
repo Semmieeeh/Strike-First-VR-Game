@@ -41,7 +41,7 @@ public class Server : MonoBehaviourPunCallbacks
         }
         if (OtherPlayer == null)
         {
-            if (PhotonNetwork.PlayerListOthers.Length > 1)
+            if (PhotonNetwork.PlayerListOthers.Length >= 1)
                 OtherPlayer = PhotonNetwork.PlayerListOthers[0];
         }
         print(MyPlayer);
