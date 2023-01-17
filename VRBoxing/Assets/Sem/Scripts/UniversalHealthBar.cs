@@ -46,6 +46,11 @@ public class UniversalHealthBar : MonoBehaviour
         regenDuration -= 1*Time.deltaTime;
         healResetTime -= 1 * Time.deltaTime;
         
+
+        if(health <= 0)
+        {
+            //death
+        }
     }
     public void TakeDamage(float amount)
     {

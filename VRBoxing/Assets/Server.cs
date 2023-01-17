@@ -74,6 +74,23 @@ public class Server : MonoBehaviourPunCallbacks
                 print(properties[kHealth] + " Health");
                 print(properties[kDamage] + " Damage");
             }
+            if (!(bool)properties[kHealingApplied])
+            {
+                print("You healed" + (float)properties[kHealing]);
+                properties[kHealingApplied] = true;
+
+                float newHealth = (float)properties[kHealth];
+
+                newHealth+=(float)properties[kHealing];
+
+                properties[kHealth] = newHealth;
+                healthBar.health = newHealth;
+                MyPlayer.SetCustomProperties(properties);
+
+                print(properties[kHealth] + " Health");
+                print(properties[kHealing] + " Healing");
+
+            }
         }
 
        
@@ -149,7 +166,7 @@ public class Server : MonoBehaviourPunCallbacks
         if (!properties.ContainsKey(kHealing))
         {
             properties.Add(kHealing, healthToAdd);
-            //{ "DMG" , 35 }
+            //{ "HEAL" , 35 }
         }
         else
         {

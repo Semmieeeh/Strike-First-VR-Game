@@ -65,7 +65,7 @@ public class VRMovement : MonoBehaviour
     {
         if (context.started)
         {
-            Debug.Log("Double damage !");
+            Debug.Log("No more blocking");
             
             grab[1].multiplier = true;
             grab[0].multiplier = true;
