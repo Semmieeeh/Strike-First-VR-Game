@@ -14,11 +14,13 @@ public class NetworkPlayer : MonoBehaviour
     public Transform headTransform;
     public Transform leftHandTransform;
     public Transform rightHandTransform;
+    public Transform bodyTransform;
 
     // Reference to the local player's camera and hand transforms.
     public Transform localCameraTransform;
     public Transform localLeftHandTransform;
     public Transform localRightHandTransform;
+    public Transform localBodyTransform;
 
     public float playerHealth;
 
@@ -33,6 +35,8 @@ public class NetworkPlayer : MonoBehaviour
             localCameraTransform = Camera.main.transform;
             localLeftHandTransform = GameObject.Find("LeftHand Controller").transform;
             localRightHandTransform = GameObject.Find("RightHand Controller").transform;
+            localBodyTransform = GameObject.Find("Body Controller").transform;
+
 
             // Set the head and hand transforms to the local player's camera and hand transforms.
             headTransform.position = localCameraTransform.position;
@@ -56,10 +60,11 @@ public class NetworkPlayer : MonoBehaviour
             // Synchronize the head and hand transforms with the local player's camera and hand transforms.
             playerHealth = healthBar.health;
 
-            photonView.RPC(nameof(MapHeadPosition), RpcTarget.All, localCameraTransform.position, localCameraTransform.rotation);
-            photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.All,  localLeftHandTransform.position, localLeftHandTransform.rotation);
-            photonView.RPC(nameof(MapRightHandPosition), RpcTarget.All, localRightHandTransform.position, localRightHandTransform.rotation);
-            photonView.RPC(nameof(SetSliderValue), RpcTarget.All, Mathf.InverseLerp(0, 100, playerHealth));
+            photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, localCameraTransform.position, localCameraTransform.rotation);
+            photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
+            photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
+            photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
+            photonView.RPC(nameof(SetSliderValue), RpcTarget.Others, Mathf.InverseLerp(0, 100, playerHealth));
         }
     }
 
@@ -67,6 +72,15 @@ public class NetworkPlayer : MonoBehaviour
     void SetSliderValue(float value)
     {
         healthSlider.value = value;
+    }
+
+    [PunRPC]
+    void MapBodyPosition(Vector3 position, Quaternion rotation)
+    {
+        if (photonView.IsMine) return;
+
+        bodyTransform.position = position;
+        bodyTransform.rotation = rotation;
     }
 
     [PunRPC]
