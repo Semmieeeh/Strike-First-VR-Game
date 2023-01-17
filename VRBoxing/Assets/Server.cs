@@ -135,7 +135,7 @@ public class Server : MonoBehaviourPunCallbacks
     public static void SetMyPlayerProperty(string key, object value)
     {
         var properties = MyPlayer.CustomProperties;
-        if (properties.ContainsKey(key))
+        if (!properties.ContainsKey(key))
         {
             properties.Add(key, value);
 
