@@ -214,13 +214,11 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 1
+  Synchronization: 0
   OwnershipTransfer: 0
   observableSearch: 0
   ObservedComponents:
-  - {fileID: 3029556615564300300}
-  - {fileID: 8747246423690310200}
-  - {fileID: 7302809928915889715}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -328,6 +326,7 @@ GameObject:
   - component: {fileID: 6981376108568402539}
   - component: {fileID: 4295308347620944512}
   - component: {fileID: 4318638892606436579}
+  - component: {fileID: 3233861758157013530}
   m_Layer: 7
   m_Name: RightHand Controller
   m_TagString: Fist
@@ -429,6 +428,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3233861758157013530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407036717551662268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 7302809928915889715}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &3029556615564301676
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +465,7 @@ GameObject:
   - component: {fileID: 3029556615564300463}
   - component: {fileID: 3029556615564300300}
   - component: {fileID: 3029556615564300371}
+  - component: {fileID: 1197769441923341845}
   m_Layer: 0
   m_Name: Head
   m_TagString: Enemy
@@ -566,6 +589,29 @@ MonoBehaviour:
   localRightHandTransform: {fileID: 0}
   playerHealth: 0
   healthSlider: {fileID: 0}
+--- !u!114 &1197769441923341845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3029556615564301676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 3029556615564300300}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &5256818175278305084
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +701,7 @@ GameObject:
   - component: {fileID: 809650584724058073}
   - component: {fileID: 3412284222134395881}
   - component: {fileID: 6196679821008973310}
+  - component: {fileID: 8496080120411307126}
   m_Layer: 7
   m_Name: LeftHand Controller
   m_TagString: Fist
@@ -756,6 +803,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7528504758465375630}
   m_Mesh: {fileID: 4300000, guid: ca20b3907ff1c794cb89c1ad2cce8282, type: 3}
+--- !u!114 &8496080120411307126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528504758465375630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 8747246423690310200}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7932838857259290308
 GameObject:
   m_ObjectHideFlags: 0
