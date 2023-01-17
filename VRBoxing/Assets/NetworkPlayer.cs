@@ -55,9 +55,10 @@ public class NetworkPlayer : MonoBehaviour
             // This is the local player's network player.
             // Synchronize the head and hand transforms with the local player's camera and hand transforms.
             playerHealth = healthBar.health;
-            photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, localCameraTransform.position, localCameraTransform.rotation);
-            photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
-            photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
+
+            photonView.RPC(nameof(MapHeadPosition), RpcTarget.All, localCameraTransform.position, localCameraTransform.rotation);
+            photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.All,  localLeftHandTransform.position, localLeftHandTransform.rotation);
+            photonView.RPC(nameof(MapRightHandPosition), RpcTarget.All, localRightHandTransform.position, localRightHandTransform.rotation);
             photonView.RPC(nameof(SetSliderValue), RpcTarget.All, Mathf.Lerp(0, 100, playerHealth));
         }
     }
