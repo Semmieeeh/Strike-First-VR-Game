@@ -78,8 +78,12 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         if(handPosCount == 4)
         {
             speed = Vector3.Distance(handPos[3], handPos[2]) + Vector3.Distance(handPos[2], handPos[1]) + Vector3.Distance(handPos[1], handPos[0]);
-            speed = speed / 3;
+            speed = speed / 5;
             speed = speed * 100;
+            if (speed > 10)
+            {
+                speed = 10;
+            }
 
         }
 
@@ -102,13 +106,16 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
     public IEnumerator ReAppear()
     {
-        mesh.SetActive(false);
-        GetComponent<BoxCollider>().enabled = false;
-        yield return new WaitForSeconds(3);
-        GetComponent<BoxCollider>().enabled = true;
-        mesh.SetActive(true);
-        hardened = false;
-        canHarden = true;
+        if(canHarden == false)
+        {
+            mesh.SetActive(false);
+            GetComponent<BoxCollider>().enabled = false;
+            yield return new WaitForSeconds(3);
+            GetComponent<BoxCollider>().enabled = true;
+            mesh.SetActive(true);
+            hardened = false;
+            canHarden = true;
+        }
     }
 
     [PunRPC]
@@ -121,9 +128,10 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            //pv.RPC(nameof(Punch), RpcTarget.Others);
+            canHarden = false;
+            //pv.RPC(nameof(ReAppear), RpcTarget.All);
             Server.DamageEnemy(speed);
-            print("griep");
+            print("You Did "+speed + " Damage");
             
         }
 
