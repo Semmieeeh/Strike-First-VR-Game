@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using Photon.Pun;
+using UnityEngine.UI;
 public class NetworkPlayer : MonoBehaviour
 {
+    UniversalHealthBar healthBar;
     // Reference to the PhotonView component.
     public PhotonView photonView;
 
@@ -18,8 +20,12 @@ public class NetworkPlayer : MonoBehaviour
     public Transform localLeftHandTransform;
     public Transform localRightHandTransform;
 
+    public float playerHealth;
+
+    public Slider healthSlider; 
     void Start()
     {
+        healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<UniversalHealthBar>();
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
@@ -48,10 +54,18 @@ public class NetworkPlayer : MonoBehaviour
         {
             // This is the local player's network player.
             // Synchronize the head and hand transforms with the local player's camera and hand transforms.
+            playerHealth = healthBar.health;
             photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, localCameraTransform.position, localCameraTransform.rotation);
             photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
             photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
+            photonView.RPC(nameof(SetSliderValue), RpcTarget.All, Mathf.Lerp(0, 100, playerHealth));
         }
+    }
+
+    [PunRPC]
+    void SetSliderValue(float value)
+    {
+        healthSlider.value = value;
     }
 
     [PunRPC]
