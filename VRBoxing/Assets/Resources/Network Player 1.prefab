@@ -464,7 +464,6 @@ GameObject:
   - component: {fileID: 3029556615564302103}
   - component: {fileID: 3029556615564300463}
   - component: {fileID: 3029556615564300300}
-  - component: {fileID: 3029556615564300371}
   - component: {fileID: 1197769441923341845}
   m_Layer: 0
   m_Name: Head
@@ -568,27 +567,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &3029556615564300371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029556615564301676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d823b22af581b9c4ca1df0685f40335e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  photonView: {fileID: 0}
-  headTransform: {fileID: 3029556615564302331}
-  leftHandTransform: {fileID: 0}
-  rightHandTransform: {fileID: 0}
-  localCameraTransform: {fileID: 0}
-  localLeftHandTransform: {fileID: 0}
-  localRightHandTransform: {fileID: 0}
-  playerHealth: 0
-  healthSlider: {fileID: 0}
 --- !u!114 &1197769441923341845
 MonoBehaviour:
   m_ObjectHideFlags: 0
