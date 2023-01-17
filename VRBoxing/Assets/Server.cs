@@ -32,6 +32,8 @@ public class Server : MonoBehaviourPunCallbacks
                 props.Add(kDamage,0);
                 props.Add(kDamageApplied, true);
                 props.Add(kHealth, 100f);
+                props.Add(kHealingApplied, true);
+                props.Add(kHealing, 0);
 
                 MyPlayer.SetCustomProperties(props);
                 myPlayerInitialized = true;
