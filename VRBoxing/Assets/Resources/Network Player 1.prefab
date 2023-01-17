@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 917603967122342644}
   - component: {fileID: 1012468684786239867}
   - component: {fileID: 9088590176340867455}
+  - component: {fileID: 2829508382271289353}
   m_Layer: 0
   m_Name: Network Player 1
   m_TagString: Untagged
@@ -214,14 +215,30 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 0
+  Synchronization: 1
   OwnershipTransfer: 0
   observableSearch: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 2829508382271289353}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &2829508382271289353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917603967122342643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &1020415443998505902
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407036717551662268}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.073, y: 0.995, z: -0.081}
+  m_LocalPosition: {x: 0.073, y: 0.995, z: -0.08099973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -443,11 +460,11 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 0
+  Synchronization: 1
   OwnershipTransfer: 0
-  observableSearch: 0
+  observableSearch: 1
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 7302809928915889715}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -796,11 +813,11 @@ MonoBehaviour:
   ObservedComponentsFoldoutOpen: 1
   Group: 0
   prefixField: -1
-  Synchronization: 0
+  Synchronization: 1
   OwnershipTransfer: 0
-  observableSearch: 0
+  observableSearch: 1
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 8747246423690310200}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
