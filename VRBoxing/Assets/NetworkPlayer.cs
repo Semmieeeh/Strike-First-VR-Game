@@ -49,6 +49,7 @@ public class NetworkPlayer : MonoBehaviour
             leftHandTransform.gameObject.SetActive(false);
             rightHandTransform.gameObject.SetActive(false);
             headTransform.gameObject.SetActive(false);
+            bodyTransform.gameObject.SetActive(false);
         }
     }
 
