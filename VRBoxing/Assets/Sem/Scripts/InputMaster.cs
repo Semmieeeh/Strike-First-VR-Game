@@ -100,7 +100,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""RemoveBlock"",
+                    ""name"": ""Heal"",
                     ""type"": ""Button"",
                     ""id"": ""bcf0fe36-4ae4-49cd-9214-b59380981fd9"",
                     ""expectedControlType"": ""Button"",
@@ -109,9 +109,18 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ZaWarudo"",
+                    ""name"": ""BlockRight"",
                     ""type"": ""Button"",
                     ""id"": ""7603bab7-5c8c-44a5-a02c-dd86f5e546f6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BlockLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""5c6b37f9-0d8e-44bf-a776-f601ce6e1f85"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press(pressPoint=0.1)"",
@@ -181,18 +190,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": ""Oculus"",
-                    ""action"": ""RemoveBlock"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b077f8e6-fe7e-42ec-8343-7434af08f1ce"",
-                    ""path"": ""<OculusTouchController>{LeftHand}/primaryButton"",
-                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
-                    ""processors"": """",
-                    ""groups"": ""Oculus"",
-                    ""action"": ""ZaWarudo"",
+                    ""action"": ""Heal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -250,6 +248,28 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""action"": ""ReleaseHardenRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""104aed5e-a745-4414-b88a-c74a1fef2ec6"",
+                    ""path"": ""<OculusTouchController>{RightHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlockRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9fe9e50-669a-4eec-b8a7-6f5d9cfd0811"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlockLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -288,8 +308,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_HardenRightFist = m_Player.FindAction("HardenRightFist", throwIfNotFound: true);
         m_Player_ReleaseHardenRight = m_Player.FindAction("ReleaseHardenRight", throwIfNotFound: true);
         m_Player_ReleaseHardenLeft = m_Player.FindAction("ReleaseHardenLeft", throwIfNotFound: true);
-        m_Player_RemoveBlock = m_Player.FindAction("RemoveBlock", throwIfNotFound: true);
-        m_Player_ZaWarudo = m_Player.FindAction("ZaWarudo", throwIfNotFound: true);
+        m_Player_Heal = m_Player.FindAction("Heal", throwIfNotFound: true);
+        m_Player_BlockRight = m_Player.FindAction("BlockRight", throwIfNotFound: true);
+        m_Player_BlockLeft = m_Player.FindAction("BlockLeft", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -357,8 +378,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_HardenRightFist;
     private readonly InputAction m_Player_ReleaseHardenRight;
     private readonly InputAction m_Player_ReleaseHardenLeft;
-    private readonly InputAction m_Player_RemoveBlock;
-    private readonly InputAction m_Player_ZaWarudo;
+    private readonly InputAction m_Player_Heal;
+    private readonly InputAction m_Player_BlockRight;
+    private readonly InputAction m_Player_BlockLeft;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -371,8 +393,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @HardenRightFist => m_Wrapper.m_Player_HardenRightFist;
         public InputAction @ReleaseHardenRight => m_Wrapper.m_Player_ReleaseHardenRight;
         public InputAction @ReleaseHardenLeft => m_Wrapper.m_Player_ReleaseHardenLeft;
-        public InputAction @RemoveBlock => m_Wrapper.m_Player_RemoveBlock;
-        public InputAction @ZaWarudo => m_Wrapper.m_Player_ZaWarudo;
+        public InputAction @Heal => m_Wrapper.m_Player_Heal;
+        public InputAction @BlockRight => m_Wrapper.m_Player_BlockRight;
+        public InputAction @BlockLeft => m_Wrapper.m_Player_BlockLeft;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -406,12 +429,15 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ReleaseHardenLeft.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenLeft;
                 @ReleaseHardenLeft.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenLeft;
                 @ReleaseHardenLeft.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReleaseHardenLeft;
-                @RemoveBlock.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
-                @RemoveBlock.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
-                @RemoveBlock.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRemoveBlock;
-                @ZaWarudo.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
-                @ZaWarudo.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
-                @ZaWarudo.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZaWarudo;
+                @Heal.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHeal;
+                @Heal.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHeal;
+                @Heal.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHeal;
+                @BlockRight.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockRight;
+                @BlockRight.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockRight;
+                @BlockRight.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockRight;
+                @BlockLeft.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockLeft;
+                @BlockLeft.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockLeft;
+                @BlockLeft.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockLeft;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -440,12 +466,15 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ReleaseHardenLeft.started += instance.OnReleaseHardenLeft;
                 @ReleaseHardenLeft.performed += instance.OnReleaseHardenLeft;
                 @ReleaseHardenLeft.canceled += instance.OnReleaseHardenLeft;
-                @RemoveBlock.started += instance.OnRemoveBlock;
-                @RemoveBlock.performed += instance.OnRemoveBlock;
-                @RemoveBlock.canceled += instance.OnRemoveBlock;
-                @ZaWarudo.started += instance.OnZaWarudo;
-                @ZaWarudo.performed += instance.OnZaWarudo;
-                @ZaWarudo.canceled += instance.OnZaWarudo;
+                @Heal.started += instance.OnHeal;
+                @Heal.performed += instance.OnHeal;
+                @Heal.canceled += instance.OnHeal;
+                @BlockRight.started += instance.OnBlockRight;
+                @BlockRight.performed += instance.OnBlockRight;
+                @BlockRight.canceled += instance.OnBlockRight;
+                @BlockLeft.started += instance.OnBlockLeft;
+                @BlockLeft.performed += instance.OnBlockLeft;
+                @BlockLeft.canceled += instance.OnBlockLeft;
             }
         }
     }
@@ -469,7 +498,8 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnHardenRightFist(InputAction.CallbackContext context);
         void OnReleaseHardenRight(InputAction.CallbackContext context);
         void OnReleaseHardenLeft(InputAction.CallbackContext context);
-        void OnRemoveBlock(InputAction.CallbackContext context);
-        void OnZaWarudo(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
+        void OnBlockRight(InputAction.CallbackContext context);
+        void OnBlockLeft(InputAction.CallbackContext context);
     }
 }

@@ -1686,6 +1686,14 @@ MonoBehaviour:
   enemy: {fileID: 0}
   healthBar: {fileID: 0}
   pv: {fileID: 0}
+  minRotX: 0
+  minRotY: 0
+  maxRotX: 0
+  maxRotY: 0
+  currentRotX: 0
+  currentRotY: 0
+  blocking: 0
+  server: {fileID: 0}
 --- !u!95 &5967584800018321525
 Animator:
   serializedVersion: 4
@@ -2044,9 +2052,9 @@ MonoBehaviour:
     m_ActionName: Player/RemoveBlock
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5967584801188454959}
-        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
-        m_MethodName: ZaWarudo
+      - m_Target: {fileID: 5967584800018321524}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: Blocking
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2106,6 +2114,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0163538a-8368-4679-9f2a-619585e1a8d9
     m_ActionName: Player/ReleaseHardenLeft
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5967584801441023604}
+        m_TargetAssemblyTypeName: GrabObjects, Assembly-CSharp
+        m_MethodName: Blocking
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5c6b37f9-0d8e-44bf-a776-f601ce6e1f85
+    m_ActionName: Player/RemoveBlock1
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Oculus
   m_DefaultActionMap: Player
@@ -2201,8 +2225,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5967584801441023500}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.175, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.17499995, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2607,6 +2631,14 @@ MonoBehaviour:
   enemy: {fileID: 0}
   healthBar: {fileID: 0}
   pv: {fileID: 0}
+  minRotX: 0
+  minRotY: 0
+  maxRotX: 0
+  maxRotY: 0
+  currentRotX: 0
+  currentRotY: 0
+  blocking: 0
+  server: {fileID: 0}
 --- !u!95 &5967584801441023605
 Animator:
   serializedVersion: 4

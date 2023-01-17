@@ -8,12 +8,14 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 public class Server : MonoBehaviourPunCallbacks
 {
     public UniversalHealthBar healthBar;
+    public GrabObject grab;
 
     public const string kDamage = "DMG";
     public const string kHealing = "HEAL";
     public const string kHealingApplied = "HEALA";
     public const string kDamageApplied = "DMGA";
     public const string kHealth = "HP";
+    public bool isBlocking;
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {

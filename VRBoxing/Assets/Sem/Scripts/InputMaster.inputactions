@@ -78,7 +78,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "RemoveBlock",
+                    "name": "Heal",
                     "type": "Button",
                     "id": "bcf0fe36-4ae4-49cd-9214-b59380981fd9",
                     "expectedControlType": "Button",
@@ -87,9 +87,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ZaWarudo",
+                    "name": "BlockRight",
                     "type": "Button",
                     "id": "7603bab7-5c8c-44a5-a02c-dd86f5e546f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BlockLeft",
+                    "type": "Button",
+                    "id": "5c6b37f9-0d8e-44bf-a776-f601ce6e1f85",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press(pressPoint=0.1)",
@@ -159,18 +168,7 @@
                     "interactions": "Hold(duration=0.1,pressPoint=0.1)",
                     "processors": "",
                     "groups": "Oculus",
-                    "action": "RemoveBlock",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b077f8e6-fe7e-42ec-8343-7434af08f1ce",
-                    "path": "<OculusTouchController>{LeftHand}/primaryButton",
-                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
-                    "processors": "",
-                    "groups": "Oculus",
-                    "action": "ZaWarudo",
+                    "action": "Heal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -226,6 +224,28 @@
                     "processors": "",
                     "groups": "Oculus",
                     "action": "ReleaseHardenRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "104aed5e-a745-4414-b88a-c74a1fef2ec6",
+                    "path": "<OculusTouchController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlockRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9fe9e50-669a-4eec-b8a7-6f5d9cfd0811",
+                    "path": "<OculusTouchController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlockLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

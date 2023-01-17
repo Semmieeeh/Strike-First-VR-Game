@@ -25,6 +25,14 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     public GameObject enemy;
     public UniversalHealthBar healthBar;
     public PhotonView pv;
+    public float minRotX;
+    public float minRotY;
+    public float maxRotX;
+    public float maxRotY;
+    public float currentRotX;
+    public float currentRotY;
+    public bool blocking;
+    public Server server;
 
     void Start()
     {
@@ -41,7 +49,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         if (context.started && canHarden == true)
         {
             hardened = true;
-            hand.GetComponent<BoxCollider>().isTrigger = false;
+            
             Debug.Log("Hardened");
         }
     }
@@ -54,10 +62,26 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             Debug.Log("Un-hardened");
         }
     }
+    public void Blocking(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            server.isBlocking = true;
+            blocking = true;
+        }
+    }
+    public void StopBlocking(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            server.isBlocking = false;
+            blocking = false;
+        }
+    }
 
-    
 
-    
+
+
     private void Update()
     {
         anim.SetBool("Hardened", hardened);
@@ -102,6 +126,16 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         //    normalHandRight.SetActive(true);
         //}
 
+        if(hardened == true)
+        {
+            hand.GetComponent<BoxCollider>().isTrigger = false;
+        }
+        else
+        {
+            hand.GetComponent<BoxCollider>().isTrigger = true;
+        }
+
+        
 
     }
     public IEnumerator ReAppear()
@@ -128,16 +162,27 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            canHarden = false;
+            //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             Server.DamageEnemy(speed);
-            print("You Did "+speed + " Damage");
+            print("You Did "+ speed + " Damage");
             
         }
 
-        //if(collision.gameObject.tag == "Fist")
-        //{
+        if (collision.gameObject.tag == "LeftFist")
+        {
+            //canHarden = false;
+            //pv.RPC(nameof(ReAppear), RpcTarget.All);
+            Server.DamageEnemy(speed / 4);
+            print("Your punch got Blocked! You did" + speed / 4 + " damage");
+        }
 
-        //}
+        if (collision.gameObject.tag == "RightFist")
+        {
+            //canHarden = false;
+            //pv.RPC(nameof(ReAppear), RpcTarget.All);
+            Server.DamageEnemy(speed / 4);
+            print("Your punch got Blocked! You did" + speed / 4 +" damage");
+        }
     }
 }
