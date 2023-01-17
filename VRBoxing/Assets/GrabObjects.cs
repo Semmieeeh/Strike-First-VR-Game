@@ -104,10 +104,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             speed = Vector3.Distance(handPos[3], handPos[2]) + Vector3.Distance(handPos[2], handPos[1]) + Vector3.Distance(handPos[1], handPos[0]);
             speed = speed / 5;
             speed = speed * 100;
-            if (speed > 10)
-            {
-                speed = 10;
-            }
+            
 
         }
 
@@ -165,6 +162,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             Server.DamageEnemy(speed);
+            pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("You Did "+ speed + " Damage");
             
         }
@@ -174,6 +172,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             Server.DamageEnemy(speed / 4);
+            pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Your punch got Blocked! You did" + speed / 4 + " damage");
         }
 
@@ -182,6 +181,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             Server.DamageEnemy(speed / 4);
+            pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Your punch got Blocked! You did" + speed / 4 +" damage");
         }
     }
