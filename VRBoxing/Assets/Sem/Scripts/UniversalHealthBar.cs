@@ -41,7 +41,7 @@ public class UniversalHealthBar : MonoBehaviour
         
         if(regenDuration > 0)
         {
-            Server.ApplyHealth(10 * Time.deltaTime);
+            Server.ApplyHealth(15 * Time.deltaTime);
         }
         regenDuration -= 1*Time.deltaTime;
         healResetTime -= 1 * Time.deltaTime;
@@ -49,7 +49,13 @@ public class UniversalHealthBar : MonoBehaviour
 
         if(health <= 0)
         {
+            health = 0;
             //death
+        }
+
+        if(health > 100)
+        {
+            health = 100;
         }
     }
     public void TakeDamage(float amount)
