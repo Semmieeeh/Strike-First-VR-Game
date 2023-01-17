@@ -66,7 +66,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         if (context.started)
         {
-            server.isBlocking = true;
+            
             blocking = true;
         }
     }
@@ -74,7 +74,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         if (context.canceled)
         {
-            server.isBlocking = false;
+            
             blocking = false;
         }
     }
