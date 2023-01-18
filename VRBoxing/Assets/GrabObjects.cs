@@ -33,6 +33,8 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     public float currentRotY;
     public bool blocking;
     public Server server;
+    public bool canPunch;
+    public float cooldown;
 
     void Start()
     {
@@ -135,7 +137,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             physicsHand.GetComponent<BoxCollider>().isTrigger = true;
         }
 
-        
+        cooldown -= 1 * Time.deltaTime;
 
     }
     public IEnumerator ReAppear()
@@ -160,37 +162,41 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
+        if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <=0)
         {
             
             Server.DamageEnemy(speed);
+            cooldown = 1;
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("You Hit The Head And Did "+ speed + " Damage");
             
         }
 
-        if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
+        if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
         {
             
             Server.DamageEnemy(speed / 4);
+            cooldown = 1;
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Your punch got Blocked! You did" + speed / 4 + " damage");
         }
 
-        if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
+        if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
         {
             
             Server.DamageEnemy(speed / 4);
+            cooldown = 1;
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Your punch got Blocked! You did" + speed / 4 +" damage");
         }
-        if (collision.gameObject.tag == "Body" && collision.gameObject.GetComponent<PhotonView>().IsMine == false)
+        if (collision.gameObject.tag == "Body" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
         {
 
             Server.DamageEnemy(speed / 2);
+            cooldown = 1;
             //canHarden = false;
             //pv.RPC(nameof(ReAppear), RpcTarget.All);
             print("Body hit for " + speed / 2 + " damage");
