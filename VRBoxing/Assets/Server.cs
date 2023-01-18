@@ -31,6 +31,10 @@ public class Server : MonoBehaviourPunCallbacks
         base.OnPlayerEnteredRoom(newPlayer);
     }
 
+    private void Start()
+    {
+        Update();
+    }
     private void Update()
     {
         if (MyPlayer == null)
