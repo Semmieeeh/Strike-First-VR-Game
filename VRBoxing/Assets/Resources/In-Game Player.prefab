@@ -379,7 +379,6 @@ GameObject:
   - component: {fileID: 6475178424186717982}
   - component: {fileID: 8529201719946024253}
   - component: {fileID: 7692558271069939783}
-  - component: {fileID: 7648769093171589046}
   m_Layer: 10
   m_Name: Lefthand Physics
   m_TagString: LeftFist
@@ -400,7 +399,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5967584801188454951}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8563538562336025620
 MeshFilter:
@@ -514,27 +513,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 7648769093171589046}
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7648769093171589046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346836855983356171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &5967584800018321419
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +963,8 @@ MonoBehaviour:
   currentRotY: 0
   blocking: 0
   server: {fileID: 0}
+  canPunch: 0
+  cooldown: 0
 --- !u!95 &5967584800018321525
 Animator:
   serializedVersion: 4
@@ -1079,6 +1063,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2788611491145430891}
   - {fileID: 5967584801727314432}
   - {fileID: 5423448641132144267}
   - {fileID: 4717546337236345777}
@@ -1113,6 +1098,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   healResetTime: 0
   canHeal: 0
+  cameraOrigin: {fileID: 6988398675611205471}
+  cam: {fileID: 5967584801727314433}
 --- !u!114 &5967584801188454948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1384,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 5c6b37f9-0d8e-44bf-a776-f601ce6e1f85
     m_ActionName: Player/RemoveBlock1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5967584801188454959}
+        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
+        m_MethodName: ResetHeight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9a9ca80d-947f-40d7-b470-940d51dcbfa4
+    m_ActionName: Player/ResetCam
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Oculus
   m_DefaultActionMap: Player
@@ -1977,6 +1980,8 @@ MonoBehaviour:
   currentRotY: 0
   blocking: 0
   server: {fileID: 0}
+  canPunch: 0
+  cooldown: 0
 --- !u!95 &5967584801441023605
 Animator:
   serializedVersion: 4
@@ -2067,7 +2072,7 @@ Transform:
   - {fileID: 5967584800018321418}
   - {fileID: 7495494990045262310}
   m_Father: {fileID: 5967584801188454951}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6141919964242004564
 GameObject:
@@ -2205,6 +2210,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &6988398675611205471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2788611491145430891}
+  m_Layer: 11
+  m_Name: CamOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2788611491145430891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6988398675611205471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5967584801188454951}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7221477479469734988
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2256,6 @@ GameObject:
   - component: {fileID: 4240505785408446267}
   - component: {fileID: 1134273777846235972}
   - component: {fileID: 6546590306666815072}
-  - component: {fileID: 7946305869440152093}
   m_Layer: 10
   m_Name: RightHand Physics
   m_TagString: RightFist
@@ -2241,7 +2276,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5967584801188454951}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6400702180167878995
 MeshFilter:
@@ -2355,27 +2390,10 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents:
-  - {fileID: 7946305869440152093}
+  ObservedComponents: []
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7946305869440152093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7221477479469734988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!1 &7495494990045262307
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,7 +2603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5967584801188454951}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!33 &2479801560035541843
 MeshFilter:

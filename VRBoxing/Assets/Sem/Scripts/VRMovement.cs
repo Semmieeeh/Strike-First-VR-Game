@@ -5,6 +5,7 @@ using UnityEngine.XR;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using Unity.XR.CoreUtils;
+using Unity.VisualScripting;
 
 
 public class VRMovement : MonoBehaviour
@@ -24,6 +25,8 @@ public class VRMovement : MonoBehaviour
     public UniversalHealthBar healthBar;
     public float healResetTime;
     public bool canHeal;
+    public GameObject cameraOrigin;
+    public GameObject cam;
 
     
     void Start()
@@ -41,9 +44,13 @@ public class VRMovement : MonoBehaviour
         Debug.Log("Looking");
 
     }
-    public void StopMove(InputAction.CallbackContext context)
+    public void ResetHeight(InputAction.CallbackContext context)
     {
-        
+        if (context.started)
+        {
+            cam.transform.position = cameraOrigin.transform.position;
+            Debug.Log("Resetting Cam");
+        }
     }
     
     

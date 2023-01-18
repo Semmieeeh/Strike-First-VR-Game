@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "Press(pressPoint=0.1)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ResetCam",
+                    "type": "Button",
+                    "id": "9a9ca80d-947f-40d7-b470-940d51dcbfa4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -246,6 +255,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "BlockLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8905fa6e-0028-4bf1-9807-e82493f8ea66",
+                    "path": "<OculusTouchController>{LeftHand}/secondaryButton",
+                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "Oculus",
+                    "action": "ResetCam",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

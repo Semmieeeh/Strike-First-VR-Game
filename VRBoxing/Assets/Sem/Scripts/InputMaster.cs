@@ -125,6 +125,15 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press(pressPoint=0.1)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ResetCam"",
+                    ""type"": ""Button"",
+                    ""id"": ""9a9ca80d-947f-40d7-b470-940d51dcbfa4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -270,6 +279,17 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""action"": ""BlockLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8905fa6e-0028-4bf1-9807-e82493f8ea66"",
+                    ""path"": ""<OculusTouchController>{LeftHand}/secondaryButton"",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""ResetCam"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -311,6 +331,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_Heal = m_Player.FindAction("Heal", throwIfNotFound: true);
         m_Player_BlockRight = m_Player.FindAction("BlockRight", throwIfNotFound: true);
         m_Player_BlockLeft = m_Player.FindAction("BlockLeft", throwIfNotFound: true);
+        m_Player_ResetCam = m_Player.FindAction("ResetCam", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -381,6 +402,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Heal;
     private readonly InputAction m_Player_BlockRight;
     private readonly InputAction m_Player_BlockLeft;
+    private readonly InputAction m_Player_ResetCam;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -396,6 +418,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @Heal => m_Wrapper.m_Player_Heal;
         public InputAction @BlockRight => m_Wrapper.m_Player_BlockRight;
         public InputAction @BlockLeft => m_Wrapper.m_Player_BlockLeft;
+        public InputAction @ResetCam => m_Wrapper.m_Player_ResetCam;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -438,6 +461,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @BlockLeft.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockLeft;
                 @BlockLeft.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockLeft;
                 @BlockLeft.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlockLeft;
+                @ResetCam.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetCam;
+                @ResetCam.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetCam;
+                @ResetCam.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetCam;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -475,6 +501,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @BlockLeft.started += instance.OnBlockLeft;
                 @BlockLeft.performed += instance.OnBlockLeft;
                 @BlockLeft.canceled += instance.OnBlockLeft;
+                @ResetCam.started += instance.OnResetCam;
+                @ResetCam.performed += instance.OnResetCam;
+                @ResetCam.canceled += instance.OnResetCam;
             }
         }
     }
@@ -501,5 +530,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnHeal(InputAction.CallbackContext context);
         void OnBlockRight(InputAction.CallbackContext context);
         void OnBlockLeft(InputAction.CallbackContext context);
+        void OnResetCam(InputAction.CallbackContext context);
     }
 }
