@@ -56,6 +56,11 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public GameObject video, gameplay, _audio;
 
     [Space(inspectorSpace)]
+    [Header("Wardrobe Settings")]
+    public AnimatorData[] wardrobeEnableAnimators;
+    public AnimatorData[] wardrobeDisableAnimators;
+ 
+    [Space(inspectorSpace)]
     [Header("Credits Settings")]
     public AnimatorData[] creditsEnableAnimators;
 
@@ -64,6 +69,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     [Header("Other")]
     public RoomCreator roomCreator;
     public ConnectToServer serverConnector;
+    public PlayerMaterialManager materialManager;
 
 
     private void Start()
@@ -180,6 +186,17 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     {
         if(createdRoom)
         PhotonNetwork.CurrentRoom.SetCustomProperties(properties);
+        
+        Player player = PhotonNetwork.LocalPlayer;
+        var props = player.CustomProperties;
+
+        props.Add(Server.kDamageLevel, 0);
+        props.Add(Server.kSkinColor, materialManager.skinColorIndex);
+        props.Add(Server.kHairCut, materialManager.hairCutIndex);
+        props.Add(Server.kGlovesColor, materialManager.glovesColorIndex);
+        props.Add(Server.kHairCutColor, materialManager.hairCutColorIndex);
+
+        player.SetCustomProperties(props);
 
         PhotonNetwork.LoadLevel(GetCurrentServerMapIndex());
     }
@@ -253,6 +270,47 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         }
 
     }
+    #endregion
+
+    #region Wardrobe
+    /// <summary>
+    /// Function called whenever the player presses the wardrobe button in the main menu
+    /// </summary>
+    public async void OnWardrobeEnter()
+    {
+        for (int i = 0; i < baseDisableAnimators.Length; i++)
+        {
+            baseDisableAnimators[i].Start();
+        }
+        await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
+
+        OpenPage("Wardrobe", true);
+
+        for (int i = 0; i < wardrobeEnableAnimators.Length; i++)
+        {
+            wardrobeEnableAnimators[i].Start();
+        }
+    }
+    /// <summary>
+    /// Function called whenever the player presses the back button in the wardrobe menu
+    /// </summary>
+    public async void OnWardrobeExit()
+    {
+        for (int i = 0; i < wardrobeDisableAnimators.Length; i++)
+        {
+            wardrobeDisableAnimators[i].Start();
+        }
+
+        await Task.Delay(ToMilliseconds(pageSwitchWaitTime + lineToggleTime * lineAnimators.Length));
+
+        OpenPage("Main Screen", true);
+
+        for (int i = 0; i < gameStartAnimators.Length; i++)
+        {
+            gameStartAnimators[i].Start();
+        }
+    }
+
     #endregion
 
     #region Options

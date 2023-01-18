@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class NetworkPlayer : MonoBehaviour
 {
     UniversalHealthBar healthBar;
+    public PlayerMaterialManager materialManager;
     // Reference to the PhotonView component.
     public PhotonView photonView;
 
@@ -51,6 +52,16 @@ public class NetworkPlayer : MonoBehaviour
             headTransform.gameObject.SetActive(false);
             bodyTransform.gameObject.SetActive(false);
         }
+        else
+        {
+            var props = Server.OtherPlayer.CustomProperties;
+
+            materialManager.damageLevel = (int)props[Server.kDamageLevel];
+            materialManager.glovesColorIndex = (int)props[Server.kGlovesColor];
+            materialManager.skinColorIndex = (int)props[Server.kSkinColor];
+            materialManager.hairCutIndex = (int)props[Server.kHairCut];
+            materialManager.hairCutColorIndex = (int)props[Server.kHairCutColor];
+        }
     }
 
     void LateUpdate()
@@ -66,6 +77,12 @@ public class NetworkPlayer : MonoBehaviour
             photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
             photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
             photonView.RPC(nameof(SetSliderValue), RpcTarget.Others, Mathf.InverseLerp(0, 100, playerHealth));
+        }
+        else
+        {
+            var props = Server.OtherPlayer.CustomProperties;
+
+            materialManager.damageLevel = (int)props[Server.kDamageLevel];
         }
     }
 

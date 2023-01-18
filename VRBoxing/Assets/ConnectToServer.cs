@@ -15,6 +15,8 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public RoomCreator roomCreator;
 
+    public PlayerMaterialManager PlayerMaterialManager;
+
     // Start is called before the first frame update
     public override void OnEnable()
     {

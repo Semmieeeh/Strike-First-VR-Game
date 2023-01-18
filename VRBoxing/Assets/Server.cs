@@ -7,6 +7,7 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class Server : MonoBehaviourPunCallbacks
 {
+    public PlayerMaterialManager localPlayerMaterialManager;
     public UniversalHealthBar healthBar;
     public GrabObject grab;
 
@@ -15,6 +16,13 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kHealingApplied = "HEALA";
     public const string kDamageApplied = "DMGA";
     public const string kHealth = "HP";
+
+    public const string kDamageLevel = "DMGL";
+    public const string kSkinColor = "SKCL";
+    public const string kGlovesColor = "GCL";
+    public const string kHairCut = "HC";
+    public const string kHairCutColor = "HCCL";
+
     public bool isBlocking;
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -38,6 +46,10 @@ public class Server : MonoBehaviourPunCallbacks
                 props.Add(kHealing, 0);
 
                 MyPlayer.SetCustomProperties(props);
+
+                InitializeMyPlayerMaterials();
+
+
                 myPlayerInitialized = true;
             }
         }
@@ -58,6 +70,28 @@ public class Server : MonoBehaviourPunCallbacks
     bool myPlayerInitialized;
     public static Player OtherPlayer;
 
+    void InitializeMyPlayerMaterials()
+    {
+        var props = MyPlayer.CustomProperties;
+
+        localPlayerMaterialManager.damageLevel = (int)props[kDamageLevel];
+        localPlayerMaterialManager.glovesColorIndex = (int)props[kGlovesColor];
+        localPlayerMaterialManager.skinColorIndex = (int)props[kSkinColor];
+        localPlayerMaterialManager.hairCutIndex = (int)props[kHairCut];
+        localPlayerMaterialManager.hairCutColorIndex = (int)props[kHairCutColor];
+    }
+    void UpdateMyPlayerMaterial()
+    {
+        var props = OtherPlayer.CustomProperties;
+
+        localPlayerMaterialManager.damageLevel = (int)props[kDamageLevel];
+    }
+    void UpdateOtherPlayerMaterials()
+    {
+        var props = OtherPlayer.CustomProperties;
+
+        localPlayerMaterialManager.damageLevel = (int)props[kDamageLevel];
+    }
     void ManageMyPlayer()
     {
         Hashtable properties = MyPlayer.CustomProperties;
