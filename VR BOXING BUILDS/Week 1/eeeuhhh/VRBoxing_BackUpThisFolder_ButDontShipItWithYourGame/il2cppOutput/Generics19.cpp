@@ -255,6 +255,8 @@ struct EmptyInternalEnumerator_1_t6607D379514C136B4028E29EF1F45C4B399125D4;
 struct EmptyInternalEnumerator_1_t13B45FF51C60059E4C69AAEC42C059AE5819C5F9;
 // System.Array/EmptyInternalEnumerator`1<Photon.Pun.PhotonView/CallbackTargetChange>
 struct EmptyInternalEnumerator_1_tC91985EB768C9599A76918335DF83C29B0249504;
+// System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>
+struct EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.UIElements.PointerDeviceState/PointerLocation>
 struct EmptyInternalEnumerator_1_t5A2BAFF971FED58478AE86EA6F044DCEEAF7329F;
 // System.Array/EmptyInternalEnumerator`1<System.Text.RegularExpressions.Regex/CachedCodeEntryKey>
@@ -693,6 +695,8 @@ struct StyleValueHandleU5BU5D_t66B7732469E9E30B1FB9A6E386315DAB36914ADE;
 struct SubstringU5BU5D_t9973080FDB519ED771E9FB3E6FDC90DF45211B77;
 // UnityEngine.Texture[]
 struct TextureU5BU5D_t0C3F884241E8243E791A31B920CAA89212888E46;
+// UnityEngine.Texture2D[]
+struct Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191;
 // System.Type[]
 struct TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB;
 // System.UInt32[]
@@ -904,6 +908,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m4761
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m4AACBBD2578CA3D36A749F12B06E67B9BED8C936_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m4D7170CDE25D96D452489D2931F7F53BB4FC9AE7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m4DF3A89BDAD6F280C34805CA58D79157CD1551C5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m4EC4EE627C26266CFD365187AE495D6F4AA0F39C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m508E2A0745D2614A560F76F76D4082359A3493A4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m51CF70483541F9982B1CE5F9C96B6D1EB9CDBA30_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m5600038929E5967A5C0ED20057D8F494392F6D47_RuntimeMethod_var;
@@ -2018,6 +2023,17 @@ struct EmptyInternalEnumerator_1_tC91985EB768C9599A76918335DF83C29B0249504_Stati
 {
 	// System.Array/EmptyInternalEnumerator`1<T> System.Array/EmptyInternalEnumerator`1::Value
 	EmptyInternalEnumerator_1_tC91985EB768C9599A76918335DF83C29B0249504* ___Value_0;
+};
+
+// System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>
+struct EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52  : public RuntimeObject
+{
+};
+
+struct EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52_StaticFields
+{
+	// System.Array/EmptyInternalEnumerator`1<T> System.Array/EmptyInternalEnumerator`1::Value
+	EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* ___Value_0;
 };
 
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.UIElements.PointerDeviceState/PointerLocation>
@@ -7757,6 +7773,27 @@ struct CallbackTargetChange_t35BA45CC3E5C4A3ED4F8EDC715DD62C8C90DBC05_marshaled_
 	RuntimeObject* ___obj_0;
 	Type_t* ___type_1;
 	int32_t ___add_2;
+};
+
+// PlayerMaterialManager/SkinColorTextures
+struct SkinColorTextures_tE902EC6199D5A54A51537CA2ABDD154601CEE812 
+{
+	// System.String PlayerMaterialManager/SkinColorTextures::colorName
+	String_t* ___colorName_0;
+	// UnityEngine.Texture2D[] PlayerMaterialManager/SkinColorTextures::textures
+	Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191* ___textures_1;
+};
+// Native definition for P/Invoke marshalling of PlayerMaterialManager/SkinColorTextures
+struct SkinColorTextures_tE902EC6199D5A54A51537CA2ABDD154601CEE812_marshaled_pinvoke
+{
+	char* ___colorName_0;
+	Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191* ___textures_1;
+};
+// Native definition for COM marshalling of PlayerMaterialManager/SkinColorTextures
+struct SkinColorTextures_tE902EC6199D5A54A51537CA2ABDD154601CEE812_marshaled_com
+{
+	Il2CppChar* ___colorName_0;
+	Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191* ___textures_1;
 };
 
 // System.Text.RegularExpressions.Regex/CachedCodeEntryKey
@@ -23504,6 +23541,76 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m929AB7
 		((  void (*) (EmptyInternalEnumerator_1_tC91985EB768C9599A76918335DF83C29B0249504*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3)))(L_0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3));
 		((EmptyInternalEnumerator_1_tC91985EB768C9599A76918335DF83C29B0249504_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->___Value_0 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((EmptyInternalEnumerator_1_tC91985EB768C9599A76918335DF83C29B0249504_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->___Value_0), (void*)L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1_Dispose_m330FF43ECC61792891D8919339161B0D6B15F907_gshared (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Boolean System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EmptyInternalEnumerator_1_MoveNext_mEAC08AA84C6CD56B87A0305357B9360525526678_gshared (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* __this, const RuntimeMethod* method) 
+{
+	{
+		return (bool)0;
+	}
+}
+// T System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>::get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SkinColorTextures_tE902EC6199D5A54A51537CA2ABDD154601CEE812 EmptyInternalEnumerator_1_get_Current_m4EC4EE627C26266CFD365187AE495D6F4AA0F39C_gshared (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* __this, const RuntimeMethod* method) 
+{
+	{
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_0 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7E7A07FECA0FF43839D67A9F7828EE56182CC9F6)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EmptyInternalEnumerator_1_get_Current_m4EC4EE627C26266CFD365187AE495D6F4AA0F39C_RuntimeMethod_var)));
+	}
+}
+// System.Object System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EmptyInternalEnumerator_1_System_Collections_IEnumerator_get_Current_m5FBE2D18BC8D19568E55A39F303885DB58A61007_gshared (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* __this, const RuntimeMethod* method) 
+{
+	{
+		SkinColorTextures_tE902EC6199D5A54A51537CA2ABDD154601CEE812 L_0;
+		L_0 = ((  SkinColorTextures_tE902EC6199D5A54A51537CA2ABDD154601CEE812 (*) (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->klass->rgctx_data, 0)))(__this, il2cpp_rgctx_method(method->klass->rgctx_data, 0));
+		SkinColorTextures_tE902EC6199D5A54A51537CA2ABDD154601CEE812 L_1 = L_0;
+		RuntimeObject* L_2 = Box(il2cpp_rgctx_data(method->klass->rgctx_data, 1), &L_1);
+		return L_2;
+	}
+}
+// System.Void System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1_System_Collections_IEnumerator_Reset_m3303112BC42BD9A1C2317F87D0A163CE28F96539_gshared (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* __this, const RuntimeMethod* method) 
+{
+	{
+		return;
+	}
+}
+// System.Void System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__ctor_mB8369B7DFCD53DCD78C6A25E5B64EB3EB35ABB56_gshared (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2((RuntimeObject*)__this, NULL);
+		return;
+	}
+}
+// System.Void System.Array/EmptyInternalEnumerator`1<PlayerMaterialManager/SkinColorTextures>::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m15DC6AD62D6DB961A510791D26546AE11D5B3F7F_gshared (const RuntimeMethod* method) 
+{
+	{
+		EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52* L_0 = (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+		NullCheck(L_0);
+		((  void (*) (EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52*, const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3)))(L_0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3));
+		((EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->___Value_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((EmptyInternalEnumerator_1_tC1AD86501A1C34CFB4F0E149A8B825D3D7B6EF52_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->___Value_0), (void*)L_0);
 		return;
 	}
 }

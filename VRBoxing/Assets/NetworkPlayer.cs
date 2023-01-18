@@ -52,16 +52,6 @@ public class NetworkPlayer : MonoBehaviour
             headTransform.gameObject.SetActive(false);
             bodyTransform.gameObject.SetActive(false);
         }
-        else
-        {
-            var props = Server.OtherPlayer.CustomProperties;
-
-            materialManager.damageLevel = (int)props[Server.kDamageLevel];
-            materialManager.glovesColorIndex = (int)props[Server.kGlovesColor];
-            materialManager.skinColorIndex = (int)props[Server.kSkinColor];
-            materialManager.hairCutIndex = (int)props[Server.kHairCut];
-            materialManager.hairCutColorIndex = (int)props[Server.kHairCutColor];
-        }
     }
 
     void LateUpdate()
@@ -83,6 +73,10 @@ public class NetworkPlayer : MonoBehaviour
             var props = Server.OtherPlayer.CustomProperties;
 
             materialManager.damageLevel = (int)props[Server.kDamageLevel];
+            materialManager.glovesColorIndex = (int)props[Server.kGlovesColor];
+            materialManager.skinColorIndex = (int)props[Server.kSkinColor];
+            materialManager.hairCutIndex = (int)props[Server.kHairCut];
+            materialManager.hairCutColorIndex = (int)props[Server.kHairCutColor];
         }
     }
 
