@@ -21,5 +21,13 @@ public class CubeSpawners : MonoBehaviourPunCallbacks
                 await Task.Yield();
             }
         }
+
+        for(int i = 0; i < amount; i++)
+        {
+            Vector3 pos = new(Random.Range(-5, 5), Random.Range(5, 7), Random.Range(-5, 5));
+            Instantiate(cube, pos, Quaternion.identity);
+
+        }
     }
+   
 }

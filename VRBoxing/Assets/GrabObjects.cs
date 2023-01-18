@@ -11,7 +11,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     public bool canGrab;
     public bool multiplier;
     public bool grabbed;
-    public GameObject hand;
+    public GameObject hand, physicsHand;
     public GameObject grabObject;
     Animator anim;
     public bool hardened;
@@ -126,10 +126,13 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         if(hardened == true)
         {
             hand.GetComponent<BoxCollider>().isTrigger = false;
+            physicsHand.GetComponent<BoxCollider>().isTrigger = false;
+
         }
         else
         {
             hand.GetComponent<BoxCollider>().isTrigger = true;
+            physicsHand.GetComponent<BoxCollider>().isTrigger = true;
         }
 
         

@@ -4448,6 +4448,7 @@ GameObject:
   - component: {fileID: 288478567}
   - component: {fileID: 288478566}
   - component: {fileID: 288478565}
+  - component: {fileID: 288478568}
   m_Layer: 8
   m_Name: Rope 1 (4)
   m_TagString: Untagged
@@ -4534,6 +4535,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288478563}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &288478568
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288478563}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &290848191
 GameObject:
   m_ObjectHideFlags: 0
@@ -6889,6 +6906,7 @@ GameObject:
   - component: {fileID: 562954835}
   - component: {fileID: 562954834}
   - component: {fileID: 562954833}
+  - component: {fileID: 562954836}
   m_Layer: 8
   m_Name: Rope 1 (6)
   m_TagString: Untagged
@@ -6975,6 +6993,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562954831}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &562954836
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562954831}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &566169027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7940,6 +7974,7 @@ GameObject:
   - component: {fileID: 649316563}
   - component: {fileID: 649316562}
   - component: {fileID: 649316561}
+  - component: {fileID: 649316564}
   m_Layer: 8
   m_Name: Rope 1 (7)
   m_TagString: Untagged
@@ -8026,6 +8061,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649316559}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &649316564
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649316559}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &650425160
 GameObject:
   m_ObjectHideFlags: 0
@@ -9307,6 +9358,7 @@ GameObject:
   - component: {fileID: 704414270}
   - component: {fileID: 704414269}
   - component: {fileID: 704414268}
+  - component: {fileID: 704414271}
   m_Layer: 8
   m_Name: Rope 1 (3)
   m_TagString: Untagged
@@ -9393,6 +9445,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704414266}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &704414271
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704414266}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &715987865
 GameObject:
   m_ObjectHideFlags: 0
@@ -9626,6 +9694,7 @@ GameObject:
   - component: {fileID: 723941008}
   - component: {fileID: 723941007}
   - component: {fileID: 723941006}
+  - component: {fileID: 723941009}
   m_Layer: 8
   m_Name: Rope 1 (5)
   m_TagString: Untagged
@@ -9712,6 +9781,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723941004}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &723941009
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723941004}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &724338430
 GameObject:
   m_ObjectHideFlags: 0
@@ -10599,6 +10684,7 @@ GameObject:
   - component: {fileID: 840831374}
   - component: {fileID: 840831373}
   - component: {fileID: 840831372}
+  - component: {fileID: 840831375}
   m_Layer: 8
   m_Name: Paal 1 (3)
   m_TagString: Untagged
@@ -10684,6 +10770,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840831370}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &840831375
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840831370}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &854657920
 GameObject:
   m_ObjectHideFlags: 0
@@ -10696,6 +10798,7 @@ GameObject:
   - component: {fileID: 854657924}
   - component: {fileID: 854657923}
   - component: {fileID: 854657922}
+  - component: {fileID: 854657925}
   m_Layer: 8
   m_Name: Rope 1 (8)
   m_TagString: Untagged
@@ -10782,6 +10885,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854657920}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &854657925
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854657920}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &856902640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11398,6 +11517,7 @@ GameObject:
   - component: {fileID: 876069556}
   - component: {fileID: 876069555}
   - component: {fileID: 876069554}
+  - component: {fileID: 876069557}
   m_Layer: 8
   m_Name: Rope 1 (9)
   m_TagString: Untagged
@@ -11484,6 +11604,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876069552}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &876069557
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876069552}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &876755303
 GameObject:
   m_ObjectHideFlags: 0
@@ -14982,6 +15118,7 @@ GameObject:
   - component: {fileID: 1104535052}
   - component: {fileID: 1104535051}
   - component: {fileID: 1104535050}
+  - component: {fileID: 1104535053}
   m_Layer: 8
   m_Name: Paal 1 (2)
   m_TagString: Untagged
@@ -15067,6 +15204,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104535048}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1104535053
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104535048}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1112040019
 GameObject:
   m_ObjectHideFlags: 0
@@ -19870,6 +20023,7 @@ GameObject:
   - component: {fileID: 1398060567}
   - component: {fileID: 1398060566}
   - component: {fileID: 1398060565}
+  - component: {fileID: 1398060568}
   m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
@@ -19956,6 +20110,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398060563}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1398060568
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398060563}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1400931999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23199,6 +23369,7 @@ GameObject:
   - component: {fileID: 1614543552}
   - component: {fileID: 1614543551}
   - component: {fileID: 1614543550}
+  - component: {fileID: 1614543553}
   m_Layer: 8
   m_Name: Rope 1 (1)
   m_TagString: Untagged
@@ -23285,6 +23456,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614543548}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1614543553
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614543548}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1625192467
 GameObject:
   m_ObjectHideFlags: 0
@@ -23836,6 +24023,7 @@ GameObject:
   - component: {fileID: 1691222790}
   - component: {fileID: 1691222789}
   - component: {fileID: 1691222788}
+  - component: {fileID: 1691222791}
   m_Layer: 8
   m_Name: Rope 1 (11)
   m_TagString: Untagged
@@ -23922,6 +24110,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691222786}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1691222791
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691222786}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1694643929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26992,6 +27196,7 @@ GameObject:
   - component: {fileID: 1958249052}
   - component: {fileID: 1958249051}
   - component: {fileID: 1958249050}
+  - component: {fileID: 1958249053}
   m_Layer: 8
   m_Name: Paal 1
   m_TagString: Untagged
@@ -27077,6 +27282,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958249048}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1958249053
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958249048}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1981366919
 GameObject:
   m_ObjectHideFlags: 0
@@ -27574,6 +27795,7 @@ GameObject:
   - component: {fileID: 2024894772}
   - component: {fileID: 2024894771}
   - component: {fileID: 2024894770}
+  - component: {fileID: 2024894773}
   m_Layer: 8
   m_Name: Rope 1 (2)
   m_TagString: Untagged
@@ -27660,6 +27882,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024894768}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2024894773
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024894768}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2029041706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28967,6 +29205,7 @@ GameObject:
   - component: {fileID: 2090824886}
   - component: {fileID: 2090824885}
   - component: {fileID: 2090824884}
+  - component: {fileID: 2090824887}
   m_Layer: 8
   m_Name: Rope 1 (10)
   m_TagString: Untagged
@@ -29053,6 +29292,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090824882}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2090824887
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090824882}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2092421594
 GameObject:
   m_ObjectHideFlags: 0
@@ -29540,6 +29795,7 @@ GameObject:
   - component: {fileID: 2122592920}
   - component: {fileID: 2122592919}
   - component: {fileID: 2122592918}
+  - component: {fileID: 2122592921}
   m_Layer: 8
   m_Name: Paal 1 (1)
   m_TagString: Untagged
@@ -29625,6 +29881,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122592916}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2122592921
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122592916}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2134817554
 GameObject:
   m_ObjectHideFlags: 0
@@ -29846,6 +30118,7 @@ GameObject:
   - component: {fileID: 2143199513}
   - component: {fileID: 2143199512}
   - component: {fileID: 2143199511}
+  - component: {fileID: 2143199514}
   m_Layer: 8
   m_Name: Rope 1
   m_TagString: Untagged
@@ -29932,3 +30205,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143199509}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2143199514
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143199509}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
