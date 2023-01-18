@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 5967584800018321525}
   - component: {fileID: 5967584800018321526}
   - component: {fileID: 1478236309966862769}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: RightHand Controller
   m_TagString: RightFist
   m_Icon: {fileID: 0}
@@ -783,6 +783,7 @@ MonoBehaviour:
   multiplier: 0
   grabbed: 0
   hand: {fileID: 5967584800018321419}
+  physicsHand: {fileID: 0}
   grabObject: {fileID: 0}
   hardened: 0
   canHarden: 0
@@ -809,6 +810,8 @@ MonoBehaviour:
   currentRotY: 0
   blocking: 0
   server: {fileID: 0}
+  canPunch: 0
+  cooldown: 0
 --- !u!95 &5967584800018321525
 Animator:
   serializedVersion: 4
@@ -1776,6 +1779,7 @@ MonoBehaviour:
   multiplier: 0
   grabbed: 0
   hand: {fileID: 5967584801441023500}
+  physicsHand: {fileID: 0}
   grabObject: {fileID: 0}
   hardened: 0
   canHarden: 0
@@ -1802,6 +1806,8 @@ MonoBehaviour:
   currentRotY: 0
   blocking: 0
   server: {fileID: 0}
+  canPunch: 0
+  cooldown: 0
 --- !u!95 &5967584801441023605
 Animator:
   serializedVersion: 4
