@@ -467,6 +467,8 @@ struct HandUserInterface_t096562EB28C154F3A505EDF13B3F7DA6113D0DBC;
 struct HandedInputSelector_t03E81F27E4BABDA2242FEDC37F67FEACF7DD2E75;
 // ExitGames.Client.Photon.Hashtable
 struct Hashtable_tD626399B3ADFD501225241D7366103F35472542A;
+// HeightReset
+struct HeightReset_t63EBA2124AD020133734F2C1398C6AA0AE2BE0F7;
 // System.IAsyncResult
 struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
 // System.Runtime.CompilerServices.IAsyncStateMachine
@@ -902,6 +904,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1C9EACD034618DFE1A9F1C4443F6F109BF57F304
 IL2CPP_EXTERN_C String_t* _stringLiteral20FD40A653330D027E8886FE4BEF9A9FDC81B125;
 IL2CPP_EXTERN_C String_t* _stringLiteral361B6C6F779D12B4F494FCB93F271A5D613E45C6;
 IL2CPP_EXTERN_C String_t* _stringLiteral3FA1C093A5007AA89335827EDD2F0AD87B88C4F0;
+IL2CPP_EXTERN_C String_t* _stringLiteral4AD3F56F410BEC596DF36A209642FFCDC7525824;
 IL2CPP_EXTERN_C String_t* _stringLiteral4D443D5C23D2672AF2F17A7AADEFF1EA7EF6A3BA;
 IL2CPP_EXTERN_C String_t* _stringLiteral4D798325B947BA218C33B279FDF2ED46FBDEFD97;
 IL2CPP_EXTERN_C String_t* _stringLiteral50651A1F5B7CFCF21C9A004BD99A78166A8A3D45;
@@ -4634,6 +4637,11 @@ struct HandedInputSelector_t03E81F27E4BABDA2242FEDC37F67FEACF7DD2E75  : public M
 	OVRInputModule_tA57D6FB43C84C28A9A6300E1B97F01703A87FD8A* ___m_InputModule_5;
 };
 
+// HeightReset
+struct HeightReset_t63EBA2124AD020133734F2C1398C6AA0AE2BE0F7  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+};
+
 // IgnoreCollision
 struct IgnoreCollision_tC3066FA8C6AC3ACFBC34298AA1FC0CE8062D216D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -4980,32 +4988,30 @@ struct PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C  : public
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___head_6;
 	// UnityEngine.Material PlayerMaterialManager::hair
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___hair_7;
-	// UnityEngine.MeshRenderer PlayerMaterialManager::bodyRenderer
-	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___bodyRenderer_8;
-	// UnityEngine.MeshRenderer PlayerMaterialManager::leftHandRenderer
-	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___leftHandRenderer_9;
-	// UnityEngine.MeshRenderer PlayerMaterialManager::rightHandRenderer
-	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___rightHandRenderer_10;
-	// UnityEngine.MeshRenderer PlayerMaterialManager::headRenderer
-	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___headRenderer_11;
-	// UnityEngine.MeshRenderer PlayerMaterialManager::hairRenderer
-	MeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE* ___hairRenderer_12;
+	// UnityEngine.Material PlayerMaterialManager::shorts
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___shorts_8;
 	// System.Int32 PlayerMaterialManager::damageLevel
-	int32_t ___damageLevel_13;
+	int32_t ___damageLevel_9;
 	// System.Int32 PlayerMaterialManager::skinColorIndex
-	int32_t ___skinColorIndex_14;
+	int32_t ___skinColorIndex_10;
 	// System.Int32 PlayerMaterialManager::glovesColorIndex
-	int32_t ___glovesColorIndex_15;
+	int32_t ___glovesColorIndex_11;
+	// System.Int32 PlayerMaterialManager::shortsColorIndex
+	int32_t ___shortsColorIndex_12;
 	// System.Int32 PlayerMaterialManager::hairCutIndex
-	int32_t ___hairCutIndex_16;
+	int32_t ___hairCutIndex_13;
 	// System.Int32 PlayerMaterialManager::hairCutColorIndex
-	int32_t ___hairCutColorIndex_17;
+	int32_t ___hairCutColorIndex_14;
 	// UnityEngine.GameObject[] PlayerMaterialManager::haircuts
-	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___haircuts_18;
+	GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* ___haircuts_15;
 	// PlayerMaterialManager/SkinColorTextures[] PlayerMaterialManager::skinColors
-	SkinColorTexturesU5BU5D_t94AFE61F2BF53EE48B88AFB484539C5D239F1BFF* ___skinColors_19;
+	SkinColorTexturesU5BU5D_t94AFE61F2BF53EE48B88AFB484539C5D239F1BFF* ___skinColors_16;
 	// UnityEngine.Texture2D[] PlayerMaterialManager::handsColors
-	Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191* ___handsColors_20;
+	Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191* ___handsColors_17;
+	// UnityEngine.Texture2D[] PlayerMaterialManager::shortsColors
+	Texture2DU5BU5D_t05332F1E3F7D4493E304C702201F9BE4F9236191* ___shortsColors_18;
+	// UnityEngine.Color[] PlayerMaterialManager::hairColors
+	ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* ___hairColors_19;
 };
 
 // RoomCreator
@@ -5013,16 +5019,18 @@ struct RoomCreator_tF2FA6D4DB7A1F4C3A55F54F008B8EFD4BA0DE2E2  : public MonoBehav
 {
 	// TMPro.TMP_InputField RoomCreator::roomNameField
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* ___roomNameField_4;
+	// TMPro.TMP_InputField RoomCreator::playerNickname
+	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* ___playerNickname_5;
 	// TMPro.TextMeshProUGUI RoomCreator::mapIndexText
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___mapIndexText_5;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___mapIndexText_6;
 	// UnityEngine.UI.Image RoomCreator::currentLevelImage
-	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___currentLevelImage_6;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___currentLevelImage_7;
 	// System.Int32 RoomCreator::mapIndex
-	int32_t ___mapIndex_7;
+	int32_t ___mapIndex_8;
 	// UnityEngine.Sprite[] RoomCreator::mapSprites
-	SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* ___mapSprites_8;
+	SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* ___mapSprites_9;
 	// ExitGames.Client.Photon.Hashtable RoomCreator::currentProperties
-	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___currentProperties_9;
+	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___currentProperties_10;
 };
 
 // SimpleCapsuleWithStickMovement
@@ -5693,17 +5701,17 @@ struct Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3  : public MonoBehaviourP
 	// GrabObject Server::grab
 	GrabObject_t130848A98FEF2A2803328956DEE21A3DD4AF4E9A* ___grab_7;
 	// System.Boolean Server::isBlocking
-	bool ___isBlocking_18;
+	bool ___isBlocking_19;
 	// System.Boolean Server::myPlayerInitialized
-	bool ___myPlayerInitialized_20;
+	bool ___myPlayerInitialized_21;
 };
 
 struct Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3_StaticFields
 {
 	// Photon.Realtime.Player Server::MyPlayer
-	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___MyPlayer_19;
+	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___MyPlayer_20;
 	// Photon.Realtime.Player Server::OtherPlayer
-	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___OtherPlayer_21;
+	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___OtherPlayer_22;
 };
 
 // ServerData
@@ -5729,6 +5737,8 @@ struct ServerData_t7CEEE6C4694DB8B371B8C8C43F40031380A0D998  : public MonoBehavi
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___fullColor_13;
 	// UnityEngine.Color ServerData::notFullColor
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___notFullColor_14;
+	// TMPro.TMP_InputField ServerData::nickname
+	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* ___nickname_15;
 };
 
 // UnityEngine.UI.Slider
@@ -7756,10 +7766,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Transform_tB27202C6F4E36D225EE28A13E4D662BF99
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t Room_get_PlayerCount_mB51FD867790C849B312565EA2052474828EA3F1A (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) ;
 // System.Byte Photon.Realtime.Room::get_MaxPlayers()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t Room_get_MaxPlayers_m366A4F5F9AE034C75EE5D68F0D42BD5D44FF92D4 (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) ;
-// System.Void InGameDisplay::UpdateCanvas()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InGameDisplay_UpdateCanvas_m351ECF7013B4F96E4D0224E464D51401A46FDACB (InGameDisplay_t8FEC4653BFA6A9DC72688BDB0CE11FA60A13DC2F* __this, const RuntimeMethod* method) ;
 // Photon.Realtime.Room Photon.Pun.PhotonNetwork::get_CurrentRoom()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D (const RuntimeMethod* method) ;
+// System.Void InGameDisplay::UpdateCanvas()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InGameDisplay_UpdateCanvas_m351ECF7013B4F96E4D0224E464D51401A46FDACB (InGameDisplay_t8FEC4653BFA6A9DC72688BDB0CE11FA60A13DC2F* __this, const RuntimeMethod* method) ;
 // System.String System.Byte::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Byte_ToString_mB80CE094B94215119578E4D796566E71D7277EE4 (uint8_t* __this, const RuntimeMethod* method) ;
 // System.String System.String::Concat(System.String,System.String,System.String,System.String)
@@ -9168,7 +9178,7 @@ IL_000c:
 		// var roomSprite = roomCreator.mapSprites[mapIndex-1];
 		RoomCreator_tF2FA6D4DB7A1F4C3A55F54F008B8EFD4BA0DE2E2* L_18 = __this->___roomCreator_8;
 		NullCheck(L_18);
-		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_19 = L_18->___mapSprites_8;
+		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_19 = L_18->___mapSprites_9;
 		int32_t L_20 = V_4;
 		NullCheck(L_19);
 		int32_t L_21 = ((int32_t)il2cpp_codegen_subtract(L_20, 1));
@@ -10392,7 +10402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabObjects_Blocking_m4665CD7CA568305401
 		// server.isBlocking = true;
 		Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3* L_2 = __this->___server_33;
 		NullCheck(L_2);
-		L_2->___isBlocking_18 = (bool)1;
+		L_2->___isBlocking_19 = (bool)1;
 		// blocking = true;
 		__this->___blocking_32 = (bool)1;
 	}
@@ -10422,7 +10432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GrabObjects_StopBlocking_m307766DC3F79DA
 		// server.isBlocking = false;
 		Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3* L_2 = __this->___server_33;
 		NullCheck(L_2);
-		L_2->___isBlocking_18 = (bool)0;
+		L_2->___isBlocking_19 = (bool)0;
 		// blocking = false;
 		__this->___blocking_32 = (bool)0;
 	}
@@ -11413,6 +11423,38 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandUserInterface__ctor_m72272234DD0EF97
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void HeightReset::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HeightReset_Start_m98298E6BE68948FA274AE9BA044D605E1B5B85AF (HeightReset_t63EBA2124AD020133734F2C1398C6AA0AE2BE0F7* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void HeightReset::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HeightReset_Update_mCE2BB78A49013EB42EA15F80D6428A402BF84BB3 (HeightReset_t63EBA2124AD020133734F2C1398C6AA0AE2BE0F7* __this, const RuntimeMethod* method) 
+{
+	{
+		// }
+		return;
+	}
+}
+// System.Void HeightReset::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HeightReset__ctor_mB0D6EA2A6190E7A558DD6B53DC0A3BF16A0465F7 (HeightReset_t63EBA2124AD020133734F2C1398C6AA0AE2BE0F7* __this, const RuntimeMethod* method) 
+{
+	{
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void IgnoreCollision::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IgnoreCollision_Start_mD3B41FE3C01A5499113F6412C76CA7777E46B412 (IgnoreCollision_tC3066FA8C6AC3ACFBC34298AA1FC0CE8062D216D* __this, const RuntimeMethod* method) 
 {
@@ -11734,14 +11776,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InGameDisplay_Update_m6891688F6E17D28B98
 		}
 	}
 	{
-		// UpdateCanvas();
-		InGameDisplay_UpdateCanvas_m351ECF7013B4F96E4D0224E464D51401A46FDACB(__this, NULL);
 		// currentRoom = PhotonNetwork.CurrentRoom;
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_2;
 		L_2 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		__this->___currentRoom_6 = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentRoom_6), (void*)L_2);
+		// UpdateCanvas();
+		InGameDisplay_UpdateCanvas_m351ECF7013B4F96E4D0224E464D51401A46FDACB(__this, NULL);
 	}
 
 IL_001e:
@@ -12239,6 +12281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuManager_OnJoinedRoom_m340B28B16D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral12521D18281CC15C62D2BA903CE26D534F855C76);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4AD3F56F410BEC596DF36A209642FFCDC7525824);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6CFB2FEC86F29DE9A31BDE7160EC8FD477DB3D88);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral831202F4E9A5F292381E33B06D667966F893797E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC97D5F75DE482C20EE6E6E1EC06CF72E43EB75C0);
@@ -12292,7 +12335,7 @@ IL_001e:
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_11 = V_1;
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_12 = __this->___materialManager_32;
 		NullCheck(L_12);
-		int32_t L_13 = L_12->___skinColorIndex_14;
+		int32_t L_13 = L_12->___skinColorIndex_10;
 		int32_t L_14 = L_13;
 		RuntimeObject* L_15 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_14);
 		NullCheck(L_11);
@@ -12301,7 +12344,7 @@ IL_001e:
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_16 = V_1;
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_17 = __this->___materialManager_32;
 		NullCheck(L_17);
-		int32_t L_18 = L_17->___hairCutIndex_16;
+		int32_t L_18 = L_17->___hairCutIndex_13;
 		int32_t L_19 = L_18;
 		RuntimeObject* L_20 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_19);
 		NullCheck(L_16);
@@ -12310,7 +12353,7 @@ IL_001e:
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_21 = V_1;
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_22 = __this->___materialManager_32;
 		NullCheck(L_22);
-		int32_t L_23 = L_22->___glovesColorIndex_15;
+		int32_t L_23 = L_22->___glovesColorIndex_11;
 		int32_t L_24 = L_23;
 		RuntimeObject* L_25 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_24);
 		NullCheck(L_21);
@@ -12319,21 +12362,30 @@ IL_001e:
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_26 = V_1;
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_27 = __this->___materialManager_32;
 		NullCheck(L_27);
-		int32_t L_28 = L_27->___hairCutColorIndex_17;
+		int32_t L_28 = L_27->___hairCutColorIndex_14;
 		int32_t L_29 = L_28;
 		RuntimeObject* L_30 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_29);
 		NullCheck(L_26);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_26, _stringLiteral831202F4E9A5F292381E33B06D667966F893797E, L_30, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		// player.SetCustomProperties(props);
-		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_31 = V_0;
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_32 = V_1;
+		// props.Add(Server.kShortsColor, materialManager.shortsColorIndex);
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_31 = V_1;
+		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_32 = __this->___materialManager_32;
+		NullCheck(L_32);
+		int32_t L_33 = L_32->___shortsColorIndex_12;
+		int32_t L_34 = L_33;
+		RuntimeObject* L_35 = Box(Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var, &L_34);
 		NullCheck(L_31);
-		bool L_33;
-		L_33 = Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA(L_31, L_32, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL, NULL);
+		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_31, _stringLiteral4AD3F56F410BEC596DF36A209642FFCDC7525824, L_35, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
+		// player.SetCustomProperties(props);
+		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_36 = V_0;
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_37 = V_1;
+		NullCheck(L_36);
+		bool L_38;
+		L_38 = Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA(L_36, L_37, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL, NULL);
 		// PhotonNetwork.LoadLevel(GetCurrentServerMapIndex());
-		int32_t L_34;
-		L_34 = MainMenuManager_GetCurrentServerMapIndex_mD81474FEFF8B95794C6050BBC5F865B85D672F37(__this, NULL);
-		PhotonNetwork_LoadLevel_m2DFDDBF54E17F875F9A30EFB459D7AE68AD865B7(L_34, NULL);
+		int32_t L_39;
+		L_39 = MainMenuManager_GetCurrentServerMapIndex_mD81474FEFF8B95794C6050BBC5F865B85D672F37(__this, NULL);
+		PhotonNetwork_LoadLevel_m2DFDDBF54E17F875F9A30EFB459D7AE68AD865B7(L_39, NULL);
 		// }
 		return;
 	}
@@ -17217,6 +17269,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkPlayer_LateUpdate_mBEC13E52713BE7
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral12521D18281CC15C62D2BA903CE26D534F855C76);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1C9EACD034618DFE1A9F1C4443F6F109BF57F304);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral361B6C6F779D12B4F494FCB93F271A5D613E45C6);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral4AD3F56F410BEC596DF36A209642FFCDC7525824);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral684CFD078C62BCEF4AA5496D8FE09BA2D09067FA);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6CFB2FEC86F29DE9A31BDE7160EC8FD477DB3D88);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral831202F4E9A5F292381E33B06D667966F893797E);
@@ -17361,13 +17414,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkPlayer_LateUpdate_mBEC13E52713BE7
 		(L_55)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_59);
 		NullCheck(L_53);
 		PhotonView_RPC_mD406BD732C9B9AFD46C149F63514AB3A923EB5BB(L_53, _stringLiteral361B6C6F779D12B4F494FCB93F271A5D613E45C6, 1, L_55, NULL);
-		goto IL_01ec;
+		goto IL_0207;
 	}
 
 IL_0158:
 	{
 		// var props = Server.OtherPlayer.CustomProperties;
-		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_60 = ((Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3_StaticFields*)il2cpp_codegen_static_fields_for(Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3_il2cpp_TypeInfo_var))->___OtherPlayer_21;
+		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_60 = ((Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3_StaticFields*)il2cpp_codegen_static_fields_for(Server_t8BA95089B8ACB105BC4A1FFD8542E82CFD5015F3_il2cpp_TypeInfo_var))->___OtherPlayer_22;
 		NullCheck(L_60);
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_61;
 		L_61 = Player_get_CustomProperties_m398B81FB1DEE02243650B8CB5FBF5C7F1B8928D6_inline(L_60, NULL);
@@ -17379,7 +17432,7 @@ IL_0158:
 		RuntimeObject* L_64;
 		L_64 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_63, _stringLiteral6CFB2FEC86F29DE9A31BDE7160EC8FD477DB3D88, NULL);
 		NullCheck(L_62);
-		L_62->___damageLevel_13 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_64, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
+		L_62->___damageLevel_9 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_64, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
 		// materialManager.glovesColorIndex = (int)props[Server.kGlovesColor];
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_65 = __this->___materialManager_5;
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_66 = V_1;
@@ -17387,7 +17440,7 @@ IL_0158:
 		RuntimeObject* L_67;
 		L_67 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_66, _stringLiteralEAB392C5F65A8EB9281ABD114654D1A64CFC52AF, NULL);
 		NullCheck(L_65);
-		L_65->___glovesColorIndex_15 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_67, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
+		L_65->___glovesColorIndex_11 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_67, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
 		// materialManager.skinColorIndex = (int)props[Server.kSkinColor];
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_68 = __this->___materialManager_5;
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_69 = V_1;
@@ -17395,7 +17448,7 @@ IL_0158:
 		RuntimeObject* L_70;
 		L_70 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_69, _stringLiteralC97D5F75DE482C20EE6E6E1EC06CF72E43EB75C0, NULL);
 		NullCheck(L_68);
-		L_68->___skinColorIndex_14 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_70, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
+		L_68->___skinColorIndex_10 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_70, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
 		// materialManager.hairCutIndex = (int)props[Server.kHairCut];
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_71 = __this->___materialManager_5;
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_72 = V_1;
@@ -17403,7 +17456,7 @@ IL_0158:
 		RuntimeObject* L_73;
 		L_73 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_72, _stringLiteral12521D18281CC15C62D2BA903CE26D534F855C76, NULL);
 		NullCheck(L_71);
-		L_71->___hairCutIndex_16 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_73, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
+		L_71->___hairCutIndex_13 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_73, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
 		// materialManager.hairCutColorIndex = (int)props[Server.kHairCutColor];
 		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_74 = __this->___materialManager_5;
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_75 = V_1;
@@ -17411,10 +17464,18 @@ IL_0158:
 		RuntimeObject* L_76;
 		L_76 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_75, _stringLiteral831202F4E9A5F292381E33B06D667966F893797E, NULL);
 		NullCheck(L_74);
-		L_74->___hairCutColorIndex_17 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_76, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
+		L_74->___hairCutColorIndex_14 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_76, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
+		// materialManager.shortsColorIndex = (int)props[Server.kShortsColor];
+		PlayerMaterialManager_tEA5A5A50FC9C8EF48C153CC15ADE36276A72625C* L_77 = __this->___materialManager_5;
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_78 = V_1;
+		NullCheck(L_78);
+		RuntimeObject* L_79;
+		L_79 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_78, _stringLiteral4AD3F56F410BEC596DF36A209642FFCDC7525824, NULL);
+		NullCheck(L_77);
+		L_77->___shortsColorIndex_12 = ((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_79, Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_il2cpp_TypeInfo_var))));
 	}
 
-IL_01ec:
+IL_0207:
 	{
 		// }
 		return;

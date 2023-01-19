@@ -195,6 +195,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         props.Add(Server.kHairCut, materialManager.hairCutIndex);
         props.Add(Server.kGlovesColor, materialManager.glovesColorIndex);
         props.Add(Server.kHairCutColor, materialManager.hairCutColorIndex);
+        props.Add(Server.kShortsColor, materialManager.shortsColorIndex);
 
         player.SetCustomProperties(props);
 

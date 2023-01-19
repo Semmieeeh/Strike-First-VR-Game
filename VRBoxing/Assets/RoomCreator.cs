@@ -9,6 +9,7 @@ using Hastable = ExitGames.Client.Photon.Hashtable;
 public class RoomCreator : MonoBehaviour
 {
     public TMP_InputField roomNameField;
+    public TMP_InputField playerNickname;
     public TextMeshProUGUI mapIndexText;
     public Image currentLevelImage;
 
@@ -20,7 +21,7 @@ public class RoomCreator : MonoBehaviour
 
     public void TryCreate()
     {
-        if (!roomNameField.text.IsNullOrEmpty())
+        if (!roomNameField.text.IsNullOrEmpty() && !playerNickname.text.IsNullOrEmpty())
         {
             string name = /*mapIndex.ToString()*/ 1+" " + roomNameField.text;
 

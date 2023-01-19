@@ -20,6 +20,7 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kDamageLevel = "DMGL";
     public const string kSkinColor = "SKCL";
     public const string kGlovesColor = "GCL";
+    public const string kShortsColor = "SCL";
     public const string kHairCut = "HC";
     public const string kHairCutColor = "HCCL";
 
@@ -83,6 +84,7 @@ public class Server : MonoBehaviourPunCallbacks
         localPlayerMaterialManager.skinColorIndex = (int)props[kSkinColor];
         localPlayerMaterialManager.hairCutIndex = (int)props[kHairCut];
         localPlayerMaterialManager.hairCutColorIndex = (int)props[kHairCutColor];
+        localPlayerMaterialManager.shortsColorIndex = (int)props[kShortsColor];
     }
     void UpdateMyPlayerMaterial()
     {

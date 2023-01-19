@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine.UI;
+using WebSocketSharp;
 
 public class ServerData : MonoBehaviourPunCallbacks
 {
@@ -23,6 +24,7 @@ public class ServerData : MonoBehaviourPunCallbacks
     public TextMeshProUGUI JoinText;
     public Color fullColor, notFullColor;
 
+    public TMP_InputField nickname;
     public const string mapIndexProperty = "M";
 
     public void Initialize(string roomName, Sprite levelSprite, int mapIndex)
@@ -33,11 +35,15 @@ public class ServerData : MonoBehaviourPunCallbacks
 
         mapNameText.text = roomName;
         mapImage.sprite = levelSprite;
+
+        nickname = GameObject.Find("Player Name Input").GetComponent<TMP_InputField>();
     }
+
 
     public void JoinServer()
     {
         if (isServerFull) return;
+        //if (nickname.text.IsNullOrEmpty()) return;
 
         GameManager.MainMenu.PlayerJoinedRoom(this);
     }

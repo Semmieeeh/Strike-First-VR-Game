@@ -77,6 +77,7 @@ public class NetworkPlayer : MonoBehaviour
             materialManager.skinColorIndex = (int)props[Server.kSkinColor];
             materialManager.hairCutIndex = (int)props[Server.kHairCut];
             materialManager.hairCutColorIndex = (int)props[Server.kHairCutColor];
+            materialManager.shortsColorIndex = (int)props[Server.kShortsColor];
         }
     }
 

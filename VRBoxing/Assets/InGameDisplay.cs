@@ -27,8 +27,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         // Only the client of the host will update the in-game display. the other client(s) will fetch the data of the in-game display
         if (PhotonNetwork.IsMasterClient)
         {
-            UpdateCanvas();
             currentRoom = PhotonNetwork.CurrentRoom;    
+            UpdateCanvas();
         }
     }
 
