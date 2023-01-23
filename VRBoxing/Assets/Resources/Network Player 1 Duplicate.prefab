@@ -195,7 +195,7 @@ MonoBehaviour:
   materialManager: {fileID: 8170507703560946419}
   photonView: {fileID: 9088590176340867455}
   headTransform: {fileID: 6282977914344966282}
-  shotgunTransform: {fileID: 0}
+  shotgunTransform: {fileID: 8006508237858958357}
   leftHandTransform: {fileID: 5540766527627598758}
   rightHandTransform: {fileID: 5373367480881695413}
   bodyTransform: {fileID: 8151342061086526915}
