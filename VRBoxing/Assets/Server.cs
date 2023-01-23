@@ -24,6 +24,7 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kHairCut = "HC";
     public const string kHairCutColor = "HCCL";
 
+
     
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -35,6 +36,7 @@ public class Server : MonoBehaviourPunCallbacks
     private void Start()
     {
         Update();
+        
     }
     private void Update()
     {
@@ -242,11 +244,13 @@ public class Server : MonoBehaviourPunCallbacks
 
     public static void ShotgunAppear()
     {
-        
+        GameObject shotgun = GameObject.FindGameObjectWithTag("Shotgun");
+        shotgun.SetActive(true);
     }
 
     public static void ShotgunDisappear()
     {
-
+        GameObject shotgun = GameObject.FindGameObjectWithTag("Shotgun");
+        shotgun.SetActive(false);
     }
 }
