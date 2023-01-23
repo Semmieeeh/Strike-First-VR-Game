@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class NetworkPlayer : MonoBehaviour
 {
     UniversalHealthBar healthBar;
+    GrabObjects grab;
     public PlayerMaterialManager materialManager;
     // Reference to the PhotonView component.
     public PhotonView photonView;
 
     // References to the head and hand transforms.
     public Transform headTransform;
+    public Transform shotgunTransform;
     public Transform leftHandTransform;
     public Transform rightHandTransform;
     public Transform bodyTransform;
@@ -21,6 +23,7 @@ public class NetworkPlayer : MonoBehaviour
     public Transform localCameraTransform;
     public Transform localLeftHandTransform;
     public Transform localRightHandTransform;
+    public Transform LocalShotgunTransform;
     public Transform localBodyTransform;
 
     public float playerHealth;
@@ -33,10 +36,13 @@ public class NetworkPlayer : MonoBehaviour
         if (photonView.IsMine)
         {
             // Find Local Transforms
+
             localCameraTransform = Camera.main.transform;
             localLeftHandTransform = GameObject.Find("LeftHand Controller").transform;
             localRightHandTransform = GameObject.Find("RightHand Controller").transform;
+            LocalShotgunTransform = GameObject.Find("Snotgun").transform;
             localBodyTransform = GameObject.Find("Body Controller").transform;
+            grab = localRightHandTransform.GetComponent<GrabObjects>();
 
 
             // Set the head and hand transforms to the local player's camera and hand transforms.
@@ -66,6 +72,7 @@ public class NetworkPlayer : MonoBehaviour
             photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
             photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
             photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
+            photonView.RPC(nameof(MapShotgunPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation, LocalShotgunTransform.localScale);
             photonView.RPC(nameof(SetSliderValue), RpcTarget.Others, Mathf.InverseLerp(0, 100, playerHealth));
         }
         else
@@ -103,6 +110,14 @@ public class NetworkPlayer : MonoBehaviour
 
         headTransform.position = position;
         headTransform.rotation = rotation;
+    }
+    [PunRPC]
+    void MapShotgunPosition(Vector3 position, Quaternion rotation, Vector3 scale)
+    {
+        if (photonView.IsMine) return;
+        shotgunTransform.localScale = scale;
+        shotgunTransform.position = position;
+        shotgunTransform.rotation = rotation;
     }
 
     [PunRPC]

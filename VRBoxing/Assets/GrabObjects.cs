@@ -38,6 +38,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     public AudioManager audioManager;
     public bool canPlay = true;
     public GrabObjects otherHand;
+    
 
     void Start()
     {

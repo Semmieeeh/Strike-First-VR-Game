@@ -134,6 +134,33 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Shotgun"",
+                    ""type"": ""Button"",
+                    ""id"": ""db1b8747-92bf-4c6c-9394-740fb5851c71"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShotgunDis"",
+                    ""type"": ""Button"",
+                    ""id"": ""776f8b52-9944-4fe2-93f1-0acc44402f00"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ShootShotgun"",
+                    ""type"": ""Button"",
+                    ""id"": ""05a3e4f7-6a35-467c-aff3-f936ab5a8a08"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -290,6 +317,39 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""action"": ""ResetCam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3912d738-a111-4b0f-846e-3c0390cc315e"",
+                    ""path"": ""<OculusTouchController>{RightHand}/secondaryButton"",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""Shotgun"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""744cfa87-c5f6-4780-a238-764cdb071a08"",
+                    ""path"": ""<OculusTouchController>{RightHand}/secondaryButton"",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ShotgunDis"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""13ab6f58-194e-46d3-a6ad-994ebc9a68f3"",
+                    ""path"": ""<OculusTouchController>{RightHand}/triggerPressed"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": ""Oculus"",
+                    ""action"": ""ShootShotgun"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -332,6 +392,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_BlockRight = m_Player.FindAction("BlockRight", throwIfNotFound: true);
         m_Player_BlockLeft = m_Player.FindAction("BlockLeft", throwIfNotFound: true);
         m_Player_ResetCam = m_Player.FindAction("ResetCam", throwIfNotFound: true);
+        m_Player_Shotgun = m_Player.FindAction("Shotgun", throwIfNotFound: true);
+        m_Player_ShotgunDis = m_Player.FindAction("ShotgunDis", throwIfNotFound: true);
+        m_Player_ShootShotgun = m_Player.FindAction("ShootShotgun", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -403,6 +466,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_BlockRight;
     private readonly InputAction m_Player_BlockLeft;
     private readonly InputAction m_Player_ResetCam;
+    private readonly InputAction m_Player_Shotgun;
+    private readonly InputAction m_Player_ShotgunDis;
+    private readonly InputAction m_Player_ShootShotgun;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -419,6 +485,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @BlockRight => m_Wrapper.m_Player_BlockRight;
         public InputAction @BlockLeft => m_Wrapper.m_Player_BlockLeft;
         public InputAction @ResetCam => m_Wrapper.m_Player_ResetCam;
+        public InputAction @Shotgun => m_Wrapper.m_Player_Shotgun;
+        public InputAction @ShotgunDis => m_Wrapper.m_Player_ShotgunDis;
+        public InputAction @ShootShotgun => m_Wrapper.m_Player_ShootShotgun;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -464,6 +533,15 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ResetCam.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetCam;
                 @ResetCam.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetCam;
                 @ResetCam.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnResetCam;
+                @Shotgun.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShotgun;
+                @Shotgun.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShotgun;
+                @Shotgun.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShotgun;
+                @ShotgunDis.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShotgunDis;
+                @ShotgunDis.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShotgunDis;
+                @ShotgunDis.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShotgunDis;
+                @ShootShotgun.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShootShotgun;
+                @ShootShotgun.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShootShotgun;
+                @ShootShotgun.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShootShotgun;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -504,6 +582,15 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @ResetCam.started += instance.OnResetCam;
                 @ResetCam.performed += instance.OnResetCam;
                 @ResetCam.canceled += instance.OnResetCam;
+                @Shotgun.started += instance.OnShotgun;
+                @Shotgun.performed += instance.OnShotgun;
+                @Shotgun.canceled += instance.OnShotgun;
+                @ShotgunDis.started += instance.OnShotgunDis;
+                @ShotgunDis.performed += instance.OnShotgunDis;
+                @ShotgunDis.canceled += instance.OnShotgunDis;
+                @ShootShotgun.started += instance.OnShootShotgun;
+                @ShootShotgun.performed += instance.OnShootShotgun;
+                @ShootShotgun.canceled += instance.OnShootShotgun;
             }
         }
     }
@@ -531,5 +618,8 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnBlockRight(InputAction.CallbackContext context);
         void OnBlockLeft(InputAction.CallbackContext context);
         void OnResetCam(InputAction.CallbackContext context);
+        void OnShotgun(InputAction.CallbackContext context);
+        void OnShotgunDis(InputAction.CallbackContext context);
+        void OnShootShotgun(InputAction.CallbackContext context);
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using Unity.XR.CoreUtils;
 using Unity.VisualScripting;
+using OVR;
+using static UnityEngine.ParticleSystem;
 
 
 public class VRMovement : MonoBehaviour
@@ -27,8 +29,19 @@ public class VRMovement : MonoBehaviour
     public bool canHeal;
     public GameObject cameraOrigin;
     public GameObject cam;
-
+    bool reset;
+    public bool shotgunActive;
+    public GameObject shotgun;
+    public Animator anim;
+    public int cycle;
+    public float damage;
+    public AudioManager sound;
+    public ParticleSystem particle;
     
+    public GameObject gunTip;
+    public RaycastHit hit;
+
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
@@ -36,6 +49,7 @@ public class VRMovement : MonoBehaviour
         rig = GetComponent<XROrigin>();
         healthBar = GetComponentInParent<UniversalHealthBar>();
         healResetTime = 10f;
+        reset = false;
     }
     
 
@@ -48,12 +62,47 @@ public class VRMovement : MonoBehaviour
     {
         if (context.started)
         {
-            cam.transform.position = cameraOrigin.transform.position;
-            Debug.Log("Resetting Cam");
+            reset = true;
         }
     }
+    public void ActivateShotgun(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("Shotgun");
+        }
+        if(context.started)
+        {            
+            shotgunActive = true;
+            
+        }
+        if (context.canceled)
+        {
+            shotgunActive = false;
+        }
+        
+        
+    }
     
-    
+    public void Shoot(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            if (shotgunActive == true)
+            {
+                Debug.Log("Shot!");
+                Instantiate(particle, gunTip.transform.position, gunTip.transform.rotation);
+                sound.PlayAudio(4, 0.8f, 1.2f);
+                if (Physics.Raycast(gunTip.transform.position, gunTip.transform.forward, out hit, 10f))
+                {
+                    if (hit.transform.gameObject.tag == "Head" || hit.transform.gameObject.tag == "Enemy" || hit.transform.gameObject.tag == "RightFist" || hit.transform.gameObject.tag == "LeftFist")
+                    {
+                        Server.DamageEnemy(1000);
+                    }
+                }
+            }
+        }
+    }
     
     public void Heal(InputAction.CallbackContext context)
     {
@@ -89,6 +138,13 @@ public class VRMovement : MonoBehaviour
         {
             canHeal = false;
         }
+        if(reset == true)
+        {
+            cam.transform.position = cameraOrigin.transform.position;
+            Debug.Log("Resetting Cam");
+            reset = false;
+        }
+        anim.SetBool("Shotgun", shotgunActive);
     }
     public void Movement(InputAction.CallbackContext context)
     {

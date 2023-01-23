@@ -68,13 +68,24 @@ public class Server : MonoBehaviourPunCallbacks
 
         if(MyPlayer != null)
         ManageMyPlayer();
+
         
+        CheckForWinner();
     }
 
     public static Player MyPlayer;
     bool myPlayerInitialized;
     public static Player OtherPlayer;
 
+    void CheckForWinner()
+    {
+        if (healthBar.health <= 0)
+        {
+            //RPC shit dat ik verlies
+            //RPC shit dat andere wint
+            
+        }
+    }
     void InitializeMyPlayerMaterials()
     {
         var props = MyPlayer.CustomProperties;

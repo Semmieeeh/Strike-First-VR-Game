@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Stefan/Main Menu.unity
     guid: e84c4ce34cd967340b411866cb908671
   - enabled: 1
+    path: Assets/Osama/osamascene.unity
+    guid: 8234bb15eeb66294eb683ac7d2275d81
+  - enabled: 1
     path: Assets/Dariel/Stadium Level.unity
     guid: 906bef2d2b7dba549815241ae98db464
   - enabled: 0
