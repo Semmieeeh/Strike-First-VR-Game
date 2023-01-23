@@ -239,4 +239,6 @@ public class Server : MonoBehaviourPunCallbacks
 
         MyPlayer.SetCustomProperties(properties);
     }
+
+    
 }
