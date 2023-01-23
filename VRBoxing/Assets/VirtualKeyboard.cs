@@ -41,9 +41,15 @@ public class VirtualKeyboard : MonoBehaviour
         }
         
     }
+
+    public void SetTarget(TMP_InputField field)
+    {
+        target = field;
+    }
     public void ToggleOff()
     {
         //gameObject.SetActive(false);
+        target = null;
         targetScale = Vector3.zero;
     }
 

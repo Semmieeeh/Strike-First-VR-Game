@@ -10,6 +10,6 @@ public class AdditionalInputField : MonoBehaviour
     
     public void OnClick()
     {
-        keyboard.target = GetComponent<TMP_InputField>();
+        keyboard.SetTarget(GetComponent<TMP_InputField>());
     }
 }
