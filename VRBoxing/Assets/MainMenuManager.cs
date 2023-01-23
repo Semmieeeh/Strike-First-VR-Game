@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Oculus.Interaction.PoseDetection;
 using Photon.Pun;
 using TMPro;
+using WebSocketSharp;
 using Hastable = ExitGames.Client.Photon.Hashtable;
 using Photon.Realtime;
 
@@ -53,7 +54,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
     [Space(inspectorSpace)]
     public Animator optionsTabAnimator;
-    public GameObject video, gameplay, _audio;
+    public GameObject settings;
 
     [Space(inspectorSpace)]
     [Header("Wardrobe Settings")]
@@ -70,17 +71,20 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public RoomCreator roomCreator;
     public ConnectToServer serverConnector;
     public PlayerMaterialManager materialManager;
+    public TMP_InputField nickNameInput;
+    public Button startButton;
 
 
-    private void Start()
+    private void Update()
     {
-            
+        startButton.interactable = !nickNameInput.text.IsNullOrEmpty();
     }
     /// <summary>
     /// Function called whenever the player pressed the Play button on the start screen
     /// </summary>
     public void OnGameStart()
     {
+        if (nickNameInput.text.IsNullOrEmpty()) return;
         OpenPage("Main Screen",true);
         for (int i = 0; i < gameStartAnimators.Length; i++)
         {
@@ -329,9 +333,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         await Task.Delay(ToMilliseconds(pageSwitchWaitTime));
 
         OpenPage("Options",true);
-
-        ToggleOptionsSubMenu(1);
-
+        optionsTabAnimator.SetBool("Toggle", true);
         ToggleOptionsLine(true);
 
         for (int i = 0; i < optionsEnableAnimators.Length; i++)
@@ -351,9 +353,8 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
             optionsDisableAnimators[i].Start();
         }
 
+        optionsTabAnimator.SetBool("Toggle", false);
         ToggleOptionsLine(false);
-
-        ToggleOptionsSubMenu(-1);
 
         await Task.Delay(ToMilliseconds(pageSwitchWaitTime + lineToggleTime * lineAnimators.Length));
 
@@ -377,46 +378,6 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
             animator.SetBool("Enabled", enable);
             await Task.Delay(ToMilliseconds(lineToggleTime));
         }
-    }
-
-    int previousIndex;
-    bool changing;
-    public async void ToggleOptionsSubMenu(int menuIndex)
-    {
-        if (previousIndex == menuIndex || changing) return;
-        changing = true;
-
-        optionsTabAnimator.SetBool("Toggle",false);
-
-        await Task.Delay(ToMilliseconds(0.25f));
-
-
-        switch (menuIndex)
-        {
-            case (int)OptionsMenu.Video:
-                video.SetActive(true);
-                gameplay.SetActive(false);
-                _audio.SetActive(false);
-                break;
-            case (int)OptionsMenu.Gameplay:
-                video.SetActive(false);
-                gameplay.SetActive(true);
-                _audio.SetActive(false);
-                break;
-            case (int)OptionsMenu.Audio:
-                video.SetActive(false);
-                gameplay.SetActive(false);
-                _audio.SetActive(true);
-                break;
-            default:
-                video.SetActive(false);
-                gameplay.SetActive(false);
-                _audio.SetActive(false);
-                break;
-        }
-        optionsTabAnimator.SetBool("Toggle", true);
-        previousIndex = menuIndex;
-        changing = false;
     }
 
     #endregion 

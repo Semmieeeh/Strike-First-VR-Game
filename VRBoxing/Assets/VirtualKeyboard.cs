@@ -81,6 +81,7 @@ public class VirtualKeyboard : MonoBehaviour
     {
         target.text = current;
         current = null;
+        sb.Clear();
         ToggleOff();
     }
 }
