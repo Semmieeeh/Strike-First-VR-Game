@@ -115,7 +115,7 @@ public class NetworkPlayer : MonoBehaviour
     void MapShotgunPosition(Vector3 position, Vector3 rotation)
     {
         if (photonView.IsMine) return;
-        
+        position.z += 0.00406f;
         shotgunTransform.position = position;
         
         
