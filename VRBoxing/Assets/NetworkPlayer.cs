@@ -117,7 +117,14 @@ public class NetworkPlayer : MonoBehaviour
         if (photonView.IsMine) return;
         
         shotgunTransform.position = position;
+        
+        
+        Quaternion newShotgunRot;
+        
+        newShotgunRot.y = 180;
+        rotation.y += newShotgunRot.y;
         shotgunTransform.rotation = rotation;
+
     }
 
     [PunRPC]
