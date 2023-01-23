@@ -17,6 +17,7 @@ TagManager:
   - Head
   - Body
   - Shotgun
+  - ShotgunOrigin
   layers:
   - Default
   - TransparentFX
