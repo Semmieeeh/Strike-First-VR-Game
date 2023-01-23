@@ -240,8 +240,13 @@ public class Server : MonoBehaviourPunCallbacks
         MyPlayer.SetCustomProperties(properties);
     }
 
-    public static void SetActive()
+    public static void ShotgunAppear()
     {
-        MyPlayer
+        
+    }
+
+    public static void ShotgunDisappear()
+    {
+
     }
 }

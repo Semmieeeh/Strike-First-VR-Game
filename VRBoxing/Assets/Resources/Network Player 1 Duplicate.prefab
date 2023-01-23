@@ -629,6 +629,7 @@ GameObject:
   - component: {fileID: 1468680138761850198}
   - component: {fileID: 1537262748835332437}
   - component: {fileID: 6632582064882359295}
+  - component: {fileID: 9040323645661620035}
   m_Layer: 0
   m_Name: Head
   m_TagString: Head
@@ -758,6 +759,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6632582064882359295}
+  - {fileID: 9040323645661620035}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -777,6 +779,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &9040323645661620035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3796007931457254357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35144820bcc25444bb8f0fd767d9423e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SmoothingDelay: 1
 --- !u!1 &3838518782328789062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5662,6 +5677,7 @@ GameObject:
   - component: {fileID: 4588197194513401779}
   - component: {fileID: 5166121661974394277}
   - component: {fileID: 5643928450245855770}
+  - component: {fileID: 6559492042520463372}
   m_Layer: 0
   m_Name: Body
   m_TagString: Body
@@ -5787,6 +5803,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 4588197194513401779}
+  - {fileID: 6559492042520463372}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -5803,6 +5820,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0030463063, y: 0.0067726416, z: 0.012226761}
   m_Center: {x: -4.1461645e-10, y: 5.30917e-10, z: -0.0003643136}
+--- !u!114 &6559492042520463372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619477784242660241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35144820bcc25444bb8f0fd767d9423e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SmoothingDelay: 1
 --- !u!1 &4903061524380252840
 GameObject:
   m_ObjectHideFlags: 0
@@ -6171,6 +6201,7 @@ GameObject:
   - component: {fileID: 8006508237858958357}
   - component: {fileID: 6627495845241978299}
   - component: {fileID: 258248931583549730}
+  - component: {fileID: 8320203955314909069}
   m_Layer: 0
   m_Name: Snotgun
   m_TagString: Shotgun
@@ -6220,6 +6251,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 258248931583549730}
+  - {fileID: 8320203955314909069}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -6239,6 +6271,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
+--- !u!114 &8320203955314909069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230252669911316143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35144820bcc25444bb8f0fd767d9423e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SmoothingDelay: 1
 --- !u!1 &7300403788736424158
 GameObject:
   m_ObjectHideFlags: 0
@@ -6324,6 +6369,7 @@ GameObject:
   - component: {fileID: 558422762489890083}
   - component: {fileID: 7029183755720467508}
   - component: {fileID: 26388757710628936}
+  - component: {fileID: 2084240931455573605}
   m_Layer: 0
   m_Name: Network Left Hand Pivot
   m_TagString: LeftHand
@@ -6383,6 +6429,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 558422762489890083}
+  - {fileID: 2084240931455573605}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -6399,6 +6446,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09335412, y: 0.19380814, z: 0.23839992}
   m_Center: {x: 0.014025457, y: 0.008085001, z: 0.11269212}
+--- !u!114 &2084240931455573605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7344038084873405234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35144820bcc25444bb8f0fd767d9423e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SmoothingDelay: 1
 --- !u!1 &7932838857259290308
 GameObject:
   m_ObjectHideFlags: 0
@@ -6871,6 +6931,7 @@ GameObject:
   - component: {fileID: 5914266518150185781}
   - component: {fileID: 5776096072088125103}
   - component: {fileID: 3438237549302810414}
+  - component: {fileID: 2038430882532434653}
   m_Layer: 0
   m_Name: Network Right Hand Pivot
   m_TagString: RightHand
@@ -6927,6 +6988,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 3438237549302810414}
+  - {fileID: 2038430882532434653}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -6946,6 +7008,19 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
+--- !u!114 &2038430882532434653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852421232401715052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35144820bcc25444bb8f0fd767d9423e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SmoothingDelay: 1
 --- !u!1001 &1719690436718770733
 PrefabInstance:
   m_ObjectHideFlags: 0

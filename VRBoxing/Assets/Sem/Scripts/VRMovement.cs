@@ -73,12 +73,14 @@ public class VRMovement : MonoBehaviour
         }
         if(context.started)
         {            
-            shotgunActive = true;                        
+            shotgunActive = true;
+            Server.ShotgunAppear();
             
         }
         if (context.canceled)
         {
             shotgunActive = false;
+            Server.ShotgunDisappear();
         }
         
         
