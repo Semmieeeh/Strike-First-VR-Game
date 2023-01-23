@@ -36,7 +36,7 @@ public class Server : MonoBehaviourPunCallbacks
     private void Start()
     {
         Update();
-        
+        ShotgunDisappear();
     }
     private void Update()
     {
