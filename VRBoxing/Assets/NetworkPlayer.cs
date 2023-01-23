@@ -72,7 +72,7 @@ public class NetworkPlayer : MonoBehaviour
             photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
             photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
             photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
-            photonView.RPC(nameof(MapShotgunPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation, LocalShotgunTransform.localScale);
+            photonView.RPC(nameof(MapShotgunPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
             photonView.RPC(nameof(SetSliderValue), RpcTarget.Others, Mathf.InverseLerp(0, 100, playerHealth));
         }
         else
@@ -112,10 +112,10 @@ public class NetworkPlayer : MonoBehaviour
         headTransform.rotation = rotation;
     }
     [PunRPC]
-    void MapShotgunPosition(Vector3 position, Quaternion rotation, Vector3 scale)
+    void MapShotgunPosition(Vector3 position, Quaternion rotation)
     {
         if (photonView.IsMine) return;
-        shotgunTransform.localScale = scale;
+        
         shotgunTransform.position = position;
         shotgunTransform.rotation = rotation;
     }
