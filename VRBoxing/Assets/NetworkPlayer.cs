@@ -72,7 +72,7 @@ public class NetworkPlayer : MonoBehaviour
             photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
             photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
             photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
-            photonView.RPC(nameof(MapShotgunPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
+            photonView.RPC(nameof(MapShotgunPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.localEulerAngles);
             photonView.RPC(nameof(SetSliderValue), RpcTarget.Others, Mathf.InverseLerp(0, 100, playerHealth));
         }
         else
@@ -112,18 +112,18 @@ public class NetworkPlayer : MonoBehaviour
         headTransform.rotation = rotation;
     }
     [PunRPC]
-    void MapShotgunPosition(Vector3 position, Quaternion rotation)
+    void MapShotgunPosition(Vector3 position, Vector3 rotation)
     {
         if (photonView.IsMine) return;
         
         shotgunTransform.position = position;
         
         
-        Quaternion newShotgunRot;
+        Vector3 newShotgunRot;
         
         newShotgunRot.y = 180;
         rotation.y += newShotgunRot.y;
-        shotgunTransform.rotation = rotation;
+        shotgunTransform.localEulerAngles = rotation;
 
     }
 
