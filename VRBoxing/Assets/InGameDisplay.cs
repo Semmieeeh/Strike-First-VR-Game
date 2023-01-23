@@ -55,14 +55,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         }
 
         //update the players name
-        if (Server.MyPlayer != null)
-        {
-            player1.text = Server.MyPlayer.NickName;
-        }
-        if(Server.OtherPlayer != null)
-        {
-            player2.text = Server.OtherPlayer.NickName;
-        }
+        photonView.RPC(nameof(SetPlayerNamesPreGame), RpcTarget.All);
     }
 
     void PrepareStartGame()
@@ -80,6 +73,19 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         for (int i = 0; i < roundsToPlay; i++)
         {
 
+        }
+    }
+
+    [PunRPC]
+    void SetPlayerNamesPreGame()
+    {
+        if (Server.MyPlayer != null)
+        {
+            this.player1.text = Server.MyPlayer.NickName;
+        }
+        if (Server.OtherPlayer != null)
+        {
+            this.player2.text = Server.OtherPlayer.NickName;
         }
     }
 
