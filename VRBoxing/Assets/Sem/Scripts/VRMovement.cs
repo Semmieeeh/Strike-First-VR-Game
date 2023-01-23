@@ -8,7 +8,7 @@ using Unity.XR.CoreUtils;
 using Unity.VisualScripting;
 using OVR;
 using static UnityEngine.ParticleSystem;
-
+using Photon.Pun;
 
 public class VRMovement : MonoBehaviour
 {
@@ -37,7 +37,7 @@ public class VRMovement : MonoBehaviour
     public float damage;
     public AudioManager sound;
     public ParticleSystem particle;
-    
+    public PhotonView pv;
     public GameObject gunTip;
     public RaycastHit hit;
 
@@ -73,7 +73,7 @@ public class VRMovement : MonoBehaviour
         }
         if(context.started)
         {            
-            shotgunActive = true;
+            shotgunActive = true;                        
             
         }
         if (context.canceled)
@@ -188,6 +188,6 @@ public class VRMovement : MonoBehaviour
         Vector3 capsuleCenter = transform.InverseTransformPoint(rig.Camera.transform.position);
         characterController.center = new Vector3(capsuleCenter.x, characterController.height / 1.5f + characterController.skinWidth, capsuleCenter.z);
     }
-
+    
     
 }
