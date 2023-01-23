@@ -192,6 +192,8 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         PhotonNetwork.CurrentRoom.SetCustomProperties(properties);
         
         Player player = PhotonNetwork.LocalPlayer;
+
+        player.NickName = nickNameInput.text;
         var props = player.CustomProperties;
 
         props.Add(Server.kDamageLevel, 0);
