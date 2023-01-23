@@ -9,7 +9,7 @@ public class Server : MonoBehaviourPunCallbacks
 {
     public PlayerMaterialManager localPlayerMaterialManager;
     public UniversalHealthBar healthBar;
-    public GrabObject grab;
+    
 
     public const string kDamage = "DMG";
     public const string kHealing = "HEAL";
@@ -24,7 +24,8 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kHairCut = "HC";
     public const string kHairCutColor = "HCCL";
 
-    public bool isBlocking;
+
+    
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
@@ -35,6 +36,7 @@ public class Server : MonoBehaviourPunCallbacks
     private void Start()
     {
         Update();
+        ShotgunDisappear();
     }
     private void Update()
     {
@@ -68,13 +70,24 @@ public class Server : MonoBehaviourPunCallbacks
 
         if(MyPlayer != null)
         ManageMyPlayer();
+
         
+        CheckForWinner();
     }
 
     public static Player MyPlayer;
     bool myPlayerInitialized;
     public static Player OtherPlayer;
 
+    void CheckForWinner()
+    {
+        if (healthBar.health <= 0)
+        {
+            //RPC shit dat ik verlies
+            //RPC shit dat andere wint
+            
+        }
+    }
     void InitializeMyPlayerMaterials()
     {
         var props = MyPlayer.CustomProperties;
@@ -227,5 +240,18 @@ public class Server : MonoBehaviourPunCallbacks
         }
 
         MyPlayer.SetCustomProperties(properties);
+    }
+
+    public static void ShotgunAppear()
+    {
+        GameObject shotgun = GameObject.FindGameObjectWithTag("Shotgun");
+        shotgun.SetActive(true);
+    }
+
+    public static void ShotgunDisappear()
+    {
+        GameObject shotgun = GameObject.FindGameObjectWithTag("Shotgun");
+        
+        shotgun.SetActive(false);
     }
 }

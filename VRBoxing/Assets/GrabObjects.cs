@@ -38,6 +38,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     public AudioManager audioManager;
     public bool canPlay = true;
     public GrabObjects otherHand;
+    
 
     void Start()
     {
@@ -71,7 +72,6 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         if (context.started)
         {
-            server.isBlocking = true;
             blocking = true;
         }
     }
@@ -79,7 +79,6 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     {
         if (context.canceled)
         {
-            server.isBlocking = false;
             blocking = false;
         }
     }

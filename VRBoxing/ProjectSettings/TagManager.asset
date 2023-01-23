@@ -16,6 +16,8 @@ TagManager:
   - RightHand
   - Head
   - Body
+  - Shotgun
+  - ShotgunOrigin
   layers:
   - Default
   - TransparentFX

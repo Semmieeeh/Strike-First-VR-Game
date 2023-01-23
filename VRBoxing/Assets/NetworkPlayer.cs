@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class NetworkPlayer : MonoBehaviour
 {
     UniversalHealthBar healthBar;
+    GrabObjects grab;
     public PlayerMaterialManager materialManager;
     // Reference to the PhotonView component.
     public PhotonView photonView;
 
     // References to the head and hand transforms.
     public Transform headTransform;
+    public Transform shotgunTransform;
     public Transform leftHandTransform;
     public Transform rightHandTransform;
     public Transform bodyTransform;
@@ -21,6 +23,7 @@ public class NetworkPlayer : MonoBehaviour
     public Transform localCameraTransform;
     public Transform localLeftHandTransform;
     public Transform localRightHandTransform;
+    public Transform LocalShotgunTransform;
     public Transform localBodyTransform;
 
     public float playerHealth;
@@ -33,10 +36,13 @@ public class NetworkPlayer : MonoBehaviour
         if (photonView.IsMine)
         {
             // Find Local Transforms
+
             localCameraTransform = Camera.main.transform;
             localLeftHandTransform = GameObject.Find("LeftHand Controller").transform;
             localRightHandTransform = GameObject.Find("RightHand Controller").transform;
+            LocalShotgunTransform = GameObject.Find("ShotgunOrigin").transform;
             localBodyTransform = GameObject.Find("Body Controller").transform;
+            grab = localRightHandTransform.GetComponent<GrabObjects>();
 
 
             // Set the head and hand transforms to the local player's camera and hand transforms.
@@ -103,6 +109,22 @@ public class NetworkPlayer : MonoBehaviour
 
         headTransform.position = position;
         headTransform.rotation = rotation;
+    }
+    [PunRPC]
+    void MapShotgunPosition(Vector3 position, Vector3 rotation)
+    {
+        if (photonView.IsMine) return;
+        position.z = position.z +0.004f;
+        position.y = position.y +0.0006f;    
+        shotgunTransform.position = position;
+        
+        
+        Vector3 newShotgunRot;
+        
+        newShotgunRot.y = 180;
+        rotation.y += newShotgunRot.y;
+        shotgunTransform.localEulerAngles = rotation;
+
     }
 
     [PunRPC]

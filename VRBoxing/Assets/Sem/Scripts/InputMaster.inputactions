@@ -112,6 +112,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Shotgun",
+                    "type": "Button",
+                    "id": "db1b8747-92bf-4c6c-9394-740fb5851c71",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShotgunDis",
+                    "type": "Button",
+                    "id": "776f8b52-9944-4fe2-93f1-0acc44402f00",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShootShotgun",
+                    "type": "Button",
+                    "id": "05a3e4f7-6a35-467c-aff3-f936ab5a8a08",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -266,6 +293,39 @@
                     "processors": "",
                     "groups": "Oculus",
                     "action": "ResetCam",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3912d738-a111-4b0f-846e-3c0390cc315e",
+                    "path": "<OculusTouchController>{RightHand}/secondaryButton",
+                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "Oculus",
+                    "action": "Shotgun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "744cfa87-c5f6-4780-a238-764cdb071a08",
+                    "path": "<OculusTouchController>{RightHand}/secondaryButton",
+                    "interactions": "Hold(duration=0.1,pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShotgunDis",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "13ab6f58-194e-46d3-a6ad-994ebc9a68f3",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "Oculus",
+                    "action": "ShootShotgun",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
