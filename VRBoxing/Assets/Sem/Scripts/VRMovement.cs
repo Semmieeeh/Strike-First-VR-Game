@@ -62,7 +62,8 @@ public class VRMovement : MonoBehaviour
     {
         if (context.started)
         {
-            reset = true;
+            cam.transform.position = cameraOrigin.transform.position;
+            Debug.Log("Resetting Cam");
         }
     }
     public void ActivateShotgun(InputAction.CallbackContext context)
@@ -119,23 +120,7 @@ public class VRMovement : MonoBehaviour
             healthBar.Heal();
         }
     }
-    public void Disable()
-    {
-        grab[0].multiplier = false;
-        grab[1].multiplier = false;
-    }
-
-    public void RemoveBlock(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            Debug.Log("No more blocking");
-            
-            grab[1].multiplier = true;
-            grab[0].multiplier = true;
-            Invoke(nameof(Disable), 3f);
-        }
-    }
+    
     private void Update()
     {
         if (healResetTime > 0)
@@ -146,12 +131,7 @@ public class VRMovement : MonoBehaviour
         {
             canHeal = false;
         }
-        if(reset == true)
-        {
-            cam.transform.position = cameraOrigin.transform.position;
-            Debug.Log("Resetting Cam");
-            reset = false;
-        }
+        
         anim.SetBool("Shotgun", shotgunActive);
     }
     public void Movement(InputAction.CallbackContext context)

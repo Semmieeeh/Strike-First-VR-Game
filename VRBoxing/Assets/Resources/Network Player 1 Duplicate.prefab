@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 2237926637619585499}
   - component: {fileID: 4101162027486270737}
   - component: {fileID: 9008368415203194803}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: RightHand
   m_TagString: RightFist
   m_Icon: {fileID: 0}
