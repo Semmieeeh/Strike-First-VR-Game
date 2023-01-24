@@ -139,7 +139,7 @@ public class VRMovement : MonoBehaviour
         
         UnityEngine.XR.InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out inputAxis);
-        speed += 8 * Time.deltaTime;
+        speed += 3 * Time.deltaTime;
         if(speed > maxSpeed)
         {
             speed = maxSpeed;
