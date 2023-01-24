@@ -23,13 +23,27 @@ public class FollowHead : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 posDif;
+        Position();
+        Rotation();
         
+    }
+    public void Position()
+    {
+        Vector3 posDif;
         posDif.z = target.transform.position.z;
         posDif.x = target.transform.position.x;
         posDif.y = gameObject.transform.position.y;
-
         gameObject.transform.position = posDif;
-        
+    }
+    public void Rotation()
+    {
+        Quaternion headRot = target.rotation;
+        if (headRot.z - gameObject.transform.rotation.z < -30f || headRot.z- gameObject.transform.rotation.z > 30f)
+        {
+            headRot.z = target.rotation.z - 30f;
+            headRot.y = gameObject.transform.rotation.y;
+            headRot.x = gameObject.transform.rotation.x;
+            gameObject.transform.rotation = headRot;
+        }
     }
 }
