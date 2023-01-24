@@ -52,11 +52,11 @@ public class Server : MonoBehaviourPunCallbacks
             if (!myPlayerInitialized && MyPlayer != null)
             {
                 var props = MyPlayer.CustomProperties;
-                props.Add(kDamage,0);
+                props.Add(kDamage,0f);
                 props.Add(kDamageApplied, true);
                 props.Add(kHealth, 100f);
                 props.Add(kHealingApplied, true);
-                props.Add(kHealing, 0);
+                props.Add(kHealing, 0f);
 
                 MyPlayer.SetCustomProperties(props);
 
