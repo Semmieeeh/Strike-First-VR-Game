@@ -68,6 +68,7 @@ public class Server : MonoBehaviourPunCallbacks
                 props.Add(kHealingApplied, true);
                 props.Add(kHealing, 0f);
                 props.Add(kPlayerPosition, Vector3.zero);
+                props.Add(kRoundsWon, 0);
 
                 MyPlayer.SetCustomProperties(props);
 
