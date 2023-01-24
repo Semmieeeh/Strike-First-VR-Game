@@ -17,9 +17,15 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public int roundsToPlay;
 
+    public GameObject preGameObject;
+
     [Header("In Game")]
     public RoundData[] rounds;
+    public GameObject inGameObject;
 
+    public TextMeshProUGUI player1InGame, player1Health,player1RoundsWon;
+
+    public TextMeshProUGUI player2InGame, player2Health, player2RoundsWon;
 
     Room currentRoom;
 
@@ -47,6 +53,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public void UpdateCanvas()
     {
+        //Pre Game 
         if (currentRoom == null) return;
 
         //Update Waiting for players text
@@ -59,7 +66,26 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         }
 
         //update the players name
-        photonView.RPC(nameof(SetPlayerNamesPreGame), RpcTarget.All);
+        SetPlayerNamesPreGame();
+
+
+        if (timeToWaitWhenGameCanStart <= 0)
+        {
+            //In Game
+            //Update Player 1 settings
+            var player1Properties = Server.MyPlayer.CustomProperties;
+            player1InGame.text = Server.MyPlayer.NickName;
+            player1Health.text = player1Properties[Server.kHealth].ToString() + "%";
+            player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+
+            //Update Player 2 settings
+            var player2Properties = Server.OtherPlayer.CustomProperties;
+            player2InGame.text = Server.OtherPlayer.NickName;
+            player2Health.text = player2Properties[Server.kHealth].ToString() + "%";
+            player2RoundsWon.text = player2Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+        }
+
+
     }
 
     void PrepareStartGame()
@@ -74,6 +100,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     void StartGame()
     {
+        preGameObject.SetActive(false);
+        inGameObject.SetActive(true);
         for (int i = 0; i < rounds.Length; i++)
         {
 
