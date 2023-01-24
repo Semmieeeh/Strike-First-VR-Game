@@ -70,23 +70,12 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         }
 
         //update the players name
-        SetPlayerNamesPreGame();
+        photonView.RPC(nameof(SetPlayerNamesPreGame),RpcTarget.All);
 
 
         if (timeToWaitWhenGameCanStart <= 0)
         {
-            //In Game
-            //Update Player 1 settings
-            var player1Properties = Server.MyPlayer.CustomProperties;
-            player1InGame.text = Server.MyPlayer.NickName;
-            player1Health.text = player1Properties[Server.kHealth].ToString() + "%";
-            player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + "Rounds Won";
-
-            //Update Player 2 settings
-            var player2Properties = Server.OtherPlayer.CustomProperties;
-            player2InGame.text = Server.OtherPlayer.NickName;
-            player2Health.text = player2Properties[Server.kHealth].ToString() + "%";
-            player2RoundsWon.text = player2Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+            photonView.RPC(nameof(UpdateInGameStats), RpcTarget.All);
         }
 
 
@@ -104,10 +93,6 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     async void StartGame()
     {
-        prepareGameStarted = true;
-        preGameObject.SetActive(false);
-        inGameObject.SetActive(true);
-
         var myPlayer = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < rounds.Length; i++)
         {
@@ -184,10 +169,9 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public async Task CelebrateRoundWon(Player wonPlayer)
     {
-        if (wonPlayer == Server.MyPlayer)// The player who won will spawn and controll the celebration
+        if (wonPlayer == Server.MyPlayer) // The player who won will spawn and controll the celebration
         {
             var spotLight = PhotonNetwork.Instantiate(roundWonSpotlight.name, (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition], Quaternion.identity);
-            float timer = 5;
 
             var wonPlayerProperties = wonPlayer.CustomProperties;
 
@@ -198,6 +182,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
             wonPlayer.SetCustomProperties(wonPlayerProperties);
 
+            float timer = 5;
             while (timer >= 0) 
             {
                 Vector3 position = (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition];
@@ -207,6 +192,10 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             }
 
             PhotonNetwork.Destroy(spotLight);
+        }
+        else
+        {
+            await Task.Delay(5000);
         }
     }
 
@@ -242,6 +231,27 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         {
             player2.text = "Waiting...";
         }
+    }
+
+    [PunRPC]
+    void UpdateInGameStats()
+    {
+        prepareGameStarted = true;
+        preGameObject.SetActive(false);
+        inGameObject.SetActive(true);
+
+        //In Game
+        //Update Player 1 settings
+        var player1Properties = Server.MyPlayer.CustomProperties;
+        player1InGame.text = Server.MyPlayer.NickName;
+        player1Health.text = player1Properties[Server.kHealth].ToString() + "%";
+        player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+
+        //Update Player 2 settings
+        var player2Properties = Server.OtherPlayer.CustomProperties;
+        player2InGame.text = Server.OtherPlayer.NickName;
+        player2Health.text = player2Properties[Server.kHealth].ToString() + "%";
+        player2RoundsWon.text = player2Properties[Server.kRoundsWon].ToString() + "Rounds Won";
     }
 
     [System.Serializable]
