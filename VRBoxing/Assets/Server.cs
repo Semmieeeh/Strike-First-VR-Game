@@ -25,6 +25,7 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kHealth = "HP";
     public const string kRoundsWon = "ROW";
     public const string kCanFight = "CAF";
+    public const string kPlayerPosition = "PLP";
 
     public const string kDamageLevel = "DMGL";
     public const string kSkinColor = "SKCL";
@@ -66,6 +67,7 @@ public class Server : MonoBehaviourPunCallbacks
                 props.Add(kHealth, 100f);
                 props.Add(kHealingApplied, true);
                 props.Add(kHealing, 0f);
+                props.Add(kPlayerPosition, Vector3.zero);
 
                 MyPlayer.SetCustomProperties(props);
 
@@ -136,6 +138,8 @@ public class Server : MonoBehaviourPunCallbacks
     void ManageMyPlayer()
     {
         Hashtable properties = MyPlayer.CustomProperties;
+        properties[kPlayerPosition] = localPlayerMaterialManager.transform.position;
+
         if (properties.ContainsKey(kDamageApplied))
         {
             if (!(bool)properties[kDamageApplied])
@@ -240,7 +244,7 @@ public class Server : MonoBehaviourPunCallbacks
     }
 
     /// <summary>
-    /// Function used to enable the players movement and damage systems;
+    /// Function used to enable the players movement and damage systems. This function will be executed by the host of the game
     /// </summary>
     public static void SetMovementActive(bool active)
     {
@@ -249,6 +253,30 @@ public class Server : MonoBehaviourPunCallbacks
             var roomProperties = PhotonNetwork.CurrentRoom.CustomProperties;
             roomProperties[kCanFight] = active;
         }
+    }
+
+    /// <summary>
+    /// Used to reset both player's properties to fight again. This function will be executed by the host of the game
+    /// </summary>
+    public static void ResetPlayersProperties()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            ResetPlayerProperties(MyPlayer);
+            ResetPlayerProperties(OtherPlayer);
+        }
+    }
+
+    static void ResetPlayerProperties(Player player)
+    {
+        var properties = player.CustomProperties;
+
+        properties[kDamage] = 0f;
+        properties[kHealing] = 0f;
+        properties[kHealingApplied] = true;
+        properties[kDamageApplied] = true;
+        //properties[kHealth] = maxHealth;
+        properties[kCanFight] = false;
     }
 
     public static void SetMyPlayerProperty(string key, object value)
