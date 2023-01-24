@@ -9,6 +9,7 @@ public class Server : MonoBehaviourPunCallbacks
 {
     public PlayerMaterialManager localPlayerMaterialManager;
     public UniversalHealthBar healthBar;
+    public ParticleSystem bloodParticle;
     
 
     public const string kDamage = "DMG";
@@ -25,7 +26,12 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kHairCutColor = "HCCL";
 
 
-    
+    public static Server server;
+
+    private void Awake()
+    {
+        server = this;
+    }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
@@ -163,7 +169,9 @@ public class Server : MonoBehaviourPunCallbacks
         }
         else
         {
-            properties[kDamage] = damage;
+            float originalDamage = (float)properties[kDamage];
+            properties[kDamage] = originalDamage + damage;
+
         }
         if (!properties.ContainsKey(kDamageApplied))
         {
@@ -240,6 +248,16 @@ public class Server : MonoBehaviourPunCallbacks
         }
 
         MyPlayer.SetCustomProperties(properties);
+    }
+
+    public static void ApplyBlood(Vector3 position, Vector3 normal)
+    {
+        DestroyParticle(PhotonNetwork.Instantiate(server.bloodParticle.name, position, Quaternion.Euler(normal)));
+    }
+
+    static void DestroyParticle(GameObject particle)
+    {
+        Destroy(particle, 4);
     }
 
     public static void ShotgunAppear()

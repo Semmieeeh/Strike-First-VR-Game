@@ -7,13 +7,32 @@ public class CameraFlash : MonoBehaviour
     public ParticleSystem flash;
 
     public Transform[] positions;
+
+    public bool useNPCs;
+    public string npcTag;
+    float timer;
     // Update is called once per frame
+
+    private void Start()
+    {
+        if (useNPCs)
+        {
+            var objs = GameObject.FindGameObjectsWithTag(npcTag);
+            positions = new Transform[objs.Length];
+            for (int i = 0; i < objs.Length; i++)
+            {
+                positions[i] = objs[i].transform;
+            }
+        }
+    }
     void Update()
     {
-        if (flash.isStopped)
+        timer -= Time.deltaTime;
+        if (flash.isStopped && timer < 0)
         {
             transform.position = positions[Random.Range(0, positions.Length)].position;
             flash.Play();
+            timer = Random.Range(0f,1f);
         }
     }
 }

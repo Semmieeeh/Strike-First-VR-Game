@@ -2245,6 +2245,7 @@ MonoBehaviour:
   damage: 1000
   sound: {fileID: 5818685712339648653}
   particle: {fileID: 518098811366680500, guid: 3b3aba009359c6142a577a30f1d5d9ff, type: 3}
+  pv: {fileID: 0}
   gunTip: {fileID: 8257423230954238158}
 --- !u!114 &5967584801188454948
 MonoBehaviour:
