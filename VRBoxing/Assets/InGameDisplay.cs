@@ -29,6 +29,9 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public TextMeshProUGUI countdown;
 
+    [Header("Round Celebration")]
+    public GameObject roundWonSpotlight;
+
     Room currentRoom;
 
     public bool LobbyFull
@@ -42,7 +45,6 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     bool gameStarted;
     bool prepareGameStarted;
 
-    public bool playerDied;
     public void Update()
     {
         // Only the client of the host will update the in-game display. the other client(s) will fetch the data of the in-game display
@@ -68,23 +70,12 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         }
 
         //update the players name
-        SetPlayerNamesPreGame();
+        photonView.RPC(nameof(SetPlayerNamesPreGame),RpcTarget.All);
 
 
         if (timeToWaitWhenGameCanStart <= 0)
         {
-            //In Game
-            //Update Player 1 settings
-            var player1Properties = Server.MyPlayer.CustomProperties;
-            player1InGame.text = Server.MyPlayer.NickName;
-            player1Health.text = player1Properties[Server.kHealth].ToString() + "%";
-            player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + "Rounds Won";
-
-            //Update Player 2 settings
-            var player2Properties = Server.OtherPlayer.CustomProperties;
-            player2InGame.text = Server.OtherPlayer.NickName;
-            player2Health.text = player2Properties[Server.kHealth].ToString() + "%";
-            player2RoundsWon.text = player2Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+            photonView.RPC(nameof(UpdateInGameStats), RpcTarget.All);
         }
 
 
@@ -102,10 +93,6 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     async void StartGame()
     {
-        prepareGameStarted = true;
-        preGameObject.SetActive(false);
-        inGameObject.SetActive(true);
-
         var myPlayer = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < rounds.Length; i++)
         {
@@ -141,9 +128,17 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             //check and wait if a player has lost
             await Task.WhenAll(WaitForPlayerDead());
 
-            //celebration for winner
-            var winner = FindWinner();
+            //Round celebration for winner
+            Player winner = FindWinner();
+
+            
+            Server.SetMovementActive(false);
+
+            await Task.WhenAll(CelebrateRoundWon(winner));
+
             //restart the cycle until all rounds have been played;
+            //reset player properties to default
+            Server.ResetPlayersProperties();
         }
 
         //end celebration for the winner
@@ -170,6 +165,38 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
         } while (playerDead == false);
 
+    }
+
+    public async Task CelebrateRoundWon(Player wonPlayer)
+    {
+        if (wonPlayer == Server.MyPlayer) // The player who won will spawn and controll the celebration
+        {
+            var spotLight = PhotonNetwork.Instantiate(roundWonSpotlight.name, (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition], Quaternion.identity);
+
+            var wonPlayerProperties = wonPlayer.CustomProperties;
+
+            var count = (float)wonPlayerProperties[Server.kRoundsWon];
+            count += 1;
+
+            wonPlayerProperties[Server.kRoundsWon] = count;
+
+            wonPlayer.SetCustomProperties(wonPlayerProperties);
+
+            float timer = 5;
+            while (timer >= 0) 
+            {
+                Vector3 position = (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition];
+                spotLight.transform.position = position + Vector3.up * 10;
+                await Task.Yield();
+                timer -= Time.deltaTime;
+            }
+
+            PhotonNetwork.Destroy(spotLight);
+        }
+        else
+        {
+            await Task.Delay(5000);
+        }
     }
 
     public Player FindWinner()
@@ -204,6 +231,27 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         {
             player2.text = "Waiting...";
         }
+    }
+
+    [PunRPC]
+    void UpdateInGameStats()
+    {
+        prepareGameStarted = true;
+        preGameObject.SetActive(false);
+        inGameObject.SetActive(true);
+
+        //In Game
+        //Update Player 1 settings
+        var player1Properties = Server.MyPlayer.CustomProperties;
+        player1InGame.text = Server.MyPlayer.NickName;
+        player1Health.text = player1Properties[Server.kHealth].ToString() + "%";
+        player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+
+        //Update Player 2 settings
+        var player2Properties = Server.OtherPlayer.CustomProperties;
+        player2InGame.text = Server.OtherPlayer.NickName;
+        player2Health.text = player2Properties[Server.kHealth].ToString() + "%";
+        player2RoundsWon.text = player2Properties[Server.kRoundsWon].ToString() + "Rounds Won";
     }
 
     [System.Serializable]
