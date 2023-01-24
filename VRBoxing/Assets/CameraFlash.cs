@@ -10,7 +10,7 @@ public class CameraFlash : MonoBehaviour
 
     public bool useNPCs;
     public string npcTag;
-    float timer;
+    float timer = 1;
     // Update is called once per frame
 
     private void Start()

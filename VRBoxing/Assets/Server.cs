@@ -258,7 +258,7 @@ public class Server : MonoBehaviourPunCallbacks
     public static void ApplyBlood(Vector3 position, Vector3 normal)
     {
         print("Blood Applied");
-        DestroyParticle(PhotonNetwork.Instantiate(server.bloodParticle.name, position, Quaternion.Euler(normal)));
+        DestroyParticle(PhotonNetwork.Instantiate(server.bloodParticle.name, position, Quaternion.FromToRotation(Vector3.forward, normal)));
     }
 
     async static void DestroyParticle(GameObject particle)
