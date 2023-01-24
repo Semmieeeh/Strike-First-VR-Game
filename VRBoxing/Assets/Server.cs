@@ -169,7 +169,9 @@ public class Server : MonoBehaviourPunCallbacks
         }
         else
         {
-            properties[kDamage] = damage;
+            float originalDamage = (float)properties[kDamage];
+            properties[kDamage] = originalDamage + damage;
+
         }
         if (!properties.ContainsKey(kDamageApplied))
         {
