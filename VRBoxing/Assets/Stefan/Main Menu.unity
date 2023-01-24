@@ -46380,6 +46380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: In-Game Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6075747336022788404, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6546590306666815072, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
       propertyPath: sceneViewId
@@ -46389,6 +46394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: sceneViewId
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748333413274705382, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9069507114609530545, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
