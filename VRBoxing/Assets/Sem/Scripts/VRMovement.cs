@@ -50,6 +50,7 @@ public class VRMovement : MonoBehaviour
         healthBar = GetComponentInParent<UniversalHealthBar>();
         healResetTime = 10f;
         reset = false;
+        pv = GetComponent<PhotonView>();
     }
     
 
