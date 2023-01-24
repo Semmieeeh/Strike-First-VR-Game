@@ -211,8 +211,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public int mapSceneIndexOffset;
     int GetCurrentServerMapIndex()
     {
-        //return mapSceneIndexOffset + (int)PhotonNetwork.CurrentRoom.CustomProperties[ServerData.mapIndexProperty];
-        return 1;
+        return int.Parse(PhotonNetwork.CurrentRoom.Name[0].ToString());
     }
 
     public bool createdRoom;

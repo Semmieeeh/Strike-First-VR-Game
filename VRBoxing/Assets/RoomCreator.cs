@@ -13,7 +13,7 @@ public class RoomCreator : MonoBehaviour
     public TextMeshProUGUI mapIndexText;
     public Image currentLevelImage;
 
-    [Range(1,3)]
+    [Range(1,2)]
     public int mapIndex;
     public Sprite[] mapSprites;
 
@@ -23,7 +23,7 @@ public class RoomCreator : MonoBehaviour
     {
         if (!roomNameField.text.IsNullOrEmpty() && !playerNickname.text.IsNullOrEmpty())
         {
-            string name = /*mapIndex.ToString()*/ 1+" " + roomNameField.text;
+            string name = mapIndex.ToString() +" " + roomNameField.text;
 
             currentProperties = GetCurrentProperties();
             if (GameManager.MainMenu.TryCreateRoom(name, currentProperties))
