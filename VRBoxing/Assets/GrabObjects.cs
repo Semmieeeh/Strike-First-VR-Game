@@ -260,6 +260,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("You Hit The Head And Did " + speed + " Damage");
+                ApplyBlood(collision);
 
             }
 

@@ -172,8 +172,8 @@ public class Server : MonoBehaviourPunCallbacks
         }
         else
         {
-            float originalDamage = (float)properties[kDamage];
-            properties[kDamage] = originalDamage + damage;
+            var originalDamage = properties[kDamage];
+            properties[kDamage] = (float)originalDamage + damage;
 
             properties[kDamageLevel] = DetermineDamageLevel((float)properties[kHealth]);
 
@@ -257,12 +257,14 @@ public class Server : MonoBehaviourPunCallbacks
 
     public static void ApplyBlood(Vector3 position, Vector3 normal)
     {
+        print("Blood Applied");
         DestroyParticle(PhotonNetwork.Instantiate(server.bloodParticle.name, position, Quaternion.Euler(normal)));
     }
 
     async static void DestroyParticle(GameObject particle)
     {
         await System.Threading.Tasks.Task.Delay(3000);
+        print("Blood Gone");
         PhotonNetwork.Destroy(particle);
     }
 
