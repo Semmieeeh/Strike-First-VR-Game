@@ -27,6 +27,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public TextMeshProUGUI player2InGame, player2Health, player2RoundsWon;
 
+    public TextMeshProUGUI countdown;
+
     Room currentRoom;
 
     public bool LobbyFull
@@ -98,14 +100,89 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         }
     }
 
-    void StartGame()
+    async void StartGame()
     {
+        prepareGameStarted = true;
         preGameObject.SetActive(false);
         inGameObject.SetActive(true);
+
+        var myPlayer = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < rounds.Length; i++)
         {
+            var round = rounds[i];
 
+            //set player on the right spot
+            //if we are the host, set the player on the first position of the rounds spawn positions
+            if (PhotonNetwork.IsMasterClient)
+            {
+                myPlayer.transform.position = round.player1Pos.position;
+            }
+            //if not, set the player on the second position of the rounds spawn positions
+            else
+            {
+                myPlayer.transform.position = round.player2Pos.position;
+            }
+
+            //waiting a second
+            await Task.Delay(1000);
+
+            //countdown from a number
+
+            for (int j = 3 /* starting number*/ ; j > 0; j--)
+            {
+                countdown.text = j.ToString();
+                await Task.Delay(1000);
+            }
+            //after countdown, players can move and fight
+            Server.SetMovementActive(true);
+
+            countdown.text = "GO!";
+
+            //check and wait if a player has lost
+            await Task.WhenAll(WaitForPlayerDead());
+
+            //celebration for winner
+            var winner = FindWinner();
+            //restart the cycle until all rounds have been played;
         }
+
+        //end celebration for the winner
+    }
+
+    public async Task WaitForPlayerDead()
+    {
+        bool playerDead = false;
+        
+        do {
+            var MyPlayerProperties = Server.MyPlayer.CustomProperties;
+            var OtherPlayerProperties = Server.OtherPlayer.CustomProperties;
+
+            if((float)MyPlayerProperties[Server.kHealth] <= 0)
+            {
+                playerDead = true;
+            }
+            if ((float)OtherPlayerProperties[Server.kHealth] <= 0)
+            {
+                playerDead = true;
+            }
+
+            await Task.Yield();
+
+        } while (playerDead == false);
+
+    }
+
+    public Player FindWinner()
+    {
+        var MyPlayerProperties = Server.MyPlayer.CustomProperties;
+        var OtherPlayerProperties = Server.OtherPlayer.CustomProperties;
+
+        if ((float)MyPlayerProperties[Server.kHealth] <= 0)
+        {
+            return Server.MyPlayer;
+        }
+
+        return Server.OtherPlayer;
     }
 
     [PunRPC]

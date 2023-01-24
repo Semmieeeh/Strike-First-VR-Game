@@ -9,7 +9,13 @@ public class Server : MonoBehaviourPunCallbacks
 {
     public PlayerMaterialManager localPlayerMaterialManager;
     public UniversalHealthBar healthBar;
+
+    [Space(10)]
+    [Header("Particles")]
     public ParticleSystem bloodParticle;
+    public ParticleSystem[] HitEffects;
+
+    public float minDamageParticleEffect;
     
 
     public const string kDamage = "DMG";
@@ -18,6 +24,7 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kDamageApplied = "DMGA";
     public const string kHealth = "HP";
     public const string kRoundsWon = "ROW";
+    public const string kCanFight = "CAF";
 
     public const string kDamageLevel = "DMGL";
     public const string kSkinColor = "SKCL";
@@ -29,6 +36,7 @@ public class Server : MonoBehaviourPunCallbacks
 
     public static Server server;
 
+    bool roomInitialized;
     private void Awake()
     {
         server = this;
@@ -65,6 +73,13 @@ public class Server : MonoBehaviourPunCallbacks
 
 
                 myPlayerInitialized = true;
+            }
+            if (!roomInitialized)
+            {
+                var roomProperties = PhotonNetwork.CurrentRoom.CustomProperties;
+
+                roomProperties.Add(kCanFight, false);
+                roomInitialized = true;
             }
         }
         if (OtherPlayer == null)
@@ -135,7 +150,13 @@ public class Server : MonoBehaviourPunCallbacks
                 properties[kHealth] = newHealth;
                 healthBar.health = newHealth;
 
+                if(newHealth <= 0)
+                {
+                    var roomProps =PhotonNetwork.CurrentRoom.CustomProperties;
+                    roomProps[kCanFight] = false;
+                }
                 localPlayerMaterialManager.damageLevel = DetermineDamageLevel(newHealth);
+
 
                 MyPlayer.SetCustomProperties(properties);
                 
@@ -165,6 +186,9 @@ public class Server : MonoBehaviourPunCallbacks
     }
     public static void DamageEnemy(float damage)
     {
+        var roomProps = PhotonNetwork.CurrentRoom.CustomProperties;
+        if ((bool)roomProps[kCanFight] == false) return;
+
         Hashtable properties = OtherPlayer.CustomProperties;
         if (!properties.ContainsKey(kDamage))
         {
@@ -177,6 +201,8 @@ public class Server : MonoBehaviourPunCallbacks
             properties[kDamage] = (float)originalDamage + damage;
 
             properties[kDamageLevel] = DetermineDamageLevel((float)properties[kHealth]);
+
+           
 
         }
         if (!properties.ContainsKey(kDamageApplied))
@@ -191,14 +217,38 @@ public class Server : MonoBehaviourPunCallbacks
         OtherPlayer.SetCustomProperties(properties);
     }
 
+    public static void CheckHitEffect(Vector3 position, float damage)
+    {
+        if (damage > server.minDamageParticleEffect)
+        {
+            var particle = server.HitEffects[Random.Range(0, server.HitEffects.Length)];
+            Destroy(Instantiate(particle, position, Quaternion.identity),1f);
+        }
+    }
+
     /// <summary>
     /// healthToAdd Can be negative to remove health
     /// </summary>
     /// <param name="healthToAdd"></param>
     public static void UpdatePlayerHealth(float healthToAdd)
     {
+        var roomProps = PhotonNetwork.CurrentRoom.CustomProperties;
+        if ((bool)roomProps[kCanFight] == false) return;
+
         var properties = MyPlayer.CustomProperties;
         SetMyPlayerProperty(kHealth, (float)properties[kHealth] + healthToAdd);
+    }
+
+    /// <summary>
+    /// Function used to enable the players movement and damage systems;
+    /// </summary>
+    public static void SetMovementActive(bool active)
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            var roomProperties = PhotonNetwork.CurrentRoom.CustomProperties;
+            roomProperties[kCanFight] = active;
+        }
     }
 
     public static void SetMyPlayerProperty(string key, object value)

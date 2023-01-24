@@ -79,7 +79,7 @@ public class FollowHead : MonoBehaviour
         if(angle > threshold)
         {
             Debug.Log("Rotating");
-            Quaternion newRot = Quaternion.RotateTowards(transform.rotation, head.transform.rotation, 5*sTime.deltaTime);
+            Quaternion newRot = Quaternion.RotateTowards(transform.rotation, head.transform.rotation, 5*Time.deltaTime);
             myRot.y = newRot.y;
             transform.rotation = myRot;
         }
