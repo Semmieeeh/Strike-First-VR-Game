@@ -133,6 +133,9 @@ public class Server : MonoBehaviourPunCallbacks
 
                 properties[kHealth] = newHealth;
                 healthBar.health = newHealth;
+
+                localPlayerMaterialManager.damageLevel = DetermineDamageLevel(newHealth);
+
                 MyPlayer.SetCustomProperties(properties);
                 
                 print(properties[kHealth] + " Health");
@@ -171,6 +174,8 @@ public class Server : MonoBehaviourPunCallbacks
         {
             float originalDamage = (float)properties[kDamage];
             properties[kDamage] = originalDamage + damage;
+
+            properties[kDamageLevel] = DetermineDamageLevel((float)properties[kHealth]);
 
         }
         if (!properties.ContainsKey(kDamageApplied))
@@ -258,6 +263,14 @@ public class Server : MonoBehaviourPunCallbacks
     static void DestroyParticle(GameObject particle)
     {
         Destroy(particle, 4);
+    }
+
+    static int DetermineDamageLevel(float newHealth)
+    {
+        int lvl = 0;
+        if (newHealth < 70) lvl = 1;
+        if (newHealth < 30) lvl = 2;
+        return lvl;
     }
 
     public static void ShotgunAppear()

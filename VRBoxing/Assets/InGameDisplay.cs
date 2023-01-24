@@ -17,6 +17,10 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public int roundsToPlay;
 
+    [Header("In Game")]
+    public RoundData[] rounds;
+
+
     Room currentRoom;
 
     public bool LobbyFull
@@ -70,7 +74,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     void StartGame()
     {
-        for (int i = 0; i < roundsToPlay; i++)
+        for (int i = 0; i < rounds.Length; i++)
         {
 
         }
@@ -83,10 +87,28 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         {
             this.player1.text = Server.MyPlayer.NickName;
         }
+        else
+        {
+            player1.text = "Waiting...";
+        }
         if (Server.OtherPlayer != null)
         {
             this.player2.text = Server.OtherPlayer.NickName;
         }
+        else
+        {
+            player2.text = "Waiting...";
+        }
+    }
+
+    [System.Serializable]
+    public struct RoundData
+    {
+        public float time;
+        public Transform player1Pos, player2Pos;
+
+        public string playerThatWon;
+        public bool roundOver;
     }
 
 }
