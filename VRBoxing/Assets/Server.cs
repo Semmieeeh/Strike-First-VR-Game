@@ -17,6 +17,7 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kHealingApplied = "HEALA";
     public const string kDamageApplied = "DMGA";
     public const string kHealth = "HP";
+    public const string kRoundsWon = "ROW";
 
     public const string kDamageLevel = "DMGL";
     public const string kSkinColor = "SKCL";

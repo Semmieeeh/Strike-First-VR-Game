@@ -44,7 +44,9 @@ public class VirtualKeyboard : MonoBehaviour
 
     public void SetTarget(TMP_InputField field)
     {
+        if (target == field) return;
         target = field;
+        ToggleOn();
     }
     public void ToggleOff()
     {
