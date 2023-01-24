@@ -260,9 +260,10 @@ public class Server : MonoBehaviourPunCallbacks
         DestroyParticle(PhotonNetwork.Instantiate(server.bloodParticle.name, position, Quaternion.Euler(normal)));
     }
 
-    static void DestroyParticle(GameObject particle)
+    async static void DestroyParticle(GameObject particle)
     {
-        Destroy(particle, 4);
+        await System.Threading.Tasks.Task.Delay(3000);
+        PhotonNetwork.Destroy(particle);
     }
 
     static int DetermineDamageLevel(float newHealth)
