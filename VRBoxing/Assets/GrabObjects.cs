@@ -214,6 +214,8 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("You Hit The Head And Did " + speed + " Damage");
 
+                ApplyBlood(collision);
+
             }
 
             if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
@@ -224,6 +226,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Your punch got Blocked! You did" + speed / 4 + " damage");
+
             }
 
             if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
@@ -244,6 +247,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Body hit for " + speed / 2 + " damage");
+                ApplyBlood(collision);
             }
         }
         if(gameObject.tag == "RightFist")
@@ -287,7 +291,20 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Body hit for " + speed / 2 + " damage");
+                ApplyBlood(collision);
             }
         }
     }
+
+    public void ApplyBlood(Collision collision)
+    {
+        var contact = collision.GetContact(0);
+
+        Vector3 position = contact.point;
+        Vector3 normal = contact.normal;
+
+        Server.ApplyBlood(position, normal);
+    }
 }
+
+
