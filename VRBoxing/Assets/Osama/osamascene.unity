@@ -8731,7 +8731,7 @@ MeshRenderer:
   m_GameObject: {fileID: 613451924}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -17100,7 +17100,7 @@ Light:
   m_Color: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
   m_Intensity: 4
   m_Range: 30
-  m_SpotAngle: 60
+  m_SpotAngle: 119.25801
   m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
