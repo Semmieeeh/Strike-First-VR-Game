@@ -277,13 +277,17 @@ public class Server : MonoBehaviourPunCallbacks
     public static void ShotgunAppear()
     {
         GameObject shotgun = GameObject.FindGameObjectWithTag("Shotgun");
+        
         shotgun.SetActive(true);
     }
 
     public static void ShotgunDisappear()
     {
         GameObject shotgun = GameObject.FindGameObjectWithTag("Shotgun");
-        
+        if (shotgun == null)
+        {
+            return;
+        }
         shotgun.SetActive(false);
     }
 }

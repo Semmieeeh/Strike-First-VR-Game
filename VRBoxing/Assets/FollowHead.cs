@@ -27,7 +27,7 @@ public class FollowHead : MonoBehaviour
         
         posDif.z = target.transform.position.z;
         posDif.x = target.transform.position.x;
-        posDif.y = target.transform.position.y -1f;
+        posDif.y = gameObject.transform.position.y;
 
         gameObject.transform.position = posDif;
         
