@@ -28,11 +28,11 @@ public class CameraFlash : MonoBehaviour
     void Update()
     {
         timer -= Time.deltaTime;
-        if (flash.isStopped && timer < 0)
+        if (flash.isStopped)
         {
             transform.position = positions[Random.Range(0, positions.Length)].position;
             flash.Play();
-            timer = Random.Range(0f,1f);
+            timer = Random.Range(1f,100f) / 100;
         }
     }
 }
