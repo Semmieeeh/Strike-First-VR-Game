@@ -158,7 +158,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
             print("Started Celebration");
             await Task.WhenAll(CelebrateRoundWon(winner));
-            photonView.RPC(nameof(StartCelebration), RpcTarget.All, winner.NickName);
+            photonView.RPC(nameof(StartCelebration), RpcTarget.All);
 
             print("Stopped celebration!");
 
@@ -203,46 +203,35 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    public async void StartCelebration(string playerName)
+    public async void StartCelebration()
     {
         print("celebration gecelebrate");
-        Player wonPlayer = null;
-        if (Server.MyPlayer.NickName == playerName)
-            wonPlayer = Server.MyPlayer;
-        else wonPlayer = Server.OtherPlayer;
-
-        await CelebrateRoundWon(wonPlayer);
+        await CelebrateRoundWon(FindWinner());
     }
     public async Task CelebrateRoundWon(Player wonPlayer)
     {
-        if (wonPlayer == Server.MyPlayer) // The player who won will spawn and controll the celebration
+        print("Winning"); 
+        var spotLight = PhotonNetwork.Instantiate(roundWonSpotlight.name, (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition], Quaternion.identity);
+
+        var wonPlayerProperties = wonPlayer.CustomProperties;
+
+        int count = (int)wonPlayerProperties[Server.kRoundsWon];
+        count += 1;
+
+        wonPlayerProperties[Server.kRoundsWon] = count;
+
+        wonPlayer.SetCustomProperties(wonPlayerProperties);
+
+        float timer = 5;
+        while (timer >= 0) 
         {
-            var spotLight = PhotonNetwork.Instantiate(roundWonSpotlight.name, (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition], Quaternion.identity);
-
-            var wonPlayerProperties = wonPlayer.CustomProperties;
-
-            int count = (int)wonPlayerProperties[Server.kRoundsWon];
-            count += 1;
-
-            wonPlayerProperties[Server.kRoundsWon] = count;
-
-            wonPlayer.SetCustomProperties(wonPlayerProperties);
-
-            float timer = 5;
-            while (timer >= 0) 
-            {
-                Vector3 position = (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition];
-                spotLight.transform.position = position + Vector3.up * 10;
-                await Task.Yield();
-                timer -= Time.deltaTime;
-            }
-
-            PhotonNetwork.Destroy(spotLight);
+            Vector3 position = (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition];
+            spotLight.transform.position = position + Vector3.up * 10;
+            await Task.Yield();
+            timer -= Time.deltaTime;
         }
-        else
-        {
-            await Task.Delay(5000);
-        }
+
+        PhotonNetwork.Destroy(spotLight);
     }
 
     public Player FindWinner()
