@@ -103,6 +103,8 @@ public class Server : MonoBehaviourPunCallbacks
     bool myPlayerInitialized;
     public static Player OtherPlayer;
 
+    public static Player Winner;
+
     void InitializeMyPlayerMaterials()
     {
         var props = MyPlayer.CustomProperties;
