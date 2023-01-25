@@ -109,13 +109,13 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             var round = rounds[i];
             currentRound = i;
             print("Rounds");
-            
-            Server.ResetPlayersProperties();
+
+            photonView.RPC(nameof(ResetPlayerProperties), RpcTarget.All);
             print("Properties have been reset");
 
             //set player on the right spot
             //Syncronizes the positin of the players to the right spot via RPC
-            photonView.RPC(nameof(SetPlayerToPosition),RpcTarget.All,currentRound);
+            photonView.RPC(nameof(SetPlayerToPosition),RpcTarget.All, currentRound);
 
             Server.SetMovementActive(false);
             //waiting a second
@@ -164,13 +164,19 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
             //restart the cycle until all rounds have been played;
             //reset player properties to default
-            Server.ResetPlayersProperties();
+            photonView.RPC(nameof(ResetPlayerProperties), RpcTarget.All);
             print("Properties have been reset");
         }
 
         //end celebration for the winner
     }
 
+    [PunRPC]
+    public void ResetPlayerProperties()
+    {
+        Server.ResetPlayersProperties();
+    }
+    
     public async Task WaitForPlayerDead()
     {
         bool playerDead = false;
@@ -191,6 +197,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             await Task.Yield();
 
         } while (playerDead == false);
+
+        print("Player Has Died");
 
     }
 
@@ -242,7 +250,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         var MyPlayerProperties = Server.MyPlayer.CustomProperties;
         var OtherPlayerProperties = Server.OtherPlayer.CustomProperties;
 
-        if ((float)MyPlayerProperties[Server.kHealth] >= 0)
+        if ((float)MyPlayerProperties[Server.kHealth] > 0)
         {
             return Server.MyPlayer;
         }
