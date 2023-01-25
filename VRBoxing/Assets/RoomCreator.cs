@@ -47,8 +47,8 @@ public class RoomCreator : MonoBehaviour
     public void ScrollThroughLevel(int amount)
     {
         mapIndex += amount;
-        if (mapIndex < 1) mapIndex = 3;
-        else if (mapIndex > 3) mapIndex = 1;
+        if (mapIndex < 1) mapIndex = 2;
+        else if (mapIndex > 2) mapIndex = 1;
 
         mapIndexText.text = mapIndex.ToString();
         currentLevelImage.sprite = mapSprites[mapIndex - 1];
