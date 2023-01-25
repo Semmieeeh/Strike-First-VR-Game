@@ -118,14 +118,14 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 audioManager.PlayArmAudio(0, speed * 0.1f, 0.5f);
                 canPlay = false;
             }
-            if (speed < 5 || hardened == false && otherHand.hardened == false)
+            if (speed < 5 || hardened == false)
             {
                 audioManager.StopAudio(0);
                 canPlay = true;
             }
             if (audioManager.IsPlaying(0) == true)
             {
-                audioManager.SetPitch(0, 0.2f, speed * 0.2f);
+                audioManager.SetPitch(0, 0.6f, speed * 0.25f);
             }
         }
 
@@ -136,14 +136,14 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 audioManager.PlayArmAudio(1, speed * 0.1f, 0.5f);
                 canPlay = false;
             }
-            if (speed < 5 || hardened == false && otherHand.hardened == false)
+            if (speed < 5 || hardened == false)
             {
                 audioManager.StopAudio(1);
                 canPlay = true;
             }
             if (audioManager.IsPlaying(1) == true)
             {
-                audioManager.SetPitch(1, 0.2f, speed * 0.2f);
+                audioManager.SetPitch(1, 0.6f, speed * 0.25f);
             }
         }
 
