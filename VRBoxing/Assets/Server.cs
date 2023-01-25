@@ -363,6 +363,20 @@ public class Server : MonoBehaviourPunCallbacks
         shotgun.SetActive(true);
     }
 
+    public static bool CanMove()
+    {
+        var room = PhotonNetwork.CurrentRoom;
+
+        if(room != null)
+        {
+            var roomProps = room.CustomProperties;
+            if (roomProps.ContainsKey(kCanFight))
+            {
+                return (bool)roomProps[kCanFight];
+            }
+        }
+        return true;
+    }
     public static void ShotgunDisappear()
     {
         GameObject shotgun = GameObject.FindGameObjectWithTag("Shotgun");
