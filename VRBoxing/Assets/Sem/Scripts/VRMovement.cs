@@ -133,7 +133,11 @@ public class VRMovement : MonoBehaviour
     }
     public void Movement(InputAction.CallbackContext context)
     {
-        if (!Server.CanMove()) return;
+        if (!Server.CanMove())
+        { 
+            speed = 0;
+            return;
+        }
         
         UnityEngine.XR.InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
         device.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxis, out inputAxis);

@@ -341,6 +341,7 @@ public class Server : MonoBehaviourPunCallbacks
 
     static int DetermineDamageLevel(float newHealth)
     {
+        print(newHealth + " Is your new health");
         int lvl = 0;
         if (newHealth < 700) lvl = 1;
         if (newHealth < 300) lvl = 2;
