@@ -52,10 +52,11 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public void Update()
     {
+        currentRoom = PhotonNetwork.CurrentRoom;
+
         // Only the client of the host will update the in-game display. the other client(s) will fetch the data of the in-game display
         if (PhotonNetwork.IsMasterClient)
-        {
-            currentRoom = PhotonNetwork.CurrentRoom;    
+        {   
             UpdateCanvas();
         }
     }
@@ -266,6 +267,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         {
             player2.text = "Waiting...";
         }
+
+        if (LobbyFull) waitingTMP.text = "Game Starting...";
     }
 
     [PunRPC]
@@ -280,14 +283,14 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         //Update Player 1 settings
         var player1Properties = Server.MyPlayer.CustomProperties;
         player1InGame.text = Server.MyPlayer.NickName;
-        player1Health.text = player1Properties[Server.kHealth].ToString() + "%";
-        player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + " Rounds Won";
+        player1Health.text = ((float)player1Properties[Server.kHealth]).ToString("D") + "%";
+        player1RoundsWon.text = ((float)player1Properties[Server.kHealth]).ToString("D") + " Rounds Won";
 
         //Update Player 2 settings
         var player2Properties = Server.OtherPlayer.CustomProperties;
         player2InGame.text = Server.OtherPlayer.NickName;
-        player2Health.text = player2Properties[Server.kHealth].ToString() + "%";
-        player2RoundsWon.text = player2Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+        player2Health.text = ((int)player2Properties[Server.kHealth]).ToString() + "%";
+        player2RoundsWon.text = ((int)player2Properties[Server.kRoundsWon]).ToString() + "Rounds Won";
 
         //Update Trophy Picture
         int player1Wins = (int)player1Properties[Server.kRoundsWon];

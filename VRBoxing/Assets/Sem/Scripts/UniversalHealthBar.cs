@@ -63,13 +63,9 @@ public class UniversalHealthBar : MonoBehaviour
             //death
         }
 
-        if(health > 100)
+        if(health > maxHealth)
         {
-            health = 100;
+            health = maxHealth;
         }
-    }
-    public void TakeDamage(float amount)
-    {
-        health -= amount;
     }
 }
