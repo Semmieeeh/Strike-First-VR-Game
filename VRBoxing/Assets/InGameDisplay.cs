@@ -113,6 +113,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             //Syncronizes the positin of the players to the right spot via RPC
             photonView.RPC(nameof(SetPlayerToPosition),RpcTarget.All,currentRound);
 
+            Server.SetMovementActive(false);
             //waiting a second
             print("Waiting a second");
             await Task.Delay(1000);
@@ -146,11 +147,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             //Syncronizes the winner of the round across the network
             photonView.RPC(nameof(SetWinnerOfRound), RpcTarget.All, winner.NickName, i);
 
-            Server.SetMovementActive(false);
-
             photonView.RPC(nameof(CelebrateRoundOver),RpcTarget.All);
-
-            print("cant move anymore LOL");
 
             //Synchronizes the status of the round across the network
             photonView.RPC(nameof(SetRoundOver), RpcTarget.All, i);
@@ -158,6 +155,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             print("Started Celebration");
             await Task.WhenAll(CelebrateRoundWon(winner));
             photonView.RPC(nameof(StartCelebration), RpcTarget.All, winner.NickName);
+
             print("Stopped celebration!");
 
             //restart the cycle until all rounds have been played;
@@ -195,6 +193,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     public async void StartCelebration(string playerName)
     {
+        print("celebration gecelebrate");
         Player wonPlayer = null;
         if (Server.MyPlayer.NickName == playerName)
             wonPlayer = Server.MyPlayer;
@@ -250,6 +249,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     void SetPlayerNamesPreGame()
     {
+        print("pre game geupdated");
         if (Server.MyPlayer != null)
         {
             this.player1.text = Server.MyPlayer.NickName;
@@ -271,6 +271,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     void UpdateInGameStats()
     {
+        print("In Game Stats geupdated");
         prepareGameStarted = true;
         preGameObject.SetActive(false);
         inGameObject.SetActive(true);
@@ -280,7 +281,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         var player1Properties = Server.MyPlayer.CustomProperties;
         player1InGame.text = Server.MyPlayer.NickName;
         player1Health.text = player1Properties[Server.kHealth].ToString() + "%";
-        player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + "Rounds Won";
+        player1RoundsWon.text = player1Properties[Server.kRoundsWon].ToString() + " Rounds Won";
 
         //Update Player 2 settings
         var player2Properties = Server.OtherPlayer.CustomProperties;
@@ -313,6 +314,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     public void CelebrateRoundOver()
     {
+        print("Celebrate particels!");
         for (int i = 0; i < celebrationEffects.Length; i++)
         {
             celebrationEffects[i].Play();
@@ -322,6 +324,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SetPlayerToPosition(int roundIndex)
     {
+        print("player set to position");
         var round = rounds[roundIndex];
         var myPlayer = GameObject.FindGameObjectWithTag("Player");
         if (PhotonNetwork.IsMasterClient)
@@ -340,18 +343,21 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     public void SetCountDownText(string text)
     {
+        print("countdown text gezet");
         this.countdown.text = text;
     }
 
     [PunRPC]
     public void SetWinnerOfRound(string winner, int roundIndex)
     {
+        print("winner of round gezet");
         rounds[roundIndex].playerThatWon = winner;
     }
 
     [PunRPC]
     public void SetRoundOver(int roundIndex)
     {
+        print("round over gezet");
         rounds[roundIndex].roundOver = true;
     }
 

@@ -95,24 +95,12 @@ public class Server : MonoBehaviourPunCallbacks
 
         if(MyPlayer != null)
         ManageMyPlayer();
-
-        
-        CheckForWinner();
     }
 
     public static Player MyPlayer;
     bool myPlayerInitialized;
     public static Player OtherPlayer;
 
-    void CheckForWinner()
-    {
-        if (healthBar.health <= 0)
-        {
-            //RPC shit dat ik verlies
-            //RPC shit dat andere wint
-            
-        }
-    }
     void InitializeMyPlayerMaterials()
     {
         var props = MyPlayer.CustomProperties;
@@ -153,7 +141,6 @@ public class Server : MonoBehaviourPunCallbacks
                 newHealth -= (float)properties[kDamage];
 
                 properties[kHealth] = newHealth;
-                healthBar.health = newHealth;
 
                 if(newHealth <= 0)
                 {
@@ -250,6 +237,8 @@ public class Server : MonoBehaviourPunCallbacks
     {
         var roomProperties = PhotonNetwork.CurrentRoom.CustomProperties;
         roomProperties[kCanFight] = active;
+
+        PhotonNetwork.CurrentRoom.SetCustomProperties(roomProperties);
         print("Player Cannot Fight Anymore");
     }
 
@@ -271,6 +260,7 @@ public class Server : MonoBehaviourPunCallbacks
         properties[kHealingApplied] = true;
         properties[kDamageApplied] = true;
         properties[kHealth] = 1000f;
+        properties[kDamageLevel] = 0;
 
         player.SetCustomProperties(properties);
     }
@@ -346,8 +336,8 @@ public class Server : MonoBehaviourPunCallbacks
     static int DetermineDamageLevel(float newHealth)
     {
         int lvl = 0;
-        if (newHealth < 70) lvl = 1;
-        if (newHealth < 30) lvl = 2;
+        if (newHealth < 700) lvl = 1;
+        if (newHealth < 300) lvl = 2;
         return lvl;
     }
 
