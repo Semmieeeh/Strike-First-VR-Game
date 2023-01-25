@@ -16,7 +16,7 @@ public class Server : MonoBehaviourPunCallbacks
     public ParticleSystem[] HitEffects;
 
     public float minDamageParticleEffect;
-    
+
 
     public const string kDamage = "DMG";
     public const string kHealing = "HEAL";

@@ -8,7 +8,19 @@ using Photon.Pun;
 public class UniversalHealthBar : MonoBehaviour
 {
     public float regenDuration;
-    public float health;
+    public float health
+    {
+        get
+        {
+            return (float)Server.MyPlayer.CustomProperties[Server.kHealth];
+        }
+        set 
+        {
+            var props = Server.MyPlayer.CustomProperties;
+            props[Server.kHealth] = value;
+            Server.MyPlayer.SetCustomProperties(props);
+        }
+    }
     public bool dead;
     public float maxHealth;
     public float minHealth;
@@ -16,7 +28,6 @@ public class UniversalHealthBar : MonoBehaviour
     VRMovement vm;
     void Start()
     {
-        
         maxHealth = 1000;
         minHealth = 0;
         health = maxHealth;
@@ -38,7 +49,6 @@ public class UniversalHealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if(regenDuration > 0)
         {
             Server.ApplyHealth(15 * Time.deltaTime);

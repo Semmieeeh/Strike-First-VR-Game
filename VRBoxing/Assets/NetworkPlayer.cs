@@ -20,7 +20,7 @@ public class NetworkPlayer : MonoBehaviour
     public Transform bodyTransform;
 
     // Reference to the local player's camera and hand transforms.
-    public Transform localCameraTransform;
+    public Transform localHeadTransform;
     public Transform localLeftHandTransform;
     public Transform localRightHandTransform;
     public Transform LocalShotgunTransform;
@@ -37,7 +37,7 @@ public class NetworkPlayer : MonoBehaviour
         {
             // Find Local Transforms
 
-            localCameraTransform = Camera.main.transform;
+            localHeadTransform = Camera.main.transform.GetChild(0);
             localLeftHandTransform = GameObject.Find("LeftHand Controller").transform;
             localRightHandTransform = GameObject.Find("RightHand Controller").transform;
             LocalShotgunTransform = GameObject.Find("ShotgunOrigin").transform;
@@ -46,8 +46,8 @@ public class NetworkPlayer : MonoBehaviour
 
 
             // Set the head and hand transforms to the local player's camera and hand transforms.
-            headTransform.position = localCameraTransform.position;
-            headTransform.rotation = localCameraTransform.rotation;
+            headTransform.position = localHeadTransform.position;
+            headTransform.rotation = localHeadTransform.rotation;
             leftHandTransform.position = localLeftHandTransform.position;
             leftHandTransform.rotation = localLeftHandTransform.rotation;
             rightHandTransform.position = localRightHandTransform.position;
@@ -68,7 +68,7 @@ public class NetworkPlayer : MonoBehaviour
             // Synchronize the head and hand transforms with the local player's camera and hand transforms.
             playerHealth = healthBar.health;
 
-            photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, localCameraTransform.position, localCameraTransform.rotation);
+            photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, localHeadTransform.position, localHeadTransform.rotation);
             photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
             photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
             photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
