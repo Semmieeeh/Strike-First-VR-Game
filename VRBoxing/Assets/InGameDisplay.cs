@@ -66,6 +66,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         //Check if another player has joined
         if (LobbyFull && prepareGameStarted == false)
         {
+            print("Prepare Start Game!");
             PrepareStartGame();
         }
 
@@ -87,58 +88,78 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         timeToWaitWhenGameCanStart -= Time.deltaTime;
         if(timeToWaitWhenGameCanStart <= 0)
         {
+            print("Game Started");
             StartGame();
         }
+        print(timeToWaitWhenGameCanStart);
     }
 
     async void StartGame()
     {
+        print("player vinden");
         var myPlayer = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < rounds.Length; i++)
         {
             var round = rounds[i];
 
+            print("Rounds");
             //set player on the right spot
             //if we are the host, set the player on the first position of the rounds spawn positions
             if (PhotonNetwork.IsMasterClient)
             {
                 myPlayer.transform.position = round.player1Pos.position;
+                print("myplayer position set to pos 1");
             }
             //if not, set the player on the second position of the rounds spawn positions
             else
             {
                 myPlayer.transform.position = round.player2Pos.position;
+                print("myplayer position set to pos 2");
             }
 
             //waiting a second
+            print("Waiting a second");
             await Task.Delay(1000);
 
+            print("succesfully waited a second");
             //countdown from a number
 
             for (int j = 3 /* starting number*/ ; j > 0; j--)
             {
+                print("Countdown: " + j);
+
                 countdown.text = j.ToString();
                 await Task.Delay(1000);
             }
             //after countdown, players can move and fight
             Server.SetMovementActive(true);
+            print("Can fight!");
 
             countdown.text = "GO!";
 
             //check and wait if a player has lost
             await Task.WhenAll(WaitForPlayerDead());
+            print("player died!");
 
             //Round celebration for winner
             Player winner = FindWinner();
+            print(winner.NickName + " Has Won!");
 
-            
+            round.playerThatWon = winner.NickName;
+
             Server.SetMovementActive(false);
+            print("cant move anymore LOL");
 
+            round.roundOver = true;
+
+            print("Started Celebration");
             await Task.WhenAll(CelebrateRoundWon(winner));
+            print("Stopped celebration!");
 
             //restart the cycle until all rounds have been played;
             //reset player properties to default
             Server.ResetPlayersProperties();
+            print("Properties have been reset");
         }
 
         //end celebration for the winner

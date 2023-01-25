@@ -157,8 +157,7 @@ public class Server : MonoBehaviourPunCallbacks
 
                 if(newHealth <= 0)
                 {
-                    var roomProps =PhotonNetwork.CurrentRoom.CustomProperties;
-                    roomProps[kCanFight] = false;
+                    SetMovementActive(false);
                 }
                 localPlayerMaterialManager.damageLevel = DetermineDamageLevel(newHealth);
 
@@ -249,11 +248,9 @@ public class Server : MonoBehaviourPunCallbacks
     /// </summary>
     public static void SetMovementActive(bool active)
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            var roomProperties = PhotonNetwork.CurrentRoom.CustomProperties;
-            roomProperties[kCanFight] = active;
-        }
+        var roomProperties = PhotonNetwork.CurrentRoom.CustomProperties;
+        roomProperties[kCanFight] = active;
+        print("Player Cannot Fight Anymore");
     }
 
     /// <summary>
