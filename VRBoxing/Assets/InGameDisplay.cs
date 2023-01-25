@@ -109,6 +109,9 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             var round = rounds[i];
             currentRound = i;
             print("Rounds");
+            
+            Server.ResetPlayersProperties();
+            print("Properties have been reset");
 
             //set player on the right spot
             //Syncronizes the positin of the players to the right spot via RPC
@@ -284,13 +287,13 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         var player1Properties = Server.MyPlayer.CustomProperties;
         player1InGame.text = Server.MyPlayer.NickName;
         player1Health.text = (Mathf.RoundToInt((float)player1Properties[Server.kHealth])).ToString() + "%";
-        player1RoundsWon.text = (Mathf.RoundToInt((float)player1Properties[Server.kHealth])).ToString() + " Rounds Won";
+        player1RoundsWon.text = ((int)player1Properties[Server.kRoundsWon]).ToString() + " Rounds Won";
 
         //Update Player 2 settings
         var player2Properties = Server.OtherPlayer.CustomProperties;
         player2InGame.text = Server.OtherPlayer.NickName;
         player2Health.text = (Mathf.RoundToInt((float)player2Properties[Server.kHealth])).ToString() + "%";
-        player2RoundsWon.text = (Mathf.RoundToInt((float)player2Properties[Server.kHealth])).ToString() + "Rounds Won";
+        player2RoundsWon.text = ((int)player2Properties[Server.kRoundsWon]).ToString() + "Rounds Won";
 
         //Update Trophy Picture
         int player1Wins = (int)player1Properties[Server.kRoundsWon];
