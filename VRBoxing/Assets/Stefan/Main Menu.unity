@@ -46097,9 +46097,8 @@ MonoBehaviour:
   currentLevelImage: {fileID: 1881121984}
   mapIndex: 1
   mapSprites:
-  - {fileID: 21300000, guid: 3f329e927a2b9de488c8d3a3645b23dd, type: 3}
-  - {fileID: 21300000, guid: 9a8399a4332e85c47a876c05e7487e29, type: 3}
-  - {fileID: 21300000, guid: 991b5ff604df1cd4a9a152da15ae8f35, type: 3}
+  - {fileID: 21300000, guid: 7a6a94a694db19a48a45b12fd0914456, type: 3}
+  - {fileID: 21300000, guid: 7cd0eaabb2eb6fc4eac2fd9b7548cf62, type: 3}
 --- !u!95 &1811129375
 Animator:
   serializedVersion: 4
