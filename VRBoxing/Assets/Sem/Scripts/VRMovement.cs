@@ -23,17 +23,14 @@ public class VRMovement : MonoBehaviour
     public float speed,maxSpeed;
     public float gravity, fallingspeed;
     public float cameraOffset;
-    public GrabObjects[] grab;
     public UniversalHealthBar healthBar;
     public float healResetTime;
     public bool canHeal;
     public GameObject cameraOrigin;
     public GameObject cam;
-    bool reset;
     public bool shotgunActive;
     public GameObject shotgun;
     public Animator anim;
-    public int cycle;
     public float damage;
     public AudioManager sound;
     public ParticleSystem particle;
@@ -49,7 +46,6 @@ public class VRMovement : MonoBehaviour
         rig = GetComponent<XROrigin>();
         healthBar = GetComponentInParent<UniversalHealthBar>();
         healResetTime = 10f;
-        reset = false;
         pv = GetComponent<PhotonView>();
     }
     

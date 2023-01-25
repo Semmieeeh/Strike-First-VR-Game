@@ -9,6 +9,7 @@ using TMPro;
 using WebSocketSharp;
 using Hastable = ExitGames.Client.Photon.Hashtable;
 using Photon.Realtime;
+using Unity.VisualScripting;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -73,11 +74,27 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public PlayerMaterialManager materialManager;
     public TMP_InputField nickNameInput;
     public Button startButton;
+    private AudioSource audio;
+    private float minVolume = 0.1f;
+    private bool canFade;
 
-
+    public void Start()
+    {
+        audio = GameObject.Find("Main Menu Music").GetComponent<AudioSource>();
+    }
     private void Update()
     {
         startButton.interactable = !nickNameInput.text.IsNullOrEmpty();
+        if(canFade == true)
+        {
+
+            Fadeout();
+            if(audio.volume < minVolume)
+            {
+                audio.volume = minVolume;
+                canFade = false;
+            }
+        }
     }
     /// <summary>
     /// Function called whenever the player pressed the Play button on the start screen
@@ -90,6 +107,12 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         {
             gameStartAnimators[i].Start();
         }
+        canFade = true;
+    }
+
+    public void Fadeout()
+    {
+        audio.volume -= 0.2f * Time.deltaTime;
     }
     #region Start Game
 
