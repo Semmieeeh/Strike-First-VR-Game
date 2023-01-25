@@ -9984,7 +9984,7 @@ GameObject:
   - component: {fileID: 368265021}
   - component: {fileID: 368265018}
   m_Layer: 5
-  m_Name: Loho
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
