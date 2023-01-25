@@ -190,13 +190,6 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             canHarden = true;
         }
     }
-
-    [PunRPC]
-    public void Punch()
-    {
-        gameObject.transform.parent.GetComponent<UniversalHealthBar>().TakeDamage(speed);
-
-    }
     void PlaySound()
     {
 
