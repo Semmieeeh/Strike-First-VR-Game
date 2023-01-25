@@ -52,10 +52,11 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public void Update()
     {
+        currentRoom = PhotonNetwork.CurrentRoom;
+
         // Only the client of the host will update the in-game display. the other client(s) will fetch the data of the in-game display
         if (PhotonNetwork.IsMasterClient)
-        {
-            currentRoom = PhotonNetwork.CurrentRoom;    
+        {   
             UpdateCanvas();
         }
     }
@@ -288,8 +289,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         //Update Player 2 settings
         var player2Properties = Server.OtherPlayer.CustomProperties;
         player2InGame.text = Server.OtherPlayer.NickName;
-        player2Health.text = ((float)player2Properties[Server.kHealth]).ToString("D") + "%";
-        player2RoundsWon.text = ((float)player2Properties[Server.kRoundsWon]).ToString("D") + "Rounds Won";
+        player2Health.text = ((int)player2Properties[Server.kHealth]).ToString() + "%";
+        player2RoundsWon.text = ((int)player2Properties[Server.kRoundsWon]).ToString() + "Rounds Won";
 
         //Update Trophy Picture
         int player1Wins = (int)player1Properties[Server.kRoundsWon];
