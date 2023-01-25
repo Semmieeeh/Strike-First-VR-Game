@@ -246,7 +246,18 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 ApplyBlood(collision);
                 Server.CheckHitEffect(collision.GetContact(0).point, speed / 2);
             }
+            if (collision.gameObject.tag == "NPC")
+            {
+                audioManager.PlayAudio(2, 0.8f, 1.2f);
+                cooldown = 1;
+                //canHarden = false;
+                //pv.RPC(nameof(ReAppear), RpcTarget.All);                
+                ApplyBlood(collision);
+                
+            }
         }
+
+
         if(gameObject.tag == "RightFist")
         {
             if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
@@ -297,6 +308,16 @@ public class GrabObjects : MonoBehaviourPunCallbacks
                 ApplyBlood(collision);
                 Server.CheckHitEffect(collision.GetContact(0).point, speed / 2);
             }
+            if (collision.gameObject.tag == "NPC")
+            {
+                audioManager.PlayAudio(3, 0.8f, 1.2f);
+                cooldown = 1;
+                //canHarden = false;
+                //pv.RPC(nameof(ReAppear), RpcTarget.All);                
+                ApplyBlood(collision);
+
+            }
+
         }
     }
 
