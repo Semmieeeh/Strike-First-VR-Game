@@ -271,6 +271,8 @@ public class Server : MonoBehaviourPunCallbacks
         properties[kHealingApplied] = true;
         properties[kDamageApplied] = true;
         properties[kHealth] = 1000f;
+
+        player.SetCustomProperties(properties);
     }
 
     public static void SetMyPlayerProperty(string key, object value)
