@@ -17,7 +17,7 @@ public class UniversalHealthBar : MonoBehaviour
     void Start()
     {
         
-        maxHealth = 100;
+        maxHealth = 1000;
         minHealth = 0;
         health = maxHealth;
         vm = GetComponent<VRMovement>();

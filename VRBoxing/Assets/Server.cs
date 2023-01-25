@@ -64,7 +64,7 @@ public class Server : MonoBehaviourPunCallbacks
                 var props = MyPlayer.CustomProperties;
                 props.Add(kDamage,0f);
                 props.Add(kDamageApplied, true);
-                props.Add(kHealth, 100f);
+                props.Add(kHealth, 1000f);
                 props.Add(kHealingApplied, true);
                 props.Add(kHealing, 0f);
                 props.Add(kPlayerPosition, Vector3.zero);
@@ -276,7 +276,7 @@ public class Server : MonoBehaviourPunCallbacks
         properties[kHealing] = 0f;
         properties[kHealingApplied] = true;
         properties[kDamageApplied] = true;
-        //properties[kHealth] = maxHealth;
+        properties[kHealth] = 1000f;
         properties[kCanFight] = false;
     }
 
