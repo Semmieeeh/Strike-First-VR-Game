@@ -172,6 +172,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         }
 
         //end celebration for the winner
+        photonView.RPC(nameof(LoadEndGameScene), RpcTarget.All);
     }
 
     [PunRPC]
@@ -364,6 +365,12 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     {
         print("round over gezet");
         rounds[roundIndex].roundOver = true;
+    }
+
+    [PunRPC]
+    public void LoadEndGameScene()
+    {
+        PhotonNetwork.LoadLevel(3);
     }
 
     [System.Serializable]
