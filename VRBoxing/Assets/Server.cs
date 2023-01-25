@@ -247,22 +247,28 @@ public class Server : MonoBehaviourPunCallbacks
     /// </summary>
     public static void ResetPlayersProperties()
     {
-        ResetPlayerProperties(MyPlayer);
-        ResetPlayerProperties(OtherPlayer);
-    }
+        var props1 = MyPlayer.CustomProperties;
 
-    static void ResetPlayerProperties(Player player)
-    {
-        var properties = player.CustomProperties;
+        props1[kDamage] = 0f;
+        props1[kHealing] = 0f;
+        props1[kHealingApplied] = true;
+        props1[kDamageApplied] = true;
+        props1[kHealth] = 1000f;
+        props1[kDamageLevel] = 0;
 
-        properties[kDamage] = 0f;
-        properties[kHealing] = 0f;
-        properties[kHealingApplied] = true;
-        properties[kDamageApplied] = true;
-        properties[kHealth] = 1000f;
-        properties[kDamageLevel] = 0;
+        MyPlayer.SetCustomProperties(props1);
 
-        player.SetCustomProperties(properties);
+        var props2 = OtherPlayer.CustomProperties;
+
+        props2[kDamage] = 0f;
+        props2[kHealing] = 0f;
+        props2[kHealingApplied] = true;
+        props2[kDamageApplied] = true;
+        props2[kHealth] = 1000f;
+        props2[kDamageLevel] = 0;
+
+        OtherPlayer.SetCustomProperties(props2);
+
     }
 
     public static void SetMyPlayerProperty(string key, object value)
