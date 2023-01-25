@@ -157,7 +157,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             photonView.RPC(nameof(SetRoundOver), RpcTarget.All, i);
 
             print("Started Celebration");
-            await Task.WhenAll(CelebrateRoundWon(winner));
+            //await Task.WhenAll(CelebrateRoundWon(winner));
             photonView.RPC(nameof(StartCelebration), RpcTarget.All);
 
             print("Stopped celebration!");
@@ -237,7 +237,6 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     public Player FindWinner()
     {
         var MyPlayerProperties = Server.MyPlayer.CustomProperties;
-        var OtherPlayerProperties = Server.OtherPlayer.CustomProperties;
 
         if ((float)MyPlayerProperties[Server.kHealth] > 0)
         {
