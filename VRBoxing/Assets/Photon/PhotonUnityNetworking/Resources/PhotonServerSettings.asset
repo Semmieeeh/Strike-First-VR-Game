@@ -51,6 +51,12 @@ MonoBehaviour:
   - MapShotgunPosition
   - SetPlayerNamesPreGame
   - UpdateInGameStats
+  - CelebrateRoundOver
+  - SetPlayerToPosition
+  - SetCountDownText
+  - SetWinnerOfRound
+  - SetRoundOver
+  - StartCelebration
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
