@@ -81,7 +81,7 @@ public class Server : MonoBehaviourPunCallbacks
             {
                 var roomProperties = PhotonNetwork.CurrentRoom.CustomProperties;
 
-                roomProperties.Add(kCanFight, false);
+                roomProperties.Add(kCanFight, true);
                 roomInitialized = true;
             }
         }
@@ -258,11 +258,8 @@ public class Server : MonoBehaviourPunCallbacks
     /// </summary>
     public static void ResetPlayersProperties()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
-            ResetPlayerProperties(MyPlayer);
-            ResetPlayerProperties(OtherPlayer);
-        }
+        ResetPlayerProperties(MyPlayer);
+        ResetPlayerProperties(OtherPlayer);
     }
 
     static void ResetPlayerProperties(Player player)
@@ -274,7 +271,6 @@ public class Server : MonoBehaviourPunCallbacks
         properties[kHealingApplied] = true;
         properties[kDamageApplied] = true;
         properties[kHealth] = 1000f;
-        properties[kCanFight] = false;
     }
 
     public static void SetMyPlayerProperty(string key, object value)
