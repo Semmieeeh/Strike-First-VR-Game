@@ -226,8 +226,17 @@ public class Server : MonoBehaviourPunCallbacks
 
     public static void ResetHealth()
     {
-        SetMyPlayerProperty(kHealthReset, false);
-        SetOtherPlayerProperty(kHealthReset, false);
+        var props1 = MyPlayer.CustomProperties;
+
+        props1[kHealthReset] = false;
+
+        MyPlayer.SetCustomProperties(props1);
+
+        var props2 = OtherPlayer.CustomProperties;
+
+        props2[kHealthReset] = false;
+
+        OtherPlayer.SetCustomProperties(props2);
     }
 
     /// <summary>
