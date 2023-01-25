@@ -2905,7 +2905,7 @@ PrefabInstance:
         type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 875747253}
     - target: {fileID: 9049257802817661914, guid: 171f67ec066585f4bb497a0721bc78b4,
         type: 3}
       propertyPath: bloodParticle
@@ -2944,7 +2944,7 @@ PrefabInstance:
         type: 3}
       propertyPath: localPlayerMaterialManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 875747254}
     - target: {fileID: 9049257802817661917, guid: 171f67ec066585f4bb497a0721bc78b4,
         type: 3}
       propertyPath: m_RootOrder
@@ -12273,6 +12273,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3000847984639673252, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 813687120580296666, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
       propertyPath: sceneViewId
@@ -12365,6 +12370,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a64f62237056cf4f8e6226855f9da69, type: 3}
+--- !u!114 &875747253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -3000847984639673252, guid: 6a64f62237056cf4f8e6226855f9da69,
+    type: 3}
+  m_PrefabInstance: {fileID: 875747252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cbe54ce44ef5d74caf2d19295aecca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &875747254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5647815253246784650, guid: 6a64f62237056cf4f8e6226855f9da69,
+    type: 3}
+  m_PrefabInstance: {fileID: 875747252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525eeac57779fee46a0e747e5e28ae86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &878598588
 GameObject:
   m_ObjectHideFlags: 0

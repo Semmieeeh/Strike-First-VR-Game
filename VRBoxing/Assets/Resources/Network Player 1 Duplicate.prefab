@@ -200,7 +200,7 @@ MonoBehaviour:
   leftHandTransform: {fileID: 5540766527627598758}
   rightHandTransform: {fileID: 5373367480881695413}
   bodyTransform: {fileID: 8151342061086526915}
-  localCameraTransform: {fileID: 0}
+  localHeadTransform: {fileID: 0}
   localLeftHandTransform: {fileID: 0}
   localRightHandTransform: {fileID: 0}
   LocalShotgunTransform: {fileID: 0}
