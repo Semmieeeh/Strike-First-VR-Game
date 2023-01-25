@@ -210,7 +210,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
             var wonPlayerProperties = wonPlayer.CustomProperties;
 
-            var count = (float)wonPlayerProperties[Server.kRoundsWon];
+            int count = (int)wonPlayerProperties[Server.kRoundsWon];
             count += 1;
 
             wonPlayerProperties[Server.kRoundsWon] = count;

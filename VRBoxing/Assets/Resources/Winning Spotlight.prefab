@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2816012172327313789}
   - component: {fileID: 2816012172327313788}
   - component: {fileID: 2816012172327313667}
+  - component: {fileID: 8524623252485029604}
   m_Layer: 0
   m_Name: Winning Spotlight
   m_TagString: Untagged
@@ -111,3 +112,25 @@ MonoBehaviour:
   InGameDisplay: {fileID: 0}
   red: {r: 1, g: 0.38113207, b: 0.38113207, a: 1}
   cyan: {r: 0.44716978, g: 0.9357145, b: 1, a: 1}
+--- !u!114 &8524623252485029604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816012172327313666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
