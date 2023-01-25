@@ -23,6 +23,7 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kHealingApplied = "HEALA";
     public const string kDamageApplied = "DMGA";
     public const string kHealth = "HP";
+    public const string kHealthReset = "HPR";
     public const string kRoundsWon = "ROW";
     public const string kCanFight = "CAF";
     public const string kPlayerPosition = "PLP";
@@ -69,6 +70,7 @@ public class Server : MonoBehaviourPunCallbacks
                 props.Add(kHealing, 0f);
                 props.Add(kPlayerPosition, Vector3.zero);
                 props.Add(kRoundsWon, 0);
+                props.Add(kHealthReset, true);
 
                 MyPlayer.SetCustomProperties(props);
 
@@ -129,6 +131,11 @@ public class Server : MonoBehaviourPunCallbacks
         Hashtable properties = MyPlayer.CustomProperties;
         properties[kPlayerPosition] = localPlayerMaterialManager.transform.position;
 
+        if (!(bool)properties[kHealthReset])
+        {
+            properties[kHealth]= 1000f;
+            properties[kHealthReset] = true;
+        }
         if (properties.ContainsKey(kDamageApplied))
         {
             if (!(bool)properties[kDamageApplied])
@@ -215,6 +222,12 @@ public class Server : MonoBehaviourPunCallbacks
             var particle = server.HitEffects[Random.Range(0, server.HitEffects.Length)];
             Destroy(Instantiate(particle, position, Quaternion.identity),1f);
         }
+    }
+
+    public static void ResetHealth()
+    {
+        SetMyPlayerProperty(kHealthReset, false);
+        SetOtherPlayerProperty(kHealthReset, false);
     }
 
     /// <summary>

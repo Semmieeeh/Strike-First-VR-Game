@@ -43,6 +43,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     {
         get
         {
+            currentRoom = PhotonNetwork.CurrentRoom;
             return currentRoom.PlayerCount >= currentRoom.MaxPlayers;
         }
     }
@@ -113,6 +114,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             photonView.RPC(nameof(ResetPlayerProperties), RpcTarget.All);
             print("Properties have been reset");
 
+            Server.ResetHealth();
             //set player on the right spot
             //Syncronizes the positin of the players to the right spot via RPC
             photonView.RPC(nameof(SetPlayerToPosition),RpcTarget.All, currentRound);
@@ -157,6 +159,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             photonView.RPC(nameof(SetRoundOver), RpcTarget.All, i);
 
             print("Started Celebration");
+
             //await Task.WhenAll(CelebrateRoundWon(winner));
             photonView.RPC(nameof(StartCelebration), RpcTarget.All);
 
@@ -185,11 +188,11 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             var MyPlayerProperties = Server.MyPlayer.CustomProperties;
             var OtherPlayerProperties = Server.OtherPlayer.CustomProperties;
 
-            if((float)MyPlayerProperties[Server.kHealth] <= 0)
+            if((float)MyPlayerProperties[Server.kHealth] <= 0f)
             {
                 playerDead = true;
             }
-            if ((float)OtherPlayerProperties[Server.kHealth] <= 0)
+            if ((float)OtherPlayerProperties[Server.kHealth] <= 0f)
             {
                 playerDead = true;
             }
@@ -238,7 +241,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     {
         var MyPlayerProperties = Server.MyPlayer.CustomProperties;
 
-        if ((float)MyPlayerProperties[Server.kHealth] > 0)
+        if ((float)MyPlayerProperties[Server.kHealth] > 0f)
         {
             return Server.MyPlayer;
         }
