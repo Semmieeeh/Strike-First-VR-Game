@@ -25,10 +25,18 @@ public class PlayerRagdollManager : MonoBehaviour
 
     void SetPositionAndRotation(Transform current, Transform Target, bool active)
     {
+        Rigidbody rb = ragdollHead.GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+
         current.position = Target.position;
         current.rotation = Target.rotation;
 
         current.gameObject.SetActive(active);
-        ragdollHead.GetComponent<Rigidbody>().isKinematic = !active;
+        rb.isKinematic = !active;
+        if (active)
+        {
+            rb.AddExplosionForce(10, rb.transform.position, 10);
+        }
     }
 }
