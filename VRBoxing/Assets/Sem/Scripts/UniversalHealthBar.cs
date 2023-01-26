@@ -55,17 +55,5 @@ public class UniversalHealthBar : MonoBehaviour
         }
         regenDuration -= 1*Time.deltaTime;
         healResetTime -= 1 * Time.deltaTime;
-        
-
-        if(health <= 0)
-        {
-            health = 0;
-            //death
-        }
-
-        if(health > maxHealth)
-        {
-            health = maxHealth;
-        }
     }
 }

@@ -30,8 +30,9 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     public TextMeshProUGUI player2InGame, player2Health, player2RoundsWon;
     public Image player2Trophy;
 
-    public TextMeshProUGUI countdown;
+    public TextMeshProUGUI countdown, countdownTimer;
 
+    public float currentRoundTimer;
     int currentRound;
     [Header("Round Celebration")]
     public GameObject roundWonSpotlight;
@@ -59,6 +60,12 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {   
             UpdateCanvas();
+        }
+
+        if(currentRoundTimer > 0)
+        {
+            currentRoundTimer -= Time.deltaTime;
+            photonView.RPC(nameof(SetTimerText), RpcTarget.All, currentRoundTimer);
         }
     }
 
@@ -108,6 +115,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         for (int i = 0; i < rounds.Length; i++)
         {
             var round = rounds[i];
+            currentRoundTimer = round.time;
+
             currentRound = i;
             print("Rounds");
 
@@ -143,8 +152,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             photonView.RPC(nameof(SetCountDownText), RpcTarget.All, "GO!");
 
             //check and wait if a player has lost
-            await Task.WhenAll(WaitForPlayerDead());
-            print("player died!");
+            await Task.WhenAll(WaitForRoundOver());
+            print("Round Over!");
 
             //Round celebration for winner
             Player winner = FindWinner();
@@ -180,10 +189,16 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     {
         Server.ResetPlayersProperties();
     }
-    
-    public async Task WaitForPlayerDead()
+
+    [PunRPC]
+    public void SetTimerText(float time)
     {
-        bool playerDead = false;
+        countdownTimer.text = Mathf.RoundToInt(time).ToString();
+    }
+    
+    public async Task WaitForRoundOver()
+    {
+        bool gameOver = false;
         
         do {
             var MyPlayerProperties = Server.MyPlayer.CustomProperties;
@@ -191,32 +206,33 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
             if((float)MyPlayerProperties[Server.kHealth] <= 0f)
             {
-                playerDead = true;
+                gameOver = true;
             }
             if ((float)OtherPlayerProperties[Server.kHealth] <= 0f)
             {
-                playerDead = true;
+                gameOver = true;
+            }
+            if(currentRoundTimer <= 0)
+            {
+                gameOver = true;
             }
 
             await Task.Yield();
 
-        } while (playerDead == false);
+        } while (gameOver == false);
 
-        print("Player Has Died");
+        print("Round Over 2!");
 
     }
 
     [PunRPC]
-    public async void StartCelebration()
+    public void StartCelebration()
     {
-        print("celebration gecelebrate");
-        await CelebrateRoundWon(FindWinner());
+        if(PhotonNetwork.IsMasterClient)
+            CelebrateRoundWon(FindWinner());
     }
-    public async Task CelebrateRoundWon(Player wonPlayer)
+    public void CelebrateRoundWon(Player wonPlayer)
     {
-        print("Winning"); 
-        var spotLight = PhotonNetwork.Instantiate(roundWonSpotlight.name, (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition], Quaternion.identity);
-
         var wonPlayerProperties = wonPlayer.CustomProperties;
 
         int count = (int)wonPlayerProperties[Server.kRoundsWon];
@@ -225,29 +241,25 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         wonPlayerProperties[Server.kRoundsWon] = count;
 
         wonPlayer.SetCustomProperties(wonPlayerProperties);
-
-        float timer = 5;
-        while (timer >= 0) 
-        {
-            Vector3 position = (Vector3)wonPlayer.CustomProperties[Server.kPlayerPosition];
-            spotLight.transform.position = position + Vector3.up * 10;
-            await Task.Yield();
-            timer -= Time.deltaTime;
-        }
-
-        PhotonNetwork.Destroy(spotLight);
     }
 
     public Player FindWinner()
     {
-        var MyPlayerProperties = Server.MyPlayer.CustomProperties;
+        Player winner = null;
+        float highestHealth = 0;
 
-        if ((float)MyPlayerProperties[Server.kHealth] > 0f)
+        if ((float)Server.MyPlayer.CustomProperties[Server.kHealth] > highestHealth)
         {
-            return Server.MyPlayer;
+            winner = Server.MyPlayer;
+            highestHealth = (float)Server.MyPlayer.CustomProperties[Server.kHealth];
+        }
+        if ((float)Server.OtherPlayer.CustomProperties[Server.kHealth] > highestHealth)
+        {
+            winner = Server.OtherPlayer;
+            highestHealth = (float)Server.OtherPlayer.CustomProperties[Server.kHealth];
         }
 
-        return Server.OtherPlayer;
+        return winner;
     }
 
     [PunRPC]

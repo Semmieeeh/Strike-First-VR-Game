@@ -4,11 +4,15 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
+using UnityEngine.InputSystem;
 
 public class Server : MonoBehaviourPunCallbacks
 {
     public PlayerMaterialManager localPlayerMaterialManager;
     public UniversalHealthBar healthBar;
+
+    public PlayerInput input;
+    public InputAction action;
 
     [Space(10)]
     [Header("Particles")]
@@ -16,7 +20,8 @@ public class Server : MonoBehaviourPunCallbacks
     public ParticleSystem[] HitEffects;
 
     public float minDamageParticleEffect;
-
+    public float resetHealthAmount = 1000;
+    public float damagelvl1Amount = 700, damagelvl2Amount = 300;
 
     public const string kDamage = "DMG";
     public const string kHealing = "HEAL";
@@ -65,7 +70,7 @@ public class Server : MonoBehaviourPunCallbacks
                 var props = MyPlayer.CustomProperties;
                 props.Add(kDamage,0f);
                 props.Add(kDamageApplied, true);
-                props.Add(kHealth, 1000f);
+                props.Add(kHealth, resetHealthAmount);
                 props.Add(kHealingApplied, true);
                 props.Add(kHealing, 0f);
                 props.Add(kPlayerPosition, Vector3.zero);
@@ -86,6 +91,7 @@ public class Server : MonoBehaviourPunCallbacks
                 roomProperties.Add(kCanFight, true);
                 roomInitialized = true;
             }
+                
         }
         if (OtherPlayer == null)
         {
@@ -99,12 +105,17 @@ public class Server : MonoBehaviourPunCallbacks
         ManageMyPlayer();
     }
 
-    public static Player MyPlayer;
+    public static Player MyPlayer { get; set; }
     bool myPlayerInitialized;
     public static Player OtherPlayer;
 
     public static Player Winner;
 
+    public void DamagePlayerDebug()
+    {
+        DamageEnemy(100f);
+        print("Enemy Took Damage");
+    }
     void InitializeMyPlayerMaterials()
     {
         var props = MyPlayer.CustomProperties;
@@ -135,12 +146,12 @@ public class Server : MonoBehaviourPunCallbacks
 
         if (!(bool)properties[kHealthReset])
         {
-            properties[kHealth]= 1000f;
+            properties[kHealth]= resetHealthAmount;
             properties[kHealthReset] = true;
         }
         if (properties.ContainsKey(kDamageApplied))
         {
-            if (!(bool)properties[kDamageApplied])
+            if (!(bool)properties[kDamageApplied] && CanMove())
             {
                 print("You took" + (float)properties[kDamage] + " damage");
                 properties[kDamageApplied] = true;
@@ -154,7 +165,9 @@ public class Server : MonoBehaviourPunCallbacks
                 if(newHealth <= 0)
                 {
                     SetMovementActive(false);
+                    newHealth = 0;
                 }
+
                 localPlayerMaterialManager.damageLevel = DetermineDamageLevel(newHealth);
 
 
@@ -163,7 +176,7 @@ public class Server : MonoBehaviourPunCallbacks
                 print(properties[kHealth] + " Health");
                 print(properties[kDamage] + " Damage");
             }
-            if (!(bool)properties[kHealingApplied])
+            if (!(bool)properties[kHealingApplied] & CanMove())
             {
                 print("You healed" + (float)properties[kHealing]);
                 properties[kHealingApplied] = true;
@@ -173,7 +186,7 @@ public class Server : MonoBehaviourPunCallbacks
                 newHealth+=(float)properties[kHealing];
 
                 properties[kHealth] = newHealth;
-                healthBar.health = newHealth;
+
                 MyPlayer.SetCustomProperties(properties);
 
                 print(properties[kHealth] + " Health");
@@ -186,8 +199,7 @@ public class Server : MonoBehaviourPunCallbacks
     }
     public static void DamageEnemy(float damage)
     {
-        var roomProps = PhotonNetwork.CurrentRoom.CustomProperties;
-        if ((bool)roomProps[kCanFight] == false) return;
+        if (CanMove() == false) return;
 
         Hashtable properties = OtherPlayer.CustomProperties;
         if (!properties.ContainsKey(kDamage))
@@ -231,27 +243,16 @@ public class Server : MonoBehaviourPunCallbacks
         var props1 = MyPlayer.CustomProperties;
 
         props1[kHealthReset] = false;
+        props1[kHealth] = server.resetHealthAmount;
 
         MyPlayer.SetCustomProperties(props1);
 
         var props2 = OtherPlayer.CustomProperties;
 
         props2[kHealthReset] = false;
+        props2[kHealth] = server.resetHealthAmount;
 
         OtherPlayer.SetCustomProperties(props2);
-    }
-
-    /// <summary>
-    /// healthToAdd Can be negative to remove health
-    /// </summary>
-    /// <param name="healthToAdd"></param>
-    public static void UpdatePlayerHealth(float healthToAdd)
-    {
-        var roomProps = PhotonNetwork.CurrentRoom.CustomProperties;
-        if ((bool)roomProps[kCanFight] == false) return;
-
-        var properties = MyPlayer.CustomProperties;
-        SetMyPlayerProperty(kHealth, (float)properties[kHealth] + healthToAdd);
     }
 
     /// <summary>
@@ -277,7 +278,7 @@ public class Server : MonoBehaviourPunCallbacks
         props1[kHealing] = 0f;
         props1[kHealingApplied] = true;
         props1[kDamageApplied] = true;
-        props1[kHealth] = 1000f;
+        props1[kHealth] = server.resetHealthAmount;
         props1[kDamageLevel] = 0;
 
         MyPlayer.SetCustomProperties(props1);
@@ -288,42 +289,11 @@ public class Server : MonoBehaviourPunCallbacks
         props2[kHealing] = 0f;
         props2[kHealingApplied] = true;
         props2[kDamageApplied] = true;
-        props2[kHealth] = 1000f;
+        props2[kHealth] = server.resetHealthAmount;
         props2[kDamageLevel] = 0;
 
         OtherPlayer.SetCustomProperties(props2);
 
-    }
-
-    public static void SetMyPlayerProperty(string key, object value)
-    {
-        var properties = MyPlayer.CustomProperties;
-        if (!properties.ContainsKey(key))
-        {
-            properties.Add(key, value);
-
-        }
-        properties[key] = value;
-
-        SetPlayerProperties(MyPlayer, properties);
-    }
-
-    public static void SetOtherPlayerProperty(string key, object value)
-    {
-        var properties = OtherPlayer.CustomProperties;
-        if (properties.ContainsKey(key))
-        {
-            properties.Add(key, value);
-
-        }
-        properties[key] = value;
-
-        SetPlayerProperties(OtherPlayer, properties);
-    }
-
-    public static void SetPlayerProperties(Player player, Hashtable properties)
-    {
-        player.SetCustomProperties(properties);
     }
 
     public static void ApplyHealth(float healthToAdd)
@@ -367,8 +337,8 @@ public class Server : MonoBehaviourPunCallbacks
     {
         print(newHealth + " Is your new health");
         int lvl = 0;
-        if (newHealth < 700) lvl = 1;
-        if (newHealth < 300) lvl = 2;
+        if (newHealth < server.damagelvl1Amount) lvl = 1;
+        if (newHealth < server.damagelvl2Amount) lvl = 2;
         return lvl;
     }
 
@@ -404,5 +374,31 @@ public class Server : MonoBehaviourPunCallbacks
             return;
         }
         shotgun.SetActive(false);
+    }
+
+    float previousHealth1, previousHealth2;
+    public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
+    {
+        base.OnPlayerPropertiesUpdate(targetPlayer, changedProps);
+
+        float health = (float)changedProps[kHealth];
+
+        if (targetPlayer == MyPlayer) {
+            if (previousHealth1 != health)
+            {
+                previousHealth1 = health;
+                Debug.LogError($"(Neppe Error)(optie 1) {targetPlayer.NickName} 's health changed to {health}");
+            }
+        }
+        else
+        {
+            if(previousHealth2 != health)
+            {
+                previousHealth2 = health;
+                Debug.LogError($"(Neppe Error)(optie 2) {targetPlayer.NickName} 's health changed to {health}");
+                
+            }
+        }
+
     }
 }
