@@ -196,7 +196,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(gameObject.tag == "LeftFist")
+        if(gameObject.tag == "InGameLeft")
         {
             if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
             {
@@ -258,7 +258,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
         }
 
 
-        if(gameObject.tag == "RightFist")
+        if(gameObject.tag == "InGameRight")
         {
             if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
             {
