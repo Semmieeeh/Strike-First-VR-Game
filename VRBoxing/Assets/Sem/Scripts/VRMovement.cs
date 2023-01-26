@@ -141,6 +141,12 @@ public class VRMovement : MonoBehaviourPunCallbacks
             }
         }
     }
+
+    public void DevDisconnect(InputAction.CallbackContext contexts)
+    {
+        if (contexts.started)
+            Disconnect();
+    }
     public void Disconnect()
     {
         PhotonNetwork.LeaveRoom();

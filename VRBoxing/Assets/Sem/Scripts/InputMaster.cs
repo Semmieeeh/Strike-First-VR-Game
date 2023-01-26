@@ -168,7 +168,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""id"": ""44ff56d8-07a4-48a9-87bc-858a95e8503b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(pressPoint=0.1)"",
+                    ""interactions"": ""Press"",
                     ""initialStateCheck"": false
                 },
                 {
@@ -177,7 +177,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""id"": ""6265faf3-ef25-41b0-a910-45cfec2720be"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Tap"",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
                     ""initialStateCheck"": false
                 }
             ],
@@ -384,7 +384,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""68354ab5-1fff-480d-93a0-71d20900bd46"",
                     ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press(pressPoint=0.1)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""DisconnectDev"",
