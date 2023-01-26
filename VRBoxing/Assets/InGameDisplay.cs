@@ -34,6 +34,11 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     public float currentRoundTimer;
     int currentRound;
+
+    [Header("Disconnected")]
+    public GameObject disconnectedObject;
+
+
     [Header("Round Celebration")]
     public GameObject roundWonSpotlight;
     public ParticleSystem[] celebrationEffects;
@@ -51,7 +56,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     bool gameStarted;
     bool prepareGameStarted;
-
+    bool playerDisconnected;
     public void Update()
     {
         currentRoom = PhotonNetwork.CurrentRoom;
@@ -110,11 +115,11 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     async void StartGame()
     {
-        
         print("player vinden");
         var myPlayer = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < rounds.Length; i++)
         {
+            if (playerDisconnected) return;
             var round = rounds[i];
             currentRoundTimer = round.time;
 
@@ -134,11 +139,14 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             print("Waiting a second");
             await Task.Delay(1000);
 
+            if (playerDisconnected) return;
+
             print("succesfully waited a second");
             //countdown from a number
 
             for (int j = 3 /* starting number*/ ; j > 0; j--)
             {
+                if (playerDisconnected) return;
                 print("Countdown: " + j);
 
                 //Syncronizes the countdown across the network
@@ -152,8 +160,12 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             //Syncronizes the countdown across the network
             photonView.RPC(nameof(SetCountDownText), RpcTarget.All, "GO!");
 
+            if (playerDisconnected) return;
+
             //check and wait if a player has lost
             await Task.WhenAll(WaitForRoundOver());
+
+            if (playerDisconnected) return;
             print("Round Over!");
 
             //Round celebration for winner
@@ -173,6 +185,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             //await Task.WhenAll(CelebrateRoundWon(winner));
             photonView.RPC(nameof(StartCelebration), RpcTarget.All);
 
+            if (playerDisconnected) return;
             await Task.Delay(5000);
             print("Stopped celebration!");
 
@@ -184,6 +197,36 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
         //end celebration for the winner
         photonView.RPC(nameof(LoadEndGameScene), RpcTarget.All);
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        base.OnPlayerLeftRoom(otherPlayer);
+
+        photonView.RPC(nameof(PlayerDisconnected),RpcTarget.All);
+    }
+
+    [PunRPC]
+    public async void PlayerDisconnected()
+    {
+        //turn of main ui
+
+        preGameObject.SetActive(false);
+        inGameObject.SetActive(false);
+        //enable disconnect ui
+
+        disconnectedObject.SetActive(true);
+
+        //leave game and return to main menu
+        await Task.Delay(5000);
+
+        PhotonNetwork.Disconnect();
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        base.OnDisconnected(cause);
+        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
     }
 
     [PunRPC]
@@ -203,6 +246,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         bool gameOver = false;
         
         do {
+            if (playerDisconnected) return;
             var MyPlayerProperties = Server.MyPlayer.CustomProperties;
             var OtherPlayerProperties = Server.OtherPlayer.CustomProperties;
 

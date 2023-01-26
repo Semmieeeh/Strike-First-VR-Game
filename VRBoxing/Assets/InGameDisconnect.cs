@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.XR;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class InGameDisconnect : MonoBehaviour
+public class InGameDisconnect : MonoBehaviourPunCallbacks
 {
-    public float rotateTreshold;
+    public Vector2 rotateTreshold;
 
     Vector3 defaultScale;
 
     public bool disconnected;
+    public Slider progressSlider;
 
     private void Start()
     {
@@ -16,7 +21,7 @@ public class InGameDisconnect : MonoBehaviour
     }
     void Update()
     {
-        if(transform.parent.rotation.z <= rotateTreshold) // de disconnect menu kan aan
+        if (transform.eulerAngles.x >= rotateTreshold.x && transform.eulerAngles.x <= rotateTreshold.y) // de disconnect menu kan aan
         {
             transform.localScale = defaultScale;
         }
@@ -25,15 +30,41 @@ public class InGameDisconnect : MonoBehaviour
             transform.localScale = Vector3.zero;
         }
 
-        if (disconnected)
+        if (transform.localScale == Vector3.zero)
         {
-            transform.root.position = new Vector3(0, -100, 0);
+            progressSlider.value = 0;
         }
+        else
+        {
+            if (false) // waneer de trigger is vastgehouden 
+            {
+                if (false) //en de b knop is 5 keer gedrukt, leaved de speler dfe game
+                {
+                    progressSlider.value += 5;
 
+                    if (progressSlider.value == 5)
+                    {
+                        Disconnect();
+                    }
+                }
+            }
+            else
+            {
+                progressSlider.value = 0;
+            }
+
+        }
     }
 
     public void Disconnect()
     {
-        disconnected = true;
+        PhotonNetwork.Disconnect();
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        base.OnDisconnected(cause);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
