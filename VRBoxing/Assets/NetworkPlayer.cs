@@ -8,6 +8,7 @@ public class NetworkPlayer : MonoBehaviour
 {
     UniversalHealthBar healthBar;
     GrabObjects grab;
+    PlayerRagdollManager ragdoll;
     public PlayerMaterialManager materialManager;
     // Reference to the PhotonView component.
     public PhotonView photonView;
@@ -32,6 +33,7 @@ public class NetworkPlayer : MonoBehaviour
     void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("Player").GetComponent<UniversalHealthBar>();
+        ragdoll = healthBar.GetComponent<PlayerRagdollManager>();
         photonView = GetComponent<PhotonView>();
         if (photonView.IsMine)
         {
@@ -68,11 +70,21 @@ public class NetworkPlayer : MonoBehaviour
             // Synchronize the head and hand transforms with the local player's camera and hand transforms.
             playerHealth = healthBar.health;
 
-            photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, localHeadTransform.position, localHeadTransform.rotation);
-            photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others,  localLeftHandTransform.position, localLeftHandTransform.rotation);
-            photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
-            photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
-            photonView.RPC(nameof(SetSliderValue), RpcTarget.Others, Mathf.InverseLerp(0, 1000, playerHealth));
+            if (ragdoll.isOn) 
+            {
+                photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, ragdoll.ragdollHead.position, ragdoll.ragdollHead.rotation);
+                photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others, ragdoll.ragdollLeft.position, ragdoll.ragdollLeft.rotation);
+                photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, ragdoll.ragdollRight.position, ragdoll.ragdollRight.rotation);
+                photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, ragdoll.ragdollBody.position, ragdoll.ragdollBody.rotation);
+            }
+            else
+            {
+                photonView.RPC(nameof(MapHeadPosition), RpcTarget.Others, localHeadTransform.position, localHeadTransform.rotation);
+                photonView.RPC(nameof(MapLeftHandPosition), RpcTarget.Others, localLeftHandTransform.position, localLeftHandTransform.rotation);
+                photonView.RPC(nameof(MapRightHandPosition), RpcTarget.Others, localRightHandTransform.position, localRightHandTransform.rotation);
+                photonView.RPC(nameof(MapBodyPosition), RpcTarget.Others, localBodyTransform.position, localBodyTransform.rotation);
+                photonView.RPC(nameof(SetSliderValue), RpcTarget.Others, Mathf.InverseLerp(0, 1000, playerHealth));
+            }
         }
         else
         {

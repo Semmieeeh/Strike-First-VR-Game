@@ -9,6 +9,8 @@ using UnityEngine.InputSystem;
 public class Server : MonoBehaviourPunCallbacks
 {
     public PlayerMaterialManager localPlayerMaterialManager;
+    public PlayerRagdollManager ragdollmanager;
+
     public UniversalHealthBar healthBar;
 
     public PlayerInput input;
@@ -32,6 +34,7 @@ public class Server : MonoBehaviourPunCallbacks
     public const string kRoundsWon = "ROW";
     public const string kCanFight = "CAF";
     public const string kPlayerPosition = "PLP";
+    public const string kPlayerDead = "PLDE";
 
     public const string kDamageLevel = "DMGL";
     public const string kSkinColor = "SKCL";
@@ -76,6 +79,7 @@ public class Server : MonoBehaviourPunCallbacks
                 props.Add(kPlayerPosition, Vector3.zero);
                 props.Add(kRoundsWon, 0);
                 props.Add(kHealthReset, true);
+                props.Add(kPlayerDead, false);
 
                 MyPlayer.SetCustomProperties(props);
 
@@ -165,6 +169,8 @@ public class Server : MonoBehaviourPunCallbacks
                 if(newHealth <= 0)
                 {
                     SetMovementActive(false);
+                    properties[kPlayerDead] = true;
+                    ragdollmanager.EnableRagdoll(true);
                     newHealth = 0;
                 }
 
@@ -280,6 +286,9 @@ public class Server : MonoBehaviourPunCallbacks
         props1[kDamageApplied] = true;
         props1[kHealth] = server.resetHealthAmount;
         props1[kDamageLevel] = 0;
+        props1[kPlayerDead] = false;
+
+        server.ragdollmanager.EnableRagdoll(false);
 
         MyPlayer.SetCustomProperties(props1);
 
@@ -291,6 +300,7 @@ public class Server : MonoBehaviourPunCallbacks
         props2[kDamageApplied] = true;
         props2[kHealth] = server.resetHealthAmount;
         props2[kDamageLevel] = 0;
+        props1[kPlayerDead] = false;
 
         OtherPlayer.SetCustomProperties(props2);
 
