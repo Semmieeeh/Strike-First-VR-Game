@@ -111,39 +111,39 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             
 
         }
-        if(gameObject.tag == "LeftFist")
+        if(gameObject.tag == "InGameLeft")
         {
-            if (speed > 5 && hardened == true && audioManager.IsPlaying(0) == false && canPlay == true)
+            if (speed > 20 && hardened == true && audioManager.IsPlaying(0) == false && canPlay == true)
             {
-                audioManager.PlayArmAudio(0, speed * 0.1f, 0.5f);
+                audioManager.PlayArmAudio(0, 0.6f, speed * 0.25f);
                 canPlay = false;
             }
-            if (speed < 5 || hardened == false)
+            if (speed < 20 || hardened == false)
             {
                 audioManager.StopAudio(0);
                 canPlay = true;
             }
             if (audioManager.IsPlaying(0) == true)
             {
-                audioManager.SetPitch(0, 0.6f, speed * 0.25f);
+                audioManager.SetPitch(0, 0.2f, speed * 0.3f);
             }
         }
 
-        if (gameObject.tag == "RightFist")
+        if (gameObject.tag == "InGameRight")
         {
-            if (speed > 5 && hardened == true && audioManager.IsPlaying(1) == false && canPlay == true)
+            if (speed > 20 && hardened == true && audioManager.IsPlaying(1) == false && canPlay == true)
             {
                 audioManager.PlayArmAudio(1, speed * 0.1f, 0.5f);
                 canPlay = false;
             }
-            if (speed < 5 || hardened == false)
+            if (speed < 20 || hardened == false)
             {
                 audioManager.StopAudio(1);
                 canPlay = true;
             }
             if (audioManager.IsPlaying(1) == true)
             {
-                audioManager.SetPitch(1, 0.6f, speed * 0.25f);
+                audioManager.SetPitch(1, 0.2f, speed * 0.3f);
             }
         }
 
@@ -202,7 +202,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             {
                 audioManager.PlayAudio(2, 0.8f, 1.2f);
                 Server.DamageEnemy(speed);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("You Hit The Head And Did " + speed + " Damage");
@@ -216,7 +216,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             {
                 audioManager.PlayAudio(5, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Your punch got Blocked! You did" + speed / 4 + " damage");
@@ -228,7 +228,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             {
                 audioManager.PlayAudio(5, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Your punch got Blocked! You did" + speed / 4 + " damage");
@@ -239,7 +239,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
                 Server.DamageEnemy(speed / 2);
                 audioManager.PlayAudio(2, 0.8f, 1.2f);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Body hit for " + speed / 2 + " damage");
@@ -249,7 +249,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             if (collision.gameObject.tag == "NPC")
             {
                 audioManager.PlayAudio(2, 0.8f, 1.2f);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);                
                 ApplyBlood(collision);
@@ -264,7 +264,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             {
                 audioManager.PlayAudio(3, 0.8f, 1.2f);
                 Server.DamageEnemy(speed);
-                cooldown = 1;
+                cooldown = 0.2f;
 
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
@@ -279,7 +279,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             {
                 audioManager.PlayAudio(6, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Your punch got Blocked! You did" + speed / 4 + " damage");
@@ -290,7 +290,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             {
                 audioManager.PlayAudio(6, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Your punch got Blocked! You did" + speed / 4 + " damage");
@@ -301,7 +301,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
                 Server.DamageEnemy(speed / 2);
                 audioManager.PlayAudio(3, 0.8f, 1.2f);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);
                 print("Body hit for " + speed / 2 + " damage");
@@ -311,7 +311,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
             if (collision.gameObject.tag == "NPC")
             {
                 audioManager.PlayAudio(3, 0.8f, 1.2f);
-                cooldown = 1;
+                cooldown = 0.2f;
                 //canHarden = false;
                 //pv.RPC(nameof(ReAppear), RpcTarget.All);                
                 ApplyBlood(collision);

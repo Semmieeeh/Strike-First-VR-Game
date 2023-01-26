@@ -110,6 +110,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     async void StartGame()
     {
+        
         print("player vinden");
         var myPlayer = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < rounds.Length; i++)
@@ -229,7 +230,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     public void StartCelebration()
     {
-        if(PhotonNetwork.IsMasterClient)
+        
+        if (PhotonNetwork.IsMasterClient)
             CelebrateRoundWon(FindWinner());
     }
     public void CelebrateRoundWon(Player wonPlayer)
@@ -340,10 +342,15 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             celebrationEffects[i].Play();
         }
     }
-
+    public void BellAudio()
+    {
+        AudioManager audio = GameObject.Find("AudioShit").GetComponent<AudioManager>();
+        audio.PlayAudio(0, 1, 1);
+    }
     [PunRPC]
     public void SetPlayerToPosition(int roundIndex)
     {
+        photonView.RPC(nameof(BellAudio), RpcTarget.All);
         print("player set to position");
         var round = rounds[roundIndex];
         var myPlayer = GameObject.FindGameObjectWithTag("Player");

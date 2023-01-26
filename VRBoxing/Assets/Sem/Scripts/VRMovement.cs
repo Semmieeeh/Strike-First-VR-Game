@@ -37,10 +37,18 @@ public class VRMovement : MonoBehaviour
     public PhotonView pv;
     public GameObject gunTip;
     public RaycastHit hit;
+    public AudioManager aud;
+    private GameObject audioCheck;
 
 
     void Start()
     {
+        audioCheck = GameObject.Find("AudioOn");
+        if(audioCheck.tag != "NPC")
+        {
+            aud.PlayAudio(7, 1, 1);
+            
+        }
         rb = gameObject.GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
         rig = GetComponent<XROrigin>();
