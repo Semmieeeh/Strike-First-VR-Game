@@ -139,6 +139,15 @@
                     "processors": "",
                     "interactions": "Hold(duration=0.1,pressPoint=0.1)",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Disconnect",
+                    "type": "Button",
+                    "id": "44ff56d8-07a4-48a9-87bc-858a95e8503b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -326,6 +335,17 @@
                     "processors": "",
                     "groups": "Oculus",
                     "action": "ShootShotgun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94a4435a-7004-4f9b-9284-d6c4d75d541d",
+                    "path": "<OculusTouchController>{LeftHand}/secondaryButton",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Disconnect",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1143,6 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateTreshold: {x: -25.6, y: 114.96}
   disconnected: 0
+  progressSlider: {fileID: 0}
 --- !u!114 &798569002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3587,6 +3588,10 @@ MonoBehaviour:
   pv: {fileID: 0}
   gunTip: {fileID: 8257423230954238158}
   aud: {fileID: 5818685712339648653}
+  disconnectCooldown: 0
+  disconnectButtonPresses: 0
+  slider: {fileID: 4816612348390566989}
+  grab: {fileID: 5967584801441023604}
 --- !u!114 &5967584801188454948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3923,6 +3928,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 05a3e4f7-6a35-467c-aff3-f936ab5a8a08
     m_ActionName: Player/ShootShotgun
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5967584801188454959}
+        m_TargetAssemblyTypeName: VRMovement, Assembly-CSharp
+        m_MethodName: DisconnectInGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 44ff56d8-07a4-48a9-87bc-858a95e8503b
+    m_ActionName: Player/Disconnect
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Oculus
   m_DefaultActionMap: Player

@@ -9,8 +9,11 @@ using Unity.VisualScripting;
 using OVR;
 using static UnityEngine.ParticleSystem;
 using Photon.Pun;
+using UnityEngine.UI;
+using Photon.Realtime;
 
-public class VRMovement : MonoBehaviour
+
+public class VRMovement : MonoBehaviourPunCallbacks
 {
     Rigidbody rb;
     public bool isHardened;
@@ -39,10 +42,14 @@ public class VRMovement : MonoBehaviour
     public RaycastHit hit;
     public AudioManager aud;
     private GameObject audioCheck;
-
+    public float disconnectCooldown;
+    public float disconnectButtonPresses;
+    public Slider slider;
+    public GrabObjects grab;
 
     void Start()
     {
+        PhotonNetwork.JoinRandomRoom();
         audioCheck = GameObject.Find("AudioOn");
         if(audioCheck.tag != "NPC")
         {
@@ -117,7 +124,53 @@ public class VRMovement : MonoBehaviour
             }
         }
     }
+    public void DisconnectInGame(InputAction.CallbackContext context)
+    {
+        if (context.canceled && grab.hardened == true )
+        {
+            
+            disconnectButtonPresses += 0.5f;
+            if (disconnectButtonPresses == 1)
+            {
+                disconnectCooldown = 3;
+            }
+            if (disconnectButtonPresses > 4)
+            {
+                
+                //PhotonNetwork.Disconnect();
+                Disconnect();
+            }
+        }
+    }
+    public void Disconnect()
+    {
+        
+        PhotonNetwork.LeaveRoom();
+    }
+
+    public override void OnLeftRoom()
+    {
+        PhotonNetwork.Disconnect();
+    }
+
     
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        PhotonNetwork.LeaveLobby();
+        
+    }
+    public override void OnLeftLobby()
+    {
+        base.OnLeftLobby();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    public override void OnConnectedToMaster()
+    {
+        base.OnConnectedToMaster();
+        
+    }
     public void Heal(InputAction.CallbackContext context)
     {
         if (context.started && canHeal)
@@ -138,6 +191,12 @@ public class VRMovement : MonoBehaviour
         }
         
         anim.SetBool("Shotgun", shotgunActive);
+        disconnectCooldown -= 1 * Time.deltaTime;
+        if(disconnectCooldown < 0)
+        {
+            disconnectButtonPresses = 0;
+        }
+        slider.value = disconnectButtonPresses;
     }
     public void Movement(InputAction.CallbackContext context)
     {
