@@ -172,6 +172,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             //await Task.WhenAll(CelebrateRoundWon(winner));
             photonView.RPC(nameof(StartCelebration), RpcTarget.All);
 
+            await Task.Delay(5000);
             print("Stopped celebration!");
 
             //restart the cycle until all rounds have been played;
