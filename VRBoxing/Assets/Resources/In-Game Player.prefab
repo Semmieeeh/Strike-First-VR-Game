@@ -715,7 +715,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1904c2c9e8ea99d4f847ec5cc1f90365, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.51
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -926,7 +926,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1904c2c9e8ea99d4f847ec5cc1f90365, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.51
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2231,7 +2231,6 @@ MonoBehaviour:
   gravity: -9.82
   fallingspeed: 0
   cameraOffset: 0
-  grab: []
   healthBar: {fileID: 0}
   healResetTime: 0
   canHeal: 0
@@ -2240,7 +2239,6 @@ MonoBehaviour:
   shotgunActive: 0
   shotgun: {fileID: 2560981031300144679}
   anim: {fileID: 3973054394895112222}
-  cycle: 0
   damage: 1000
   sound: {fileID: 5818685712339648653}
   particle: {fileID: 518098811366680500, guid: 3b3aba009359c6142a577a30f1d5d9ff, type: 3}
@@ -2618,7 +2616,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regenDuration: 0
-  health: 0
   dead: 0
   maxHealth: 0
   minHealth: 0

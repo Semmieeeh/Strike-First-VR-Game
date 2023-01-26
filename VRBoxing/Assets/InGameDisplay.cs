@@ -30,7 +30,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     public TextMeshProUGUI player2InGame, player2Health, player2RoundsWon;
     public Image player2Trophy;
 
-    public TextMeshProUGUI countdown, countdownTimer;
+    public TextMeshProUGUI countdown, countdownTimer, roundText;
 
     public float currentRoundTimer;
     int currentRound;
@@ -90,7 +90,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
         if (timeToWaitWhenGameCanStart <= 0)
         {
-            photonView.RPC(nameof(UpdateInGameStats), RpcTarget.All);
+            photonView.RPC(nameof(UpdateInGameStats), RpcTarget.All, currentRound);
         }
 
 
@@ -287,7 +287,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    void UpdateInGameStats()
+    void UpdateInGameStats(int round)
     {
         print("In Game Stats geupdated");
         prepareGameStarted = true;
@@ -295,6 +295,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         inGameObject.SetActive(true);
 
         //In Game
+        roundText.text = $"Round {round}";
         //Update Player 1 settings
         var player1Properties = Server.MyPlayer.CustomProperties;
         player1InGame.text = Server.MyPlayer.NickName;
