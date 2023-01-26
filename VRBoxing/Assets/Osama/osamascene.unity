@@ -2931,7 +2931,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ragdollmanager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 875747255}
     - target: {fileID: 9049257802817661914, guid: 171f67ec066585f4bb497a0721bc78b4,
         type: 3}
       propertyPath: HitEffects.Array.size
@@ -13108,6 +13108,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 525eeac57779fee46a0e747e5e28ae86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &875747255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6935780658010128740, guid: 6a64f62237056cf4f8e6226855f9da69,
+    type: 3}
+  m_PrefabInstance: {fileID: 875747252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f947bd963936741977107cb9e42564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &878598588
