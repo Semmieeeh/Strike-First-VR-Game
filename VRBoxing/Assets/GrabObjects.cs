@@ -214,7 +214,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
             if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
             {
-                audioManager.PlayAudio(2, 0.8f, 1.2f);
+                audioManager.PlayAudio(5, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
                 cooldown = 1;
                 //canHarden = false;
@@ -226,7 +226,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
             if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
             {
-                audioManager.PlayAudio(2, 0.8f, 1.2f);
+                audioManager.PlayAudio(5, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
                 cooldown = 1;
                 //canHarden = false;
@@ -277,7 +277,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
             if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
             {
-                audioManager.PlayAudio(3, 0.8f, 1.2f);
+                audioManager.PlayAudio(6, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
                 cooldown = 1;
                 //canHarden = false;
@@ -288,7 +288,7 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
             if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
             {
-                audioManager.PlayAudio(3, 0.8f, 1.2f);
+                audioManager.PlayAudio(6, 0.8f, 1.2f);
                 Server.DamageEnemy(speed / 4);
                 cooldown = 1;
                 //canHarden = false;
