@@ -2117,6 +2117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Confetti (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 289581043908728854, guid: dfce6e118cecdd94e9ba51ee83341156,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfce6e118cecdd94e9ba51ee83341156, type: 3}
 --- !u!1 &108518856
@@ -15327,6 +15332,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Confetti
+      objectReference: {fileID: 0}
+    - target: {fileID: 269016106665175179, guid: bab8f270d0522d446991bc2548d9aaf0,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 269016106665175188, guid: bab8f270d0522d446991bc2548d9aaf0,
         type: 3}
