@@ -12999,35 +12999,25 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 924611275320803531, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: rotateTreshold
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 924611275320803531, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: rotateTreshold.x
-      value: -25.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 924611275320803531, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: rotateTreshold.y
-      value: 114.96
-      objectReference: {fileID: 0}
     - target: {fileID: 1478236309966862769, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
       propertyPath: sceneViewId
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 3878042383043908051, guid: 6a64f62237056cf4f8e6226855f9da69,
+    - target: {fileID: 4482256191295669409, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3878042383043908051, guid: 6a64f62237056cf4f8e6226855f9da69,
+    - target: {fileID: 4482256191295669409, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 108
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482256191295669409, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5076906561389834372, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
@@ -13094,80 +13084,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: In-Game Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5967584801441023503, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.769
-      objectReference: {fileID: 0}
     - target: {fileID: 6546590306666815072, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
       propertyPath: sceneViewId
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 381.1893
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 286.2273
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.044
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.049183678
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7053942
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.049183678
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7053942
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.01109
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.11305
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 7.977
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7265648420495142385, guid: 6a64f62237056cf4f8e6226855f9da69,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
-      objectReference: {fileID: 0}
     - target: {fileID: 7692558271069939783, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
       propertyPath: sceneViewId
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941187373454084651, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941187373454084651, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9069507114609530545, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}

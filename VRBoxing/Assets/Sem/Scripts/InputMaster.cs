@@ -170,6 +170,15 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Press(pressPoint=0.1)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""DisconnectDev"",
+                    ""type"": ""Button"",
+                    ""id"": ""6265faf3-ef25-41b0-a910-45cfec2720be"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -370,6 +379,17 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""action"": ""Disconnect"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""68354ab5-1fff-480d-93a0-71d20900bd46"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DisconnectDev"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -416,6 +436,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_Player_ShotgunDis = m_Player.FindAction("ShotgunDis", throwIfNotFound: true);
         m_Player_ShootShotgun = m_Player.FindAction("ShootShotgun", throwIfNotFound: true);
         m_Player_Disconnect = m_Player.FindAction("Disconnect", throwIfNotFound: true);
+        m_Player_DisconnectDev = m_Player.FindAction("DisconnectDev", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -491,6 +512,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ShotgunDis;
     private readonly InputAction m_Player_ShootShotgun;
     private readonly InputAction m_Player_Disconnect;
+    private readonly InputAction m_Player_DisconnectDev;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -511,6 +533,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         public InputAction @ShotgunDis => m_Wrapper.m_Player_ShotgunDis;
         public InputAction @ShootShotgun => m_Wrapper.m_Player_ShootShotgun;
         public InputAction @Disconnect => m_Wrapper.m_Player_Disconnect;
+        public InputAction @DisconnectDev => m_Wrapper.m_Player_DisconnectDev;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -568,6 +591,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Disconnect.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisconnect;
                 @Disconnect.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisconnect;
                 @Disconnect.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisconnect;
+                @DisconnectDev.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisconnectDev;
+                @DisconnectDev.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisconnectDev;
+                @DisconnectDev.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDisconnectDev;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -620,6 +646,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Disconnect.started += instance.OnDisconnect;
                 @Disconnect.performed += instance.OnDisconnect;
                 @Disconnect.canceled += instance.OnDisconnect;
+                @DisconnectDev.started += instance.OnDisconnectDev;
+                @DisconnectDev.performed += instance.OnDisconnectDev;
+                @DisconnectDev.canceled += instance.OnDisconnectDev;
             }
         }
     }
@@ -651,5 +680,6 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnShotgunDis(InputAction.CallbackContext context);
         void OnShootShotgun(InputAction.CallbackContext context);
         void OnDisconnect(InputAction.CallbackContext context);
+        void OnDisconnectDev(InputAction.CallbackContext context);
     }
 }

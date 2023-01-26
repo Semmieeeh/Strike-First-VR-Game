@@ -49,7 +49,6 @@ public class VRMovement : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        PhotonNetwork.JoinRandomRoom();
         audioCheck = GameObject.Find("AudioOn");
         if(audioCheck.tag != "NPC")
         {
@@ -144,25 +143,26 @@ public class VRMovement : MonoBehaviourPunCallbacks
     }
     public void Disconnect()
     {
-        
         PhotonNetwork.LeaveRoom();
+        print("a");
     }
 
     public override void OnLeftRoom()
     {
         PhotonNetwork.Disconnect();
+        print("\b");
     }
-
-    
 
     public override void OnDisconnected(DisconnectCause cause)
     {
         PhotonNetwork.LeaveLobby();
-        
+        print("c");
+
     }
     public override void OnLeftLobby()
     {
         base.OnLeftLobby();
+        print("d");
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 

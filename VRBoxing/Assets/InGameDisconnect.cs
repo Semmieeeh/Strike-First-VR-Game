@@ -58,13 +58,21 @@ public class InGameDisconnect : MonoBehaviourPunCallbacks
 
     public void Disconnect()
     {
+        PhotonNetwork.LeaveRoom();
+    }
+
+    public override void OnLeftRoom()
+    {
+        PhotonNetwork.LeaveLobby();
+    }
+
+    public override void OnLeftLobby()
+    {
         PhotonNetwork.Disconnect();
     }
 
     public override void OnDisconnected(DisconnectCause cause)
     {
-        base.OnDisconnected(cause);
-
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
