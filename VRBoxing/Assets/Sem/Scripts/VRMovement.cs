@@ -142,6 +142,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
         }
     }
 
+    bool disconnecting = false;
     public void DevDisconnect(InputAction.CallbackContext contexts)
     {
         if (contexts.started)
@@ -149,6 +150,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
     }
     public void Disconnect()
     {
+        disconnecting = true;
         PhotonNetwork.LeaveRoom();
         print("a");
     }
@@ -175,6 +177,8 @@ public class VRMovement : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         base.OnConnectedToMaster();
+        if(disconnecting)
+        PhotonNetwork.Disconnect();
         
     }
     public void Heal(InputAction.CallbackContext context)
