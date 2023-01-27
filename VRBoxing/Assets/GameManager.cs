@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public static string LocalPlayerNickName;
+    public static bool HasUsername;
 
     [SerializeField] MainMenuManager mainMenuManager;
 

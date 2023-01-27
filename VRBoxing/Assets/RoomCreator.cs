@@ -21,7 +21,7 @@ public class RoomCreator : MonoBehaviour
 
     public void TryCreate()
     {
-        if (!roomNameField.text.IsNullOrEmpty() && !playerNickname.text.IsNullOrEmpty())
+        if (!roomNameField.text.IsNullOrEmpty())
         {
             string name = mapIndex.ToString() +" " + roomNameField.text;
 

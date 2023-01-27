@@ -81,6 +81,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     public void Start()
     {
         audio = GameObject.Find("Main Menu Music").GetComponent<AudioSource>();
+        OnGameStart();
     }
     private void Update()
     {
@@ -101,7 +102,15 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void OnGameStart()
     {
-        if (nickNameInput.text.IsNullOrEmpty()) return;
+        if(!GameManager.HasUsername)
+        {
+            if (nickNameInput.text.IsNullOrEmpty()) return;
+
+            GameManager.LocalPlayerNickName = nickNameInput.text;
+            GameManager.HasUsername = true;
+        }
+
+
         OpenPage("Main Screen",true);
         for (int i = 0; i < gameStartAnimators.Length; i++)
         {
@@ -216,7 +225,10 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         
         Player player = PhotonNetwork.LocalPlayer;
 
-        player.NickName = nickNameInput.text;
+        print(player.NickName + "1");
+        if(player.NickName.IsNullOrEmpty())
+            player.NickName = GameManager.LocalPlayerNickName;
+        print(player.NickName + "2");
         var props = player.CustomProperties;
         props.Clear();
         props.Add(Server.kDamageLevel, 0);
