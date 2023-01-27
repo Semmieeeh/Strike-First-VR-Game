@@ -176,13 +176,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel(0);
     }
 
-    public override void OnConnectedToMaster()
-    {
-        base.OnConnectedToMaster();
-        if(disconnecting)
-        PhotonNetwork.Disconnect();
-        
-    }
+    
     public void Heal(InputAction.CallbackContext context)
     {
         if (context.started && canHeal)
