@@ -68,7 +68,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             UpdateCanvas();
         }
 
-        if(currentRoundTimer > 0)
+        if(currentRoundTimer > 0 && roundActive)
         {
             currentRoundTimer -= Time.deltaTime;
             photonView.RPC(nameof(SetTimerText), RpcTarget.All, currentRoundTimer);
@@ -114,6 +114,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         print(timeToWaitWhenGameCanStart);
     }
 
+    bool roundActive;
     async void StartGame()
     {
         print("player vinden");
