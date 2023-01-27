@@ -56,6 +56,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
             
             
         }
+        
         rb = gameObject.GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
         rig = GetComponent<XROrigin>();
@@ -208,6 +209,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
             disconnectButtonPresses = 0;
         }
         slider.value = disconnectButtonPresses;
+        Debug.Log($"NetworkClientState: {PhotonNetwork.NetworkClientState.ToString()}\nNetWorkingClient.State: {PhotonNetwork.NetworkingClient.State.ToString()}");
     }
     public void Movement(InputAction.CallbackContext context)
     {

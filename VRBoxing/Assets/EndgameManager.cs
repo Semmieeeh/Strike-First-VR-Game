@@ -47,7 +47,9 @@ public class EndgameManager : MonoBehaviourPunCallbacks
         print("room left!");
         base.OnLeftRoom();
 
-        disconnectStatus.text = "Leaving Lobby...";
+
+
+        //disconnectStatus.text = "Leaving Lobby...";
         PhotonNetwork.LeaveLobby();
         print("Leaving Lobby");
     }
