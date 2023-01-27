@@ -50,6 +50,7 @@ public class Server : MonoBehaviourPunCallbacks
     private void Awake()
     {
         server = this;
+        roomInitialized = false;
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
