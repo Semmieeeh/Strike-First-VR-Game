@@ -8629,8 +8629,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_Destroy_m3168CD7351F397AFD
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks__ctor_m25DE2B188CA2481D58FBA9BB58CFBD65432B77E2 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) ;
 // System.Void PlayerRagdollManager::SetPositionAndRotation(UnityEngine.Transform,UnityEngine.Transform,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerRagdollManager_SetPositionAndRotation_m8DE3EA378BEDDEE61C37B609AE43C053D72FF8B0 (PlayerRagdollManager_t67BDCD16978FE85F0817E2BCD4CC2F0197453B58* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___current0, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___Target1, bool ___active2, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Rigidbody::AddExplosionForce(System.Single,UnityEngine.Vector3,System.Single,System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddExplosionForce_mD8FF6CAA6FF6749259FB95762B2A521CF8483163 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, float ___explosionForce0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explosionPosition1, float ___explosionRadius2, float ___upwardsModifier3, const RuntimeMethod* method) ;
+// System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68 (int32_t ___minInclusive0, int32_t ___maxExclusive1, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rigidbody::AddExplosionForce(System.Single,UnityEngine.Vector3,System.Single,System.Single,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddExplosionForce_mE4673F6D1DA0C206DA79659E9005A0F067348402 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, float ___explosionForce0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explosionPosition1, float ___explosionRadius2, float ___upwardsModifier3, int32_t ___mode4, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Rigidbody::AddTorque(UnityEngine.Vector3,UnityEngine.ForceMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddTorque_m7922F76C73DACF9E1610D72726C01709C14F0937 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___torque0, int32_t ___mode1, const RuntimeMethod* method) ;
 // System.Void PlayersManager::SetUpPlayer(Photon.Realtime.Player)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayersManager_SetUpPlayer_mE0F871991F01DF58A868C2D9DE6136DA265A519D (PlayersManager_tBB0498847AC1C227E730EC3030F2C4219498D46F* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___player0, const RuntimeMethod* method) ;
 // System.Void PlayersManager::UpdatePlayerProperties(Photon.Realtime.Player,System.Single,System.Int32,System.Single,System.Single)
@@ -8694,8 +8698,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RagdollBehaviour_EnableRagdoll_m40492B72
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* RagdollBehaviour_FindHitRigidbody_mC649770DA99CB980D3C3F28854D563CA559F3373 (RagdollBehaviour_t5E9993AABEE930B00BDCCAF6A5B605878C2929E6* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___hitPoint0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Rigidbody::AddForceAtPosition(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.ForceMode)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForceAtPosition_m61575E676B16690BEC0FD29841EAD35CC40B642C (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___force0, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___position1, int32_t ___mode2, const RuntimeMethod* method) ;
-// System.Int32 UnityEngine.Random::Range(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68 (int32_t ___minInclusive0, int32_t ___maxExclusive1, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Rigidbody::get_position()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Rigidbody_get_position_m4ECB79BDBBF8FD1EA572EDB792D3330DDED24691 (Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Collider::set_enabled(System.Boolean)
@@ -22882,6 +22884,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerRagdollManager_SetPositionAndRotat
 		s_Il2CppMethodInitialized = true;
 	}
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* V_0 = NULL;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		// Rigidbody rb = ragdollHead.GetComponent<Rigidbody>();
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___ragdollHead_4;
@@ -22934,22 +22938,49 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerRagdollManager_SetPositionAndRotat
 		bool L_17 = ___active2;
 		if (!L_17)
 		{
-			goto IL_0073;
+			goto IL_00d8;
 		}
 	}
 	{
-		// rb.AddExplosionForce(50, transform.position, 10, 3.0f);
-		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_18 = V_0;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
-		L_19 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
-		NullCheck(L_19);
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
-		L_20 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_19, NULL);
-		NullCheck(L_18);
-		Rigidbody_AddExplosionForce_mD8FF6CAA6FF6749259FB95762B2A521CF8483163(L_18, (50.0f), L_20, (10.0f), (3.0f), NULL);
+		// Vector3 direction = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1));
+		int32_t L_18;
+		L_18 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68((-1), 1, NULL);
+		int32_t L_19;
+		L_19 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68((-1), 1, NULL);
+		int32_t L_20;
+		L_20 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68((-1), 1, NULL);
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_1), ((float)L_18), ((float)L_19), ((float)L_20), NULL);
+		// rb.AddExplosionForce(500f, transform.position -direction , 50f, 50f, ForceMode.Impulse);
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_21 = V_0;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_22;
+		L_22 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_22);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23;
+		L_23 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_22, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = V_1;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25;
+		L_25 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_23, L_24, NULL);
+		NullCheck(L_21);
+		Rigidbody_AddExplosionForce_mE4673F6D1DA0C206DA79659E9005A0F067348402(L_21, (500.0f), L_25, (50.0f), (50.0f), 1, NULL);
+		// rb.AddTorque(new Vector3(
+		//     Random.Range(-360, 360),
+		//     Random.Range(-360, 360),
+		//     Random.Range(-360, 360)), ForceMode.Impulse);
+		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_26 = V_0;
+		int32_t L_27;
+		L_27 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(((int32_t)-360), ((int32_t)360), NULL);
+		int32_t L_28;
+		L_28 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(((int32_t)-360), ((int32_t)360), NULL);
+		int32_t L_29;
+		L_29 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(((int32_t)-360), ((int32_t)360), NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
+		memset((&L_30), 0, sizeof(L_30));
+		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_30), ((float)L_27), ((float)L_28), ((float)L_29), /*hidden argument*/NULL);
+		NullCheck(L_26);
+		Rigidbody_AddTorque_m7922F76C73DACF9E1610D72726C01709C14F0937(L_26, L_30, 1, NULL);
 	}
 
-IL_0073:
+IL_00d8:
 	{
 		// }
 		return;
@@ -25365,7 +25396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoomCreator_TryCreate_m6A7746DA8D9556722
 	}
 	String_t* V_0 = NULL;
 	{
-		// if (!roomNameField.text.IsNullOrEmpty() && !playerNickname.text.IsNullOrEmpty())
+		// if (!roomNameField.text.IsNullOrEmpty())
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_0 = __this->___roomNameField_4;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -25375,50 +25406,37 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoomCreator_TryCreate_m6A7746DA8D9556722
 		L_2 = Ext_IsNullOrEmpty_mBBF811952357E4465ACE6E59DB0E0F29BF0A13B6(L_1, NULL);
 		if (L_2)
 		{
-			goto IL_006e;
-		}
-	}
-	{
-		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_3 = __this->___playerNickname_5;
-		NullCheck(L_3);
-		String_t* L_4;
-		L_4 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline(L_3, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Ext_t6D7C499436D2B147B941E873C73C930E159B53D0_il2cpp_TypeInfo_var);
-		bool L_5;
-		L_5 = Ext_IsNullOrEmpty_mBBF811952357E4465ACE6E59DB0E0F29BF0A13B6(L_4, NULL);
-		if (L_5)
-		{
-			goto IL_006e;
+			goto IL_005c;
 		}
 	}
 	{
 		// string name = mapIndex.ToString() +" " + roomNameField.text;
-		int32_t* L_6 = (&__this->___mapIndex_8);
+		int32_t* L_3 = (&__this->___mapIndex_8);
+		String_t* L_4;
+		L_4 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_3, NULL);
+		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_5 = __this->___roomNameField_4;
+		NullCheck(L_5);
+		String_t* L_6;
+		L_6 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline(L_5, NULL);
 		String_t* L_7;
-		L_7 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_6, NULL);
-		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_8 = __this->___roomNameField_4;
-		NullCheck(L_8);
-		String_t* L_9;
-		L_9 = TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline(L_8, NULL);
-		String_t* L_10;
-		L_10 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_7, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, L_9, NULL);
-		V_0 = L_10;
+		L_7 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_4, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, L_6, NULL);
+		V_0 = L_7;
 		// currentProperties = GetCurrentProperties();
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_11;
-		L_11 = RoomCreator_GetCurrentProperties_m03FE2029387F2B12F72ADA975AD2C647EB49FF4D(__this, NULL);
-		__this->___currentProperties_10 = L_11;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentProperties_10), (void*)L_11);
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_8;
+		L_8 = RoomCreator_GetCurrentProperties_m03FE2029387F2B12F72ADA975AD2C647EB49FF4D(__this, NULL);
+		__this->___currentProperties_10 = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentProperties_10), (void*)L_8);
 		// if (GameManager.MainMenu.TryCreateRoom(name, currentProperties))
-		MainMenuManager_tF7A52AE15B4646A6080DC28A83B82CB4ACF46B94* L_12;
-		L_12 = GameManager_get_MainMenu_m42AC399DF0FCA0EEA0348F59DCC3315523E4A65F(NULL);
-		String_t* L_13 = V_0;
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_14 = __this->___currentProperties_10;
-		NullCheck(L_12);
-		bool L_15;
-		L_15 = MainMenuManager_TryCreateRoom_mF430FED0EFA2C442B42965F46CDB9C3D763B3A84(L_12, L_13, L_14, NULL);
-		if (!L_15)
+		MainMenuManager_tF7A52AE15B4646A6080DC28A83B82CB4ACF46B94* L_9;
+		L_9 = GameManager_get_MainMenu_m42AC399DF0FCA0EEA0348F59DCC3315523E4A65F(NULL);
+		String_t* L_10 = V_0;
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_11 = __this->___currentProperties_10;
+		NullCheck(L_9);
+		bool L_12;
+		L_12 = MainMenuManager_TryCreateRoom_mF430FED0EFA2C442B42965F46CDB9C3D763B3A84(L_9, L_10, L_11, NULL);
+		if (!L_12)
 		{
-			goto IL_006e;
+			goto IL_005c;
 		}
 	}
 	{
@@ -25427,7 +25445,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoomCreator_TryCreate_m6A7746DA8D9556722
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral55EAEC5ADC1F5443FEE95CECED5BF43E0EC70D97, NULL);
 	}
 
-IL_006e:
+IL_005c:
 	{
 		// }
 		return;
