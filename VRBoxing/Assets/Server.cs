@@ -107,6 +107,8 @@ public class Server : MonoBehaviourPunCallbacks
 
         if(MyPlayer != null)
         ManageMyPlayer();
+
+        print(PhotonNetwork.CurrentRoom.CustomProperties[kCanFight]);
     }
 
     public static Player MyPlayer { get; set; }
