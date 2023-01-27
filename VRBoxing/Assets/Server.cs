@@ -306,6 +306,16 @@ public class Server : MonoBehaviourPunCallbacks
 
     }
 
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        base.OnPlayerLeftRoom(otherPlayer);
+
+        var props = otherPlayer.CustomProperties;
+
+        props.Clear();
+
+        otherPlayer.SetCustomProperties(props);
+    }
     public static void ApplyHealth(float healthToAdd)
     {
         Hashtable properties = MyPlayer.CustomProperties;
