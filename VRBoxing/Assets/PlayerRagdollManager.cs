@@ -38,7 +38,7 @@ public class PlayerRagdollManager : MonoBehaviour
         {
             Vector3 direction = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1));
 
-            rb.AddExplosionForce(500f, transform.position -direction , 10, 50f, ForceMode.Impulse);
+            rb.AddExplosionForce(500f, transform.position -direction , 50f, 50f, ForceMode.Impulse);
             rb.AddTorque(new Vector3(
                 Random.Range(-360, 360), 
                 Random.Range(-360, 360), 
