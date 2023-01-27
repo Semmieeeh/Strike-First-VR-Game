@@ -173,7 +173,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
     {
         base.OnLeftLobby();
         print("d");
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        PhotonNetwork.LoadLevel(0);
     }
 
     public override void OnConnectedToMaster()

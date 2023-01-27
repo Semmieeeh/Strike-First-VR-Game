@@ -35,8 +35,9 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public override void OnConnectedToMaster()
     {
-        if(!PhotonNetwork.InLobby)
-        PhotonNetwork.JoinLobby();
+        base.OnConnectedToMaster();
+        if (!PhotonNetwork.InLobby)
+            PhotonNetwork.JoinLobby();
     }
 
     public override void OnDisconnected(DisconnectCause cause)
@@ -102,7 +103,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public void ClearServerList()
     {
-        print("ewgfaewgaesgtaesg");
+        print("");
         for (int i = 0; i < activeServers.Count; i++)
         {
             Destroy(activeServers[i].gameObject);

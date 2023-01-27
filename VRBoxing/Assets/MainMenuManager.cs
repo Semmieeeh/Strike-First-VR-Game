@@ -218,7 +218,7 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
 
         player.NickName = nickNameInput.text;
         var props = player.CustomProperties;
-
+        props.Clear();
         props.Add(Server.kDamageLevel, 0);
         props.Add(Server.kSkinColor, materialManager.skinColorIndex);
         props.Add(Server.kHairCut, materialManager.hairCutIndex);
