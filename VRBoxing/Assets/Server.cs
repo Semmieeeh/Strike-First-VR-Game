@@ -115,7 +115,7 @@ public class Server : MonoBehaviourPunCallbacks
     bool myPlayerInitialized;
     public static Player OtherPlayer;
 
-    public static Player Winner;
+    public static Player Winner { get; set; }
 
     public void DamagePlayerDebug()
     {
@@ -218,8 +218,8 @@ public class Server : MonoBehaviourPunCallbacks
         else
         {
             var originalDamage = properties[kDamage];
-            properties[kDamage] = (float)originalDamage + damage;
-
+            properties[kDamage] = /*(float)originalDamage +*/ damage;
+        
             properties[kDamageLevel] = DetermineDamageLevel((float)properties[kHealth]);
 
            

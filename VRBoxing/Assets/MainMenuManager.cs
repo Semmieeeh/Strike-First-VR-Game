@@ -442,6 +442,11 @@ public class MainMenuManager : MonoBehaviourPunCallbacks
         }
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     public int ToMilliseconds(float value)
     {
         return Mathf.RoundToInt(value * 1000);

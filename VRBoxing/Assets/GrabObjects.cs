@@ -34,7 +34,9 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     public bool blocking;
     public Server server;
     public bool canPunch;
-    public float cooldown;
+    public float cooldown = 0.4f;
+    public float damageCooldown;
+    float damageCooldownTimer;
     public AudioManager audioManager;
     public bool canPlay = true;
     public GrabObjects otherHand;
@@ -88,6 +90,8 @@ public class GrabObjects : MonoBehaviourPunCallbacks
 
     private void Update()
     {
+        damageCooldownTimer -= Time.deltaTime;
+
         anim.SetBool("Hardened", hardened);
         timer += Time.deltaTime;
         if(timer > 0.1f)
@@ -196,126 +200,131 @@ public class GrabObjects : MonoBehaviourPunCallbacks
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(gameObject.tag == "InGameLeft")
+        if(damageCooldownTimer <= 0) 
         {
-            if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+            damageCooldownTimer = damageCooldown;
+
+            if(gameObject.tag == "InGameLeft")
             {
-                audioManager.PlayAudio(2, 0.8f, 1.2f);
-                Server.DamageEnemy(speed);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
-                print("You Hit The Head And Did " + speed + " Damage");
+                if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
+                    audioManager.PlayAudio(2, 0.8f, 1.2f);
+                    Server.DamageEnemy(speed);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    print("You Hit The Head And Did " + speed + " Damage");
 
-                ApplyBlood(collision);
-                Server.CheckHitEffect(collision.GetContact(0).point, speed);
+                    ApplyBlood(collision);
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed);
 
+                }
+
+                if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
+                    audioManager.PlayAudio(5, 0.8f, 1.2f);
+                    Server.DamageEnemy(speed / 4);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    print("Your punch got Blocked! You did" + speed / 4 + " damage");
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
+
+                }
+
+                if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
+                    audioManager.PlayAudio(5, 0.8f, 1.2f);
+                    Server.DamageEnemy(speed / 4);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    print("Your punch got Blocked! You did" + speed / 4 + " damage");
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
+                }
+                if (collision.gameObject.tag == "Body" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
+
+                    Server.DamageEnemy(speed / 2);
+                    audioManager.PlayAudio(2, 0.8f, 1.2f);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    print("Body hit for " + speed / 2 + " damage");
+                    ApplyBlood(collision);
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed / 2);
+                }
+                if (collision.gameObject.tag == "NPC")
+                {
+                    audioManager.PlayAudio(2, 0.8f, 1.2f);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);                
+                    ApplyBlood(collision);
+                    
+                }
             }
 
-            if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+
+            if (gameObject.tag == "InGameRight")
             {
-                audioManager.PlayAudio(5, 0.8f, 1.2f);
-                Server.DamageEnemy(speed / 4);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
-                print("Your punch got Blocked! You did" + speed / 4 + " damage");
-                Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
+                if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
+                    audioManager.PlayAudio(3, 0.8f, 1.2f);
+                    Server.DamageEnemy(speed);
+                    cooldown = 0.2f;
 
-            }
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
 
-            if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
-            {
-                audioManager.PlayAudio(5, 0.8f, 1.2f);
-                Server.DamageEnemy(speed / 4);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
-                print("Your punch got Blocked! You did" + speed / 4 + " damage");
-                Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
-            }
-            if (collision.gameObject.tag == "Body" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
-            {
+                    print("You Hit The Head And Did " + speed + " Damage");
+                    ApplyBlood(collision);
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed);
 
-                Server.DamageEnemy(speed / 2);
-                audioManager.PlayAudio(2, 0.8f, 1.2f);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
-                print("Body hit for " + speed / 2 + " damage");
-                ApplyBlood(collision);
-                Server.CheckHitEffect(collision.GetContact(0).point, speed / 2);
-            }
-            if (collision.gameObject.tag == "NPC")
-            {
-                audioManager.PlayAudio(2, 0.8f, 1.2f);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);                
-                ApplyBlood(collision);
-                
-            }
-        }
+                }
 
+                if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
+                    audioManager.PlayAudio(6, 0.8f, 1.2f);
+                    Server.DamageEnemy(speed / 4);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    print("Your punch got Blocked! You did" + speed / 4 + " damage");
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
+                }
 
-        if(gameObject.tag == "InGameRight")
-        {
-            if (collision.gameObject.tag == "Head" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
-            {
-                audioManager.PlayAudio(3, 0.8f, 1.2f);
-                Server.DamageEnemy(speed);
-                cooldown = 0.2f;
+                if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
+                    audioManager.PlayAudio(6, 0.8f, 1.2f);
+                    Server.DamageEnemy(speed / 4);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    print("Your punch got Blocked! You did" + speed / 4 + " damage");
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
+                }
+                if (collision.gameObject.tag == "Body" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
+                {
 
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    Server.DamageEnemy(speed / 2);
+                    audioManager.PlayAudio(3, 0.8f, 1.2f);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);
+                    print("Body hit for " + speed / 2 + " damage");
+                    ApplyBlood(collision);
+                    Server.CheckHitEffect(collision.GetContact(0).point, speed / 2);
+                }
+                if (collision.gameObject.tag == "NPC")
+                {
+                    audioManager.PlayAudio(3, 0.8f, 1.2f);
+                    cooldown = 0.2f;
+                    //canHarden = false;
+                    //pv.RPC(nameof(ReAppear), RpcTarget.All);                
+                    ApplyBlood(collision);
 
-                print("You Hit The Head And Did " + speed + " Damage");
-                ApplyBlood(collision);
-                Server.CheckHitEffect(collision.GetContact(0).point, speed);
-
-            }
-
-            if (collision.gameObject.tag == "LeftFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
-            {
-                audioManager.PlayAudio(6, 0.8f, 1.2f);
-                Server.DamageEnemy(speed / 4);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
-                print("Your punch got Blocked! You did" + speed / 4 + " damage");
-                Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
-            }
-
-            if (collision.gameObject.tag == "RightFist" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
-            {
-                audioManager.PlayAudio(6, 0.8f, 1.2f);
-                Server.DamageEnemy(speed / 4);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
-                print("Your punch got Blocked! You did" + speed / 4 + " damage");
-                Server.CheckHitEffect(collision.GetContact(0).point, speed / 4);
-            }
-            if (collision.gameObject.tag == "Body" && collision.gameObject.GetComponent<PhotonView>().IsMine == false && cooldown <= 0)
-            {
-
-                Server.DamageEnemy(speed / 2);
-                audioManager.PlayAudio(3, 0.8f, 1.2f);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);
-                print("Body hit for " + speed / 2 + " damage");
-                ApplyBlood(collision);
-                Server.CheckHitEffect(collision.GetContact(0).point, speed / 2);
-            }
-            if (collision.gameObject.tag == "NPC")
-            {
-                audioManager.PlayAudio(3, 0.8f, 1.2f);
-                cooldown = 0.2f;
-                //canHarden = false;
-                //pv.RPC(nameof(ReAppear), RpcTarget.All);                
-                ApplyBlood(collision);
-
+                }
             }
 
         }

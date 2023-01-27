@@ -3440,6 +3440,7 @@ MonoBehaviour:
   server: {fileID: 0}
   canPunch: 0
   cooldown: 0
+  damageCooldown: 0
   audioManager: {fileID: 5818685712339648653}
   canPlay: 1
   otherHand: {fileID: 5967584801441023604}
@@ -4589,6 +4590,7 @@ MonoBehaviour:
   server: {fileID: 0}
   canPunch: 0
   cooldown: 0
+  damageCooldown: 0
   audioManager: {fileID: 5818685712339648653}
   canPlay: 1
   otherHand: {fileID: 5967584800018321524}

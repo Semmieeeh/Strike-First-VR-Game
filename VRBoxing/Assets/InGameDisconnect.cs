@@ -63,6 +63,7 @@ public class InGameDisconnect : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
+        
         PhotonNetwork.LeaveLobby();
     }
 

@@ -6580,14 +6580,14 @@ struct U3CU3Ec__DisplayClass20_0_t0788574D429D86ADE6D8398D3C6521AC33D98D82  : pu
 	GrabInteractor_t8B09914CD93E3AB3991AFC62FDD00DB9FC52CCA0* ___U3CU3E4__this_1;
 };
 
-// GrabObjects/<ReAppear>d__40
-struct U3CReAppearU3Ed__40_t163295431FB93A99E13A2E8852651D1D36C92B8D  : public RuntimeObject
+// GrabObjects/<ReAppear>d__42
+struct U3CReAppearU3Ed__42_t745C0CDB861F64A366E0EEC03821B5B53CF03BE4  : public RuntimeObject
 {
-	// System.Int32 GrabObjects/<ReAppear>d__40::<>1__state
+	// System.Int32 GrabObjects/<ReAppear>d__42::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object GrabObjects/<ReAppear>d__40::<>2__current
+	// System.Object GrabObjects/<ReAppear>d__42::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
-	// GrabObjects GrabObjects/<ReAppear>d__40::<>4__this
+	// GrabObjects GrabObjects/<ReAppear>d__42::<>4__this
 	GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33* ___U3CU3E4__this_2;
 };
 
@@ -34938,13 +34938,17 @@ struct FollowTargetProvider_tEAF324DD11C2B03960560CBCB3C928A360C79492  : public 
 struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	// MainMenuManager GameManager::mainMenuManager
-	MainMenuManager_tF7A52AE15B4646A6080DC28A83B82CB4ACF46B94* ___mainMenuManager_5;
+	MainMenuManager_tF7A52AE15B4646A6080DC28A83B82CB4ACF46B94* ___mainMenuManager_7;
 };
 
 struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields
 {
 	// GameManager GameManager::instance
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___instance_4;
+	// System.String GameManager::LocalPlayerNickName
+	String_t* ___LocalPlayerNickName_5;
+	// System.Boolean GameManager::HasUsername
+	bool ___HasUsername_6;
 };
 
 // Oculus.Interaction.GameObjectActiveState
@@ -40787,12 +40791,16 @@ struct GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33  : public MonoBehav
 	bool ___canPunch_34;
 	// System.Single GrabObjects::cooldown
 	float ___cooldown_35;
+	// System.Single GrabObjects::damageCooldown
+	float ___damageCooldown_36;
+	// System.Single GrabObjects::damageCooldownTimer
+	float ___damageCooldownTimer_37;
 	// AudioManager GrabObjects::audioManager
-	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___audioManager_36;
+	AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B* ___audioManager_38;
 	// System.Boolean GrabObjects::canPlay
-	bool ___canPlay_37;
+	bool ___canPlay_39;
 	// GrabObjects GrabObjects::otherHand
-	GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33* ___otherHand_38;
+	GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33* ___otherHand_40;
 };
 
 // UnityEngine.UI.GraphicRaycaster
@@ -48779,15 +48787,15 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5879[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5880[5] = 
 {
 	static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___target_4)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___head_5)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___rb_6)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___rotDif_7)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___isPlayer_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5881[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5881[4] = 
 {
-	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields, ___instance_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___mainMenuManager_5)),};
+	static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields, ___instance_4)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields, ___LocalPlayerNickName_5)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields, ___HasUsername_6)),static_cast<int32_t>(offsetof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6, ___mainMenuManager_7)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5882[3] = 
 {
-	static_cast<int32_t>(offsetof(U3CReAppearU3Ed__40_t163295431FB93A99E13A2E8852651D1D36C92B8D, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CReAppearU3Ed__40_t163295431FB93A99E13A2E8852651D1D36C92B8D, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CReAppearU3Ed__40_t163295431FB93A99E13A2E8852651D1D36C92B8D, ___U3CU3E4__this_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5883[34] = 
+	static_cast<int32_t>(offsetof(U3CReAppearU3Ed__42_t745C0CDB861F64A366E0EEC03821B5B53CF03BE4, ___U3CU3E1__state_0)),static_cast<int32_t>(offsetof(U3CReAppearU3Ed__42_t745C0CDB861F64A366E0EEC03821B5B53CF03BE4, ___U3CU3E2__current_1)),static_cast<int32_t>(offsetof(U3CReAppearU3Ed__42_t745C0CDB861F64A366E0EEC03821B5B53CF03BE4, ___U3CU3E4__this_2)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5883[36] = 
 {
-	static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canGrab_5)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___multiplier_6)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabbed_7)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___hand_8)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___physicsHand_9)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabObject_10)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___anim_11)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___hardened_12)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canHarden_13)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___handPos_14)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___timer_15)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___handPosCount_16)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___speed_17)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___mesh_18)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___leftHandDouble_19)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___rightHandDouble_20)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___normalHandLeft_21)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___normalHandRight_22)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___enemy_23)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___healthBar_24)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___pv_25)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___minRotX_26)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___minRotY_27)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___maxRotX_28)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___maxRotY_29)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___currentRotX_30)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___currentRotY_31)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___blocking_32)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___server_33)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canPunch_34)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___cooldown_35)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___audioManager_36)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canPlay_37)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___otherHand_38)),};
+	static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canGrab_5)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___multiplier_6)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabbed_7)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___hand_8)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___physicsHand_9)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___grabObject_10)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___anim_11)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___hardened_12)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canHarden_13)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___handPos_14)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___timer_15)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___handPosCount_16)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___speed_17)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___mesh_18)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___leftHandDouble_19)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___rightHandDouble_20)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___normalHandLeft_21)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___normalHandRight_22)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___enemy_23)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___healthBar_24)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___pv_25)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___minRotX_26)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___minRotY_27)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___maxRotX_28)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___maxRotY_29)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___currentRotX_30)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___currentRotY_31)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___blocking_32)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___server_33)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canPunch_34)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___cooldown_35)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___damageCooldown_36)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___damageCooldownTimer_37)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___audioManager_38)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___canPlay_39)),static_cast<int32_t>(offsetof(GrabObjects_t9901F55D948FB6582FD2EF68EB0525D532ECAC33, ___otherHand_40)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5884[4] = 
 {
 	static_cast<int32_t>(offsetof(HandPhysics_t333BAF3075C50DA74C7C30A3C7981422E1BCCB36, ___target_4)),static_cast<int32_t>(offsetof(HandPhysics_t333BAF3075C50DA74C7C30A3C7981422E1BCCB36, ___handToFollow_5)),static_cast<int32_t>(offsetof(HandPhysics_t333BAF3075C50DA74C7C30A3C7981422E1BCCB36, ___rb_6)),static_cast<int32_t>(offsetof(HandPhysics_t333BAF3075C50DA74C7C30A3C7981422E1BCCB36, ___isLeft_7)),};

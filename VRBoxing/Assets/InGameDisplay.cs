@@ -201,6 +201,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
             print("Properties have been reset");
         }
 
+        Server.Winner = FindGameWinner();
         //end celebration for the winner
         photonView.RPC(nameof(LoadEndGameScene), RpcTarget.All);
     }
@@ -330,6 +331,24 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         return winner;
     }
 
+    public Player FindGameWinner()
+    {
+        Player winner = null;
+        int highestRoundWon = 0;
+
+        if ((int)Server.MyPlayer.CustomProperties[Server.kRoundsWon] > highestRoundWon)
+        {
+            winner = Server.MyPlayer;
+            highestRoundWon = (int)Server.MyPlayer.CustomProperties[Server.kRoundsWon];
+        }
+        if ((int)Server.OtherPlayer.CustomProperties[Server.kRoundsWon] > highestRoundWon)
+        {
+            winner = Server.OtherPlayer;
+            highestRoundWon = (int)Server.OtherPlayer.CustomProperties[Server.kRoundsWon];
+        }
+
+        return winner;
+    }
     [PunRPC]
     void SetPlayerNamesPreGame()
     {
@@ -363,7 +382,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         inGameObject.SetActive(true);
 
         //In Game
-        roundText.text = $"Round {round}";
+        roundText.text = $"Round {round + 1}";
         //Update Player 1 settings
         var player1Properties = Server.MyPlayer.CustomProperties;
         player1InGame.text = Server.MyPlayer.NickName;
