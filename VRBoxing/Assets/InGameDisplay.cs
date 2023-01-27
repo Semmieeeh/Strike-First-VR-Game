@@ -210,7 +210,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [PunRPC]
     public void PlayAudio()
     {
-        GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(8, 1, 1);
+        GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(8, 1, 1, 0.4f);
 
     }
     public override void OnPlayerLeftRoom(Player otherPlayer)
@@ -371,6 +371,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
         //In Game
         roundText.text = $"Round {round + 1}";
+
         //Update Player 1 settings
         var player1Properties = Server.MyPlayer.CustomProperties;
         player1InGame.text = Server.MyPlayer.NickName;

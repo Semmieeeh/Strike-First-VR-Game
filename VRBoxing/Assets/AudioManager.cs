@@ -19,11 +19,17 @@ public class AudioManager : MonoBehaviour
             StopCoroutine(CountDown(12));
         }
     }
+
     public void PlayAudio(int toPLay, float minimalPitch, float maximumPitch)
+    {
+        PlayAudio(toPLay, minimalPitch, maximumPitch, audioSources[toPLay].volume);
+    }
+    public void PlayAudio(int toPLay, float minimalPitch, float maximumPitch, float volume)
     {
 
         float newPitch = Random.Range(minimalPitch, maximumPitch);
         audioSources[toPLay].pitch = newPitch;
+        audioSources[toPLay].volume = volume;
         audioSources[toPLay].Play();
         currentlyPlaying = toPLay;
     }
