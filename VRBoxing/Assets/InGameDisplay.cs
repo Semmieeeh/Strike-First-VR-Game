@@ -47,6 +47,17 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
 
     Room currentRoom;
 
+    public void Start()
+    {
+        var props1 =Server.MyPlayer.CustomProperties;
+        props1[Server.kRoundsWon] = 0;
+        Server.MyPlayer.SetCustomProperties(props1);
+
+        var props2 = Server.OtherPlayer.CustomProperties;
+        props2[Server.kRoundsWon] = 0;
+        Server.OtherPlayer.SetCustomProperties(props2);
+
+    }
     public bool LobbyFull
     {
         get
@@ -376,13 +387,13 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         //Update Player 1 settings
         var player1Properties = Server.MyPlayer.CustomProperties;
         player1InGame.text = Server.MyPlayer.NickName;
-        player1Health.text = (Mathf.RoundToInt((float)player1Properties[Server.kHealth])).ToString() + "%";
+        player1Health.text = (Mathf.RoundToInt((float)player1Properties[Server.kHealth])).ToString();
         player1RoundsWon.text = ((int)player1Properties[Server.kRoundsWon]).ToString() + " Rounds Won";
 
         //Update Player 2 settings
         var player2Properties = Server.OtherPlayer.CustomProperties;
         player2InGame.text = Server.OtherPlayer.NickName;
-        player2Health.text = (Mathf.RoundToInt((float)player2Properties[Server.kHealth])).ToString() + "%";
+        player2Health.text = (Mathf.RoundToInt((float)player2Properties[Server.kHealth])).ToString();
         player2RoundsWon.text = ((int)player2Properties[Server.kRoundsWon]).ToString() + "Rounds Won";
 
         //Update Trophy Picture
