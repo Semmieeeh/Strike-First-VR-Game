@@ -54,6 +54,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
         {
             aud.PlayAudio(7, 1, 1);
             
+            
         }
         rb = gameObject.GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
@@ -63,7 +64,7 @@ public class VRMovement : MonoBehaviourPunCallbacks
         pv = GetComponent<PhotonView>();
     }
     
-
+    
     public void Look(InputAction.CallbackContext context)
     {
         Debug.Log("Looking");

@@ -7,6 +7,7 @@ using Photon.Realtime;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine.UI;
+using JetBrains.Annotations;
 
 public class InGameDisplay : MonoBehaviourPunCallbacks
 {
@@ -119,6 +120,10 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         var myPlayer = GameObject.FindGameObjectWithTag("Player");
         for (int i = 0; i < rounds.Length; i++)
         {
+            if(i == 0)
+            {
+                photonView.RPC(nameof(PlayAudio), RpcTarget.All);
+            }
             if (playerDisconnected) return;
             var round = rounds[i];
             currentRoundTimer = round.time;
@@ -198,7 +203,22 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         //end celebration for the winner
         photonView.RPC(nameof(LoadEndGameScene), RpcTarget.All);
     }
-
+    public void PlayAudio()
+    {
+        int i = Random.Range(0, 2);
+        if(i == 0)
+        {
+            GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(0, 1, 1);
+        }
+        else if(i == 1)
+        {
+            GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(1, 1, 1);
+        }
+        else if (i == 2)
+        {
+            GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(2, 1, 1);
+        }
+    }
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         base.OnPlayerLeftRoom(otherPlayer);
