@@ -36,7 +36,7 @@ public class PlayerRagdollManager : MonoBehaviour
         rb.isKinematic = !active;
         if (active)
         {
-            rb.AddExplosionForce(50, transform.position, 10, 3.0f);
+            rb.AddExplosionForce(500f, transform.position + Vector3.up , 10, 50f);
         }
     }
 }
