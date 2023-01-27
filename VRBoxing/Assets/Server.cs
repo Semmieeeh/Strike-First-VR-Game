@@ -22,8 +22,8 @@ public class Server : MonoBehaviourPunCallbacks
     public ParticleSystem[] HitEffects;
 
     public float minDamageParticleEffect;
-    public float resetHealthAmount = 1000;
-    public float damagelvl1Amount = 700, damagelvl2Amount = 300;
+    public float resetHealthAmount = 500;
+    public float damagelvl1Amount = 350, damagelvl2Amount = 100;
 
     public const string kDamage = "DMG";
     public const string kHealing = "HEAL";

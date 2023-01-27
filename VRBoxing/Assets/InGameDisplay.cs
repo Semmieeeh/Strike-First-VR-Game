@@ -206,6 +206,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         //end celebration for the winner
         photonView.RPC(nameof(LoadEndGameScene), RpcTarget.All);
     }
+
+    [PunRPC]
     public void PlayAudio()
     {
         GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(8, 1, 1);

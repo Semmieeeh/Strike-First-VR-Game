@@ -55583,6 +55583,12 @@ struct EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8  : public MonoBe
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___disconnectStatus_8;
 	// UnityEngine.Transform EndgameManager::myPlayer
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___myPlayer_9;
+	// UnityEngine.AudioSource EndgameManager::win
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___win_10;
+	// UnityEngine.AudioSource EndgameManager::win2
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___win2_11;
+	// UnityEngine.AudioSource EndgameManager::lose
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___lose_12;
 };
 
 // Photon.Pun.Demo.Cockpit.FriendListView

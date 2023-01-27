@@ -40672,6 +40672,12 @@ struct EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8  : public MonoBe
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___disconnectStatus_8;
 	// UnityEngine.Transform EndgameManager::myPlayer
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___myPlayer_9;
+	// UnityEngine.AudioSource EndgameManager::win
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___win_10;
+	// UnityEngine.AudioSource EndgameManager::win2
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___win2_11;
+	// UnityEngine.AudioSource EndgameManager::lose
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___lose_12;
 };
 
 // Oculus.Interaction.GrabInteractable
@@ -48785,9 +48791,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5877[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5878[4] = 
 {
 	static_cast<int32_t>(offsetof(DizzynessManager_t1B938255E68D26EE0DF703878938695E689A2563, ___dizzyImage_4)),static_cast<int32_t>(offsetof(DizzynessManager_t1B938255E68D26EE0DF703878938695E689A2563, ___dizzyNess_5)),static_cast<int32_t>(offsetof(DizzynessManager_t1B938255E68D26EE0DF703878938695E689A2563, ___dizzytoAddOnHit_6)),static_cast<int32_t>(offsetof(DizzynessManager_t1B938255E68D26EE0DF703878938695E689A2563, ___dizzynessRemoveSpeed_7)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5879[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5879[8] = 
 {
-	static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___winnerPos_5)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___loserPos_6)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___winnerText_7)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___disconnectStatus_8)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___myPlayer_9)),};
+	static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___winnerPos_5)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___loserPos_6)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___winnerText_7)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___disconnectStatus_8)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___myPlayer_9)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___win_10)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___win2_11)),static_cast<int32_t>(offsetof(EndgameManager_tCCDFA8D3BCE2095FEFB6A29D1B75A333F1C2ECB8, ___lose_12)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5880[5] = 
 {
 	static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___target_4)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___head_5)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___rb_6)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___rotDif_7)),static_cast<int32_t>(offsetof(FollowHead_t6C1AB6DE704CB5EA6F6561A1B8309DCA98D8644E, ___isPlayer_8)),};

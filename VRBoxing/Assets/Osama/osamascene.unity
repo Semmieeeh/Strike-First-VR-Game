@@ -13207,6 +13207,16 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3442330906524624744, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442330906524624744, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: MinDistance
+      value: 495.0495
+      objectReference: {fileID: 0}
     - target: {fileID: 4482256191295669409, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
       propertyPath: m_AnchorMax.x
