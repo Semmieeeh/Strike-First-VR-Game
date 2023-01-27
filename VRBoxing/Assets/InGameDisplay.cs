@@ -43,6 +43,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     [Header("Round Celebration")]
     public GameObject roundWonSpotlight;
     public ParticleSystem[] celebrationEffects;
+    public AudioSource cheer, bells;
 
     Room currentRoom;
 
@@ -207,19 +208,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     }
     public void PlayAudio()
     {
-        int i = Random.Range(0, 2);
-        if(i == 0)
-        {
-            GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(0, 1, 1);
-        }
-        else if(i == 1)
-        {
-            GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(1, 1, 1);
-        }
-        else if (i == 2)
-        {
-            GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(2, 1, 1);
-        }
+        GameObject.Find("AudioShit").GetComponent<AudioManager>().PlayAudio(8, 1, 1);
+
     }
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
@@ -425,6 +415,8 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         {
             celebrationEffects[i].Play();
         }
+        cheer.Play();
+        bells.Play();
     }
     public void BellAudio()
     {

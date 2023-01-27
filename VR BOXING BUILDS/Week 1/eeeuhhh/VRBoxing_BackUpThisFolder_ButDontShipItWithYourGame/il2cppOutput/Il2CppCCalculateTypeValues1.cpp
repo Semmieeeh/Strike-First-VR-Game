@@ -40127,39 +40127,39 @@ struct RecorderStep_t777416BC8C63C5B903C8798E0DFBF88A613BBC78_marshaled_com
 	HandGrabInteractable_tAA4FA87F97EBE085B00C9989B64494E72E717127* ___interactable_3;
 };
 
-// InGameDisplay/<PlayerDisconnected>d__37
-struct U3CPlayerDisconnectedU3Ed__37_t2F66DFB1A22295F66F3DF260F5550D73AF3F197C  : public RuntimeObject
+// InGameDisplay/<PlayerDisconnected>d__39
+struct U3CPlayerDisconnectedU3Ed__39_t281A4BE7FB824B4F262DA4030D3F0B281EAA192B  : public RuntimeObject
 {
-	// System.Int32 InGameDisplay/<PlayerDisconnected>d__37::<>1__state
+	// System.Int32 InGameDisplay/<PlayerDisconnected>d__39::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder InGameDisplay/<PlayerDisconnected>d__37::<>t__builder
+	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder InGameDisplay/<PlayerDisconnected>d__39::<>t__builder
 	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder_1;
-	// InGameDisplay InGameDisplay/<PlayerDisconnected>d__37::<>4__this
+	// InGameDisplay InGameDisplay/<PlayerDisconnected>d__39::<>4__this
 	InGameDisplay_t8FEC4653BFA6A9DC72688BDB0CE11FA60A13DC2F* ___U3CU3E4__this_2;
-	// System.Runtime.CompilerServices.TaskAwaiter InGameDisplay/<PlayerDisconnected>d__37::<>u__1
+	// System.Runtime.CompilerServices.TaskAwaiter InGameDisplay/<PlayerDisconnected>d__39::<>u__1
 	TaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833 ___U3CU3Eu__1_3;
 };
 
-// InGameDisplay/<StartGame>d__34
-struct U3CStartGameU3Ed__34_t97FE7562B3C8F52E36E56229B63D27228E62E0E1  : public RuntimeObject
+// InGameDisplay/<StartGame>d__36
+struct U3CStartGameU3Ed__36_t5A82F4A876A1088931E7099C584FF4D90AAABF85  : public RuntimeObject
 {
-	// System.Int32 InGameDisplay/<StartGame>d__34::<>1__state
+	// System.Int32 InGameDisplay/<StartGame>d__36::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder InGameDisplay/<StartGame>d__34::<>t__builder
+	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder InGameDisplay/<StartGame>d__36::<>t__builder
 	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder_1;
-	// InGameDisplay InGameDisplay/<StartGame>d__34::<>4__this
+	// InGameDisplay InGameDisplay/<StartGame>d__36::<>4__this
 	InGameDisplay_t8FEC4653BFA6A9DC72688BDB0CE11FA60A13DC2F* ___U3CU3E4__this_2;
-	// UnityEngine.GameObject InGameDisplay/<StartGame>d__34::<myPlayer>5__1
+	// UnityEngine.GameObject InGameDisplay/<StartGame>d__36::<myPlayer>5__1
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___U3CmyPlayerU3E5__1_3;
-	// System.Int32 InGameDisplay/<StartGame>d__34::<i>5__2
+	// System.Int32 InGameDisplay/<StartGame>d__36::<i>5__2
 	int32_t ___U3CiU3E5__2_4;
-	// InGameDisplay/RoundData InGameDisplay/<StartGame>d__34::<round>5__3
+	// InGameDisplay/RoundData InGameDisplay/<StartGame>d__36::<round>5__3
 	RoundData_t3FC57CFE5E7E9FE41A94E8A4E2FC0B52E92ED233 ___U3CroundU3E5__3_5;
-	// Photon.Realtime.Player InGameDisplay/<StartGame>d__34::<winner>5__4
+	// Photon.Realtime.Player InGameDisplay/<StartGame>d__36::<winner>5__4
 	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___U3CwinnerU3E5__4_6;
-	// System.Int32 InGameDisplay/<StartGame>d__34::<j>5__5
+	// System.Int32 InGameDisplay/<StartGame>d__36::<j>5__5
 	int32_t ___U3CjU3E5__5_7;
-	// System.Runtime.CompilerServices.TaskAwaiter InGameDisplay/<StartGame>d__34::<>u__1
+	// System.Runtime.CompilerServices.TaskAwaiter InGameDisplay/<StartGame>d__36::<>u__1
 	TaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833 ___U3CU3Eu__1_8;
 };
 
@@ -42766,22 +42766,22 @@ struct PoseCalculator_t50174F017AABA7E6B8B2D705A8BBE74CE507BDA8  : public Multic
 {
 };
 
-// InGameDisplay/<WaitForRoundOver>d__41
-struct U3CWaitForRoundOverU3Ed__41_t3E8691D458834F91D25B4C0910F7FFC389405FF7  : public RuntimeObject
+// InGameDisplay/<WaitForRoundOver>d__43
+struct U3CWaitForRoundOverU3Ed__43_t7AD509DC2795D3FD743F8AE9A25C21BC272927EB  : public RuntimeObject
 {
-	// System.Int32 InGameDisplay/<WaitForRoundOver>d__41::<>1__state
+	// System.Int32 InGameDisplay/<WaitForRoundOver>d__43::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder InGameDisplay/<WaitForRoundOver>d__41::<>t__builder
+	// System.Runtime.CompilerServices.AsyncTaskMethodBuilder InGameDisplay/<WaitForRoundOver>d__43::<>t__builder
 	AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06 ___U3CU3Et__builder_1;
-	// InGameDisplay InGameDisplay/<WaitForRoundOver>d__41::<>4__this
+	// InGameDisplay InGameDisplay/<WaitForRoundOver>d__43::<>4__this
 	InGameDisplay_t8FEC4653BFA6A9DC72688BDB0CE11FA60A13DC2F* ___U3CU3E4__this_2;
-	// System.Boolean InGameDisplay/<WaitForRoundOver>d__41::<gameOver>5__1
+	// System.Boolean InGameDisplay/<WaitForRoundOver>d__43::<gameOver>5__1
 	bool ___U3CgameOverU3E5__1_3;
-	// ExitGames.Client.Photon.Hashtable InGameDisplay/<WaitForRoundOver>d__41::<MyPlayerProperties>5__2
+	// ExitGames.Client.Photon.Hashtable InGameDisplay/<WaitForRoundOver>d__43::<MyPlayerProperties>5__2
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___U3CMyPlayerPropertiesU3E5__2_4;
-	// ExitGames.Client.Photon.Hashtable InGameDisplay/<WaitForRoundOver>d__41::<OtherPlayerProperties>5__3
+	// ExitGames.Client.Photon.Hashtable InGameDisplay/<WaitForRoundOver>d__43::<OtherPlayerProperties>5__3
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___U3COtherPlayerPropertiesU3E5__3_5;
-	// System.Runtime.CompilerServices.YieldAwaitable/YieldAwaiter InGameDisplay/<WaitForRoundOver>d__41::<>u__1
+	// System.Runtime.CompilerServices.YieldAwaitable/YieldAwaiter InGameDisplay/<WaitForRoundOver>d__43::<>u__1
 	YieldAwaiter_t5F0A81DC85227C01FFC38D53139B5C19D920B52A ___U3CU3Eu__1_6;
 };
 
@@ -55937,16 +55937,20 @@ struct InGameDisplay_t8FEC4653BFA6A9DC72688BDB0CE11FA60A13DC2F  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___roundWonSpotlight_27;
 	// UnityEngine.ParticleSystem[] InGameDisplay::celebrationEffects
 	ParticleSystemU5BU5D_tC5E33DA557C9C2064085128B3530C5F04D48F6E6* ___celebrationEffects_28;
+	// UnityEngine.AudioSource InGameDisplay::cheer
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___cheer_29;
+	// UnityEngine.AudioSource InGameDisplay::bells
+	AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* ___bells_30;
 	// Photon.Realtime.Room InGameDisplay::currentRoom
-	Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* ___currentRoom_29;
+	Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* ___currentRoom_31;
 	// System.Boolean InGameDisplay::gameStarted
-	bool ___gameStarted_30;
+	bool ___gameStarted_32;
 	// System.Boolean InGameDisplay::prepareGameStarted
-	bool ___prepareGameStarted_31;
+	bool ___prepareGameStarted_33;
 	// System.Boolean InGameDisplay::playerDisconnected
-	bool ___playerDisconnected_32;
+	bool ___playerDisconnected_34;
 	// System.Boolean InGameDisplay::roundActive
-	bool ___roundActive_33;
+	bool ___roundActive_35;
 };
 
 // Photon.Pun.Demo.Procedural.IngameControlPanel
@@ -59726,11 +59730,11 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize5889 = { sizeof(InGameDiscon
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5890;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize5890 = { sizeof(RoundData_t3FC57CFE5E7E9FE41A94E8A4E2FC0B52E92ED233)+ sizeof(RuntimeObject), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5891;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize5891 = { sizeof(U3CStartGameU3Ed__34_t97FE7562B3C8F52E36E56229B63D27228E62E0E1), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize5891 = { sizeof(U3CStartGameU3Ed__36_t5A82F4A876A1088931E7099C584FF4D90AAABF85), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5892;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize5892 = { sizeof(U3CPlayerDisconnectedU3Ed__37_t2F66DFB1A22295F66F3DF260F5550D73AF3F197C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize5892 = { sizeof(U3CPlayerDisconnectedU3Ed__39_t281A4BE7FB824B4F262DA4030D3F0B281EAA192B), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5893;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize5893 = { sizeof(U3CWaitForRoundOverU3Ed__41_t3E8691D458834F91D25B4C0910F7FFC389405FF7), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize5893 = { sizeof(U3CWaitForRoundOverU3Ed__43_t7AD509DC2795D3FD743F8AE9A25C21BC272927EB), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5894;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize5894 = { sizeof(InGameDisplay_t8FEC4653BFA6A9DC72688BDB0CE11FA60A13DC2F), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize5895;

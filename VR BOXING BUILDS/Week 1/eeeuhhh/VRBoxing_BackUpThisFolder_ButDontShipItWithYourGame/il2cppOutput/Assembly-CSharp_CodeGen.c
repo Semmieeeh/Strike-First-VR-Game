@@ -268,24 +268,24 @@ extern void InGameDisplay_SetRoundOver_m39B0F980130F344836376F45A09F89429A953CF6
 extern void InGameDisplay_LoadEndGameScene_mD520D5460112645C374401575A7CDE2F38EED70F (void);
 // 0x00000080 System.Void InGameDisplay::.ctor()
 extern void InGameDisplay__ctor_mC04CE417FA8DA2753F819C33BACA484F393292A4 (void);
-// 0x00000081 System.Void InGameDisplay/<StartGame>d__34::.ctor()
-extern void U3CStartGameU3Ed__34__ctor_m59E9331B2FA5BD1AA6C8289BCC893A5603BC6FF4 (void);
-// 0x00000082 System.Void InGameDisplay/<StartGame>d__34::MoveNext()
-extern void U3CStartGameU3Ed__34_MoveNext_mA449C935F1AE20EFBEB45904E4E9A8214CF1E6DB (void);
-// 0x00000083 System.Void InGameDisplay/<StartGame>d__34::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-extern void U3CStartGameU3Ed__34_SetStateMachine_m87310B5E2D40912935D68EF3967EEB12E4FF310E (void);
-// 0x00000084 System.Void InGameDisplay/<PlayerDisconnected>d__37::.ctor()
-extern void U3CPlayerDisconnectedU3Ed__37__ctor_m98F0C646E82747D1B75F31DF14C9FC69A2DC1EF7 (void);
-// 0x00000085 System.Void InGameDisplay/<PlayerDisconnected>d__37::MoveNext()
-extern void U3CPlayerDisconnectedU3Ed__37_MoveNext_mF5F706F5F760B467BBF439F58B08584E30EDE41C (void);
-// 0x00000086 System.Void InGameDisplay/<PlayerDisconnected>d__37::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-extern void U3CPlayerDisconnectedU3Ed__37_SetStateMachine_mB3A2C521D439A8F82AE4C9E78C1E7C9DE09F7161 (void);
-// 0x00000087 System.Void InGameDisplay/<WaitForRoundOver>d__41::.ctor()
-extern void U3CWaitForRoundOverU3Ed__41__ctor_m2E4CE1C38FE9AC3CCEF7BE046E4288B2ADB0ECAB (void);
-// 0x00000088 System.Void InGameDisplay/<WaitForRoundOver>d__41::MoveNext()
-extern void U3CWaitForRoundOverU3Ed__41_MoveNext_m673EF7AEA08B6DE3D018040B01C4F7BCF74F5E1E (void);
-// 0x00000089 System.Void InGameDisplay/<WaitForRoundOver>d__41::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
-extern void U3CWaitForRoundOverU3Ed__41_SetStateMachine_m7A4424707D91197856ECE8DD571C17D22D703069 (void);
+// 0x00000081 System.Void InGameDisplay/<StartGame>d__36::.ctor()
+extern void U3CStartGameU3Ed__36__ctor_m9D67E2FB9CF44B10D3576D21DCC24597576B2984 (void);
+// 0x00000082 System.Void InGameDisplay/<StartGame>d__36::MoveNext()
+extern void U3CStartGameU3Ed__36_MoveNext_m03408B62ED4AD3AE261B1BA60C481D93B41230FA (void);
+// 0x00000083 System.Void InGameDisplay/<StartGame>d__36::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+extern void U3CStartGameU3Ed__36_SetStateMachine_m670981CEF74DC9ED90483F9A25BAE6256230AF09 (void);
+// 0x00000084 System.Void InGameDisplay/<PlayerDisconnected>d__39::.ctor()
+extern void U3CPlayerDisconnectedU3Ed__39__ctor_mB2BCBBB22B3C0D84E2109EA9B6594C342069E080 (void);
+// 0x00000085 System.Void InGameDisplay/<PlayerDisconnected>d__39::MoveNext()
+extern void U3CPlayerDisconnectedU3Ed__39_MoveNext_m0E3FC103861851C60BDC519D5242D0528D6964E7 (void);
+// 0x00000086 System.Void InGameDisplay/<PlayerDisconnected>d__39::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+extern void U3CPlayerDisconnectedU3Ed__39_SetStateMachine_mCF327B9DA17AA881ADF4037DEA2ED22FDE599916 (void);
+// 0x00000087 System.Void InGameDisplay/<WaitForRoundOver>d__43::.ctor()
+extern void U3CWaitForRoundOverU3Ed__43__ctor_m4E693EC50B57FBF49D2DDCF6F7944354DE58F732 (void);
+// 0x00000088 System.Void InGameDisplay/<WaitForRoundOver>d__43::MoveNext()
+extern void U3CWaitForRoundOverU3Ed__43_MoveNext_mCE3CED933872B67357CD4BDAC6EF10449F114017 (void);
+// 0x00000089 System.Void InGameDisplay/<WaitForRoundOver>d__43::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+extern void U3CWaitForRoundOverU3Ed__43_SetStateMachine_m11B7983D5D742AD3197DFDF5076FAF315E535CC8 (void);
 // 0x0000008A System.Void MainMenuManager::Start()
 extern void MainMenuManager_Start_m0DE5C20FF402B377BA9FD8819426F55C9289A55A (void);
 // 0x0000008B System.Void MainMenuManager::Update()
@@ -3820,15 +3820,15 @@ static Il2CppMethodPointer s_methodPointers[1867] =
 	InGameDisplay_SetRoundOver_m39B0F980130F344836376F45A09F89429A953CF6,
 	InGameDisplay_LoadEndGameScene_mD520D5460112645C374401575A7CDE2F38EED70F,
 	InGameDisplay__ctor_mC04CE417FA8DA2753F819C33BACA484F393292A4,
-	U3CStartGameU3Ed__34__ctor_m59E9331B2FA5BD1AA6C8289BCC893A5603BC6FF4,
-	U3CStartGameU3Ed__34_MoveNext_mA449C935F1AE20EFBEB45904E4E9A8214CF1E6DB,
-	U3CStartGameU3Ed__34_SetStateMachine_m87310B5E2D40912935D68EF3967EEB12E4FF310E,
-	U3CPlayerDisconnectedU3Ed__37__ctor_m98F0C646E82747D1B75F31DF14C9FC69A2DC1EF7,
-	U3CPlayerDisconnectedU3Ed__37_MoveNext_mF5F706F5F760B467BBF439F58B08584E30EDE41C,
-	U3CPlayerDisconnectedU3Ed__37_SetStateMachine_mB3A2C521D439A8F82AE4C9E78C1E7C9DE09F7161,
-	U3CWaitForRoundOverU3Ed__41__ctor_m2E4CE1C38FE9AC3CCEF7BE046E4288B2ADB0ECAB,
-	U3CWaitForRoundOverU3Ed__41_MoveNext_m673EF7AEA08B6DE3D018040B01C4F7BCF74F5E1E,
-	U3CWaitForRoundOverU3Ed__41_SetStateMachine_m7A4424707D91197856ECE8DD571C17D22D703069,
+	U3CStartGameU3Ed__36__ctor_m9D67E2FB9CF44B10D3576D21DCC24597576B2984,
+	U3CStartGameU3Ed__36_MoveNext_m03408B62ED4AD3AE261B1BA60C481D93B41230FA,
+	U3CStartGameU3Ed__36_SetStateMachine_m670981CEF74DC9ED90483F9A25BAE6256230AF09,
+	U3CPlayerDisconnectedU3Ed__39__ctor_mB2BCBBB22B3C0D84E2109EA9B6594C342069E080,
+	U3CPlayerDisconnectedU3Ed__39_MoveNext_m0E3FC103861851C60BDC519D5242D0528D6964E7,
+	U3CPlayerDisconnectedU3Ed__39_SetStateMachine_mCF327B9DA17AA881ADF4037DEA2ED22FDE599916,
+	U3CWaitForRoundOverU3Ed__43__ctor_m4E693EC50B57FBF49D2DDCF6F7944354DE58F732,
+	U3CWaitForRoundOverU3Ed__43_MoveNext_mCE3CED933872B67357CD4BDAC6EF10449F114017,
+	U3CWaitForRoundOverU3Ed__43_SetStateMachine_m11B7983D5D742AD3197DFDF5076FAF315E535CC8,
 	MainMenuManager_Start_m0DE5C20FF402B377BA9FD8819426F55C9289A55A,
 	MainMenuManager_Update_mAA4CF1D462BFFD3E5B84FB1B79B53AF29452FDB9,
 	MainMenuManager_OnGameStart_m531A65229BABAF11E8C5A71E222E238B6020FA9F,

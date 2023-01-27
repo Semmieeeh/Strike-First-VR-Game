@@ -11,6 +11,7 @@ public class EndgameManager : MonoBehaviourPunCallbacks
     public TextMeshProUGUI winnerText, disconnectStatus;
     Transform myPlayer;
 
+    public AudioSource win, win2, lose;
     void Start()
     {
         Server.SetMovementActive(false);
@@ -19,12 +20,17 @@ public class EndgameManager : MonoBehaviourPunCallbacks
         if(Server.MyPlayer == Server.Winner)
         {
             myPlayer.transform.position = winnerPos.position;
-            winnerText.text = Server.MyPlayer.NickName;
+            winnerText.text = Server.MyPlayer.NickName + " won the Game!";
+
+            win.Play();
+            win2.Play();
         }
         else
         {
             myPlayer.transform.position = loserPos.position;
-            winnerText.text = Server.OtherPlayer.NickName;
+            winnerText.text = Server.OtherPlayer.NickName + " won the Game!";
+
+            lose.Play();
         }
 
         StartDisconnect();
