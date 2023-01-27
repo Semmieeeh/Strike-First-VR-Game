@@ -217,6 +217,7 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
     {
         base.OnPlayerLeftRoom(otherPlayer);
 
+        
         photonView.RPC(nameof(PlayerDisconnected),RpcTarget.All);
     }
 

@@ -13242,6 +13242,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioShit
       objectReference: {fileID: 0}
+    - target: {fileID: 5967584800018321461, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967584800018321463, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5967584801188454951, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
       propertyPath: m_RootOrder
@@ -13301,6 +13311,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: In-Game Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967584801441023496, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5967584801441023502, guid: 6a64f62237056cf4f8e6226855f9da69,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6546590306666815072, guid: 6a64f62237056cf4f8e6226855f9da69,
         type: 3}
