@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &4232012
@@ -369,7 +374,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -454,6 +459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -969,6 +979,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &20298208
@@ -1052,6 +1067,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -1187,6 +1207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &34585795
@@ -1270,6 +1295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -1389,19 +1419,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &40321216
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4847192100278301255}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.00376569, y: 0.0037656913, z: 0.011980547}
-  m_Center: {x: 0, y: 0.0000000018626451, z: 0.0025924377}
 --- !u!1 &41777281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
@@ -1433,7 +1450,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1518,6 +1535,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -2146,6 +2168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -2382,6 +2409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &75985028
@@ -2602,6 +2634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &81096927
@@ -2685,6 +2722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -3041,6 +3083,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &112145954
@@ -3143,7 +3190,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3375,6 +3422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &136030467 stripped
@@ -3408,7 +3460,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3443,7 +3495,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3478,7 +3530,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3563,6 +3615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -3694,6 +3751,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -4527,7 +4589,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4612,6 +4674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -4835,7 +4902,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5398,6 +5465,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &201097393
@@ -5606,7 +5678,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5936,6 +6008,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &225989970 stripped
@@ -5969,7 +6046,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6226,6 +6303,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &229606727
@@ -6475,6 +6557,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -6777,6 +6864,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &247128089
@@ -6861,6 +6953,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &248614753
@@ -6944,6 +7041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -7542,7 +7644,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8372,6 +8474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &273682041
@@ -8455,6 +8562,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -8581,6 +8693,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &290322142
@@ -8683,7 +8800,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8847,6 +8964,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &314090344 stripped
@@ -8886,7 +9008,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -8921,7 +9043,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -9107,7 +9229,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -9278,7 +9400,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -9514,6 +9636,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -9652,6 +9779,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -10089,6 +10221,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &371291226
@@ -10262,7 +10399,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10735,7 +10872,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10999,7 +11136,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -11891,6 +12028,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &430589199 stripped
@@ -11996,7 +12138,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -12147,6 +12289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -12930,6 +13077,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &482438189
@@ -13149,6 +13301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -13391,7 +13548,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -13539,7 +13696,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -13677,7 +13834,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -14034,6 +14191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &529268016 stripped
@@ -14067,7 +14229,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -14123,6 +14285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -14362,7 +14529,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -14447,6 +14614,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -14621,7 +14793,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -15145,6 +15317,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &594141175 stripped
@@ -15178,7 +15355,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -15395,6 +15572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -15725,7 +15907,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -15791,7 +15973,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -16202,7 +16384,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -16328,7 +16510,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -16363,7 +16545,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -16398,7 +16580,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -16638,6 +16820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -17083,6 +17270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -17221,6 +17413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -17389,6 +17586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &696276594
@@ -17473,6 +17675,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &700060527 stripped
@@ -17506,7 +17713,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -17815,7 +18022,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -17885,7 +18092,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -18374,6 +18581,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &734959590 stripped
@@ -18407,7 +18619,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -18492,6 +18704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -18988,6 +19205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &751406937
@@ -19074,6 +19296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -19468,7 +19695,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -19503,7 +19730,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -19682,6 +19909,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &777085265
@@ -19798,7 +20030,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -21072,7 +21304,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -21201,7 +21433,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -21660,6 +21892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &876836306
@@ -21757,6 +21994,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -21845,7 +22087,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -22033,6 +22275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -22461,7 +22708,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -22845,6 +23092,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &925373380
@@ -22929,6 +23181,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &929335328
@@ -22979,6 +23236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -23597,6 +23859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &949469008
@@ -23797,7 +24064,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -24358,6 +24625,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &975523879
@@ -24441,6 +24713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -24526,6 +24803,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &977145290
@@ -24609,6 +24891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -25017,7 +25304,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -25032,6 +25319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -25780,7 +26072,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -25997,6 +26289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1012037257
@@ -26139,103 +26436,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1012037257}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1012324890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1012324891}
-  - component: {fileID: 1012324894}
-  - component: {fileID: 1012324893}
-  - component: {fileID: 1012324892}
-  m_Layer: 0
-  m_Name: Cylinder.001
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1012324891
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012324890}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.000000014901161, y: 0.9396576, z: 0.000000009934108}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1531706520}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1012324892
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012324890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.00376569, y: 0.0037656913, z: 0.011980547}
-  m_Center: {x: 0, y: 0.0000000018626451, z: 0.0025924377}
---- !u!23 &1012324893
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012324890}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b49b896d2095cd342b24d602c806297d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1012324894
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012324890}
-  m_Mesh: {fileID: -7387706064836869012, guid: 8f27e962581b1cb4db90342f7bf4a8d1, type: 3}
 --- !u!1001 &1017817903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26318,6 +26518,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1018966638 stripped
@@ -26351,7 +26556,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -26673,7 +26878,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -27002,6 +27207,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -27137,7 +27347,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -27172,7 +27382,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -27470,6 +27680,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -27553,6 +27768,42 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080944632}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1085336019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1729373463914621290, guid: 85beed3523dc9a64ebee28691f78cd87,
+    type: 3}
+  m_PrefabInstance: {fileID: 641050262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1085336023
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085336019}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0010997377
+  m_Height: 0.004996801
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.00009409472, z: 0.0024743988}
+--- !u!54 &1085336024
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085336019}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -28114,7 +28365,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -28218,7 +28469,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -28668,6 +28919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1120353237
@@ -28847,7 +29103,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -29017,6 +29273,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1132488352
@@ -29143,7 +29404,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -29491,7 +29752,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -29506,6 +29767,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -29674,7 +29940,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -29830,6 +30096,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -29957,9 +30228,7 @@ Transform:
   - {fileID: 590595394}
   - {fileID: 152851372}
   - {fileID: 411512096}
-  - {fileID: 1617543832}
   - {fileID: 1309671724}
-  - {fileID: 1594705945}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30740,6 +31009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1223037936
@@ -30861,6 +31135,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1230786089 stripped
@@ -30935,7 +31214,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -30970,7 +31249,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -31093,6 +31372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1250761843 stripped
@@ -31126,7 +31410,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -31161,7 +31445,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -31342,7 +31626,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -31511,6 +31795,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1283575507
@@ -31561,6 +31850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -32206,6 +32500,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -32370,7 +32669,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -32536,13 +32835,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309671723}
   m_LocalRotation: {x: -0, y: -0.97475964, z: -0, w: 0.22325695}
-  m_LocalPosition: {x: 3.6, y: 0.076, z: -0.21}
+  m_LocalPosition: {x: 2.46, y: 0.076, z: -2.36}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2070465495}
   m_Father: {fileID: 1166272353}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!145 &1309671725
 SpringJoint:
@@ -32906,6 +33205,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1326315088
@@ -32989,6 +33293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -33244,6 +33553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -33418,6 +33732,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1347512627
@@ -33502,6 +33821,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1348148474 stripped
@@ -33535,7 +33859,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -33621,6 +33945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1351532720
@@ -33705,6 +34034,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1351949961
@@ -33788,6 +34122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -34287,6 +34626,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1374845038
@@ -34370,6 +34714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -34895,6 +35244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -37153,7 +37507,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -37449,7 +37803,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -37708,6 +38062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1469009526
@@ -37965,6 +38324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1485008403
@@ -38196,7 +38560,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -38282,6 +38646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1530281133 stripped
@@ -38315,71 +38684,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!1 &1531706519
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1531706520}
-  - component: {fileID: 1531706522}
-  - component: {fileID: 1531706521}
-  m_Layer: 0
-  m_Name: boxbag Variant
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1531706520
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531706519}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1744417319}
-  - {fileID: 1012324891}
-  m_Father: {fileID: 1594705945}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -154.199, z: 0}
---- !u!65 &1531706521
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531706519}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5800003, y: 0.32727042, z: 0.60056204}
-  m_Center: {x: -0.0059352918, y: 0.13389745, z: -0.0033259792}
---- !u!54 &1531706522
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531706519}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -38478,6 +38783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -39490,6 +39800,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1565523531
@@ -39669,7 +39984,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -39955,7 +40270,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -40287,6 +40602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1582923560 stripped
@@ -40320,7 +40640,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -40393,80 +40713,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85beed3523dc9a64ebee28691f78cd87, type: 3}
---- !u!1 &1594705944
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1594705945}
-  - component: {fileID: 1594705947}
-  - component: {fileID: 1594705946}
-  m_Layer: 0
-  m_Name: Turnpoint (2)
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1594705945
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594705944}
-  m_LocalRotation: {x: -0, y: -0.97475964, z: -0, w: 0.22325695}
-  m_LocalPosition: {x: 3.6, y: 0.076, z: -2.72}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1531706520}
-  m_Father: {fileID: 1166272353}
-  m_RootOrder: 44
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!145 &1594705946
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594705944}
-  m_ConnectedBody: {fileID: 1531706522}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  serializedVersion: 2
-  m_Spring: 10
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &1594705947
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594705944}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1600661269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40548,6 +40794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -41156,6 +41407,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1608765520}
+  - component: {fileID: 1608765522}
+  - component: {fileID: 1608765521}
   m_Layer: 0
   m_Name: AudioOn
   m_TagString: NPC
@@ -41171,13 +41424,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608765519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.98207, y: -0.42819, z: -4.406328}
+  m_LocalPosition: {x: 3.959, y: 2.179, z: 3.858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1608765521
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608765519}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1608765522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608765519}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1611528327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41259,6 +41541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -41343,6 +41630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -41502,80 +41794,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1612029196}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1617543831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1617543832}
-  - component: {fileID: 1617543834}
-  - component: {fileID: 1617543833}
-  m_Layer: 0
-  m_Name: Turnpoint
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1617543832
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617543831}
-  m_LocalRotation: {x: -0, y: -0.97475964, z: -0, w: 0.22325695}
-  m_LocalPosition: {x: 3.6, y: 0.076, z: 2.158}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3668563595796149407}
-  m_Father: {fileID: 1166272353}
-  m_RootOrder: 42
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!145 &1617543833
-SpringJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617543831}
-  m_ConnectedBody: {fileID: 4153035239027617318}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
-  serializedVersion: 2
-  m_Spring: 10
-  m_Damper: 0.2
-  m_MinDistance: 0
-  m_MaxDistance: 0
-  m_Tolerance: 0.025
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &1617543834
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617543831}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1619084290
 GameObject:
   m_ObjectHideFlags: 0
@@ -41981,6 +42199,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1638225167
@@ -42271,6 +42494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1646579095
@@ -42395,6 +42623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -43040,7 +43273,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -43449,6 +43682,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1700760916
@@ -43622,7 +43860,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -43844,6 +44082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1712630427
@@ -44063,6 +44306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1720230159
@@ -44129,7 +44377,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -44408,89 +44656,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1738558933}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1744417318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1744417319}
-  - component: {fileID: 1744417321}
-  - component: {fileID: 1744417320}
-  m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1744417319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744417318}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.000000014901161, y: 0, z: 0.000000009934108}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1531706520}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1744417320
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744417318}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b49b896d2095cd342b24d602c806297d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1744417321
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744417318}
-  m_Mesh: {fileID: 2534964839176971238, guid: 8f27e962581b1cb4db90342f7bf4a8d1, type: 3}
 --- !u!1001 &1744653595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44573,6 +44738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1749538990 stripped
@@ -44606,7 +44776,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -44797,7 +44967,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -44832,7 +45002,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -45238,6 +45408,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1769049860 stripped
@@ -45271,7 +45446,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -45549,6 +45724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -46112,6 +46292,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!4 &1792208112 stripped
@@ -46151,7 +46336,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -46363,7 +46548,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -46398,7 +46583,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -47848,7 +48033,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -47933,6 +48118,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -48336,6 +48526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1900073786
@@ -48593,7 +48788,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -48628,7 +48823,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -49751,6 +49946,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: krat (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
       propertyPath: m_RootOrder
@@ -49880,7 +50080,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -49915,7 +50115,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -50239,6 +50439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &1975725353 stripped
@@ -50272,7 +50477,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -50427,6 +50632,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1982904446
@@ -50511,6 +50721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &1985518692
@@ -50524,6 +50739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -50804,6 +51024,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &2002459467
@@ -50887,6 +51112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -51055,6 +51285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &2011467603 stripped
@@ -51088,7 +51323,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -51174,6 +51409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &2016152217
@@ -51257,6 +51497,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -51400,6 +51645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &2028663661 stripped
@@ -51433,7 +51683,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -51804,7 +52054,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -51927,6 +52177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &2053654552 stripped
@@ -51960,7 +52215,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -52078,7 +52333,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -52196,7 +52451,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -52282,6 +52537,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1001 &2069331886
@@ -52366,6 +52626,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: amstelbottle (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
 --- !u!1 &2069820638 stripped
@@ -52399,7 +52664,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -52498,7 +52763,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -52581,6 +52846,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: krat (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443391630777816900, guid: 249dbf62a7f80604a807fcae749fa156,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2255218912242748926, guid: 249dbf62a7f80604a807fcae749fa156,
         type: 3}
@@ -52720,6 +52990,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: amstelbottle (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9040394422064111083, guid: 7be4af3835b95234e8ee5f4725d93ffd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7be4af3835b95234e8ee5f4725d93ffd, type: 3}
@@ -53094,7 +53369,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -53312,7 +53587,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -53347,7 +53622,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -53382,7 +53657,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -54477,32 +54752,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3efc57c326bf5e14f85d3863b7c96b58, type: 3}
---- !u!1 &565986543750978932
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7591195198829463877}
-  - component: {fileID: 9159072362012666673}
-  - component: {fileID: 6237619489702618539}
-  m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!33 &892944257800455013
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4847192100278301255}
-  m_Mesh: {fileID: -7387706064836869012, guid: 8f27e962581b1cb4db90342f7bf4a8d1, type: 3}
 --- !u!1001 &2288729034772316055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54582,89 +54831,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5166ed6b2a838d44383f906d544a13e7, type: 3}
---- !u!4 &3668563595796149407
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153035239027617317}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7591195198829463877}
-  - {fileID: 7557087651682763173}
-  m_Father: {fileID: 1617543832}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -154.199, z: 0}
---- !u!1 &4153035239027617317
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3668563595796149407}
-  - component: {fileID: 4153035239027617318}
-  - component: {fileID: 4153035239027617319}
-  m_Layer: 0
-  m_Name: boxbag Variant
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!54 &4153035239027617318
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153035239027617317}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &4153035239027617319
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153035239027617317}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5800003, y: 0.32727042, z: 0.60056204}
-  m_Center: {x: -0.0059352918, y: 0.13389745, z: -0.0033259792}
---- !u!1 &4847192100278301255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7557087651682763173}
-  - component: {fileID: 892944257800455013}
-  - component: {fileID: 6287589247743720398}
-  - component: {fileID: 40321216}
-  m_Layer: 0
-  m_Name: Cylinder.001
-  m_TagString: NPC
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &5049318558815403428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54815,125 +54981,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23512f0d074cf4542ad43b38df2aac55, type: 3}
---- !u!23 &6237619489702618539
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565986543750978932}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b49b896d2095cd342b24d602c806297d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!23 &6287589247743720398
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4847192100278301255}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b49b896d2095cd342b24d602c806297d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!4 &7557087651682763173
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4847192100278301255}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.000000014901161, y: 0.9396576, z: 0.000000009934108}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3668563595796149407}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &7591195198829463877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565986543750978932}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.000000014901161, y: 0, z: 0.000000009934108}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3668563595796149407}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9159072362012666673
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565986543750978932}
-  m_Mesh: {fileID: 2534964839176971238, guid: 8f27e962581b1cb4db90342f7bf4a8d1, type: 3}
