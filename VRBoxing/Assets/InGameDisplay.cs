@@ -234,14 +234,10 @@ public class InGameDisplay : MonoBehaviourPunCallbacks
         //leave game and return to main menu
         await Task.Delay(5000);
 
-        PhotonNetwork.Disconnect();
+        PhotonNetwork.LeaveRoom();
     }
 
-    public override void OnDisconnected(DisconnectCause cause)
-    {
-        base.OnDisconnected(cause);
-        UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
-    }
+    
 
     [PunRPC]
     public void ResetPlayerProperties()
